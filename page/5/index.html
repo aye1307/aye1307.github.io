@@ -145,7 +145,7 @@
                 <!-- 
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  is-7-desktop">
-        <a href="/2019/09/27/兼容IE8的一些方法/">
+        <a href="/2019/09/27/封装的函数方法/">
             <div class="full-height post-hover"
                  style="
                          background-image: url('');
@@ -155,7 +155,7 @@
                          ">
                     <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
                         <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            兼容IE8的方法函数
+                            常用的函数方法
                         </h1>
                         <div>
                         
@@ -165,10 +165,12 @@
                         
                         </div>
                         <p class="post-content-text is-marginless has-padding text-shadow">
-                            兼容IE8的方法函数
-兼容IE8 数组的 forEach
-if ( !Array.prototype.forEach ) {
-    Array.prototype.forEach = function forEach( callbac..
+                            常用的函数方法
+原生封装的ajax函数
+function Ajax(type, url, data, success, failed){
+    // 创建ajax对象
+    var xhr = null;
+    if ( wind..
                         </p>
                         <p class="date text-shadow">2019-09-27</p>
                         <button class="button is-info is-small">Read More</button>
@@ -180,11 +182,11 @@ if ( !Array.prototype.forEach ) {
         <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
                 
-<a class="post-hover" href="/2019/09/27/DOMContentLoaded和load的区别/" style="height: 48.5%">
+<a class="post-hover" href="/2019/09/27/兼容IE8的一些方法/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                DOMContentLoaded与load的区别
+                兼容IE8的方法函数
             </h3>
             
             
@@ -193,7 +195,9 @@ if ( !Array.prototype.forEach ) {
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                DOMContentLoaded与load的区别onload事件onload事件所有的浏览器都支..
+                兼容IE8的方法函数
+兼容IE8 数组的 forEach
+if ( !Array.prototy..
             </p>
             <p class="date text-shadow is-marginless">2019-09-27</p>
         </div>
@@ -227,11 +231,11 @@ if ( !Array.prototype.forEach ) {
     <div class="column is-12 is-hidden-desktop">
         
         
-<a class="post-hover" href="/2019/09/27/DOMContentLoaded和load的区别/" style="height: 48.5%">
+<a class="post-hover" href="/2019/09/27/兼容IE8的一些方法/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                DOMContentLoaded与load的区别
+                兼容IE8的方法函数
             </h3>
             
             
@@ -240,7 +244,9 @@ if ( !Array.prototype.forEach ) {
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                DOMContentLoaded与load的区别onload事件onload事件所有的浏览器都支..
+                兼容IE8的方法函数
+兼容IE8 数组的 forEach
+if ( !Array.prototy..
             </p>
             <p class="date text-shadow is-marginless">2019-09-27</p>
         </div>
@@ -272,18 +278,16 @@ if ( !Array.prototype.forEach ) {
     </div>
 </div>
  -->
-                    
-                    
                 
                     
-                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/27/DOMContentLoaded和load的区别/">
+                            <a class="post-hover" href="/2019/09/27/封装的函数方法/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
                                 <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
-                                        <h3>DOMContentLoaded与load的区别</h3>
+                                        <h3>常用的函数方法</h3>
                                         
                                         <p>
                                             
@@ -291,11 +295,45 @@ if ( !Array.prototype.forEach ) {
                                             
                                         </p>
                                         <p>
-                                            DOMContentLoaded与load的区别onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
-window.onload = function() {}
-DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
-
-IE6、IE7不支持DOMConte..
+                                            常用的函数方法
+原生封装的ajax函数
+function Ajax(type, url, data, success, failed){
+    // 创建ajax对象
+    var xhr = null;
+    if ( window.XMLHttpRequest ) {//非IE浏览器
+        xhr = new XMLHttpReque..
+                                        </p>
+                                        <p>2019-09-27</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/09/27/兼容IE8的一些方法/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>兼容IE8的方法函数</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">JavaScript</span>
+                                            
+                                        </p>
+                                        <p>
+                                            兼容IE8的方法函数
+兼容IE8 数组的 forEach
+if ( !Array.prototype.forEach ) {
+    Array.prototype.forEach = function forEach( callback, thisArg ) {
+        var T, k;
+        if ( this == null )..
                                         </p>
                                         <p>2019-09-27</p>
                                         <button class="button is-small">Read More</button>
@@ -374,6 +412,36 @@ Cooki..
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/09/25/立即调用表达式/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>jQuery立即调用表达式</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">jQuery</span>
+                                            
+                                        </p>
+                                        <p>
+                                            立即调用表达式;(function(global, factory){
+    factory(global);
+}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
+    var jQuery = function (select..
+                                        </p>
+                                        <p>2019-09-25</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/09/25/类数组对象结构/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
@@ -393,36 +461,6 @@ jQuery([selector, [context]])
 jQuery(element)
 jQuery(elementArray)
 jQuery(o..
-                                        </p>
-                                        <p>2019-09-25</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/25/立即调用表达式/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>jQuery立即调用表达式</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">jQuery</span>
-                                            
-                                        </p>
-                                        <p>
-                                            立即调用表达式;(function(global, factory){
-    factory(global);
-}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
-    var jQuery = function (select..
                                         </p>
                                         <p>2019-09-25</p>
                                         <button class="button is-small">Read More</button>
@@ -567,15 +605,6 @@ jQuery(o..
                 
 
                 
-                <li>
-                    <a target="_blank" href="http://weibo.com/aye1307">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                        </span>
-                    </a>
-                </li>
-                
 
                 
 
@@ -602,7 +631,7 @@ jQuery(o..
                 <p>Posts</p>
             </div>
             <div class="flex-1 is-flex flex-column center full-height">
-                <strong>16</strong>
+                <strong>15</strong>
                 <p>Tags</p>
             </div>
         </div>
@@ -613,20 +642,8 @@ jQuery(o..
         </div>
         <div class="content-inner is-flex flex-wrap justify-space-between">
             
-                <a class="tags-item" href="tags/Axios/" title="Axios" rel="1">
+                <a class="tags-item" href="tags/Axios/" title="Axios" rel="2">
                     Axios
-                </a>
-            
-                <a class="tags-item" href="tags/JavaScript/" title="JavaScript" rel="14">
-                    JavaScript
-                </a>
-            
-                <a class="tags-item" href="tags/axios/" title="axios" rel="1">
-                    axios
-                </a>
-            
-                <a class="tags-item" href="tags/vue/" title="vue" rel="8">
-                    vue
                 </a>
             
                 <a class="tags-item" href="tags/Linux/" title="Linux" rel="1">
@@ -641,12 +658,16 @@ jQuery(o..
                     CSS
                 </a>
             
-                <a class="tags-item" href="tags/Git/" title="Git" rel="1">
-                    Git
+                <a class="tags-item" href="tags/JavaScript/" title="JavaScript" rel="14">
+                    JavaScript
                 </a>
             
-                <a class="tags-item" href="tags/cookie/" title="cookie" rel="2">
-                    cookie
+                <a class="tags-item" href="tags/vue/" title="vue" rel="8">
+                    vue
+                </a>
+            
+                <a class="tags-item" href="tags/Git/" title="Git" rel="1">
+                    Git
                 </a>
             
                 <a class="tags-item" href="tags/小程序/" title="小程序" rel="2">
@@ -657,6 +678,10 @@ jQuery(o..
                     map
                 </a>
             
+                <a class="tags-item" href="tags/cookie/" title="cookie" rel="2">
+                    cookie
+                </a>
+            
                 <a class="tags-item" href="tags/jQuery/" title="jQuery" rel="2">
                     jQuery
                 </a>
@@ -665,12 +690,12 @@ jQuery(o..
                     HTML
                 </a>
             
-                <a class="tags-item" href="tags/移动端/" title="移动端" rel="1">
-                    移动端
-                </a>
-            
                 <a class="tags-item" href="tags/面试题/" title="面试题" rel="1">
                     面试题
+                </a>
+            
+                <a class="tags-item" href="tags/移动端/" title="移动端" rel="1">
+                    移动端
                 </a>
             
                 <a class="tags-item" href="tags/前端优化/" title="前端优化" rel="1">

@@ -231,31 +231,6 @@
     
     
     <entry>
-      <title>添加书签至浏览器</title>
-      <link href="/2019/12/14/%E6%B7%BB%E5%8A%A0%E4%B9%A6%E7%AD%BE%E8%87%B3%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-      <url>/2019/12/14/%E6%B7%BB%E5%8A%A0%E4%B9%A6%E7%AD%BE%E8%87%B3%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
-      
-        <content type="html"><![CDATA[<h1 id="添加书签至浏览器"><a href="#添加书签至浏览器" class="headerlink" title="添加书签至浏览器"></a>添加书签至浏览器</h1><pre><code class="javascript"> // 添加书签至浏览器function addfavorite() {     var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;    try{        if (document.all) { //IE类浏览器            try {                window.external.toString(); //360浏览器不支持window.external，无法收藏                window.alert(&quot;国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。&quot;);            }            catch (e){                try{                    window.external.addFavorite(window.location, document.title);                }                catch (e){                    window.external.addToFavoritesBar(window.location, document.title);  //IE8                }            }        }        else if (window.sidebar) { //firfox等浏览器            window.sidebar.addPanel(document.title, window.location, &quot;&quot;);        }        else {            alert(&#39;您可以尝试通过快捷键&#39; + ctrl + &#39; + D 加入到收藏夹~&#39;);        }    }    catch (e){        window.alert(&quot;因为IE浏览器存在bug，添加收藏失败！\n解决办法：在注册表中查找\n HKEY_CLASSES_ROOT\\TypeLib\\{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}\\1.1\\0\\win32 \n将 C:\\WINDOWS\\system32\\shdocvw.dll 改为 C:\\WINDOWS\\system32\\ieframe.dll &quot;);    }}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>百度地图渲染路线</title>
       <link href="/2019/12/14/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%B8%B2%E6%9F%93%E8%B7%AF%E7%BA%BF/"/>
       <url>/2019/12/14/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%B8%B2%E6%9F%93%E8%B7%AF%E7%BA%BF/</url>
@@ -281,11 +256,11 @@
     
     
     <entry>
-      <title>百度地图添加折线</title>
-      <link href="/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%8A%98%E7%BA%BF/"/>
-      <url>/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%8A%98%E7%BA%BF/</url>
+      <title>添加书签至浏览器</title>
+      <link href="/2019/12/14/%E6%B7%BB%E5%8A%A0%E4%B9%A6%E7%AD%BE%E8%87%B3%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+      <url>/2019/12/14/%E6%B7%BB%E5%8A%A0%E4%B9%A6%E7%AD%BE%E8%87%B3%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
       
-        <content type="html"><![CDATA[<h1 id="百度地图添加折线"><a href="#百度地图添加折线" class="headerlink" title="百度地图添加折线"></a>百度地图添加折线</h1><pre><code class="javascript">var map = new BMap.Map(&quot;container&quot;);var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标Avar point_end = new BMap.Point(119.88116,32.31841);  // 创建终点坐标var polyline = new BMap.Polyline([point_start,pointA,point_end], {strokeColor:&quot;#ff6600&quot;, strokeWeight:6, strokeOpacity:1});  //定义折线map.addOverlay(polyline);     //添加折线到地图上</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="添加书签至浏览器"><a href="#添加书签至浏览器" class="headerlink" title="添加书签至浏览器"></a>添加书签至浏览器</h1><pre><code class="javascript"> // 添加书签至浏览器function addfavorite() {     var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;    try{        if (document.all) { //IE类浏览器            try {                window.external.toString(); //360浏览器不支持window.external，无法收藏                window.alert(&quot;国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。&quot;);            }            catch (e){                try{                    window.external.addFavorite(window.location, document.title);                }                catch (e){                    window.external.addToFavoritesBar(window.location, document.title);  //IE8                }            }        }        else if (window.sidebar) { //firfox等浏览器            window.sidebar.addPanel(document.title, window.location, &quot;&quot;);        }        else {            alert(&#39;您可以尝试通过快捷键&#39; + ctrl + &#39; + D 加入到收藏夹~&#39;);        }    }    catch (e){        window.alert(&quot;因为IE浏览器存在bug，添加收藏失败！\n解决办法：在注册表中查找\n HKEY_CLASSES_ROOT\\TypeLib\\{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}\\1.1\\0\\win32 \n将 C:\\WINDOWS\\system32\\shdocvw.dll 改为 C:\\WINDOWS\\system32\\ieframe.dll &quot;);    }}</code></pre>]]></content>
       
       
       <categories>
@@ -297,7 +272,7 @@
       
         <tags>
             
-            <tag> map </tag>
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -306,11 +281,11 @@
     
     
     <entry>
-      <title>百度地图自适应显示地图</title>
-      <link href="/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%87%AA%E9%80%82%E5%BA%94%E6%98%BE%E7%A4%BA/"/>
-      <url>/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%87%AA%E9%80%82%E5%BA%94%E6%98%BE%E7%A4%BA/</url>
+      <title>百度地图常用API</title>
+      <link href="/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E5%B8%B8%E7%94%A8API/"/>
+      <url>/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E5%B8%B8%E7%94%A8API/</url>
       
-        <content type="html"><![CDATA[<h1 id="百度地图自适应显示地图"><a href="#百度地图自适应显示地图" class="headerlink" title="百度地图自适应显示地图**"></a>百度地图自适应显示地图**</h1><h3 id="根据标注点坐标范围计算显示缩放级别zoom"><a href="#根据标注点坐标范围计算显示缩放级别zoom" class="headerlink" title="根据标注点坐标范围计算显示缩放级别zoom"></a>根据标注点坐标范围计算显示缩放级别zoom</h3><p>1、 计算缩放级别的函数</p><pre><code class="javascript">//根据经纬极值计算绽放级别。  function getZoom (maxLng, minLng, maxLat, minLat) {      var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&quot;,&quot;500&quot;,&quot;1000&quot;,&quot;2000&quot;,&quot;5000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;25000&quot;,&quot;50000&quot;,&quot;100000&quot;,&quot;200000&quot;,&quot;500000&quot;,&quot;1000000&quot;,&quot;2000000&quot;]//级别18到3。      var pointA = new BMap.Point(maxLng,maxLat);  // 创建点坐标A      var pointB = new BMap.Point(minLng,minLat);  // 创建点坐标B      var distance = map.getDistance(pointA,pointB).toFixed(1);  //获取两点距离,保留小数点后两位     for (var i = 0,zoomLen = zoom.length; i &lt; zoomLen; i++) {          if(zoom[i] - distance &gt; 0){              return 18-i+3;            //之所以会多3，是因为地图范围常常是比例尺距离的10倍以上。所以级别会增加3。          }      };  }  </code></pre><p>2、 计算最大经纬度，最小经纬度。计算中心点。并调用getZoom()获取显示级别 </p><pre><code class="javascript">//根据原始数据计算中心坐标和缩放级别，并为地图设置中心坐标和缩放级别。  function setZoom(points){      if(points.length&gt;0){          var maxLng = points[0].lng;          var minLng = points[0].lng;          var maxLat = points[0].lat;          var minLat = points[0].lat;          var res;          for (var i = points.length - 1; i &gt;= 0; i--) {              res = points[i];              if(res.lng &gt; maxLng) maxLng =res.lng;              if(res.lng &lt; minLng) minLng =res.lng;              if(res.lat &gt; maxLat) maxLat =res.lat;              if(res.lat &lt; minLat) minLat =res.lat;          };          var cenLng =(parseFloat(maxLng)+parseFloat(minLng))/2;          var cenLat = (parseFloat(maxLat)+parseFloat(minLat))/2;          var zoom = getZoom(maxLng, minLng, maxLat, minLat);          map.centerAndZoom(new BMap.Point(cenLng,cenLat), zoom);        }else{          //没有坐标，显示全中国          map.centerAndZoom(new BMap.Point(103.388611,35.563611), 5);        }   }  </code></pre><p>使用方法：</p><pre><code class="javascript">var points = [    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853},    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322},    {&quot;lng&quot;: 119.88116, &quot;lat&quot;:32.31841},];var map = new BMap.Map(&quot;container&quot;);setZoom(points);</code></pre><h3 id="通过官方API"><a href="#通过官方API" class="headerlink" title="通过官方API"></a>通过官方API</h3><pre><code class="javascript">var points = [    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853},    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322},    {&quot;lng&quot;: 119.88116, &quot;lat&quot;:32.31841},];var view = map.getViewport(eval(points));  var mapZoom = view.zoom;   var centerPoint = view.center;   map.centerAndZoom(centerPoint,mapZoom); </code></pre><p>链接：</p><p><a href="https://blog.csdn.net/qs17126/article/details/78083416?utm_source=blogxgwz9" target="_blank" rel="noopener">自适应显示地图</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="百度地图常用API"><a href="#百度地图常用API" class="headerlink" title="百度地图常用API"></a>百度地图常用API</h1><pre><code class="html">&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;&lt;script&gt;    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放&lt;/script&gt;</code></pre>]]></content>
       
       
       <categories>
@@ -381,11 +356,36 @@
     
     
     <entry>
-      <title>百度地图常用API</title>
-      <link href="/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E5%B8%B8%E7%94%A8API/"/>
-      <url>/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E5%B8%B8%E7%94%A8API/</url>
+      <title>百度地图自适应显示地图</title>
+      <link href="/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%87%AA%E9%80%82%E5%BA%94%E6%98%BE%E7%A4%BA/"/>
+      <url>/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%87%AA%E9%80%82%E5%BA%94%E6%98%BE%E7%A4%BA/</url>
       
-        <content type="html"><![CDATA[<h1 id="百度地图常用API"><a href="#百度地图常用API" class="headerlink" title="百度地图常用API"></a>百度地图常用API</h1><pre><code class="html">&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;&lt;script&gt;    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放&lt;/script&gt;</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="百度地图自适应显示地图"><a href="#百度地图自适应显示地图" class="headerlink" title="百度地图自适应显示地图**"></a>百度地图自适应显示地图**</h1><h3 id="根据标注点坐标范围计算显示缩放级别zoom"><a href="#根据标注点坐标范围计算显示缩放级别zoom" class="headerlink" title="根据标注点坐标范围计算显示缩放级别zoom"></a>根据标注点坐标范围计算显示缩放级别zoom</h3><p>1、 计算缩放级别的函数</p><pre><code class="javascript">//根据经纬极值计算绽放级别。  function getZoom (maxLng, minLng, maxLat, minLat) {      var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&quot;,&quot;500&quot;,&quot;1000&quot;,&quot;2000&quot;,&quot;5000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;25000&quot;,&quot;50000&quot;,&quot;100000&quot;,&quot;200000&quot;,&quot;500000&quot;,&quot;1000000&quot;,&quot;2000000&quot;]//级别18到3。      var pointA = new BMap.Point(maxLng,maxLat);  // 创建点坐标A      var pointB = new BMap.Point(minLng,minLat);  // 创建点坐标B      var distance = map.getDistance(pointA,pointB).toFixed(1);  //获取两点距离,保留小数点后两位     for (var i = 0,zoomLen = zoom.length; i &lt; zoomLen; i++) {          if(zoom[i] - distance &gt; 0){              return 18-i+3;            //之所以会多3，是因为地图范围常常是比例尺距离的10倍以上。所以级别会增加3。          }      };  }  </code></pre><p>2、 计算最大经纬度，最小经纬度。计算中心点。并调用getZoom()获取显示级别 </p><pre><code class="javascript">//根据原始数据计算中心坐标和缩放级别，并为地图设置中心坐标和缩放级别。  function setZoom(points){      if(points.length&gt;0){          var maxLng = points[0].lng;          var minLng = points[0].lng;          var maxLat = points[0].lat;          var minLat = points[0].lat;          var res;          for (var i = points.length - 1; i &gt;= 0; i--) {              res = points[i];              if(res.lng &gt; maxLng) maxLng =res.lng;              if(res.lng &lt; minLng) minLng =res.lng;              if(res.lat &gt; maxLat) maxLat =res.lat;              if(res.lat &lt; minLat) minLat =res.lat;          };          var cenLng =(parseFloat(maxLng)+parseFloat(minLng))/2;          var cenLat = (parseFloat(maxLat)+parseFloat(minLat))/2;          var zoom = getZoom(maxLng, minLng, maxLat, minLat);          map.centerAndZoom(new BMap.Point(cenLng,cenLat), zoom);        }else{          //没有坐标，显示全中国          map.centerAndZoom(new BMap.Point(103.388611,35.563611), 5);        }   }  </code></pre><p>使用方法：</p><pre><code class="javascript">var points = [    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853},    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322},    {&quot;lng&quot;: 119.88116, &quot;lat&quot;:32.31841},];var map = new BMap.Map(&quot;container&quot;);setZoom(points);</code></pre><h3 id="通过官方API"><a href="#通过官方API" class="headerlink" title="通过官方API"></a>通过官方API</h3><pre><code class="javascript">var points = [    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853},    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322},    {&quot;lng&quot;: 119.88116, &quot;lat&quot;:32.31841},];var view = map.getViewport(eval(points));  var mapZoom = view.zoom;   var centerPoint = view.center;   map.centerAndZoom(centerPoint,mapZoom); </code></pre><p>链接：</p><p><a href="https://blog.csdn.net/qs17126/article/details/78083416?utm_source=blogxgwz9" target="_blank" rel="noopener">自适应显示地图</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> map </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>百度地图添加折线</title>
+      <link href="/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%8A%98%E7%BA%BF/"/>
+      <url>/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%8A%98%E7%BA%BF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="百度地图添加折线"><a href="#百度地图添加折线" class="headerlink" title="百度地图添加折线"></a>百度地图添加折线</h1><pre><code class="javascript">var map = new BMap.Map(&quot;container&quot;);var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标Avar point_end = new BMap.Point(119.88116,32.31841);  // 创建终点坐标var polyline = new BMap.Polyline([point_start,pointA,point_end], {strokeColor:&quot;#ff6600&quot;, strokeWeight:6, strokeOpacity:1});  //定义折线map.addOverlay(polyline);     //添加折线到地图上</code></pre>]]></content>
       
       
       <categories>
@@ -435,32 +435,7 @@
       <link href="/2019/10/29/vue-cli%203.0%20%E6%89%93%E5%8C%85%E9%A2%84%E8%A7%88/"/>
       <url>/2019/10/29/vue-cli%203.0%20%E6%89%93%E5%8C%85%E9%A2%84%E8%A7%88/</url>
       
-        <content type="html"><![CDATA[<h1 id="vue-cli-3-0-打包并本地查看"><a href="#vue-cli-3-0-打包并本地查看" class="headerlink" title="vue-cli 3.0 打包并本地查看"></a>vue-cli 3.0 打包并本地查看</h1><p>使用命令行对项目打包</p><pre><code>npm run build</code></pre><p>完成后直接打开生成的 dist 文件夹下的 index.html ，打开后出现了一个空白页面，并且控制台报错，提示文件找不到。修改 vue.config.js 中的路径。将 baseUrl 属性的值 ‘/‘ 修改为 ‘./‘</p><pre><code class="javascript">module.exports = {  // 基本路径  baseUrl: &#39;./&#39;,  // 输出文件目录  outputDir: &#39;dist&#39;,  // webpack-dev-server 相关配置  devServer: {    port: 8888,  },}</code></pre><p>改好之后就可以打开页面了。但是登陆时需要请求 cookie ，在这里 get 返回的是空。这里需要启动一个 http 服务器来访问。</p><p>所以安装 http-server 来启动 http 服务器</p><pre><code class="javascript">npm install -g http-server//在dist文件夹下执行下面命令http-server</code></pre><p>但是打开网页时，显示 该网页无法正式工作 ，终端显示如下图</p><p><img src="F:%5Cstudy%5Cstudy%5Csecond%5Caye%5Cdemo%5C20191029%5Cimages%5C20190818214530176.png" alt=""></p><p>这样的话，我们可以安装 anywhere 来解决问题</p><pre><code class="javascript">npm install -g anywhere//在要启动静态服务的目录下执行anywhere -p 8080// -p 后跟端口号</code></pre><p>参考：</p><p> <a href="https://blog.csdn.net/weixin_40836227/article/details/99710001" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40836227/article/details/99710001</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>VUE-CLI 3.0 打包项目</title>
-      <link href="/2019/10/14/vue-cli%203.0%20%E6%89%93%E5%8C%85%E9%A1%B9%E7%9B%AE/"/>
-      <url>/2019/10/14/vue-cli%203.0%20%E6%89%93%E5%8C%85%E9%A1%B9%E7%9B%AE/</url>
-      
-        <content type="html"><![CDATA[<h2 id="解决vue-cli3-0打包上线静态资源找不到路径问题"><a href="#解决vue-cli3-0打包上线静态资源找不到路径问题" class="headerlink" title="解决vue cli3.0打包上线静态资源找不到路径问题"></a>解决vue cli3.0打包上线静态资源找不到路径问题</h2><p>解决方法是：<br>在项目的根目录下创建vue.config,js文件，在里面配置静态资源的路径，publicPath是配置静态资源路径的属性，vue.config,js文件的代码如下： </p><pre><code class="javascript">module.exports = {    publicPath: &#39;./&#39;}</code></pre><p>项目打包上传<br><a href="https://blog.csdn.net/jingtian678/article/details/80637948" target="_blank" rel="noopener">https://blog.csdn.net/jingtian678/article/details/80637948</a></p><p>打包后，element图标丢失<br><a href="https://www.jianshu.com/p/7d59213427a9" target="_blank" rel="noopener">https://www.jianshu.com/p/7d59213427a9</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="vue-cli-3-0-打包并本地查看"><a href="#vue-cli-3-0-打包并本地查看" class="headerlink" title="vue-cli 3.0 打包并本地查看"></a>vue-cli 3.0 打包并本地查看</h1><p>使用命令行对项目打包</p><pre><code>npm run build</code></pre><p>完成后直接打开生成的 dist 文件夹下的 index.html ，打开后出现了一个空白页面，并且控制台报错，提示文件找不到。修改 vue.config.js 中的路径。将 baseUrl 属性的值 ‘/‘ 修改为 ‘./‘</p><pre><code class="javascript">module.exports = {  // 基本路径  baseUrl: &#39;./&#39;,  // 输出文件目录  outputDir: &#39;dist&#39;,  // webpack-dev-server 相关配置  devServer: {    port: 8888,  },}</code></pre><p>改好之后就可以打开页面了。但是登陆时需要请求 cookie ，在这里 get 返回的是空。这里需要启动一个 http 服务器来访问。</p><p>所以安装 http-server 来启动 http 服务器</p><pre><code class="javascript">npm install -g http-server//在dist文件夹下执行下面命令http-server</code></pre><p>但是打开网页时，显示 该网页无法正式工作 ，终端显示如下图</p><p><img src="http://qab0509yb.bkt.clouddn.com/201910291.png" alt=""></p><p>这样的话，我们可以安装 anywhere 来解决问题</p><pre><code class="javascript">npm install -g anywhere//在要启动静态服务的目录下执行anywhere -p 8080// -p 后跟端口号</code></pre><p>参考：</p><p> <a href="https://blog.csdn.net/weixin_40836227/article/details/99710001" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40836227/article/details/99710001</a></p>]]></content>
       
       
       <categories>
@@ -506,6 +481,31 @@
     
     
     <entry>
+      <title>VUE-CLI 3.0 打包项目</title>
+      <link href="/2019/10/14/vue-cli%203.0%20%E6%89%93%E5%8C%85%E9%A1%B9%E7%9B%AE/"/>
+      <url>/2019/10/14/vue-cli%203.0%20%E6%89%93%E5%8C%85%E9%A1%B9%E7%9B%AE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="解决vue-cli3-0打包上线静态资源找不到路径问题"><a href="#解决vue-cli3-0打包上线静态资源找不到路径问题" class="headerlink" title="解决vue cli3.0打包上线静态资源找不到路径问题"></a>解决vue cli3.0打包上线静态资源找不到路径问题</h2><p>解决方法是：<br>在项目的根目录下创建vue.config,js文件，在里面配置静态资源的路径，publicPath是配置静态资源路径的属性，vue.config,js文件的代码如下： </p><pre><code class="javascript">module.exports = {    publicPath: &#39;./&#39;}</code></pre><p>项目打包上传<br><a href="https://blog.csdn.net/jingtian678/article/details/80637948" target="_blank" rel="noopener">https://blog.csdn.net/jingtian678/article/details/80637948</a></p><p>打包后，element图标丢失<br><a href="https://www.jianshu.com/p/7d59213427a9" target="_blank" rel="noopener">https://www.jianshu.com/p/7d59213427a9</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue.config.js 的配置</title>
       <link href="/2019/10/14/vue.config.js%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
       <url>/2019/10/14/vue.config.js%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
@@ -531,31 +531,6 @@
     
     
     <entry>
-      <title>元素的水平垂直居中</title>
-      <link href="/2019/10/12/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
-      <url>/2019/10/12/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</url>
-      
-        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="元素的水平垂直居中"><a href="#元素的水平垂直居中" class="headerlink" title="元素的水平垂直居中"></a>元素的水平垂直居中</h1><h3 id="已知元素宽高"><a href="#已知元素宽高" class="headerlink" title="已知元素宽高"></a>已知元素宽高</h3><h4 id="margin负值-绝对定位"><a href="#margin负值-绝对定位" class="headerlink" title="margin负值 + 绝对定位"></a>margin负值 + 绝对定位</h4><p>优点：兼容性好。</p><p>缺点：需提前知道元素的尺寸，否则需借助JS获得。</p><pre><code class="css">.child {    width: 600px; height: 400px;    position: absolute; left: 50%; top: 50%;    margin-top: -200px;    /* 高度的一半 */    margin-left: -300px;    /* 宽度的一半 */}</code></pre><h4 id="calc-绝对定位"><a href="#calc-绝对定位" class="headerlink" title="calc + 绝对定位"></a>calc + 绝对定位</h4><p>缺点：兼容性差</p><pre><code class="css">.parent {    position: relative;    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;}.child {    width: 60px;    height: 50px;    background: #19be6b;    position: absolute;    left: calc(50% - 30px);    top: calc(50% - 25px);}</code></pre><h3 id="未知元素宽高"><a href="#未知元素宽高" class="headerlink" title="未知元素宽高"></a>未知元素宽高</h3><h4 id="transform-绝对定位"><a href="#transform-绝对定位" class="headerlink" title="transform + 绝对定位"></a>transform + 绝对定位</h4><p>优点：不需知道元素尺寸</p><p>缺点：兼容性不好，只支持IE9+ </p><pre><code class="css">.child {    width: 600px; height: 400px;    position: absolute; left: 50%; top: 50%;    transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */}</code></pre><h4 id="margin：auto-绝对定位"><a href="#margin：auto-绝对定位" class="headerlink" title="margin：auto + 绝对定位"></a><code>margin：auto</code> + 绝对定位</h4><p>优点：兼容性好，不需知道元素尺寸</p><p>缺点：不支持IE7以下的浏览器 </p><pre><code class="css">.element {    width: 600px; height: 400px;    position: absolute; left: 0; top: 0; right: 0; bottom: 0;    margin: auto;    /* 有了这个就自动居中了 */}</code></pre><h4 id="：before伪类-vertical-align-middle"><a href="#：before伪类-vertical-align-middle" class="headerlink" title="：before伪类 + vertical-align: middle"></a>：before伪类 + <code>vertical-align: middle</code></h4><p>优点：兼容性好，不需知道元素尺寸</p><p><a href="https://segmentfault.com/a/1190000020646920" target="_blank" rel="noopener">理解:before伪类搭配vertical-align:middle实现垂直居中的原理</a></p><pre><code class="css">.parent {    display: inline-block;    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    text-align: center;}.parent:before {    display: inline-block;    width: 20px;    height: 100%;    content: &#39;&#39;;    background: #ff9900;    vertical-align: middle;}.child {    display: inline-block;    width: 50px;    height: 50px;    background: #19be6b;    vertical-align: middle;}</code></pre><h4 id="line-heihgt-vertical-align-middle"><a href="#line-heihgt-vertical-align-middle" class="headerlink" title="line-heihgt  + vertical-align: middle"></a>line-heihgt  + <code>vertical-align: middle</code></h4><pre><code class="css">.parent {    width: 300px;    height: 300px;    font-size: 0;    line-height: 300px;    background: #80848f;    text-align: center;}.child {    display: inline-block;    width: 60px;    height: 50px;    background: #19be6b;    vertical-align: middle;}</code></pre><h4 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h4><pre><code class="css">.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: table-cell;    vertical-align: middle;    text-align: center;}.child {    width: 60px;    height: 50px;    background: #19be6b;    display: inline-block;    vertical-align: top;}</code></pre><h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h4><p>缺点：兼容性差</p><pre><code class="css">.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: -webkit-flex; /* Safari */    display: flex;    justify-content: center;    align-items: center;}.child {    width: 60px;    height: 50px;    background: #19be6b;}/* or */.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: -webkit-flex; /* Safari */    display: flex;}.child {    width: 60px;    height: 50px;    background: #19be6b;    margin: auto;}</code></pre><h4 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h4><pre><code class="css">/* or */.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: grid;}.child {    width: 60px;    height: 50px;    background: #19be6b;    margin: auto;}</code></pre><h4 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h4><p>优点：居中元素不需要设置宽高， 兼容ie8</p><p>缺点： 必须要有文字，有局限性</p><pre><code class="html">&lt;style&gt; .center-box{    writing-mode: tb-lr;    writing-mode: vertical-lr;    text-align: center;}.center-wrap{    writing-mode: lr-tb;    writing-mode: horizontal-tb;    text-align: center;    width: 100%;    display: inline-block;}.center-content{    display: inline-block;    text-align: left;    text-align: initial;}&lt;/style&gt;&lt;div class=&quot;center-box&quot;&gt;    &lt;div class=&quot;center-wrap&quot;&gt;        &lt;div class=&quot;center-content&quot;&gt;            你想要上下左右居中的内容(元素,文本或其任意组合)        &lt;/div&gt;    &lt;/div&gt;&lt;/div&gt;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>移动端开发技巧</title>
       <link href="/2019/10/12/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
       <url>/2019/10/12/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/</url>
@@ -573,6 +548,31 @@
         <tags>
             
             <tag> 移动端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>元素的水平垂直居中</title>
+      <link href="/2019/10/12/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
+      <url>/2019/10/12/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="元素的水平垂直居中"><a href="#元素的水平垂直居中" class="headerlink" title="元素的水平垂直居中"></a>元素的水平垂直居中</h1><h3 id="已知元素宽高"><a href="#已知元素宽高" class="headerlink" title="已知元素宽高"></a>已知元素宽高</h3><h4 id="margin负值-绝对定位"><a href="#margin负值-绝对定位" class="headerlink" title="margin负值 + 绝对定位"></a>margin负值 + 绝对定位</h4><p>优点：兼容性好。</p><p>缺点：需提前知道元素的尺寸，否则需借助JS获得。</p><pre><code class="css">.child {    width: 600px; height: 400px;    position: absolute; left: 50%; top: 50%;    margin-top: -200px;    /* 高度的一半 */    margin-left: -300px;    /* 宽度的一半 */}</code></pre><h4 id="calc-绝对定位"><a href="#calc-绝对定位" class="headerlink" title="calc + 绝对定位"></a>calc + 绝对定位</h4><p>缺点：兼容性差</p><pre><code class="css">.parent {    position: relative;    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;}.child {    width: 60px;    height: 50px;    background: #19be6b;    position: absolute;    left: calc(50% - 30px);    top: calc(50% - 25px);}</code></pre><h3 id="未知元素宽高"><a href="#未知元素宽高" class="headerlink" title="未知元素宽高"></a>未知元素宽高</h3><h4 id="transform-绝对定位"><a href="#transform-绝对定位" class="headerlink" title="transform + 绝对定位"></a>transform + 绝对定位</h4><p>优点：不需知道元素尺寸</p><p>缺点：兼容性不好，只支持IE9+ </p><pre><code class="css">.child {    width: 600px; height: 400px;    position: absolute; left: 50%; top: 50%;    transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */}</code></pre><h4 id="margin：auto-绝对定位"><a href="#margin：auto-绝对定位" class="headerlink" title="margin：auto + 绝对定位"></a><code>margin：auto</code> + 绝对定位</h4><p>优点：兼容性好，不需知道元素尺寸</p><p>缺点：不支持IE7以下的浏览器 </p><pre><code class="css">.element {    width: 600px; height: 400px;    position: absolute; left: 0; top: 0; right: 0; bottom: 0;    margin: auto;    /* 有了这个就自动居中了 */}</code></pre><h4 id="：before伪类-vertical-align-middle"><a href="#：before伪类-vertical-align-middle" class="headerlink" title="：before伪类 + vertical-align: middle"></a>：before伪类 + <code>vertical-align: middle</code></h4><p>优点：兼容性好，不需知道元素尺寸</p><p><a href="https://segmentfault.com/a/1190000020646920" target="_blank" rel="noopener">理解:before伪类搭配vertical-align:middle实现垂直居中的原理</a></p><pre><code class="css">.parent {    display: inline-block;    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    text-align: center;}.parent:before {    display: inline-block;    width: 20px;    height: 100%;    content: &#39;&#39;;    background: #ff9900;    vertical-align: middle;}.child {    display: inline-block;    width: 50px;    height: 50px;    background: #19be6b;    vertical-align: middle;}</code></pre><h4 id="line-heihgt-vertical-align-middle"><a href="#line-heihgt-vertical-align-middle" class="headerlink" title="line-heihgt  + vertical-align: middle"></a>line-heihgt  + <code>vertical-align: middle</code></h4><pre><code class="css">.parent {    width: 300px;    height: 300px;    font-size: 0;    line-height: 300px;    background: #80848f;    text-align: center;}.child {    display: inline-block;    width: 60px;    height: 50px;    background: #19be6b;    vertical-align: middle;}</code></pre><h4 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h4><pre><code class="css">.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: table-cell;    vertical-align: middle;    text-align: center;}.child {    width: 60px;    height: 50px;    background: #19be6b;    display: inline-block;    vertical-align: top;}</code></pre><h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h4><p>缺点：兼容性差</p><pre><code class="css">.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: -webkit-flex; /* Safari */    display: flex;    justify-content: center;    align-items: center;}.child {    width: 60px;    height: 50px;    background: #19be6b;}/* or */.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: -webkit-flex; /* Safari */    display: flex;}.child {    width: 60px;    height: 50px;    background: #19be6b;    margin: auto;}</code></pre><h4 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h4><pre><code class="css">/* or */.parent {    width: 300px;    height: 300px;    font-size: 0;    background: #80848f;    display: grid;}.child {    width: 60px;    height: 50px;    background: #19be6b;    margin: auto;}</code></pre><h4 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h4><p>优点：居中元素不需要设置宽高， 兼容ie8</p><p>缺点： 必须要有文字，有局限性</p><pre><code class="html">&lt;style&gt; .center-box{    writing-mode: tb-lr;    writing-mode: vertical-lr;    text-align: center;}.center-wrap{    writing-mode: lr-tb;    writing-mode: horizontal-tb;    text-align: center;    width: 100%;    display: inline-block;}.center-content{    display: inline-block;    text-align: left;    text-align: initial;}&lt;/style&gt;&lt;div class=&quot;center-box&quot;&gt;    &lt;div class=&quot;center-wrap&quot;&gt;        &lt;div class=&quot;center-content&quot;&gt;            你想要上下左右居中的内容(元素,文本或其任意组合)        &lt;/div&gt;    &lt;/div&gt;&lt;/div&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -681,61 +681,36 @@
     
     
     <entry>
+      <title>Vue获取当前页面的 IP地址</title>
+      <link href="/2019/10/09/vue%E4%B8%8B%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84IP/"/>
+      <url>/2019/10/09/vue%E4%B8%8B%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84IP/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用Vue，获取当前页面的-IP地址"><a href="#使用Vue，获取当前页面的-IP地址" class="headerlink" title="使用Vue，获取当前页面的 IP地址"></a>使用Vue，获取当前页面的 IP地址</h1><p>使用vue引入外部js。（这里是使用搜狐的api来获取用户的ip）</p><p>如果是单纯的html，我们引入js很简单直接</p><pre><code class="html">&lt;script src=&quot;http://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/script&gt;</code></pre><p>但是vue不可以这样。</p><ol><li><p>在你要用到js的页面的components加入下面的代码</p><pre><code class="javascript">components: {    &#39;remote-js&#39;: {        render(createElement) {            return createElement(&#39;script&#39;, { attrs: { type: &#39;text/javascript&#39;, src: this.src }});        },        props: {            src: { type: String, required: true },        },    },}</code></pre></li><li><p>在当前页面的模板中放入相关js</p><pre><code class="html">&lt;template&gt;    &lt;remote-js src=&quot;http://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/remote-js&gt;&lt;/template&gt;</code></pre></li><li><p>调用相关方法来获取ip</p><pre><code class="javascript">var user_ip = returnCitySN[&quot;cip&quot;];</code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何disabled禁用所有表单input输入框元素</title>
       <link href="/2019/10/09/%E5%A6%82%E4%BD%95disabled%E7%A6%81%E7%94%A8%E6%89%80%E6%9C%89%E8%A1%A8%E5%8D%95input%E8%BE%93%E5%85%A5%E6%A1%86%E5%85%83%E7%B4%A0/"/>
       <url>/2019/10/09/%E5%A6%82%E4%BD%95disabled%E7%A6%81%E7%94%A8%E6%89%80%E6%9C%89%E8%A1%A8%E5%8D%95input%E8%BE%93%E5%85%A5%E6%A1%86%E5%85%83%E7%B4%A0/</url>
       
         <content type="html"><![CDATA[<h2 id="如何disabled禁用所有表单input输入框元素"><a href="#如何disabled禁用所有表单input输入框元素" class="headerlink" title="如何disabled禁用所有表单input输入框元素"></a>如何disabled禁用所有表单input输入框元素</h2><p>参考：<a href="https://www.zhangxinxu.com/wordpress/2019/04/disabled-all-form-elements/" target="_blank" rel="noopener">如何disabled禁用所有表单input输入框元素</a></p><h3 id="pointer-events-none和覆盖层方法的问题"><a href="#pointer-events-none和覆盖层方法的问题" class="headerlink" title="pointer-events:none和覆盖层方法的问题"></a>pointer-events:none和覆盖层方法的问题</h3><p>经常会遇到需求，需要禁用<code>div</code>中或者<code>form</code>元素中一堆表单控件元素，如<code>&lt;input&gt;</code>，<code>&lt;select&gt;</code>，<code>&lt;textarea&gt;</code>元素。</p><p>很多人用的下面这两种方法实现：</p><ol><li><p>设置</p><pre><code>pointer-events:none</code></pre><p>，该声明不了解可参见“<a href="https://www.zhangxinxu.com/wordpress/2011/12/css3-pointer-events-none-javascript/" target="_blank" rel="noopener">CSS3 pointer-events:none应用举例及扩展</a>”这篇文章。例如：</p><pre><code>form {  pointer-events: none;}</code></pre></li><li><p>使用</p><pre><code>::before</code></pre><p>伪元素创建一个浮层该在所有的表单元素上，例如：</p><pre><code>form {  position: relative;}form::before {  content: &#39;&#39;;  position: absolute;  left: 0; right: 0; top: 0; bottom: 0;  background-color: rgba(0,0,0,.001);}</code></pre></li></ol><p>以上两个方向虽然可以让点击无效，但是并没有阻止键盘访问，也就是Tab键索引，或者回车都能触发表单行为，使用<code>new FormData(form)</code>也能获取表单控件值，并不是真正意义上禁用，问题很大。</p><h3 id="fieldset元素轻松实现"><a href="#fieldset元素轻松实现" class="headerlink" title="fieldset元素轻松实现"></a>fieldset元素轻松实现</h3><p>其实，要真正意义上禁用所有的表单元素很简单，嵌套在<code>&lt;fieldset&gt;</code>元素中，然后设置<code>&lt;fieldset&gt;</code>元素<code>disabled</code>就可以了，代码示意如下：</p><pre><code>&lt;form&gt;    &lt;fieldset disabled&gt;        &lt;legend&gt;表单标题&lt;/legend&gt;        &lt;...&gt;    &lt;/fieldset&gt;&lt;/form&gt;</code></pre><p>回家吧，结束了！</p><h3 id="IE浏览器的瑕疵和解决"><a href="#IE浏览器的瑕疵和解决" class="headerlink" title="IE浏览器的瑕疵和解决"></a>IE浏览器的瑕疵和解决</h3><p>然后，IE浏览器（包括Edge）下有个瑕疵，那就是UI样式上虽然禁用了，键盘也无法响应，但是，输入框内容居然可以输入，而且表单的提交行为居然也可以点击触发，有些不完美，怎么办呢？</p><p>可以再辅助下面的CSS：</p><pre><code>fieldset[disabled] {   -ms-pointer-events: none;   pointer-events: none;}</code></pre><p>IE10+浏览器都可以完美禁用。</p><p>有人要问如果我要兼容IE8，IE9浏览器怎么办？</p><p>那使用伪元素创建一个浮层覆盖在所有表单元素上面，就是一开始提到的覆盖方法，具体代码不重复展示。</p><p>于是，双管齐下，表单所有元素禁用就这样完美搞定了。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Axiso解决跨域访问</title>
-      <link href="/2019/10/09/Axiso%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE/"/>
-      <url>/2019/10/09/Axiso%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Axiso解决跨域访问"><a href="#Axiso解决跨域访问" class="headerlink" title="Axiso解决跨域访问"></a>Axiso解决跨域访问</h1><p>首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同：</p><pre><code>$ vue -V2.X or 3.X</code></pre><h3 id="一、Vue2-版本"><a href="#一、Vue2-版本" class="headerlink" title="一、Vue2 版本"></a>一、Vue2 版本</h3><p>这里以访问 Ve2x 的一个公告API为例，直接访问如下：</p><pre><code class="javascript">this.$axios.get(&quot;https://www.v2ex.com/api/site/info.json&quot;).then(res=&gt;{    console.log(res)}).catch(err=&gt;{    console.log(err)})</code></pre><p>当我们运行程序后，控制台报错如下：</p><p><img src="http://qab0509yb.bkt.clouddn.com/201910091.png" alt=""></p><p>可以看到浏览器拦截了我们的请求，因为我们跨域了，下面解决跨域问题。</p><p><strong>Step1：配置BaseUrl</strong></p><p>首先在<code>main.js</code>中，配置下我们访问的Url前缀：</p><pre><code class="javascript">import Vue from &#39;vue&#39;import App from &#39;./App&#39;import Axios from &#39;axios&#39;Vue.prototype.$axios = AxiosAxios.defaults.baseURL = &#39;/api&#39;Axios.defaults.headers.post[&#39;Content-Type&#39;] = &#39;application/json&#39;;Vue.config.productionTip = false/* eslint-disable no-new */new Vue({  el: &#39;#app&#39;,  components: { App },  template: &#39;&lt;App/&gt;&#39;})</code></pre><p>关键代码是：<code>Axios.defaults.baseURL = &#39;/api&#39;</code>，这样每次发送请求都会带一个<code>/api</code>的前缀。</p><p><strong>Step2：配置代理</strong></p><p>修改config文件夹下的<code>index.js</code>文件，在<code>proxyTable</code>中加上如下代码：</p><pre><code class="javascript">&#39;/api&#39;:{    target: &quot;https://www.v2ex.com/api&quot;,    changeOrigin:true,    pathRewrite:{        &#39;^/api&#39;:&#39;&#39;    }}</code></pre><p><strong>Step3：修改请求Url</strong></p><p>修改刚刚的axios请求，把<code>url</code>修改如下：</p><pre><code class="javascript">this.$axios.get(&quot;/site/info.json&quot;).then(res=&gt;{    console.log(res)}).catch(err=&gt;{    console.log(err)})</code></pre><p><strong>Step4：重启服务</strong></p><p><strong>重启服务</strong>后，此时已经能够访问了：</p><p><img src="http://qab0509yb.bkt.clouddn.com/201910092.png" alt=""></p><p>原理：</p><p>因为我们给url加上了前缀 /api，我们访问 <a href="http://127.0.0.1:19323/site/info.json" target="_blank" rel="noopener">http://127.0.0.1:19323/site/info.json</a> 就当于访问了：<a href="http://127.0.0.1:19323/api/site/info.json。" target="_blank" rel="noopener">http://127.0.0.1:19323/api/site/info.json。</a>(假设本地访问端口号为 19323)</p><p>又因为在 index.js 中的 proxyTable 中拦截了 /api ,并把 /api 及其前面的所有替换成了 target 中的内容，因此实际访问 Url 是<a href="https://www.v2ex.com/api/site/info.json。" target="_blank" rel="noopener">https://www.v2ex.com/api/site/info.json。</a></p><h3 id="二、Vue3-版本"><a href="#二、Vue3-版本" class="headerlink" title="二、Vue3 版本"></a>二、Vue3 版本</h3><p>升级到 Vue3 后，会发现 Vue2 中存放配置的 <code>config</code> 文件夹没有了，大家不要慌张。可以在 package.json 文件的同级目录下创建 <code>vue.config.js</code> 文件。给出该文件的基础配置：</p><pre><code class="javascript">module.exports = {    outputDir: &#39;dist&#39;,   //build输出目录    assetsDir: &#39;assets&#39;, //静态资源目录（js, css, img）    lintOnSave: false, //是否开启eslint    devServer: {        open: true, //是否自动弹出浏览器页面        host: &quot;localhost&quot;,         port: &#39;8081&#39;,         https: false,   //是否使用https协议        hotOnly: false, //是否开启热更新        proxy: null,    }}</code></pre><blockquote><p>Vue3 解决跨域，内容只有第二步<strong>配置代理</strong> 和 Vue2 不同，其他的一致。</p></blockquote><p><strong>Step2：配置代理</strong></p><p>修改 vue.config.js 中 <code>devServer</code> 子节点内容，添加一个 <code>proxy</code>：</p><pre><code class="javascript">devServer: {    open: true, //是否自动弹出浏览器页面    host: &quot;localhost&quot;,     port: &#39;8081&#39;,    https: false,    hotOnly: false,     proxy: {        &#39;/api&#39;: {            target: &#39;https://www.v2ex.com/api&#39;, //API服务器的地址            changeOrigin: true,            pathRewrite: {                &#39;^/api&#39;: &#39;&#39;            }        }    },}</code></pre><h3 id="三、番外"><a href="#三、番外" class="headerlink" title="三、番外"></a>三、番外</h3><p>当然，跨域问题也可以由后端解决，将下面这个过滤器加入程序即可。</p><pre><code class="javascript">import javax.servlet.*;import javax.servlet.http.HttpServletRequest;import javax.servlet.http.HttpServletResponse;import java.io.IOException;/** * 跨域过滤器 * @author jitwxs * @since 2018/10/16 20:53 */public class CorsFilter implements Filter {    @Override    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {        HttpServletResponse response = (HttpServletResponse) res;        HttpServletRequest request = (HttpServletRequest) req;        // 不使用*，自动适配跨域域名，避免携带Cookie时失效        String origin = request.getHeader(&quot;Origin&quot;);        if(StringUtils.isNotBlank(origin)) {            response.setHeader(&quot;Access-Control-Allow-Origin&quot;, origin);        }        // 自适应所有自定义头        String headers = request.getHeader(&quot;Access-Control-Request-Headers&quot;);        if(StringUtils.isNotBlank(headers)) {            response.setHeader(&quot;Access-Control-Allow-Headers&quot;, headers);            response.setHeader(&quot;Access-Control-Expose-Headers&quot;, headers);        }        // 允许跨域的请求方法类型        response.setHeader(&quot;Access-Control-Allow-Methods&quot;, &quot;*&quot;);        // 预检命令（OPTIONS）缓存时间，单位：秒        response.setHeader(&quot;Access-Control-Max-Age&quot;, &quot;3600&quot;);        // 明确许可客户端发送Cookie，不允许删除字段即可        response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);        chain.doFilter(request, response);    }    @Override    public void init(FilterConfig filterConfig) {    }    @Override    public void destroy() {    }    /*    注册过滤器：    @Bean    public FilterRegistrationBean registerFilter() {        FilterRegistrationBean&lt;CorsFilter&gt; bean = new FilterRegistrationBean&lt;&gt;();        bean.addUrlPatterns(&quot;/*&quot;);        bean.setFilter(new CorsFilter());        // 过滤顺序，从小到大依次过滤        bean.setOrder(Ordered.HIGHEST_PRECEDENCE);        return bean;    }     */}</code></pre><p>参考：</p><p><a href="https://blog.csdn.net/yuanlaijike/article/details/80522621" target="_blank" rel="noopener">Axiso解决跨域访问</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> axios </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>移动端 1px 像素问题及解决办法</title>
-      <link href="/2019/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF1px%E9%97%AE%E9%A2%98/"/>
-      <url>/2019/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF1px%E9%97%AE%E9%A2%98/</url>
-      
-        <content type="html"><![CDATA[<h1 id="移动端-1px-像素问题及解决办法"><a href="#移动端-1px-像素问题及解决办法" class="headerlink" title="移动端 1px 像素问题及解决办法"></a>移动端 1px 像素问题及解决办法</h1><h3 id="一、为什么会有1px问题"><a href="#一、为什么会有1px问题" class="headerlink" title="一、为什么会有1px问题"></a>一、为什么会有1px问题</h3><p>那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。</p><pre><code>window.devicePixelRatio = 物理像素 /CSS像素</code></pre><p>目前主流的屏幕DPR=2 （iPhone 8）,或者3 （iPhone 8 Plus）。拿2倍屏来说，设备的物理像素要实现1像素，而DPR=2，所以css 像素只能是 0.5。一般设计稿是按照750来设计的，它上面的1px是以750来参照的，而我们写css样式是以设备375为参照的，所以我们应该写的0.5px就好了啊！ 试过了就知道，iOS 8+系统支持，安卓系统不支持。</p><h3 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h3><h5 id="1、直接设置0-5px"><a href="#1、直接设置0-5px" class="headerlink" title="1、直接设置0.5px"></a>1、直接设置0.5px</h5><p> 媒体查询利用设备像素比缩放，设置小数像素。</p><p>优点：简单，好理解<br>缺点：兼容性差，目前之余IOS8+才支持，在IOS7及其以下、安卓系统都是显示0px。</p><blockquote><p>IOS8+下已经支持带小数的px值，media query 对应 devicePixelRatio 有个查询值 -webkit-min-device-pixel-ratio；</p></blockquote><ul><li>1）设置css：</li></ul><pre><code class="css">.border { border: 1px solid #999 }@media screen and (-webkit-min-device-pixel-ratio: 2) {    .border { border: 0.5px solid #999 }}@media screen and (-webkit-min-device-pixel-ratio: 3) {    .border { border: 0.333333px solid #999 }}</code></pre><ul><li>2）设置js：</li></ul><pre><code class="html">&lt;body&gt;    &lt;div id=&quot;main&quot; style=&quot;border: 1px solid #000000;&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;script type=&quot;text/javascript&quot;&gt;    if (window.devicePixelRatio &amp;&amp; devicePixelRatio &gt;= 2) {        var main = document.getElementById(&#39;main&#39;);        main.style.border = &#39;.5px solid #000000&#39;;    }&lt;/script&gt;</code></pre><h5 id="2、使用边框图片"><a href="#2、使用边框图片" class="headerlink" title="2、使用边框图片"></a>2、使用边框图片</h5><p>缺点：需要制作图片，圆角可能出现模糊</p><pre><code class="css">.border-image-1px {    border-width: 1px 0px;    -webkit-border-image: url(&quot;border.png&quot;) 2 0 stretch;    border-image: url(&quot;border.png&quot;) 2 0 stretch;}</code></pre><ul><li><code>border-width</code>：指定边框的宽度，可以设定四个值，分别为上右下左border-width: top right bottom left。</li><li><code>border-image</code>：该例意为：距离图片上方2px（属性值上没有单位）裁剪边框图片作为上边框，下方2px裁剪作为下边框。距离左右0像素裁剪图片即没有边框，以拉伸方式展示。</li></ul><h5 id="3、多背景渐变实现"><a href="#3、多背景渐变实现" class="headerlink" title="3、多背景渐变实现"></a>3、多背景渐变实现</h5><p>除了使用图片外，当然也能使用纯css来实现，百度糯米团就是采用的这种方案。<br>缺点：因为每个边框都是线性渐变颜色实现，因此无法实现圆角。</p><pre><code class="css">.border {      background-image:linear-gradient(180deg, red, red 50%, transparent 50%),      linear-gradient(270deg, red, red 50%, transparent 50%),      linear-gradient(0deg, red, red 50%, transparent 50%),      linear-gradient(90deg, red, red 50%, transparent 50%);      background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;      background-repeat: no-repeat;      background-position: top, right top,  bottom, left top;      padding: 10px;}</code></pre><ul><li>原理：将原本1个物理像素的边框大小利用线性渐变分割成几个部分（百分比控制），实现小于1像素效果。</li><li><code>linear-gradient</code>：指定线性渐变，接受大于等于3个参数，第一个为渐变旋转角度，第二个开始为渐变的颜色和到哪个位置（百分比）全部变为该颜色，该例子中，第一句就是，渐变方向旋转180度，即从上往下（默认为0度从下往上），从红色开始渐变，到50%的位置还是红色，再渐变为继承父元素颜色。</li></ul><h5 id="4、box-shadow实现"><a href="#4、box-shadow实现" class="headerlink" title="4、box-shadow实现"></a>4、box-shadow实现</h5><p>利用阴影也可以实现，优点是没有圆角问题，缺点是颜色不好控制</p><pre><code class="css">div {    -webkit-box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.5);}div {    box-shadow: 0  -1px 1px -1px #e5e5e5,   //上边线            1px  0  1px -1px #e5e5e5,   //右边线            0  1px  1px -1px #e5e5e5,   //下边线            -1px 0  1px -1px #e5e5e5;   //左边线}</code></pre><ul><li>box-shadow属性的用法：<code>box-shadow: h-shadow v-shadow [blur] [spread] [color] [inset]</code></li></ul><p>参数分别表示: 水平阴影位置，垂直阴影位置，模糊距离， 阴影尺寸，阴影颜色，将外部阴影改为内部阴影，后四个可选。该例中为何将阴影尺寸设置为负数？设置成-1px 是为了让阴影尺寸稍小于div元素尺寸，这样左右两边的阴影就不会暴露出来，实现只有底部一边有阴影的效果。从而实现分割线效果（单边边框）。</p><h5 id="5、viewport-rem实现-推荐"><a href="#5、viewport-rem实现-推荐" class="headerlink" title="5、viewport + rem实现 - 推荐"></a>5、viewport + rem实现 - 推荐</h5><p>该方案是对上述方案的优化，整体思路就是利用viewport + rem + js 动态的修改页面的缩放比例，实现小于1像素的显示。</p><ul><li>优点：全机型兼容，直接写<code>1px</code>不能再方便</li><li>缺点：适用于新的项目，老项目可能改动大</li></ul><pre><code class="html">&lt;meta name=&quot;viewport&quot; id=&quot;WebViewport&quot; content=&quot;initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;&gt;&lt;style&gt;    html {        font-size: 1px;    }     .top_b {        border-bottom: 1px solid #E5E5E5;    }&lt;/style&gt;&lt;script&gt;    var viewport = document.querySelector(&quot;meta[name=viewport]&quot;);    //下面是根据设备像素设置viewport    if (window.devicePixelRatio == 1) {        viewport.setAttribute(&#39;content&#39;, &#39;width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&#39;);    }    if (window.devicePixelRatio == 2) {        viewport.setAttribute(&#39;content&#39;, &#39;width=device-width,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no&#39;);    }    if (window.devicePixelRatio == 3) {        viewport.setAttribute(&#39;content&#39;, &#39;width=device-width,initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no&#39;);    }    var docEl = document.documentElement;    var fontsize = 32* (docEl.clientWidth / 750) + &#39;px&#39;;    docEl.style.fontSize = fontsize;&lt;/script&gt;</code></pre><h5 id="6、伪类-transform-scale-0-5-方案-推荐"><a href="#6、伪类-transform-scale-0-5-方案-推荐" class="headerlink" title="6、伪类 + transform: scale(0.5) 方案 - 推荐"></a>6、伪类 + transform: scale(0.5) 方案 - 推荐</h5><ul><li>优点：全机型兼容，实现了真正的1px，而且可以圆角。</li><li>缺点：暂用了after 伪元素，可能影响清除浮动。</li></ul><pre><code class="css">// 1)设置height: 1px，根据媒体查询结合transform缩放为相应尺寸。div {    height:1px;    background:#000;    -webkit-transform: scaleY(0.5);    -webkit-transform-origin:0 0;    overflow: hidden;}// 2)用::after和::befor,设置border-bottom：1px solid #000,然后在缩放-webkit-transform: scaleY(0.5);可以实现两根边线的需求div::after{    content:&#39;&#39;;width:100%;    border-bottom:1px solid #000;    transform: scaleY(0.5);}// 3)用::after设置border：1px solid #000; width:200%; height:200%,然后再缩放scaleY(0.5); 优点可以实现圆角，京东就是这么实现的，缺点是按钮添加active比较麻烦。.div::after {    content: &#39;&#39;;    width: 200%;    height: 200%;    position: absolute;    top: 0;    left: 0;    border: 1px solid #bfbfbf;    border-radius: 4px;    -webkit-transform: scale(0.5,0.5);    transform: scale(0.5,0.5);    -webkit-transform-origin: top left;}</code></pre><p>1 条border：将伪元素设置绝对定位，并且和父元素的左上角对齐，将width 设置100%，height设置为1px，然后进行在Y方向缩小<code>0.5倍</code>。</p><pre><code class="less">.setOnePx{  position: relative;  &amp;::after{    position: absolute;    content: &#39;&#39;;    background-color: #e5e5e5;    display: block;    width: 100%;    height: 1px; /*no*/    transform: scale(1, 0.5);    top: 0;    left: 0;  }}</code></pre><p>4 条border：同样为伪元素设置绝对定位，并且和父元素左上角对其。将伪元素的长和宽先放大2倍，然后再设置一个边框，以左上角为中心，缩放到原来的<code>0.5倍</code></p><pre><code class="less">.setBorderAll{    position: relative;       &amp;:after{           content:&quot; &quot;;           position:absolute;           top: 0;           left: 0;           width: 200%;           height: 200%;           transform: scale(0.5);           transform-origin: left top;           box-sizing: border-box;           border: 1px solid #E5E5E5;           border-radius: 4px;      }}</code></pre><h5 id="7、媒体查询-transfrom-对方案1的优化"><a href="#7、媒体查询-transfrom-对方案1的优化" class="headerlink" title="7、媒体查询 + transfrom 对方案1的优化"></a>7、媒体查询 + transfrom 对方案1的优化</h5><pre><code class="css">/* 2倍屏 */@media only screen and (-webkit-min-device-pixel-ratio: 2.0) {    .border-bottom::after {        -webkit-transform: scaleY(0.5);        transform: scaleY(0.5);    }}/* 3倍屏 */@media only screen and (-webkit-min-device-pixel-ratio: 3.0) {    .border-bottom::after {        -webkit-transform: scaleY(0.33);        transform: scaleY(0.33);    }}</code></pre><h5 id="8、使用pxtoviewport"><a href="#8、使用pxtoviewport" class="headerlink" title="8、使用pxtoviewport"></a>8、使用pxtoviewport</h5><p>配置移动单位转换插件 <code>postcss-px-to-viewport</code> 。</p><p>缺点：兼容性不好，时有时无。</p>]]></content>
       
       
       <categories>
@@ -781,11 +756,11 @@
     
     
     <entry>
-      <title>Vue获取当前页面的 IP地址</title>
-      <link href="/2019/10/09/vue%E4%B8%8B%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84IP/"/>
-      <url>/2019/10/09/vue%E4%B8%8B%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84IP/</url>
+      <title>移动端 1px 像素问题及解决办法</title>
+      <link href="/2019/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF1px%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF1px%E9%97%AE%E9%A2%98/</url>
       
-        <content type="html"><![CDATA[<h1 id="使用Vue，获取当前页面的-IP地址"><a href="#使用Vue，获取当前页面的-IP地址" class="headerlink" title="使用Vue，获取当前页面的 IP地址"></a>使用Vue，获取当前页面的 IP地址</h1><p>使用vue引入外部js。（这里是使用搜狐的api来获取用户的ip）</p><p>如果是单纯的html，我们引入js很简单直接</p><pre><code class="html">&lt;script src=&quot;http://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/script&gt;</code></pre><p>但是vue不可以这样。</p><ol><li><p>在你要用到js的页面的components加入下面的代码</p><pre><code class="javascript">components: {    &#39;remote-js&#39;: {        render(createElement) {            return createElement(&#39;script&#39;, { attrs: { type: &#39;text/javascript&#39;, src: this.src }});        },        props: {            src: { type: String, required: true },        },    },}</code></pre></li><li><p>在当前页面的模板中放入相关js</p><pre><code class="html">&lt;template&gt;    &lt;remote-js src=&quot;http://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/remote-js&gt;&lt;/template&gt;</code></pre></li><li><p>调用相关方法来获取ip</p><pre><code class="javascript">var user_ip = returnCitySN[&quot;cip&quot;];</code></pre></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="移动端-1px-像素问题及解决办法"><a href="#移动端-1px-像素问题及解决办法" class="headerlink" title="移动端 1px 像素问题及解决办法"></a>移动端 1px 像素问题及解决办法</h1><h3 id="一、为什么会有1px问题"><a href="#一、为什么会有1px问题" class="headerlink" title="一、为什么会有1px问题"></a>一、为什么会有1px问题</h3><p>那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。</p><pre><code>window.devicePixelRatio = 物理像素 /CSS像素</code></pre><p>目前主流的屏幕DPR=2 （iPhone 8）,或者3 （iPhone 8 Plus）。拿2倍屏来说，设备的物理像素要实现1像素，而DPR=2，所以css 像素只能是 0.5。一般设计稿是按照750来设计的，它上面的1px是以750来参照的，而我们写css样式是以设备375为参照的，所以我们应该写的0.5px就好了啊！ 试过了就知道，iOS 8+系统支持，安卓系统不支持。</p><h3 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h3><h5 id="1、直接设置0-5px"><a href="#1、直接设置0-5px" class="headerlink" title="1、直接设置0.5px"></a>1、直接设置0.5px</h5><p> 媒体查询利用设备像素比缩放，设置小数像素。</p><p>优点：简单，好理解<br>缺点：兼容性差，目前之余IOS8+才支持，在IOS7及其以下、安卓系统都是显示0px。</p><blockquote><p>IOS8+下已经支持带小数的px值，media query 对应 devicePixelRatio 有个查询值 -webkit-min-device-pixel-ratio；</p></blockquote><ul><li>1）设置css：</li></ul><pre><code class="css">.border { border: 1px solid #999 }@media screen and (-webkit-min-device-pixel-ratio: 2) {    .border { border: 0.5px solid #999 }}@media screen and (-webkit-min-device-pixel-ratio: 3) {    .border { border: 0.333333px solid #999 }}</code></pre><ul><li>2）设置js：</li></ul><pre><code class="html">&lt;body&gt;    &lt;div id=&quot;main&quot; style=&quot;border: 1px solid #000000;&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;script type=&quot;text/javascript&quot;&gt;    if (window.devicePixelRatio &amp;&amp; devicePixelRatio &gt;= 2) {        var main = document.getElementById(&#39;main&#39;);        main.style.border = &#39;.5px solid #000000&#39;;    }&lt;/script&gt;</code></pre><h5 id="2、使用边框图片"><a href="#2、使用边框图片" class="headerlink" title="2、使用边框图片"></a>2、使用边框图片</h5><p>缺点：需要制作图片，圆角可能出现模糊</p><pre><code class="css">.border-image-1px {    border-width: 1px 0px;    -webkit-border-image: url(&quot;border.png&quot;) 2 0 stretch;    border-image: url(&quot;border.png&quot;) 2 0 stretch;}</code></pre><ul><li><code>border-width</code>：指定边框的宽度，可以设定四个值，分别为上右下左border-width: top right bottom left。</li><li><code>border-image</code>：该例意为：距离图片上方2px（属性值上没有单位）裁剪边框图片作为上边框，下方2px裁剪作为下边框。距离左右0像素裁剪图片即没有边框，以拉伸方式展示。</li></ul><h5 id="3、多背景渐变实现"><a href="#3、多背景渐变实现" class="headerlink" title="3、多背景渐变实现"></a>3、多背景渐变实现</h5><p>除了使用图片外，当然也能使用纯css来实现，百度糯米团就是采用的这种方案。<br>缺点：因为每个边框都是线性渐变颜色实现，因此无法实现圆角。</p><pre><code class="css">.border {      background-image:linear-gradient(180deg, red, red 50%, transparent 50%),      linear-gradient(270deg, red, red 50%, transparent 50%),      linear-gradient(0deg, red, red 50%, transparent 50%),      linear-gradient(90deg, red, red 50%, transparent 50%);      background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;      background-repeat: no-repeat;      background-position: top, right top,  bottom, left top;      padding: 10px;}</code></pre><ul><li>原理：将原本1个物理像素的边框大小利用线性渐变分割成几个部分（百分比控制），实现小于1像素效果。</li><li><code>linear-gradient</code>：指定线性渐变，接受大于等于3个参数，第一个为渐变旋转角度，第二个开始为渐变的颜色和到哪个位置（百分比）全部变为该颜色，该例子中，第一句就是，渐变方向旋转180度，即从上往下（默认为0度从下往上），从红色开始渐变，到50%的位置还是红色，再渐变为继承父元素颜色。</li></ul><h5 id="4、box-shadow实现"><a href="#4、box-shadow实现" class="headerlink" title="4、box-shadow实现"></a>4、box-shadow实现</h5><p>利用阴影也可以实现，优点是没有圆角问题，缺点是颜色不好控制</p><pre><code class="css">div {    -webkit-box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.5);}div {    box-shadow: 0  -1px 1px -1px #e5e5e5,   //上边线            1px  0  1px -1px #e5e5e5,   //右边线            0  1px  1px -1px #e5e5e5,   //下边线            -1px 0  1px -1px #e5e5e5;   //左边线}</code></pre><ul><li>box-shadow属性的用法：<code>box-shadow: h-shadow v-shadow [blur] [spread] [color] [inset]</code></li></ul><p>参数分别表示: 水平阴影位置，垂直阴影位置，模糊距离， 阴影尺寸，阴影颜色，将外部阴影改为内部阴影，后四个可选。该例中为何将阴影尺寸设置为负数？设置成-1px 是为了让阴影尺寸稍小于div元素尺寸，这样左右两边的阴影就不会暴露出来，实现只有底部一边有阴影的效果。从而实现分割线效果（单边边框）。</p><h5 id="5、viewport-rem实现-推荐"><a href="#5、viewport-rem实现-推荐" class="headerlink" title="5、viewport + rem实现 - 推荐"></a>5、viewport + rem实现 - 推荐</h5><p>该方案是对上述方案的优化，整体思路就是利用viewport + rem + js 动态的修改页面的缩放比例，实现小于1像素的显示。</p><ul><li>优点：全机型兼容，直接写<code>1px</code>不能再方便</li><li>缺点：适用于新的项目，老项目可能改动大</li></ul><pre><code class="html">&lt;meta name=&quot;viewport&quot; id=&quot;WebViewport&quot; content=&quot;initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;&gt;&lt;style&gt;    html {        font-size: 1px;    }     .top_b {        border-bottom: 1px solid #E5E5E5;    }&lt;/style&gt;&lt;script&gt;    var viewport = document.querySelector(&quot;meta[name=viewport]&quot;);    //下面是根据设备像素设置viewport    if (window.devicePixelRatio == 1) {        viewport.setAttribute(&#39;content&#39;, &#39;width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&#39;);    }    if (window.devicePixelRatio == 2) {        viewport.setAttribute(&#39;content&#39;, &#39;width=device-width,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no&#39;);    }    if (window.devicePixelRatio == 3) {        viewport.setAttribute(&#39;content&#39;, &#39;width=device-width,initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no&#39;);    }    var docEl = document.documentElement;    var fontsize = 32* (docEl.clientWidth / 750) + &#39;px&#39;;    docEl.style.fontSize = fontsize;&lt;/script&gt;</code></pre><h5 id="6、伪类-transform-scale-0-5-方案-推荐"><a href="#6、伪类-transform-scale-0-5-方案-推荐" class="headerlink" title="6、伪类 + transform: scale(0.5) 方案 - 推荐"></a>6、伪类 + transform: scale(0.5) 方案 - 推荐</h5><ul><li>优点：全机型兼容，实现了真正的1px，而且可以圆角。</li><li>缺点：暂用了after 伪元素，可能影响清除浮动。</li></ul><pre><code class="css">// 1)设置height: 1px，根据媒体查询结合transform缩放为相应尺寸。div {    height:1px;    background:#000;    -webkit-transform: scaleY(0.5);    -webkit-transform-origin:0 0;    overflow: hidden;}// 2)用::after和::befor,设置border-bottom：1px solid #000,然后在缩放-webkit-transform: scaleY(0.5);可以实现两根边线的需求div::after{    content:&#39;&#39;;width:100%;    border-bottom:1px solid #000;    transform: scaleY(0.5);}// 3)用::after设置border：1px solid #000; width:200%; height:200%,然后再缩放scaleY(0.5); 优点可以实现圆角，京东就是这么实现的，缺点是按钮添加active比较麻烦。.div::after {    content: &#39;&#39;;    width: 200%;    height: 200%;    position: absolute;    top: 0;    left: 0;    border: 1px solid #bfbfbf;    border-radius: 4px;    -webkit-transform: scale(0.5,0.5);    transform: scale(0.5,0.5);    -webkit-transform-origin: top left;}</code></pre><p>1 条border：将伪元素设置绝对定位，并且和父元素的左上角对齐，将width 设置100%，height设置为1px，然后进行在Y方向缩小<code>0.5倍</code>。</p><pre><code class="less">.setOnePx{  position: relative;  &amp;::after{    position: absolute;    content: &#39;&#39;;    background-color: #e5e5e5;    display: block;    width: 100%;    height: 1px; /*no*/    transform: scale(1, 0.5);    top: 0;    left: 0;  }}</code></pre><p>4 条border：同样为伪元素设置绝对定位，并且和父元素左上角对其。将伪元素的长和宽先放大2倍，然后再设置一个边框，以左上角为中心，缩放到原来的<code>0.5倍</code></p><pre><code class="less">.setBorderAll{    position: relative;       &amp;:after{           content:&quot; &quot;;           position:absolute;           top: 0;           left: 0;           width: 200%;           height: 200%;           transform: scale(0.5);           transform-origin: left top;           box-sizing: border-box;           border: 1px solid #E5E5E5;           border-radius: 4px;      }}</code></pre><h5 id="7、媒体查询-transfrom-对方案1的优化"><a href="#7、媒体查询-transfrom-对方案1的优化" class="headerlink" title="7、媒体查询 + transfrom 对方案1的优化"></a>7、媒体查询 + transfrom 对方案1的优化</h5><pre><code class="css">/* 2倍屏 */@media only screen and (-webkit-min-device-pixel-ratio: 2.0) {    .border-bottom::after {        -webkit-transform: scaleY(0.5);        transform: scaleY(0.5);    }}/* 3倍屏 */@media only screen and (-webkit-min-device-pixel-ratio: 3.0) {    .border-bottom::after {        -webkit-transform: scaleY(0.33);        transform: scaleY(0.33);    }}</code></pre><h5 id="8、使用pxtoviewport"><a href="#8、使用pxtoviewport" class="headerlink" title="8、使用pxtoviewport"></a>8、使用pxtoviewport</h5><p>配置移动单位转换插件 <code>postcss-px-to-viewport</code> 。</p><p>缺点：兼容性不好，时有时无。</p>]]></content>
       
       
       <categories>
@@ -797,7 +772,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> CSS </tag>
             
         </tags>
       
@@ -806,11 +781,61 @@
     
     
     <entry>
-      <title>断点续传</title>
-      <link href="/2019/10/08/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/"/>
-      <url>/2019/10/08/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/</url>
+      <title>Axiso解决跨域访问</title>
+      <link href="/2019/10/09/Axiso%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE/"/>
+      <url>/2019/10/09/Axiso%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE/</url>
       
-        <content type="html"><![CDATA[<h1 id="断点续传"><a href="#断点续传" class="headerlink" title="断点续传"></a>断点续传</h1><p>主要依赖http协议的206返回码。前提条件是通信双方使用http1.1以上协议。</p><p>客户端使用请求头Range告知自己需要的数据范围；服务器使用响应头Content-Range说明返回的数据范围和数据长度。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Axiso解决跨域访问"><a href="#Axiso解决跨域访问" class="headerlink" title="Axiso解决跨域访问"></a>Axiso解决跨域访问</h1><p>首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同：</p><pre><code>$ vue -V2.X or 3.X</code></pre><h3 id="一、Vue2-版本"><a href="#一、Vue2-版本" class="headerlink" title="一、Vue2 版本"></a>一、Vue2 版本</h3><p>这里以访问 Ve2x 的一个公告API为例，直接访问如下：</p><pre><code class="javascript">this.$axios.get(&quot;https://www.v2ex.com/api/site/info.json&quot;).then(res=&gt;{    console.log(res)}).catch(err=&gt;{    console.log(err)})</code></pre><p>当我们运行程序后，控制台报错如下：</p><p><img src="http://qab0509yb.bkt.clouddn.com/201910091.png" alt=""></p><p>可以看到浏览器拦截了我们的请求，因为我们跨域了，下面解决跨域问题。</p><p><strong>Step1：配置BaseUrl</strong></p><p>首先在<code>main.js</code>中，配置下我们访问的Url前缀：</p><pre><code class="javascript">import Vue from &#39;vue&#39;import App from &#39;./App&#39;import Axios from &#39;axios&#39;Vue.prototype.$axios = AxiosAxios.defaults.baseURL = &#39;/api&#39;Axios.defaults.headers.post[&#39;Content-Type&#39;] = &#39;application/json&#39;;Vue.config.productionTip = false/* eslint-disable no-new */new Vue({  el: &#39;#app&#39;,  components: { App },  template: &#39;&lt;App/&gt;&#39;})</code></pre><p>关键代码是：<code>Axios.defaults.baseURL = &#39;/api&#39;</code>，这样每次发送请求都会带一个<code>/api</code>的前缀。</p><p><strong>Step2：配置代理</strong></p><p>修改config文件夹下的<code>index.js</code>文件，在<code>proxyTable</code>中加上如下代码：</p><pre><code class="javascript">&#39;/api&#39;:{    target: &quot;https://www.v2ex.com/api&quot;,    changeOrigin:true,    pathRewrite:{        &#39;^/api&#39;:&#39;&#39;    }}</code></pre><p><strong>Step3：修改请求Url</strong></p><p>修改刚刚的axios请求，把<code>url</code>修改如下：</p><pre><code class="javascript">this.$axios.get(&quot;/site/info.json&quot;).then(res=&gt;{    console.log(res)}).catch(err=&gt;{    console.log(err)})</code></pre><p><strong>Step4：重启服务</strong></p><p><strong>重启服务</strong>后，此时已经能够访问了：</p><p><img src="http://qab0509yb.bkt.clouddn.com/201910092.png" alt=""></p><p>原理：</p><p>因为我们给url加上了前缀 /api，我们访问 <a href="http://127.0.0.1:19323/site/info.json" target="_blank" rel="noopener">http://127.0.0.1:19323/site/info.json</a> 就当于访问了：<a href="http://127.0.0.1:19323/api/site/info.json。" target="_blank" rel="noopener">http://127.0.0.1:19323/api/site/info.json。</a>(假设本地访问端口号为 19323)</p><p>又因为在 index.js 中的 proxyTable 中拦截了 /api ,并把 /api 及其前面的所有替换成了 target 中的内容，因此实际访问 Url 是<a href="https://www.v2ex.com/api/site/info.json。" target="_blank" rel="noopener">https://www.v2ex.com/api/site/info.json。</a></p><h3 id="二、Vue3-版本"><a href="#二、Vue3-版本" class="headerlink" title="二、Vue3 版本"></a>二、Vue3 版本</h3><p>升级到 Vue3 后，会发现 Vue2 中存放配置的 <code>config</code> 文件夹没有了，大家不要慌张。可以在 package.json 文件的同级目录下创建 <code>vue.config.js</code> 文件。给出该文件的基础配置：</p><pre><code class="javascript">module.exports = {    outputDir: &#39;dist&#39;,   //build输出目录    assetsDir: &#39;assets&#39;, //静态资源目录（js, css, img）    lintOnSave: false, //是否开启eslint    devServer: {        open: true, //是否自动弹出浏览器页面        host: &quot;localhost&quot;,         port: &#39;8081&#39;,         https: false,   //是否使用https协议        hotOnly: false, //是否开启热更新        proxy: null,    }}</code></pre><blockquote><p>Vue3 解决跨域，内容只有第二步<strong>配置代理</strong> 和 Vue2 不同，其他的一致。</p></blockquote><p><strong>Step2：配置代理</strong></p><p>修改 vue.config.js 中 <code>devServer</code> 子节点内容，添加一个 <code>proxy</code>：</p><pre><code class="javascript">devServer: {    open: true, //是否自动弹出浏览器页面    host: &quot;localhost&quot;,     port: &#39;8081&#39;,    https: false,    hotOnly: false,     proxy: {        &#39;/api&#39;: {            target: &#39;https://www.v2ex.com/api&#39;, //API服务器的地址            changeOrigin: true,            pathRewrite: {                &#39;^/api&#39;: &#39;&#39;            }        }    },}</code></pre><h3 id="三、番外"><a href="#三、番外" class="headerlink" title="三、番外"></a>三、番外</h3><p>当然，跨域问题也可以由后端解决，将下面这个过滤器加入程序即可。</p><pre><code class="javascript">import javax.servlet.*;import javax.servlet.http.HttpServletRequest;import javax.servlet.http.HttpServletResponse;import java.io.IOException;/** * 跨域过滤器 * @author jitwxs * @since 2018/10/16 20:53 */public class CorsFilter implements Filter {    @Override    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {        HttpServletResponse response = (HttpServletResponse) res;        HttpServletRequest request = (HttpServletRequest) req;        // 不使用*，自动适配跨域域名，避免携带Cookie时失效        String origin = request.getHeader(&quot;Origin&quot;);        if(StringUtils.isNotBlank(origin)) {            response.setHeader(&quot;Access-Control-Allow-Origin&quot;, origin);        }        // 自适应所有自定义头        String headers = request.getHeader(&quot;Access-Control-Request-Headers&quot;);        if(StringUtils.isNotBlank(headers)) {            response.setHeader(&quot;Access-Control-Allow-Headers&quot;, headers);            response.setHeader(&quot;Access-Control-Expose-Headers&quot;, headers);        }        // 允许跨域的请求方法类型        response.setHeader(&quot;Access-Control-Allow-Methods&quot;, &quot;*&quot;);        // 预检命令（OPTIONS）缓存时间，单位：秒        response.setHeader(&quot;Access-Control-Max-Age&quot;, &quot;3600&quot;);        // 明确许可客户端发送Cookie，不允许删除字段即可        response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);        chain.doFilter(request, response);    }    @Override    public void init(FilterConfig filterConfig) {    }    @Override    public void destroy() {    }    /*    注册过滤器：    @Bean    public FilterRegistrationBean registerFilter() {        FilterRegistrationBean&lt;CorsFilter&gt; bean = new FilterRegistrationBean&lt;&gt;();        bean.addUrlPatterns(&quot;/*&quot;);        bean.setFilter(new CorsFilter());        // 过滤顺序，从小到大依次过滤        bean.setOrder(Ordered.HIGHEST_PRECEDENCE);        return bean;    }     */}</code></pre><p>参考：</p><p><a href="https://blog.csdn.net/yuanlaijike/article/details/80522621" target="_blank" rel="noopener">Axiso解决跨域访问</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Axios </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>currentColor</title>
+      <link href="/2019/10/08/currentColor/"/>
+      <url>/2019/10/08/currentColor/</url>
+      
+        <content type="html"><![CDATA[<h1 id="currentColor"><a href="#currentColor" class="headerlink" title="currentColor"></a>currentColor</h1><p>概念： 当前文字颜色</p><p>应用场景： <code>background-color</code> | <code>border-color</code> | <code>gradient</code> | <code>box-shadow</code></p><p>参考：</p><p><a href="https://www.zhangxinxu.com/wordpress/2014/10/currentcolor-css3-powerful-css-keyword/" target="_blank" rel="noopener">currentColor-CSS3超高校级好用CSS变量</a></p><blockquote><p><code>border</code> 和 <code>box-shadow</code> 默认的颜色就是当前的文字颜色，也就是类似 <code>currentColor</code> ；</p><p>其次，在IOS Safari浏览器（IOS8）下， <code>currentColor</code> 有一些bug的，例如伪元素hover时候， <code>background:currentColor</code>  的背景色不会跟着变化。可以使用 <code>border</code> 来模拟。</p></blockquote><p>图标链接的实现方法：</p><p>button + svg 实现，语义好，兼容性差。</p><p>a + i 实现，a 标签具有键盘可访问性，同时兼容性好（尺寸控制上）， 同时设置 <code>role=&quot;button&quot;</code> 具有按钮语义。i 标签用在装饰图形上。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用js函数</title>
+      <link href="/2019/10/08/%E5%B8%B8%E7%94%A8js%E5%87%BD%E6%95%B0/"/>
+      <url>/2019/10/08/%E5%B8%B8%E7%94%A8js%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p>参考：</p><p><a href="https://juejin.im/post/5d1a45b0f265da1bb277494c#heading-0" target="_blank" rel="noopener">让你瞬间提高工作效率的常用js函数汇总(持续更新)</a></p><h3 id="常用的正则校验"><a href="#常用的正则校验" class="headerlink" title="常用的正则校验"></a>常用的正则校验</h3><pre><code class="javascript">// 匹配邮箱let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$// (新)匹配手机号let reg = /^1[0-9]{10}$/;// (旧)匹配手机号let reg = /^1(3|4|5|7|8)[0-9]{9}$/;// 匹配8-16位数字和字母密码的正则表达式let reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;// 匹配国内电话号码 0510-4305211let reg = /\d{3}-\d{8}|\d{4}-\d{7}/;// 匹配身份证号码let reg=/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;// 匹配腾讯QQ号let reg = /[1-9][0-9]{4,}/;// 匹配ip地址let reg = /\d+\.\d+\.\d+\.\d+/;// 匹配中文let reg = /^[\u4e00-\u9fa5]*$/;</code></pre><h3 id="常用的设备检测方式"><a href="#常用的设备检测方式" class="headerlink" title="常用的设备检测方式"></a>常用的设备检测方式</h3><pre><code class="javascript">let isWechat = /micromessenger/i.test(navigator.userAgent),    isWeibo = /weibo/i.test(navigator.userAgent),    isQQ = /qq\//i.test(navigator.userAgent),    isIOS = /(iphone|ipod|ipad|ios)/i.test(navigator.userAgent),    isAndroid = /android/i.test(navigator.userAgent);</code></pre><h3 id="常用的日期时间函数"><a href="#常用的日期时间函数" class="headerlink" title="常用的日期时间函数"></a>常用的日期时间函数</h3><pre><code class="javascript">// 时间格式化function format_date(timeStamp) {    let date = new Date(timeStamp);    return date.getFullYear() + &quot;年&quot;        + prefix_zero(date.getMonth() + 1) + &quot;月&quot;        + prefix_zero(date.getDate()) + &quot;日 &quot;        + prefix_zero(date.getHours()) + &quot;:&quot;        + prefix_zero(date.getMinutes());}// 数字格式化function prefix_zero(num) {    return num &gt;= 10 ? num : &quot;0&quot; + num;}// 倒计时时间格式化function format_time(timeStamp) {    let day = Math.floor(timeStamp / (24 * 3600 * 1000));    let leave1 = timeStamp % (24 * 3600 * 1000);    let hours = Math.floor(leave1 / (3600 * 1000));    let leave2 = leave1 % (3600 * 1000);    let minutes = Math.floor(leave2 / (60 * 1000));    let leave3 = leave2 % (60 * 1000);    let seconds = Math.floor(leave3 / 1000);    if (day) return day + &quot;天&quot; + hours + &quot;小时&quot; + minutes + &quot;分&quot;;    if (hours) return hours + &quot;小时&quot; + minutes + &quot;分&quot; + seconds + &quot;秒&quot;;    if (minutes) return minutes + &quot;分&quot; + seconds + &quot;秒&quot;;    if (seconds) return seconds + &quot;秒&quot;;    return &quot;时间到！&quot;;}</code></pre><h3 id="跨端事件处理"><a href="#跨端事件处理" class="headerlink" title="跨端事件处理"></a>跨端事件处理</h3><pre><code class="javascript">// 是否支持触摸事件let isSupportTouch = (&quot;ontouchstart&quot; in document.documentElement) ? true : false;//禁用Enter键表单自动提交document.onkeydown = function(event) {    let target, code, tag;    if (!event) {        event = window.event; //针对ie浏览器        target = event.srcElement;        code = event.keyCode;        if (code == 13) {            tag = target.tagName;            if (tag == &quot;TEXTAREA&quot;) { return true; }            else { return false; }        }    }    else {        target = event.target; //针对遵循w3c标准的浏览器，如Firefox        code = event.keyCode;        if (code == 13) {            tag = target.tagName;            if (tag == &quot;INPUT&quot;) { return false; }            else { return true; }        }    }};</code></pre><h3 id="移动端适配方案"><a href="#移动端适配方案" class="headerlink" title="移动端适配方案"></a>移动端适配方案</h3><pre><code class="javascript">(function (doc, win) {    var docEl = doc.documentElement,        resizeEvt = &#39;orientationchange&#39; in window ? &#39;orientationchange&#39; : &#39;resize&#39;,        recalc = function () {            var clientWidth = docEl.clientWidth;            var fontSize = 20;            docEl.style.fontSize = fontSize + &#39;px&#39;;            var docStyles = getComputedStyle(docEl);            var realFontSize = parseFloat(docStyles.fontSize);            var scale = realFontSize / fontSize;            console.log(&quot;realFontSize: &quot; + realFontSize + &quot;, scale: &quot; + scale);            fontSize = clientWidth / 667 * 20;            if(isIphoneX()) fontSize = 19;            fontSize = fontSize / scale;            docEl.style.fontSize = fontSize + &#39;px&#39;;        };    // Abort if browser does not support addEventListener    if (!doc.addEventListener) return;    win.addEventListener(resizeEvt, recalc, false);    doc.addEventListener(&#39;DOMContentLoaded&#39;, recalc, false);    // iphoneX判断    function isIphoneX(){        return /iphone/gi.test(navigator.userAgent) &amp;&amp; (screen.height == 812 &amp;&amp; screen.width == 375)    }})(document, window);</code></pre><h3 id="xss预防方式"><a href="#xss预防方式" class="headerlink" title="xss预防方式"></a>xss预防方式</h3><pre><code class="javascript">// 敏感符号转义function entities(s) {    let e = {        &#39;&quot;&#39;: &#39;&amp;quot;&#39;,        &#39;&amp;&#39;: &#39;&amp;amp;&#39;,        &#39;&lt;&#39;: &#39;&amp;lt;&#39;,        &#39;&gt;&#39;: &#39;&amp;gt;&#39;    }    return s.replace(/[&quot;&lt;&gt;&amp;]/g, m =&gt; {        return e[m]    })}</code></pre><h3 id="常用的js算法"><a href="#常用的js算法" class="headerlink" title="常用的js算法"></a>常用的js算法</h3><pre><code class="javascript">/** * 节流函数--规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。 */function throttle(fun, delay) {    let last, deferTimer    return function (args) {        let that = this        let _args = arguments        let now = +new Date()        if (last &amp;&amp; now &lt; last + delay) {            clearTimeout(deferTimer)            deferTimer = setTimeout(function () {                last = now                fun.apply(that, _args)            }, delay)        }else {            last = now            fun.apply(that,_args)        }    }}/** * 防抖函数--在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时 */ function debounce(fun, delay) {    return function (args) {        let that = this        clearTimeout(fun.id)        fun.id = setTimeout(function () {            fun.call(that, args)        }, delay)    }}// 观察者模式let Observer = (function(){  let t __messages = {};  return {    regist: function(type, fn) {      if(typeof __messages[type] === &#39;undefined&#39;) {        messages[type] = [fn];      }else {        __messages[type].push(fn);      }    },    fire: function(type, args) {      if(!__messages[type]){        return      }      let events = {        type: type,        args: args || {}      },      i = 0,      len = __messages[type].length;      for(;i&lt;len;i++){        __messages[type][i].call(this, events);      }    },    remove: function(type, fn) {      if(__messages[type] instanceof Array){        let i = __messages[type].length -1;        for(;i&gt;=0;i--){          __messages[type][i] === fn &amp;&amp; __messages[type].splice(i, 1)        }      }    }  }})(); // 模板渲染方法 function formatString(str, data) {   return str.replace(/\{\{(\w+)\}\}/g, function(match, key) {     return typeof data[key] === undefined ? &#39;&#39; : data[key]   }) } // 冒泡排序function bubbleSort(arr) {    for (let i = arr.length - 1; i &gt; 0; i--) {      for (let j = 0; j &lt; i; j++) {        if (arr[j] &gt; arr[j + 1]) {          swap(arr, j, j + 1);        }      }    }    return arr;}// 置换函数function swap(arr, indexA, indexB) {    [arr[indexA], arr[indexB]] = [arr[indexB], arr[indexA]];}// 数组去重function distinct(arr = testArr) {    return arr.filter((v, i, array) =&gt; array.indexOf(v) === i)}</code></pre>]]></content>
       
       
       <categories>
@@ -848,56 +873,6 @@
         <tags>
             
             <tag> 面试题 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>常用js函数</title>
-      <link href="/2019/10/08/%E5%B8%B8%E7%94%A8js%E5%87%BD%E6%95%B0/"/>
-      <url>/2019/10/08/%E5%B8%B8%E7%94%A8js%E5%87%BD%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<p>参考：</p><p><a href="https://juejin.im/post/5d1a45b0f265da1bb277494c#heading-0" target="_blank" rel="noopener">让你瞬间提高工作效率的常用js函数汇总(持续更新)</a></p><h3 id="常用的正则校验"><a href="#常用的正则校验" class="headerlink" title="常用的正则校验"></a>常用的正则校验</h3><pre><code class="javascript">// 匹配邮箱let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$// (新)匹配手机号let reg = /^1[0-9]{10}$/;// (旧)匹配手机号let reg = /^1(3|4|5|7|8)[0-9]{9}$/;// 匹配8-16位数字和字母密码的正则表达式let reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;// 匹配国内电话号码 0510-4305211let reg = /\d{3}-\d{8}|\d{4}-\d{7}/;// 匹配身份证号码let reg=/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;// 匹配腾讯QQ号let reg = /[1-9][0-9]{4,}/;// 匹配ip地址let reg = /\d+\.\d+\.\d+\.\d+/;// 匹配中文let reg = /^[\u4e00-\u9fa5]*$/;</code></pre><h3 id="常用的设备检测方式"><a href="#常用的设备检测方式" class="headerlink" title="常用的设备检测方式"></a>常用的设备检测方式</h3><pre><code class="javascript">let isWechat = /micromessenger/i.test(navigator.userAgent),    isWeibo = /weibo/i.test(navigator.userAgent),    isQQ = /qq\//i.test(navigator.userAgent),    isIOS = /(iphone|ipod|ipad|ios)/i.test(navigator.userAgent),    isAndroid = /android/i.test(navigator.userAgent);</code></pre><h3 id="常用的日期时间函数"><a href="#常用的日期时间函数" class="headerlink" title="常用的日期时间函数"></a>常用的日期时间函数</h3><pre><code class="javascript">// 时间格式化function format_date(timeStamp) {    let date = new Date(timeStamp);    return date.getFullYear() + &quot;年&quot;        + prefix_zero(date.getMonth() + 1) + &quot;月&quot;        + prefix_zero(date.getDate()) + &quot;日 &quot;        + prefix_zero(date.getHours()) + &quot;:&quot;        + prefix_zero(date.getMinutes());}// 数字格式化function prefix_zero(num) {    return num &gt;= 10 ? num : &quot;0&quot; + num;}// 倒计时时间格式化function format_time(timeStamp) {    let day = Math.floor(timeStamp / (24 * 3600 * 1000));    let leave1 = timeStamp % (24 * 3600 * 1000);    let hours = Math.floor(leave1 / (3600 * 1000));    let leave2 = leave1 % (3600 * 1000);    let minutes = Math.floor(leave2 / (60 * 1000));    let leave3 = leave2 % (60 * 1000);    let seconds = Math.floor(leave3 / 1000);    if (day) return day + &quot;天&quot; + hours + &quot;小时&quot; + minutes + &quot;分&quot;;    if (hours) return hours + &quot;小时&quot; + minutes + &quot;分&quot; + seconds + &quot;秒&quot;;    if (minutes) return minutes + &quot;分&quot; + seconds + &quot;秒&quot;;    if (seconds) return seconds + &quot;秒&quot;;    return &quot;时间到！&quot;;}</code></pre><h3 id="跨端事件处理"><a href="#跨端事件处理" class="headerlink" title="跨端事件处理"></a>跨端事件处理</h3><pre><code class="javascript">// 是否支持触摸事件let isSupportTouch = (&quot;ontouchstart&quot; in document.documentElement) ? true : false;//禁用Enter键表单自动提交document.onkeydown = function(event) {    let target, code, tag;    if (!event) {        event = window.event; //针对ie浏览器        target = event.srcElement;        code = event.keyCode;        if (code == 13) {            tag = target.tagName;            if (tag == &quot;TEXTAREA&quot;) { return true; }            else { return false; }        }    }    else {        target = event.target; //针对遵循w3c标准的浏览器，如Firefox        code = event.keyCode;        if (code == 13) {            tag = target.tagName;            if (tag == &quot;INPUT&quot;) { return false; }            else { return true; }        }    }};</code></pre><h3 id="移动端适配方案"><a href="#移动端适配方案" class="headerlink" title="移动端适配方案"></a>移动端适配方案</h3><pre><code class="javascript">(function (doc, win) {    var docEl = doc.documentElement,        resizeEvt = &#39;orientationchange&#39; in window ? &#39;orientationchange&#39; : &#39;resize&#39;,        recalc = function () {            var clientWidth = docEl.clientWidth;            var fontSize = 20;            docEl.style.fontSize = fontSize + &#39;px&#39;;            var docStyles = getComputedStyle(docEl);            var realFontSize = parseFloat(docStyles.fontSize);            var scale = realFontSize / fontSize;            console.log(&quot;realFontSize: &quot; + realFontSize + &quot;, scale: &quot; + scale);            fontSize = clientWidth / 667 * 20;            if(isIphoneX()) fontSize = 19;            fontSize = fontSize / scale;            docEl.style.fontSize = fontSize + &#39;px&#39;;        };    // Abort if browser does not support addEventListener    if (!doc.addEventListener) return;    win.addEventListener(resizeEvt, recalc, false);    doc.addEventListener(&#39;DOMContentLoaded&#39;, recalc, false);    // iphoneX判断    function isIphoneX(){        return /iphone/gi.test(navigator.userAgent) &amp;&amp; (screen.height == 812 &amp;&amp; screen.width == 375)    }})(document, window);</code></pre><h3 id="xss预防方式"><a href="#xss预防方式" class="headerlink" title="xss预防方式"></a>xss预防方式</h3><pre><code class="javascript">// 敏感符号转义function entities(s) {    let e = {        &#39;&quot;&#39;: &#39;&amp;quot;&#39;,        &#39;&amp;&#39;: &#39;&amp;amp;&#39;,        &#39;&lt;&#39;: &#39;&amp;lt;&#39;,        &#39;&gt;&#39;: &#39;&amp;gt;&#39;    }    return s.replace(/[&quot;&lt;&gt;&amp;]/g, m =&gt; {        return e[m]    })}</code></pre><h3 id="常用的js算法"><a href="#常用的js算法" class="headerlink" title="常用的js算法"></a>常用的js算法</h3><pre><code class="javascript">/** * 节流函数--规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。 */function throttle(fun, delay) {    let last, deferTimer    return function (args) {        let that = this        let _args = arguments        let now = +new Date()        if (last &amp;&amp; now &lt; last + delay) {            clearTimeout(deferTimer)            deferTimer = setTimeout(function () {                last = now                fun.apply(that, _args)            }, delay)        }else {            last = now            fun.apply(that,_args)        }    }}/** * 防抖函数--在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时 */ function debounce(fun, delay) {    return function (args) {        let that = this        clearTimeout(fun.id)        fun.id = setTimeout(function () {            fun.call(that, args)        }, delay)    }}// 观察者模式let Observer = (function(){  let t __messages = {};  return {    regist: function(type, fn) {      if(typeof __messages[type] === &#39;undefined&#39;) {        messages[type] = [fn];      }else {        __messages[type].push(fn);      }    },    fire: function(type, args) {      if(!__messages[type]){        return      }      let events = {        type: type,        args: args || {}      },      i = 0,      len = __messages[type].length;      for(;i&lt;len;i++){        __messages[type][i].call(this, events);      }    },    remove: function(type, fn) {      if(__messages[type] instanceof Array){        let i = __messages[type].length -1;        for(;i&gt;=0;i--){          __messages[type][i] === fn &amp;&amp; __messages[type].splice(i, 1)        }      }    }  }})(); // 模板渲染方法 function formatString(str, data) {   return str.replace(/\{\{(\w+)\}\}/g, function(match, key) {     return typeof data[key] === undefined ? &#39;&#39; : data[key]   }) } // 冒泡排序function bubbleSort(arr) {    for (let i = arr.length - 1; i &gt; 0; i--) {      for (let j = 0; j &lt; i; j++) {        if (arr[j] &gt; arr[j + 1]) {          swap(arr, j, j + 1);        }      }    }    return arr;}// 置换函数function swap(arr, indexA, indexB) {    [arr[indexA], arr[indexB]] = [arr[indexB], arr[indexA]];}// 数组去重function distinct(arr = testArr) {    return arr.filter((v, i, array) =&gt; array.indexOf(v) === i)}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>currentColor</title>
-      <link href="/2019/10/08/currentColor/"/>
-      <url>/2019/10/08/currentColor/</url>
-      
-        <content type="html"><![CDATA[<h1 id="currentColor"><a href="#currentColor" class="headerlink" title="currentColor"></a>currentColor</h1><p>概念： 当前文字颜色</p><p>应用场景： <code>background-color</code> | <code>border-color</code> | <code>gradient</code> | <code>box-shadow</code></p><p>参考：</p><p><a href="https://www.zhangxinxu.com/wordpress/2014/10/currentcolor-css3-powerful-css-keyword/" target="_blank" rel="noopener">currentColor-CSS3超高校级好用CSS变量</a></p><blockquote><p><code>border</code> 和 <code>box-shadow</code> 默认的颜色就是当前的文字颜色，也就是类似 <code>currentColor</code> ；</p><p>其次，在IOS Safari浏览器（IOS8）下， <code>currentColor</code> 有一些bug的，例如伪元素hover时候， <code>background:currentColor</code>  的背景色不会跟着变化。可以使用 <code>border</code> 来模拟。</p></blockquote><p>图标链接的实现方法：</p><p>button + svg 实现，语义好，兼容性差。</p><p>a + i 实现，a 标签具有键盘可访问性，同时兼容性好（尺寸控制上）， 同时设置 <code>role=&quot;button&quot;</code> 具有按钮语义。i 标签用在装饰图形上。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
             
         </tags>
       
@@ -956,6 +931,31 @@
     
     
     <entry>
+      <title>断点续传</title>
+      <link href="/2019/10/08/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/"/>
+      <url>/2019/10/08/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="断点续传"><a href="#断点续传" class="headerlink" title="断点续传"></a>断点续传</h1><p>主要依赖http协议的206返回码。前提条件是通信双方使用http1.1以上协议。</p><p>客户端使用请求头Range告知自己需要的数据范围；服务器使用响应头Content-Range说明返回的数据范围和数据长度。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>meta属性</title>
       <link href="/2019/10/08/meta%E5%B1%9E%E6%80%A7/"/>
       <url>/2019/10/08/meta%E5%B1%9E%E6%80%A7/</url>
@@ -973,6 +973,31 @@
         <tags>
             
             <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>DOMContentLoaded与load的区别</title>
+      <link href="/2019/09/27/DOMContentLoaded%E5%92%8Cload%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+      <url>/2019/09/27/DOMContentLoaded%E5%92%8Cload%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+      
+        <content type="html"><![CDATA[<h2 id="DOMContentLoaded与load的区别"><a href="#DOMContentLoaded与load的区别" class="headerlink" title="DOMContentLoaded与load的区别"></a>DOMContentLoaded与load的区别</h2><h3 id="onload事件"><a href="#onload事件" class="headerlink" title="onload事件"></a>onload事件</h3><p>onload事件所有的浏览器都支持，所以不需要考虑兼容性。</p><pre><code class="javascript">window.onload = function() {}</code></pre><h3 id="DOMContentLoaded事件"><a href="#DOMContentLoaded事件" class="headerlink" title="DOMContentLoaded事件"></a>DOMContentLoaded事件</h3><p>DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。</p><ul><li><p>IE6、IE7不支持DOMContentLoaded，但支持onreadystatechange事件，该事件的目的是提供与文档或元素的加载状态有关的信息。</p></li><li><p>更低的IE还有个特有的方法doScroll，通过间隔调用：<code>document.docuemntElement.doScroll(&quot;left&quot;);</code></p><p>可以检测DOM是否加载完成。当页面未加载完成时，该方法会报错，知道doScroll不再报错时，就代表DOM加载完成了。该方法更接近DOMContentLoaded的实现。</p></li></ul><pre><code class="javascript">function ready( fn ) {    if ( docuemnt.addEventListener ) {        document.addEventListener(&#39;DOMContentLoaded&#39;, function() {            document.removeEventListener(&#39;DOMContentLoaded&#39;, arguments.callee, false);            fn();        }, false);    } else if ( document.attachEvent ) {        //确保当页面时在iframe中加载时，事件依旧会被安全触发        document.addachEvent(&#39;onreadystatechange&#39;, function() {            if ( document.readyState == &#39;complete&#39; ) {                document.detachEvent(&#39;onreadystatechange&#39;, arguments.callee);                fn();             }        });        //如果是IE且页面不再iframe中时，轮询调用doScroll方法检测DOM是否加载完毕        if ( document.documentElement.doScroll &amp;&amp; typeof window.frameElement === &#39;undefined&#39; ) {            try {                document.documentElement.doScroll(&#39;left&#39;);            }            catch( error ) {                return setTimeout( arguments.callee, 20 );            };            fn();        }    }};</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -1011,31 +1036,6 @@
       <url>/2019/09/27/%E5%85%BC%E5%AE%B9IE8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95/</url>
       
         <content type="html"><![CDATA[<h2 id="兼容IE8的方法函数"><a href="#兼容IE8的方法函数" class="headerlink" title="兼容IE8的方法函数"></a>兼容IE8的方法函数</h2><ol><li><p>兼容IE8 数组的 forEach</p><pre><code class="javascript">if ( !Array.prototype.forEach ) {    Array.prototype.forEach = function forEach( callback, thisArg ) {        var T, k;        if ( this == null ) {               throw new TypeError( &quot;this is null or not defined&quot; );        }        var O = Object(this);        var len = O.length &gt;&gt;&gt; 0;         if ( typeof callback !== &quot;function&quot; ) {            throw new TypeError( callback + &quot; is not a function&quot; );        }        if ( arguments.length &gt; 1 ) {            T = thisArg;        }        k = 0;        while( k &lt; len ) {            var kValue;            if ( k in O ) {                kValue = O[ k ];                callback.call( T, kValue, k, O );            }            k++;        }    };}</code></pre></li><li><p>兼容IE8 数组的 indexOf</p><pre><code class="javascript">if ( !Array.prototype.indexOf ) {    Array.prototype.indexOf = function( elt /*, from*/ ) {        var len = this.length &gt;&gt;&gt; 0;        var from = Number( arguments[1] ) || 0;        from = (from &lt; 0)            ? Math.ceil(from)            : Math.floor(from);        if (from &lt; 0) from += len;        for ( ; from &lt; len; from++ ) {            if ( from in this &amp;&amp; this[from] === elt) return from;        }        return -1;    };}</code></pre></li><li><p>兼容bind函数</p><pre><code class="javascript">if ( !Function.prototype.bind ) {    Function.prototype.bind = function() {        if ( typeof this !== &#39;function&#39; ){            throw new TypeError(&#39;Function.prototype.bind - what is trying to be bound is not callable&#39;);        }        var _this = this;        var obj = arguments[0];        var ags = Array.prototype.slice.call( arguments, 1 );        return function() {            _this.apply( obj,ags );        };    };}</code></pre></li><li><p>兼容IE8的getElementsByClassName函数</p><pre><code class="javascript">if ( !document.getElementsByClassName ) {    document.getElementsByClassName = function ( className, element ) {        var children = ( element || document ).getElementsByTagName(&#39;*&#39;);        var elements = new Array();        for ( var i = 0; i &lt; children.length; i++ ) {            var child = children[i];            var classNames = child.className.split(&#39; &#39;);            for ( var j = 0; j &lt; classNames.length; j++ ) {                if ( classNames[j] == className ) {                    elements.push(child);                    break;                }            }        }        return elements;    };}</code></pre></li><li><p>兼容IE8的addEventListener函数</p><pre><code class="javascript">function addEventListener( ele,event,fn ){    if( ele.addEventListener ) {        ele.addEventListener( event, fn, false );    } else {        ele.attachEvent( &#39;on&#39;+event, fn.bind(ele) );    }}</code></pre></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>DOMContentLoaded与load的区别</title>
-      <link href="/2019/09/27/DOMContentLoaded%E5%92%8Cload%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-      <url>/2019/09/27/DOMContentLoaded%E5%92%8Cload%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-      
-        <content type="html"><![CDATA[<h2 id="DOMContentLoaded与load的区别"><a href="#DOMContentLoaded与load的区别" class="headerlink" title="DOMContentLoaded与load的区别"></a>DOMContentLoaded与load的区别</h2><h3 id="onload事件"><a href="#onload事件" class="headerlink" title="onload事件"></a>onload事件</h3><p>onload事件所有的浏览器都支持，所以不需要考虑兼容性。</p><pre><code class="javascript">window.onload = function() {}</code></pre><h3 id="DOMContentLoaded事件"><a href="#DOMContentLoaded事件" class="headerlink" title="DOMContentLoaded事件"></a>DOMContentLoaded事件</h3><p>DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。</p><ul><li><p>IE6、IE7不支持DOMContentLoaded，但支持onreadystatechange事件，该事件的目的是提供与文档或元素的加载状态有关的信息。</p></li><li><p>更低的IE还有个特有的方法doScroll，通过间隔调用：<code>document.docuemntElement.doScroll(&quot;left&quot;);</code></p><p>可以检测DOM是否加载完成。当页面未加载完成时，该方法会报错，知道doScroll不再报错时，就代表DOM加载完成了。该方法更接近DOMContentLoaded的实现。</p></li></ul><pre><code class="javascript">function ready( fn ) {    if ( docuemnt.addEventListener ) {        document.addEventListener(&#39;DOMContentLoaded&#39;, function() {            document.removeEventListener(&#39;DOMContentLoaded&#39;, arguments.callee, false);            fn();        }, false);    } else if ( document.attachEvent ) {        //确保当页面时在iframe中加载时，事件依旧会被安全触发        document.addachEvent(&#39;onreadystatechange&#39;, function() {            if ( document.readyState == &#39;complete&#39; ) {                document.detachEvent(&#39;onreadystatechange&#39;, arguments.callee);                fn();             }        });        //如果是IE且页面不再iframe中时，轮询调用doScroll方法检测DOM是否加载完毕        if ( document.documentElement.doScroll &amp;&amp; typeof window.frameElement === &#39;undefined&#39; ) {            try {                document.documentElement.doScroll(&#39;left&#39;);            }            catch( error ) {                return setTimeout( arguments.callee, 20 );            };            fn();        }    }};</code></pre>]]></content>
       
       
       <categories>
@@ -1108,11 +1108,11 @@
     
     
     <entry>
-      <title>jQuery的类数组对象结构</title>
-      <link href="/2019/09/25/%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%BB%93%E6%9E%84/"/>
-      <url>/2019/09/25/%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%BB%93%E6%9E%84/</url>
+      <title>jQuery立即调用表达式</title>
+      <link href="/2019/09/25/%E7%AB%8B%E5%8D%B3%E8%B0%83%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <url>/2019/09/25/%E7%AB%8B%E5%8D%B3%E8%B0%83%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[<h2 id="jQuery的类数组对象结构"><a href="#jQuery的类数组对象结构" class="headerlink" title="jQuery的类数组对象结构"></a>jQuery的类数组对象结构</h2><p>jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。</p><p>首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：</p><pre><code class="javascript">jQuery([selector, [context]])jQuery(element)jQuery(elementArray)jQuery(object)jQuery(jQuery object)jQuery(html, [ownerDocument])jQuery(html, [attributes])jQuery()jQuery(callback)</code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="立即调用表达式"><a href="#立即调用表达式" class="headerlink" title="立即调用表达式"></a>立即调用表达式</h2><pre><code class="javascript">;(function(global, factory){    factory(global);}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {    var jQuery = function (selector, context) {        return new jQuery.fn.init(selector, context);    }    jQuery.fn = jQuery.prototype = {};    return jQuery;}));</code></pre><p>任何库与框架设计的第一个要点就是<strong>解决命名空间与变量污染的问题</strong>。jQuery就是利用了JavaScript函数作用域的特性，采用<strong>立即调用表达式</strong>包裹了自身的方法来解决这个问题。</p><p>jQuery的立即调用函数表达式的写法有三种：</p><p><strong>写法1：</strong></p><pre><code class="javascript">(function(window, factory) {    factory(window);}(this, function() {    return function() {        //jQuery的调用    }}))</code></pre><p>可以看出上面的代码中嵌套了2个函数，而且把一个函数作为参数传递到另一个函数中并且执行，这种方法有点复杂，我们简化一下写法：</p><p><strong>写法2：</strong></p><pre><code class="javascript">var factory = function() {    return function() {        //执行方法    }}var jQuery = factory();</code></pre><p>上面的代码效果和方法1是等同的，但是这个factory有点变成了简单的工厂方法模式，需要自己调用，不像是一个单例的jQuery类，所以我们需要改成“自执行”，而不是另外调用。</p><p><strong>写法3：</strong></p><pre><code>(function(window, undefined) {    var jQuery = function() {}    // ...    window.jQuery = window.$ = jQuery;})(window);</code></pre><p>从上面的代码可看出，自动初始化这个函数，让其只构建一次。详细说一些这种写法的优势：</p><ol><li>window和undefined都是为了减少变量查找所经过的scope作用域。当window通过传递给闭包内部之后，在闭包内部使用它的时候，可以把它当成一个局部变量，显然比原先在window scope下查找的时候要快一些。</li><li>undefined也是同样的道理，其实这个undefined并不是JavaScript数据类型的undefined，而是一个普普通通的变量名。只是因为没给它传递值，它的值就是undefined，undefined并不是JavaScript的保留字。</li></ol><p>为什么要传递undefined？</p><p><strong>JavaScript中的undefined并不是作为关键字，因此可以允许用户对其赋值。</strong></p><p>总结：全局变量是魔鬼，匿名函数可以有效地保证在页面上写入JavaScript，而不会造成全局变量的污染，通过小括号，让其加载的时候立即初始化，这样就形成了一个单例模式的效果从而只会执行一次。</p>]]></content>
       
       
       <categories>
@@ -1133,11 +1133,11 @@
     
     
     <entry>
-      <title>jQuery立即调用表达式</title>
-      <link href="/2019/09/25/%E7%AB%8B%E5%8D%B3%E8%B0%83%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-      <url>/2019/09/25/%E7%AB%8B%E5%8D%B3%E8%B0%83%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+      <title>jQuery的类数组对象结构</title>
+      <link href="/2019/09/25/%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%BB%93%E6%9E%84/"/>
+      <url>/2019/09/25/%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%BB%93%E6%9E%84/</url>
       
-        <content type="html"><![CDATA[<h2 id="立即调用表达式"><a href="#立即调用表达式" class="headerlink" title="立即调用表达式"></a>立即调用表达式</h2><pre><code class="javascript">;(function(global, factory){    factory(global);}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {    var jQuery = function (selector, context) {        return new jQuery.fn.init(selector, context);    }    jQuery.fn = jQuery.prototype = {};    return jQuery;}));</code></pre><p>任何库与框架设计的第一个要点就是<strong>解决命名空间与变量污染的问题</strong>。jQuery就是利用了JavaScript函数作用域的特性，采用<strong>立即调用表达式</strong>包裹了自身的方法来解决这个问题。</p><p>jQuery的立即调用函数表达式的写法有三种：</p><p><strong>写法1：</strong></p><pre><code class="javascript">(function(window, factory) {    factory(window);}(this, function() {    return function() {        //jQuery的调用    }}))</code></pre><p>可以看出上面的代码中嵌套了2个函数，而且把一个函数作为参数传递到另一个函数中并且执行，这种方法有点复杂，我们简化一下写法：</p><p><strong>写法2：</strong></p><pre><code class="javascript">var factory = function() {    return function() {        //执行方法    }}var jQuery = factory();</code></pre><p>上面的代码效果和方法1是等同的，但是这个factory有点变成了简单的工厂方法模式，需要自己调用，不像是一个单例的jQuery类，所以我们需要改成“自执行”，而不是另外调用。</p><p><strong>写法3：</strong></p><pre><code>(function(window, undefined) {    var jQuery = function() {}    // ...    window.jQuery = window.$ = jQuery;})(window);</code></pre><p>从上面的代码可看出，自动初始化这个函数，让其只构建一次。详细说一些这种写法的优势：</p><ol><li>window和undefined都是为了减少变量查找所经过的scope作用域。当window通过传递给闭包内部之后，在闭包内部使用它的时候，可以把它当成一个局部变量，显然比原先在window scope下查找的时候要快一些。</li><li>undefined也是同样的道理，其实这个undefined并不是JavaScript数据类型的undefined，而是一个普普通通的变量名。只是因为没给它传递值，它的值就是undefined，undefined并不是JavaScript的保留字。</li></ol><p>为什么要传递undefined？</p><p><strong>JavaScript中的undefined并不是作为关键字，因此可以允许用户对其赋值。</strong></p><p>总结：全局变量是魔鬼，匿名函数可以有效地保证在页面上写入JavaScript，而不会造成全局变量的污染，通过小括号，让其加载的时候立即初始化，这样就形成了一个单例模式的效果从而只会执行一次。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="jQuery的类数组对象结构"><a href="#jQuery的类数组对象结构" class="headerlink" title="jQuery的类数组对象结构"></a>jQuery的类数组对象结构</h2><p>jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。</p><p>首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：</p><pre><code class="javascript">jQuery([selector, [context]])jQuery(element)jQuery(elementArray)jQuery(object)jQuery(jQuery object)jQuery(html, [ownerDocument])jQuery(html, [attributes])jQuery()jQuery(callback)</code></pre>]]></content>
       
       
       <categories>
