@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>jQuery立即调用表达式 | Hexo</title>
+  <title>jQuery立即调用表达式 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="立即调用表达式1234567891011;(function(global, factory)&amp;#123;    factory(global);&amp;#125;(typeof window !&#x3D;&#x3D; &quot;undefined&quot; ? window : this, function(window, noGlobal) &amp;#123;    var jQuery &#x3D; function (selector, con">
+  <meta name="description" content="立即调用表达式;(function(global, factory){     factory(global); }(typeof window !&#x3D;&#x3D; &quot;undefined&quot; ? window : this, function(window, noGlobal) {     var jQuery &#x3D; function (selector, context) {">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery立即调用表达式">
 <meta property="og:url" content="http://yoursite.com/2019/09/25/%E7%AB%8B%E5%8D%B3%E8%B0%83%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="立即调用表达式1234567891011;(function(global, factory)&amp;#123;    factory(global);&amp;#125;(typeof window !&#x3D;&#x3D; &quot;undefined&quot; ? window : this, function(window, noGlobal) &amp;#123;    var jQuery &#x3D; function (selector, con">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="立即调用表达式;(function(global, factory){     factory(global); }(typeof window !&#x3D;&#x3D; &quot;undefined&quot; ? window : this, function(window, noGlobal) {     var jQuery &#x3D; function (selector, context) {">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-09-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T03:17:09.563Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:01:09.320Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="jQuery">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-09-25</span>
             </div>
@@ -165,22 +163,42 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h2 id="立即调用表达式"><a href="#立即调用表达式" class="headerlink" title="立即调用表达式"></a>立即调用表达式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">;(<span class="function"><span class="keyword">function</span>(<span class="params">global, factory</span>)</span>&#123;</span><br><span class="line">    factory(global);</span><br><span class="line">&#125;(<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">"undefined"</span> ? <span class="built_in">window</span> : <span class="keyword">this</span>, <span class="function"><span class="keyword">function</span>(<span class="params">window, noGlobal</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> jQuery = <span class="function"><span class="keyword">function</span> (<span class="params">selector, context</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> jQuery.fn.init(selector, context);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    jQuery.fn = jQuery.prototype = &#123;&#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> jQuery;</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+            <h2 id="立即调用表达式"><a href="#立即调用表达式" class="headerlink" title="立即调用表达式"></a>立即调用表达式</h2><pre><code class="javascript">;(function(global, factory){
+    factory(global);
+}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
+    var jQuery = function (selector, context) {
+        return new jQuery.fn.init(selector, context);
+    }
 
+    jQuery.fn = jQuery.prototype = {};
+
+    return jQuery;
+}));</code></pre>
 <p>任何库与框架设计的第一个要点就是<strong>解决命名空间与变量污染的问题</strong>。jQuery就是利用了JavaScript函数作用域的特性，采用<strong>立即调用表达式</strong>包裹了自身的方法来解决这个问题。</p>
 <p>jQuery的立即调用函数表达式的写法有三种：</p>
 <p><strong>写法1：</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, factory</span>) </span>&#123;</span><br><span class="line">	factory(<span class="built_in">window</span>);</span><br><span class="line">&#125;(<span class="keyword">this</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="comment">//jQuery的调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">(function(window, factory) {
+    factory(window);
+}(this, function() {
+    return function() {
+        //jQuery的调用
+    }
+}))</code></pre>
 <p>可以看出上面的代码中嵌套了2个函数，而且把一个函数作为参数传递到另一个函数中并且执行，这种方法有点复杂，我们简化一下写法：</p>
 <p><strong>写法2：</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> factory = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//执行方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> jQuery = factory();</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var factory = function() {
+    return function() {
+        //执行方法
+    }
+}
+var jQuery = factory();</code></pre>
 <p>上面的代码效果和方法1是等同的，但是这个factory有点变成了简单的工厂方法模式，需要自己调用，不像是一个单例的jQuery类，所以我们需要改成“自执行”，而不是另外调用。</p>
 <p><strong>写法3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(function(window, undefined) &#123;</span><br><span class="line">	var jQuery &#x3D; function() &#123;&#125;</span><br><span class="line">	&#x2F;&#x2F; ...</span><br><span class="line">	window.jQuery &#x3D; window.$ &#x3D; jQuery;</span><br><span class="line">&#125;)(window);</span><br></pre></td></tr></table></figure>
-
-<p>从上面的代码可看出，自动初始化这个函数，让其只构建一次。详细说一些这种写法的优势：</p>
+<pre><code>(function(window, undefined) {
+    var jQuery = function() {}
+    // ...
+    window.jQuery = window.$ = jQuery;
+})(window);</code></pre><p>从上面的代码可看出，自动初始化这个函数，让其只构建一次。详细说一些这种写法的优势：</p>
 <ol>
 <li>window和undefined都是为了减少变量查找所经过的scope作用域。当window通过传递给闭包内部之后，在闭包内部使用它的时候，可以把它当成一个局部变量，显然比原先在window scope下查找的时候要快一些。</li>
 <li>undefined也是同样的道理，其实这个undefined并不是JavaScript数据类型的undefined，而是一个普普通通的变量名。只是因为没给它传递值，它的值就是undefined，undefined并不是JavaScript的保留字。</li>
@@ -191,25 +209,6 @@
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -229,7 +228,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -254,7 +253,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

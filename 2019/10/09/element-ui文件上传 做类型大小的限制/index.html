@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>element-ui文件上传 做类型大小的限制 | Hexo</title>
+  <title>element-ui文件上传 做类型大小的限制 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="element-ui文件上传 做类型大小的限制1234567&lt;div class&#x3D;&quot;filebox&quot;&gt;    &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemove&quot; multiple :limit&#x3D;&quot;limitnum&quot; :on-exceed">
+  <meta name="description" content="element-ui文件上传 做类型大小的限制 &lt;div class&#x3D;&quot;filebox&quot;&gt;     &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemov">
 <meta property="og:type" content="article">
 <meta property="og:title" content="element-ui文件上传 做类型大小的限制">
 <meta property="og:url" content="http://yoursite.com/2019/10/09/element-ui%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%20%E5%81%9A%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E7%9A%84%E9%99%90%E5%88%B6/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="element-ui文件上传 做类型大小的限制1234567&lt;div class&#x3D;&quot;filebox&quot;&gt;    &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemove&quot; multiple :limit&#x3D;&quot;limitnum&quot; :on-exceed">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="element-ui文件上传 做类型大小的限制 &lt;div class&#x3D;&quot;filebox&quot;&gt;     &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemov">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:20:33.940Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:08:08.668Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-10-09</span>
             </div>
@@ -165,35 +163,36 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="element-ui文件上传-做类型大小的限制"><a href="#element-ui文件上传-做类型大小的限制" class="headerlink" title="element-ui文件上传 做类型大小的限制"></a>element-ui文件上传 做类型大小的限制</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"filebox"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-upload</span> <span class="attr">class</span>=<span class="string">"upload-demo"</span> <span class="attr">:action</span>=<span class="string">"url"</span> <span class="attr">:on-preview</span>=<span class="string">"handlePreview"</span> <span class="attr">:on-remove</span>=<span class="string">"handleRemove"</span> <span class="attr">multiple</span> <span class="attr">:limit</span>=<span class="string">"limitnum"</span> <span class="attr">:on-exceed</span>=<span class="string">"handleExceed"</span> <span class="attr">:file-list</span>=<span class="string">"fileList"</span> <span class="attr">:beforeUpload</span>=<span class="string">"beforeAvatarUpload"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">size</span>=<span class="string">"mini"</span> <span class="attr">type</span>=<span class="string">"primary"</span>&gt;</span>点击上传<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"tip"</span> <span class="attr">class</span>=<span class="string">"el-upload__tip"</span>&gt;</span>只能上传jpg/png文件，且不超过500kb<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-upload</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:beforeUpload&#x3D;&quot;beforeAvatarUpload&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>methods里面写beforeAvatarUpload这个方法</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">beforeAvatarUpload(file) &#123; 				</span><br><span class="line">    <span class="keyword">var</span> testmsg = file.name.substring(file.name.lastIndexOf(<span class="string">'.'</span>)+<span class="number">1</span>);			</span><br><span class="line">    <span class="keyword">const</span> extension = testmsg === <span class="string">'xls'</span>;</span><br><span class="line">    <span class="keyword">const</span> extension2 = testmsg === <span class="string">'xlsx'</span>;</span><br><span class="line">    <span class="keyword">const</span> isLt2M = file.size / <span class="number">1024</span> / <span class="number">1024</span> &lt; <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">if</span>(!extension &amp;&amp; !extension2) &#123;</span><br><span class="line">        <span class="keyword">this</span>.$message(&#123;</span><br><span class="line">            message: <span class="string">'上传文件只能是 xls、xlsx格式!'</span>,</span><br><span class="line">            type: <span class="string">'warning'</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!isLt2M) &#123;</span><br><span class="line">        <span class="keyword">this</span>.$message(&#123;</span><br><span class="line">            message: <span class="string">'上传文件大小不能超过 10MB!'</span>,</span><br><span class="line">            type: <span class="string">'warning'</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> extension || extension2 &amp;&amp; isLt2M</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <h1 id="element-ui文件上传-做类型大小的限制"><a href="#element-ui文件上传-做类型大小的限制" class="headerlink" title="element-ui文件上传 做类型大小的限制"></a>element-ui文件上传 做类型大小的限制</h1><pre><code class="html">
+&lt;div class=&quot;filebox&quot;&gt;
+    &lt;el-upload class=&quot;upload-demo&quot; :action=&quot;url&quot; :on-preview=&quot;handlePreview&quot; :on-remove=&quot;handleRemove&quot; multiple :limit=&quot;limitnum&quot; :on-exceed=&quot;handleExceed&quot; :file-list=&quot;fileList&quot; :beforeUpload=&quot;beforeAvatarUpload&quot;&gt;
+        &lt;el-button size=&quot;mini&quot; type=&quot;primary&quot;&gt;点击上传&lt;/el-button&gt;
+        &lt;div slot=&quot;tip&quot; class=&quot;el-upload__tip&quot;&gt;只能上传jpg/png文件，且不超过500kb&lt;/div&gt;
+    &lt;/el-upload&gt;
+&lt;/div&gt;</code></pre>
+<pre><code>:beforeUpload=&quot;beforeAvatarUpload&quot;</code></pre><p><strong>methods里面写beforeAvatarUpload这个方法</strong></p>
+<pre><code class="javascript">beforeAvatarUpload(file) {                 
+    var testmsg = file.name.substring(file.name.lastIndexOf(&#39;.&#39;)+1);            
+    const extension = testmsg === &#39;xls&#39;;
+    const extension2 = testmsg === &#39;xlsx&#39;;
+    const isLt2M = file.size / 1024 / 1024 &lt; 10;
+    if(!extension &amp;&amp; !extension2) {
+        this.$message({
+            message: &#39;上传文件只能是 xls、xlsx格式!&#39;,
+            type: &#39;warning&#39;
+        });
+    }
+    if(!isLt2M) {
+        this.$message({
+            message: &#39;上传文件大小不能超过 10MB!&#39;,
+            type: &#39;warning&#39;
+        });
+    }
+    return extension || extension2 &amp;&amp; isLt2M
+}</code></pre>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -213,7 +212,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -238,7 +237,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

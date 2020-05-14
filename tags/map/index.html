@@ -15,23 +15,21 @@
   </script>
 
   
-  <title>Tag: map | Hexo</title>
+  <title>Tag: map | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="AYE Blog">
 <meta property="og:url" content="http://yoursite.com/tags/map/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AYE Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="aye">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -135,7 +133,11 @@
                             <p>
                                 <strong>百度地图搜索并上传位置</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                百度地图搜索并上传位置12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788..
+                                百度地图搜索并上传位置var start_point = {lng: 116.404,lat: 39.915}
+var map = new BMap.Map(&quot;container&quot;);
+map.enableScrollWheelZoom(true);     // 开启鼠标滚轮缩放
+// 根据经纬度自适应zoom和中点
+map.cen..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -154,26 +156,9 @@
                             <p>
                                 <strong>百度地图渲染路线</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                百度地图渲染路线通过经纬度渲染路线1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283var ..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/11/30/百度地图创建图标/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>百度地图创建图标</strong> <small class="post-date">at: 2019-11-30</small>
-                                <br>
-                                百度地图创建图标1234567891011121314151617181920212223242526272829//在轨迹点上创建图标，并添加点击事件  function addMarker(points)&#123;  // 创建图标对象         // 创建标注对象并添加到地图         for(var i = 0,pointsLen ..
+                                百度地图渲染路线通过经纬度渲染路线var points = [
+    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853, &quot;title&quot;:&quot;无锡市&quot;},
+    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -192,7 +177,39 @@
                             <p>
                                 <strong>百度地图封装</strong> <small class="post-date">at: 2019-11-30</small>
                                 <br>
-                                百度地图封装1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909..
+                                百度地图封装//创建和初始化地图函数：
+function initMap() {
+    createMap();//创建地图
+    setMapEvent();//设置地图事件
+    addMapControl();//向地图添加控件
+    addMarker();//向地图中添加marker
+}
+
+//创建地图函数：
+function crea..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/11/30/百度地图创建图标/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>百度地图创建图标</strong> <small class="post-date">at: 2019-11-30</small>
+                                <br>
+                                百度地图创建图标//在轨迹点上创建图标，并添加点击事件  
+function addMarker(points){  // 创建图标对象     
+    // 创建标注对象并添加到地图     
+    for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
+        var..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -211,7 +228,10 @@
                             <p>
                                 <strong>百度地图常用API</strong> <small class="post-date">at: 2019-11-30</small>
                                 <br>
-                                百度地图常用API12345&lt;div id="container"&gt;&lt;/div&gt;&lt;script&gt;	var map = new BMap.Map("container"); //初始化百度地图时，注意ID必须为container    map.enableScrollWheelZoom(true);     //开启鼠标..
+                                百度地图常用API&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
+    map.enableScrollWheelZ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -230,7 +250,9 @@
                             <p>
                                 <strong>百度地图添加折线</strong> <small class="post-date">at: 2019-11-30</small>
                                 <br>
-                                百度地图添加折线123456var map = new BMap.Map("container");var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标Avar p..
+                                百度地图添加折线var map = new BMap.Map(&quot;container&quot;);
+var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标
+var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -250,7 +272,9 @@
                                 <strong>百度地图自适应显示地图</strong> <small class="post-date">at: 2019-11-30</small>
                                 <br>
                                 百度地图自适应显示地图**根据标注点坐标范围计算显示缩放级别zoom1、 计算缩放级别的函数
-1234567891011121314//根据经纬极值计算绽放级别。  function getZoom (maxLng, minLng, maxLat, minLat) &#123;      var zoom = ["50","100","200","500..
+//根据经纬极值计算绽放级别。  
+function getZoom (maxLng, minLng, maxLat, minLat) {  
+    var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&qu..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -280,7 +304,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

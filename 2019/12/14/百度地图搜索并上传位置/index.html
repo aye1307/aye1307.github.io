@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>百度地图搜索并上传位置 | Hexo</title>
+  <title>百度地图搜索并上传位置 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="百度地图搜索并上传位置123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+  <meta name="description" content="百度地图搜索并上传位置var start_point &#x3D; {lng: 116.404,lat: 39.915} var map &#x3D; new BMap.Map(&quot;container&quot;); map.enableScrollWheelZoom(true);     &#x2F;&#x2F; 开启鼠标滚轮缩放 &#x2F;&#x2F; 根据经纬度自适应zoom和中点 map.centerAndZoom(new BMap.Po">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度地图搜索并上传位置">
 <meta property="og:url" content="http://yoursite.com/2019/12/14/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%90%9C%E7%B4%A2%E5%B9%B6%E4%B8%8A%E4%BC%A0%E4%BD%8D%E7%BD%AE/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="百度地图搜索并上传位置123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="百度地图搜索并上传位置var start_point &#x3D; {lng: 116.404,lat: 39.915} var map &#x3D; new BMap.Map(&quot;container&quot;); map.enableScrollWheelZoom(true);     &#x2F;&#x2F; 开启鼠标滚轮缩放 &#x2F;&#x2F; 根据经纬度自适应zoom和中点 map.centerAndZoom(new BMap.Po">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:01:23.855Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:00:58.363Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="map">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-12-14</span>
             </div>
@@ -165,30 +163,162 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="百度地图搜索并上传位置"><a href="#百度地图搜索并上传位置" class="headerlink" title="百度地图搜索并上传位置"></a>百度地图搜索并上传位置</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> start_point = &#123;<span class="attr">lng</span>: <span class="number">116.404</span>,<span class="attr">lat</span>: <span class="number">39.915</span>&#125;</span><br><span class="line"><span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"container"</span>);</span><br><span class="line">map.enableScrollWheelZoom(<span class="literal">true</span>);     <span class="comment">// 开启鼠标滚轮缩放</span></span><br><span class="line"><span class="comment">// 根据经纬度自适应zoom和中点</span></span><br><span class="line">map.centerAndZoom(<span class="keyword">new</span> BMap.Point(start_point.lng, start_point.lat), <span class="number">11</span>);  </span><br><span class="line"><span class="keyword">var</span> geoc = <span class="keyword">new</span> BMap.Geocoder() <span class="comment">// 根据经纬度获取地址</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">'#geo'</span>).val(<span class="built_in">JSON</span>.stringify(start_point))</span><br><span class="line">    <span class="comment">// addMarker(start_point, '')</span></span><br><span class="line">&#125;, <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加定位控件</span></span><br><span class="line"><span class="keyword">var</span> geolocationControl = <span class="keyword">new</span> BMap.GeolocationControl(&#123;</span><br><span class="line">    anchor: BMAP_ANCHOR_BOTTOM_RIGHT,</span><br><span class="line">&#125;);</span><br><span class="line">geolocationControl.addEventListener(<span class="string">"locationSuccess"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 定位成功事件</span></span><br><span class="line">    map.clearOverlays();  </span><br><span class="line">    <span class="keyword">var</span> addComp = e.addressComponent;</span><br><span class="line">    <span class="built_in">console</span>.log(addComp)</span><br><span class="line">    <span class="keyword">var</span> pp = e.point;</span><br><span class="line">    <span class="keyword">var</span> address = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;</span><br><span class="line">    $(<span class="string">'#suggestId'</span>).val(address)</span><br><span class="line">    map.centerAndZoom(pp, <span class="number">14</span>);</span><br><span class="line">    $(<span class="string">'#geo'</span>).val(<span class="built_in">JSON</span>.stringify(pp))</span><br><span class="line">    addMarker(pp, address);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line">geolocationControl.addEventListener(<span class="string">"locationError"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 定位失败事件</span></span><br><span class="line">    <span class="built_in">console</span>.log(e.message);</span><br><span class="line">&#125;);</span><br><span class="line">map.addControl(geolocationControl);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个控件类,即function</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ZoomControl</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;</span><br><span class="line">    <span class="keyword">this</span>.defaultOffset = <span class="keyword">new</span> BMap.Size(<span class="number">10</span>, <span class="number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过JavaScript的prototype属性继承于BMap.Control</span></span><br><span class="line">ZoomControl.prototype = <span class="keyword">new</span> BMap.Control();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义控件必须实现自己的initialize方法,并且将控件的DOM元素返回</span></span><br><span class="line"><span class="comment">// 在本方法中创建个div元素作为控件的容器,并将其添加到地图容器中</span></span><br><span class="line">ZoomControl.prototype.initialize = <span class="function"><span class="keyword">function</span>(<span class="params">map</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 创建一个DOM元素</span></span><br><span class="line">    <span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</span><br><span class="line">    <span class="comment">// div.innerHTML = '&lt;div id="r-result" style="background:#fff;"&gt;搜索地址:&lt;input type="text" id="suggestId" size="20" value="无锡市" style="width:150px;background:#fff;font-size:12px;color:#333;" /&gt;&lt;/div&gt;&lt;div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"&gt;&lt;/div&gt;';</span></span><br><span class="line">    div.innerHTML = <span class="string">`</span></span><br><span class="line"><span class="string">&lt;div id="r-result" &gt;</span></span><br><span class="line"><span class="string">&lt;span&gt;搜索：&lt;/span&gt;</span></span><br><span class="line"><span class="string">&lt;input type="text" id="suggestId" size="20" value="无锡市" /&gt;</span></span><br><span class="line"><span class="string">&lt;input type="hidden" id="geo" value="" /&gt;</span></span><br><span class="line"><span class="string">&lt;input type="button" id="updateAddress" value="上传位置" /&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;div id="searchResultPanel"&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line">    <span class="comment">// 添加DOM元素到地图中</span></span><br><span class="line">    map.getContainer().appendChild(div);</span><br><span class="line">    <span class="comment">// 将DOM元素返回</span></span><br><span class="line">    <span class="keyword">return</span> div;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建控件</span></span><br><span class="line"><span class="keyword">var</span> myZoomCtrl = <span class="keyword">new</span> ZoomControl();</span><br><span class="line"><span class="comment">// 添加到地图当中</span></span><br><span class="line">map.addControl(myZoomCtrl);</span><br><span class="line"><span class="keyword">var</span> ac = <span class="keyword">new</span> BMap.Autocomplete(    <span class="comment">//建立一个自动完成的对象</span></span><br><span class="line">    &#123;<span class="string">"input"</span> : <span class="string">"suggestId"</span></span><br><span class="line">     ,<span class="string">"location"</span> : map</span><br><span class="line">    &#125;);</span><br><span class="line">ac.addEventListener(<span class="string">"onhighlight"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;  <span class="comment">//鼠标放在下拉列表上的事件</span></span><br><span class="line">    <span class="keyword">var</span> str = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">var</span> _value = e.fromitem.value;</span><br><span class="line">    <span class="keyword">var</span> value = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span> (e.fromitem.index &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;</span><br><span class="line">    &#125;</span><br><span class="line">    str = <span class="string">"FromItem&lt;br /&gt;index = "</span> + e.fromitem.index + <span class="string">"&lt;br /&gt;value = "</span> + value;</span><br><span class="line"></span><br><span class="line">    value = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span> (e.toitem.index &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        _value = e.toitem.value;</span><br><span class="line">        value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;</span><br><span class="line">    &#125;</span><br><span class="line">    str += <span class="string">"&lt;br /&gt;ToItem&lt;br /&gt;index = "</span> + e.toitem.index + <span class="string">"&lt;br /&gt;value = "</span> + value;</span><br><span class="line">    $(<span class="string">"#searchResultPanel"</span>).html(str);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myValue;</span><br><span class="line">ac.addEventListener(<span class="string">"onconfirm"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;    <span class="comment">//鼠标点击下拉列表后的事件</span></span><br><span class="line">    <span class="keyword">var</span> _value = e.item.value;</span><br><span class="line">    myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;</span><br><span class="line">    $(<span class="string">"#searchResultPanel"</span>).html(<span class="string">"onconfirm&lt;br /&gt;index = "</span> + e.item.index + <span class="string">"&lt;br /&gt;myValue = "</span> + myValue);</span><br><span class="line">    setPlace();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setPlace</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    map.clearOverlays();    <span class="comment">//清除地图上所有覆盖物</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">myFun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> pp = local.getResults().getPoi(<span class="number">0</span>).point;    <span class="comment">//获取第一个智能搜索的结果</span></span><br><span class="line">        map.centerAndZoom(pp, <span class="number">14</span>);</span><br><span class="line">        $(<span class="string">'#geo'</span>).val(<span class="built_in">JSON</span>.stringify(pp))</span><br><span class="line">        addMarker(pp, <span class="string">''</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> local = <span class="keyword">new</span> BMap.LocalSearch(map, &#123; <span class="comment">//智能搜索</span></span><br><span class="line">        onSearchComplete: myFun</span><br><span class="line">    &#125;);</span><br><span class="line">    local.search(myValue);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addMarker</span>(<span class="params">pt, address</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(pt)</span><br><span class="line">    map.addOverlay(marker); </span><br><span class="line">    marker.enableDragging();</span><br><span class="line">    <span class="keyword">var</span> label = <span class="keyword">new</span> BMap.Label(address,&#123;<span class="attr">offset</span>:<span class="keyword">new</span> BMap.Size(<span class="number">20</span>,<span class="number">0</span>)&#125;);</span><br><span class="line">    label.setStyle(&#123;</span><br><span class="line">        color : <span class="string">"#666"</span>,</span><br><span class="line">        fontSize : <span class="string">"12px"</span>,</span><br><span class="line">        height : <span class="string">"24px"</span>,</span><br><span class="line">        lineHeight : <span class="string">"24px"</span>,</span><br><span class="line">        fontFamily:<span class="string">"微软雅黑"</span>,</span><br><span class="line">        padding: <span class="string">'0 5px 0 5px'</span>,</span><br><span class="line">        background: <span class="string">'#fff'</span>,</span><br><span class="line">        border:<span class="string">'0'</span>,</span><br><span class="line">        borderRadius: <span class="string">'3px'</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">    marker.setLabel(label);</span><br><span class="line">    geoc.getLocation(pt, <span class="function"><span class="keyword">function</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(rs)</span><br><span class="line">        <span class="keyword">var</span> addComp = rs.addressComponents;</span><br><span class="line">        newaddress = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;</span><br><span class="line">        label.setContent(newaddress)</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 标注拖动事件 </span></span><br><span class="line">    marker.addEventListener(<span class="string">"dragend"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123; </span><br><span class="line">        <span class="keyword">var</span> pt = e.point;</span><br><span class="line">        $(<span class="string">'#geo'</span>).val(<span class="built_in">JSON</span>.stringify(pt))</span><br><span class="line">        <span class="keyword">var</span> newaddress;</span><br><span class="line">        geoc.getLocation(pt, <span class="function"><span class="keyword">function</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> addComp = rs.addressComponents;</span><br><span class="line">            newaddress = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;</span><br><span class="line">            label.setContent(newaddress)</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上传位置</span></span><br><span class="line">$(<span class="string">'#updateAddress'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> geostr = $(<span class="string">'#geo'</span>).val()</span><br><span class="line">    <span class="built_in">console</span>.log( geostr )</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+            <h1 id="百度地图搜索并上传位置"><a href="#百度地图搜索并上传位置" class="headerlink" title="百度地图搜索并上传位置"></a>百度地图搜索并上传位置</h1><pre><code class="javascript">var start_point = {lng: 116.404,lat: 39.915}
+var map = new BMap.Map(&quot;container&quot;);
+map.enableScrollWheelZoom(true);     // 开启鼠标滚轮缩放
+// 根据经纬度自适应zoom和中点
+map.centerAndZoom(new BMap.Point(start_point.lng, start_point.lat), 11);  
+var geoc = new BMap.Geocoder() // 根据经纬度获取地址
+setTimeout(function() {
+    $(&#39;#geo&#39;).val(JSON.stringify(start_point))
+    // addMarker(start_point, &#39;&#39;)
+}, 100)
 
+// 添加定位控件
+var geolocationControl = new BMap.GeolocationControl({
+    anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+});
+geolocationControl.addEventListener(&quot;locationSuccess&quot;, function(e){
+    // 定位成功事件
+    map.clearOverlays();  
+    var addComp = e.addressComponent;
+    console.log(addComp)
+    var pp = e.point;
+    var address = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+    $(&#39;#suggestId&#39;).val(address)
+    map.centerAndZoom(pp, 14);
+    $(&#39;#geo&#39;).val(JSON.stringify(pp))
+    addMarker(pp, address);
+
+});
+geolocationControl.addEventListener(&quot;locationError&quot;,function(e){
+    // 定位失败事件
+    console.log(e.message);
+});
+map.addControl(geolocationControl);
+
+// 定义一个控件类,即function
+function ZoomControl() {
+    this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+    this.defaultOffset = new BMap.Size(10, 10);
+}
+
+// 通过JavaScript的prototype属性继承于BMap.Control
+ZoomControl.prototype = new BMap.Control();
+
+// 自定义控件必须实现自己的initialize方法,并且将控件的DOM元素返回
+// 在本方法中创建个div元素作为控件的容器,并将其添加到地图容器中
+ZoomControl.prototype.initialize = function(map){
+    // 创建一个DOM元素
+    var div = document.createElement(&quot;div&quot;);
+    // div.innerHTML = &#39;&lt;div id=&quot;r-result&quot; style=&quot;background:#fff;&quot;&gt;搜索地址:&lt;input type=&quot;text&quot; id=&quot;suggestId&quot; size=&quot;20&quot; value=&quot;无锡市&quot; style=&quot;width:150px;background:#fff;font-size:12px;color:#333;&quot; /&gt;&lt;/div&gt;&lt;div id=&quot;searchResultPanel&quot; style=&quot;border:1px solid #C0C0C0;width:150px;height:auto; display:none;&quot;&gt;&lt;/div&gt;&#39;;
+    div.innerHTML = `
+&lt;div id=&quot;r-result&quot; &gt;
+&lt;span&gt;搜索：&lt;/span&gt;
+&lt;input type=&quot;text&quot; id=&quot;suggestId&quot; size=&quot;20&quot; value=&quot;无锡市&quot; /&gt;
+&lt;input type=&quot;hidden&quot; id=&quot;geo&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;button&quot; id=&quot;updateAddress&quot; value=&quot;上传位置&quot; /&gt;
+&lt;/div&gt;
+&lt;div id=&quot;searchResultPanel&quot;&gt;&lt;/div&gt;
+`
+    // 添加DOM元素到地图中
+    map.getContainer().appendChild(div);
+    // 将DOM元素返回
+    return div;
+}
+
+// 创建控件
+var myZoomCtrl = new ZoomControl();
+// 添加到地图当中
+map.addControl(myZoomCtrl);
+var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+    {&quot;input&quot; : &quot;suggestId&quot;
+     ,&quot;location&quot; : map
+    });
+ac.addEventListener(&quot;onhighlight&quot;, function(e) {  //鼠标放在下拉列表上的事件
+    var str = &quot;&quot;;
+    var _value = e.fromitem.value;
+    var value = &quot;&quot;;
+    if (e.fromitem.index &gt; -1) {
+        value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+    }
+    str = &quot;FromItem&lt;br /&gt;index = &quot; + e.fromitem.index + &quot;&lt;br /&gt;value = &quot; + value;
+
+    value = &quot;&quot;;
+    if (e.toitem.index &gt; -1) {
+        _value = e.toitem.value;
+        value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+    }
+    str += &quot;&lt;br /&gt;ToItem&lt;br /&gt;index = &quot; + e.toitem.index + &quot;&lt;br /&gt;value = &quot; + value;
+    $(&quot;#searchResultPanel&quot;).html(str);
+});
+
+var myValue;
+ac.addEventListener(&quot;onconfirm&quot;, function(e) {    //鼠标点击下拉列表后的事件
+    var _value = e.item.value;
+    myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+    $(&quot;#searchResultPanel&quot;).html(&quot;onconfirm&lt;br /&gt;index = &quot; + e.item.index + &quot;&lt;br /&gt;myValue = &quot; + myValue);
+    setPlace();
+});
+
+function setPlace(){
+    map.clearOverlays();    //清除地图上所有覆盖物
+    function myFun(){
+        var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+        map.centerAndZoom(pp, 14);
+        $(&#39;#geo&#39;).val(JSON.stringify(pp))
+        addMarker(pp, &#39;&#39;)
+    }
+    var local = new BMap.LocalSearch(map, { //智能搜索
+        onSearchComplete: myFun
+    });
+    local.search(myValue);
+}
+
+function addMarker(pt, address) {
+    var marker = new BMap.Marker(pt)
+    map.addOverlay(marker); 
+    marker.enableDragging();
+    var label = new BMap.Label(address,{offset:new BMap.Size(20,0)});
+    label.setStyle({
+        color : &quot;#666&quot;,
+        fontSize : &quot;12px&quot;,
+        height : &quot;24px&quot;,
+        lineHeight : &quot;24px&quot;,
+        fontFamily:&quot;微软雅黑&quot;,
+        padding: &#39;0 5px 0 5px&#39;,
+        background: &#39;#fff&#39;,
+        border:&#39;0&#39;,
+        borderRadius: &#39;3px&#39;,
+    });
+    marker.setLabel(label);
+    geoc.getLocation(pt, function(rs){
+        console.log(rs)
+        var addComp = rs.addressComponents;
+        newaddress = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+        label.setContent(newaddress)
+    });
+    // 标注拖动事件 
+    marker.addEventListener(&quot;dragend&quot;, function(e){ 
+        var pt = e.point;
+        $(&#39;#geo&#39;).val(JSON.stringify(pt))
+        var newaddress;
+        geoc.getLocation(pt, function(rs){
+            var addComp = rs.addressComponents;
+            newaddress = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+            label.setContent(newaddress)
+        });
+    }); 
+}
+
+// 上传位置
+$(&#39;#updateAddress&#39;).click(function(){
+    var geostr = $(&#39;#geo&#39;).val()
+    console.log( geostr )
+})</code></pre>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -208,7 +338,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -233,7 +363,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

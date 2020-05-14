@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>面试题 | Hexo</title>
+  <title>面试题 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Shadow DOM和Virtual DOM有什么区别？ Shadow DOM 是Web Components标准，为Web组件提供了封装，Shadow DOM使得这些东西与主文档的DOM保持分离 Virtual DOM 是 Rect&#x2F;Vue等框架实现的虚拟DOM，其本质上是JavaScript对象，用于模拟DOM对象，在需要操作DOM的地方，先操作Virtual DOM，在render到真实DO">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题">
 <meta property="og:url" content="http://yoursite.com/2019/10/08/%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AYE Blog">
 <meta property="og:description" content="Shadow DOM和Virtual DOM有什么区别？ Shadow DOM 是Web Components标准，为Web组件提供了封装，Shadow DOM使得这些东西与主文档的DOM保持分离 Virtual DOM 是 Rect&#x2F;Vue等框架实现的虚拟DOM，其本质上是JavaScript对象，用于模拟DOM对象，在需要操作DOM的地方，先操作Virtual DOM，在render到真实DO">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T03:41:17.776Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:02:59.138Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="面试题">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-10-08</span>
             </div>
@@ -190,9 +188,9 @@
 <li>inline 首屏必备的 CSS 和 JavaScript</li>
 <li>meta dns prefetch 设置 DNS 预解析</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--cdn域名预解析--&gt;</span><br><span class="line">&lt;meta http-equiv&#x3D;&quot;x-dns-prefetch-control&quot; content&#x3D;&quot;on&quot; &gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;dns-prefetch&quot; href&#x3D;&quot;&#x2F;&#x2F;cdn.domain.com&quot; &gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
+<pre><code>&lt;!--cdn域名预解析--&gt;
+&lt;meta http-equiv=&quot;x-dns-prefetch-control&quot; content=&quot;on&quot; &gt;
+&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//cdn.domain.com&quot; &gt;</code></pre><ul>
 <li>资源预加载:对于移动端首屏加载后可能会被使用的资源，需要在首屏完成加载后尽快进行加载，保证在用户需要浏览时已经加载完成</li>
 <li>尝试使用 PWA 模式</li>
 <li>图片压缩处理</li>
@@ -212,8 +210,11 @@
 </li>
 <li>Demo</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"form"</span> <span class="attr">oninput</span>=<span class="string">"x.value=parseInt(a.value)+parseInt(b.value)"</span>&gt;</span></span><br><span class="line">    0<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">id</span>=<span class="string">"a"</span> <span class="attr">value</span>=<span class="string">"50"</span>&gt;</span>100</span><br><span class="line">    +<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"b"</span> <span class="attr">value</span>=<span class="string">"50"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">=<span class="tag">&lt;<span class="name">output</span> <span class="attr">form</span>=<span class="string">"form"</span> <span class="attr">name</span>=<span class="string">"x"</span> <span class="attr">for</span>=<span class="string">"a b"</span>&gt;</span><span class="tag">&lt;/<span class="name">output</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="html">&lt;form id=&quot;form&quot; oninput=&quot;x.value=parseInt(a.value)+parseInt(b.value)&quot;&gt;
+    0&lt;input type=&quot;range&quot; id=&quot;a&quot; value=&quot;50&quot;&gt;100
+    +&lt;input type=&quot;number&quot; id=&quot;b&quot; value=&quot;50&quot;&gt;
+&lt;/form&gt;
+=&lt;output form=&quot;form&quot; name=&quot;x&quot; for=&quot;a b&quot;&gt;&lt;/output&gt;</code></pre>
 <h3 id="有些js库习惯在代码开头处添加分号有什么作用呢？除了分号还可以换成别的吗？"><a href="#有些js库习惯在代码开头处添加分号有什么作用呢？除了分号还可以换成别的吗？" class="headerlink" title="有些js库习惯在代码开头处添加分号有什么作用呢？除了分号还可以换成别的吗？"></a>有些js库习惯在代码开头处添加分号有什么作用呢？除了分号还可以换成别的吗？</h3><ul>
 <li>作用：防止压缩后，当前一个js文件末尾没有分号时，浏览器会把它们当成一条语句处理，引起错误</li>
 <li>可以用<code>void</code> <code>!</code> <code>+</code> <code>~</code> 代替</li>
@@ -238,10 +239,110 @@
 </ul>
 </li>
 <li><p>demo</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">            * &#123;</span><br><span class="line">                margin: 0;</span><br><span class="line">                padding: 0;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">            <span class="selector-class">.tra</span> &#123;</span></span><br><span class="line">                width: 70px;</span><br><span class="line">                height: 70px;</span><br><span class="line">                position: fixed;</span><br><span class="line">                background: red;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">            <span class="selector-class">.drag</span> &#123;</span></span><br><span class="line">                width: 80px;</span><br><span class="line">                height: 80px;</span><br><span class="line">                background: blueviolet;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">            <span class="selector-id">#dragTarget</span> &#123;</span></span><br><span class="line">                width: 200px;</span><br><span class="line">                height: 200px;</span><br><span class="line">                border: 1px solid;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- HTML Draggable --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"drag"</span> <span class="attr">id</span>=<span class="string">"drag"</span> <span class="attr">draggable</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dragTarget"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 传统的拖拽 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tra"</span> <span class="attr">class</span>=<span class="string">"tra"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">            <span class="comment">// 传统的拖拽</span></span></span><br><span class="line"><span class="actionscript">            ; (<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> tra = <span class="built_in">document</span>.querySelector(<span class="string">'#tra'</span>);</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> startPoint = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</span></span><br><span class="line"><span class="actionscript">                <span class="keyword">var</span> isStartMove = <span class="literal">false</span>;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">const</span> addUnit = <span class="function"><span class="params">num</span> =&gt;</span> num + <span class="string">'px'</span>;</span></span><br><span class="line"><span class="actionscript">                tra.addEventListener(<span class="string">'mousedown'</span>, e =&gt; &#123;</span></span><br><span class="line"><span class="actionscript">                    isStartMove = <span class="literal">true</span>;</span></span><br><span class="line">                    startPoint = &#123;</span><br><span class="line">                        x: e.offsetX,</span><br><span class="line">                        y: e.offsetY,</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line"><span class="javascript">                <span class="built_in">window</span>.addEventListener(<span class="string">'mousemove'</span>, e =&gt; &#123;</span></span><br><span class="line"><span class="actionscript">                    <span class="keyword">if</span> (!isStartMove) <span class="keyword">return</span>;</span></span><br><span class="line">                    tra.style.left = addUnit(e.clientX - startPoint.x);</span><br><span class="line">                    tra.style.top = addUnit(e.clientY - startPoint.y);</span><br><span class="line">                &#125;);</span><br><span class="line"><span class="javascript">                <span class="built_in">window</span>.addEventListener(<span class="string">'mouseup'</span>, e =&gt; &#123;</span></span><br><span class="line"><span class="actionscript">                    isStartMove = <span class="literal">false</span>;</span></span><br><span class="line">                    startPoint = &#123;</span><br><span class="line">                        x: 0,</span><br><span class="line">                        y: 0,</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;)();</span><br><span class="line"></span><br><span class="line"><span class="actionscript">            <span class="comment">// HTML5拖拽事件</span></span></span><br><span class="line"><span class="actionscript">            ;(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> dragEl = <span class="built_in">document</span>.querySelector(<span class="string">'#drag'</span>);</span></span><br><span class="line"><span class="actionscript">                dragEl.addEventListener(<span class="string">'dragstart'</span>, e =&gt; &#123;</span></span><br><span class="line"><span class="actionscript">                    e.dataTransfer.setData(<span class="string">"Text"</span>,e.target.id);</span></span><br><span class="line"><span class="actionscript">                    e.dataTransfer.effectAllowed = <span class="string">'copyMove'</span>;</span></span><br><span class="line">                &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> dragTargetEl = <span class="built_in">document</span>.querySelector(<span class="string">'#dragTarget'</span>);</span></span><br><span class="line"><span class="actionscript">                dragTargetEl.addEventListener(<span class="string">'dragenter'</span>, e =&gt; &#123;</span></span><br><span class="line">                    e.preventDefault();</span><br><span class="line">                &#125;);</span><br><span class="line"></span><br><span class="line"><span class="actionscript">                dragTargetEl.addEventListener(<span class="string">'dragover'</span>, e =&gt; &#123;</span></span><br><span class="line">                    e.preventDefault();</span><br><span class="line">                &#125;);</span><br><span class="line"></span><br><span class="line"><span class="actionscript">                dragTargetEl.addEventListener(<span class="string">'drop'</span>, e =&gt; &#123;</span></span><br><span class="line">                    e.preventDefault();</span><br><span class="line"><span class="actionscript">                    <span class="keyword">var</span> id = e.dataTransfer.getData(<span class="string">'Text'</span>);</span></span><br><span class="line"><span class="javascript">                    e.target.appendChild(<span class="built_in">document</span>.getElementById(id));</span></span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;)();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
 
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .tra {
+                width: 70px;
+                height: 70px;
+                position: fixed;
+                background: red;
+            }
+
+            .drag {
+                width: 80px;
+                height: 80px;
+                background: blueviolet;
+            }
+
+            #dragTarget {
+                width: 200px;
+                height: 200px;
+                border: 1px solid;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;!-- HTML Draggable --&gt;
+        &lt;div class=&quot;drag&quot; id=&quot;drag&quot; draggable=&quot;true&quot;&gt;&lt;/div&gt;
+
+        &lt;div id=&quot;dragTarget&quot;&gt;&lt;/div&gt;
+        &lt;!-- 传统的拖拽 --&gt;
+        &lt;div id=&quot;tra&quot; class=&quot;tra&quot;&gt;
+        &lt;/div&gt;
+
+</code></pre>
 </li>
 </ul>
+<pre><code>      &lt;script&gt;
+          // 传统的拖拽
+          ; (function () {
+              var tra = document.querySelector(&#39;#tra&#39;);
+              var startPoint = Object.create(null);
+              var isStartMove = false;
+              const addUnit = num =&gt; num + &#39;px&#39;;
+              tra.addEventListener(&#39;mousedown&#39;, e =&gt; {
+                  isStartMove = true;
+                  startPoint = {
+                      x: e.offsetX,
+                      y: e.offsetY,
+                  }
+              });
+              window.addEventListener(&#39;mousemove&#39;, e =&gt; {
+                  if (!isStartMove) return;
+                  tra.style.left = addUnit(e.clientX - startPoint.x);
+                  tra.style.top = addUnit(e.clientY - startPoint.y);
+              });
+              window.addEventListener(&#39;mouseup&#39;, e =&gt; {
+                  isStartMove = false;
+                  startPoint = {
+                      x: 0,
+                      y: 0,
+                  }
+              });
+          })();
+
+          // HTML5拖拽事件
+          ;(function() {
+              var dragEl = document.querySelector(&#39;#drag&#39;);
+              dragEl.addEventListener(&#39;dragstart&#39;, e =&gt; {
+                  e.dataTransfer.setData(&quot;Text&quot;,e.target.id);
+                  e.dataTransfer.effectAllowed = &#39;copyMove&#39;;
+              });
+
+              var dragTargetEl = document.querySelector(&#39;#dragTarget&#39;);
+              dragTargetEl.addEventListener(&#39;dragenter&#39;, e =&gt; {
+                  e.preventDefault();
+              });
+
+              dragTargetEl.addEventListener(&#39;dragover&#39;, e =&gt; {
+                  e.preventDefault();
+              });
+
+              dragTargetEl.addEventListener(&#39;drop&#39;, e =&gt; {
+                  e.preventDefault();
+                  var id = e.dataTransfer.getData(&#39;Text&#39;);
+                  e.target.appendChild(document.getElementById(id));
+              })
+          })();
+
+
+      &lt;/script&gt;
+  &lt;/body&gt;</code></pre>  </html>
+  ```
+
 <h3 id="css中的border-none和border-0px有什么区别？"><a href="#css中的border-none和border-0px有什么区别？" class="headerlink" title="css中的border:none和border:0px有什么区别？"></a>css中的border:none和border:0px有什么区别？</h3><p>在于浏览器解析与否</p>
 <ol>
 <li>border为0的情况下虽然看不见,但是浏览器会对border进行渲染,还是占据内存的<br>而border为none时浏览器不会对其渲染,所以不会占据内存</li>
@@ -258,8 +359,17 @@
 <li>每次调用 $() 其实都是生成一个超大的对象，还是尽量存为变量吧</li>
 <li>用 jquery 写事件委托是最爽的，优点也是非常明显的</li>
 </ul>
-<h3 id="怎样把整个页面中的内容设置成只读-不可编辑的状态"><a href="#怎样把整个页面中的内容设置成只读-不可编辑的状态" class="headerlink" title="怎样把整个页面中的内容设置成只读,不可编辑的状态?"></a>怎样把整个页面中的内容设置成只读,不可编辑的状态?</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">方法1: οnfοcus=this.blur() </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"input1"</span> <span class="attr">value</span>=<span class="string">"中国"</span> ο<span class="attr">nf</span>ο<span class="attr">cus</span>=<span class="string">this.blur()</span>&gt;</span> </span><br><span class="line"></span><br><span class="line">方法2:readonly </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"input1"</span> <span class="attr">value</span>=<span class="string">"中国"</span> <span class="attr">readonly</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"input1"</span> <span class="attr">value</span>=<span class="string">"中国"</span> <span class="attr">readonly</span>=<span class="string">"true"</span>&gt;</span> </span><br><span class="line"></span><br><span class="line">方法3: disabled </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"input1"</span> <span class="attr">value</span>=<span class="string">"中国"</span> <span class="attr">disabled</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="怎样把整个页面中的内容设置成只读-不可编辑的状态"><a href="#怎样把整个页面中的内容设置成只读-不可编辑的状态" class="headerlink" title="怎样把整个页面中的内容设置成只读,不可编辑的状态?"></a>怎样把整个页面中的内容设置成只读,不可编辑的状态?</h3><pre><code class="html">方法1: οnfοcus=this.blur() 
 
+&lt;input type=&quot;text&quot; name=&quot;input1&quot; value=&quot;中国&quot; οnfοcus=this.blur()&gt; 
+
+方法2:readonly 
+&lt;input type=&quot;text&quot; name=&quot;input1&quot; value=&quot;中国&quot; readonly&gt; 
+
+&lt;input type=&quot;text&quot; name=&quot;input1&quot; value=&quot;中国&quot; readonly=&quot;true&quot;&gt; 
+
+方法3: disabled 
+&lt;input type=&quot;text&quot; name=&quot;input1&quot; value=&quot;中国&quot; disabled&gt;</code></pre>
 <h3 id="怎样对css文件进行压缩合并的？"><a href="#怎样对css文件进行压缩合并的？" class="headerlink" title="怎样对css文件进行压缩合并的？"></a>怎样对css文件进行压缩合并的？</h3><ul>
 <li>使用在线网站进行压缩，如<a href="http://tool.lu/css" target="_blank" rel="noopener">http://tool.lu/css</a></li>
 <li>如使用Gulp，可使用<code>gulp-minify-css</code>进行压缩</li>
@@ -268,25 +378,6 @@
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -306,7 +397,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -331,7 +422,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

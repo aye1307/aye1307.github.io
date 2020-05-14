@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>获取当天的时间戳 | Hexo</title>
+  <title>获取当天的时间戳 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="获取当天的时间戳12345678var start &#x3D; new Date(	new Date(new Date().toLocaleDateString()).getTime()); &#x2F;&#x2F; 当天0点var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59	new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1">
+  <meta name="description" content="获取当天的时间戳var start &#x3D; new Date(     new Date(new Date().toLocaleDateString()).getTime() ); &#x2F;&#x2F; 当天0点 var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59     new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 *">
 <meta property="og:type" content="article">
 <meta property="og:title" content="获取当天的时间戳">
 <meta property="og:url" content="http://yoursite.com/2019/12/23/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%A4%A9%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="获取当天的时间戳12345678var start &#x3D; new Date(	new Date(new Date().toLocaleDateString()).getTime()); &#x2F;&#x2F; 当天0点var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59	new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="获取当天的时间戳var start &#x3D; new Date(     new Date(new Date().toLocaleDateString()).getTime() ); &#x2F;&#x2F; 当天0点 var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59     new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 *">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:20:33.809Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:00:47.014Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-12-23</span>
             </div>
@@ -165,34 +163,29 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="获取当天的时间戳"><a href="#获取当天的时间戳" class="headerlink" title="获取当天的时间戳"></a>获取当天的时间戳</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> start = <span class="keyword">new</span> <span class="built_in">Date</span>(</span><br><span class="line">	<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleDateString()).getTime()</span><br><span class="line">); <span class="comment">// 当天0点</span></span><br><span class="line"><span class="keyword">var</span> end = <span class="keyword">new</span> <span class="built_in">Date</span>( <span class="comment">// 当天23:59</span></span><br><span class="line">	<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleDateString()).getTime() + <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> - <span class="number">1</span></span><br><span class="line">);</span><br><span class="line"><span class="keyword">var</span> startTime = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().getTime() - <span class="number">1</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>); <span class="comment">// 当前时间的前一小时</span></span><br><span class="line"><span class="keyword">var</span> endTime = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().getTime()); <span class="comment">// 当前时间</span></span><br></pre></td></tr></table></figure>
+            <h1 id="获取当天的时间戳"><a href="#获取当天的时间戳" class="headerlink" title="获取当天的时间戳"></a>获取当天的时间戳</h1><pre><code>var start = new Date(
+    new Date(new Date().toLocaleDateString()).getTime()
+); // 当天0点
+var end = new Date( // 当天23:59
+    new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000 - 1
+);
+var startTime = new Date(new Date().getTime() - 1 * 60 * 60 * 1000); // 当前时间的前一小时
+var endTime = new Date(new Date().getTime()); // 当前时间</code></pre><pre><code class="javascript">
+//获取格林时间
+var date1 = new Date(new Date(new Date().toLocaleDateString()).getTime());
+var date2 = new Date(new Date(new Date().toLocaleDateString()).getTime()+24*60*60*1000-1);
 
 
+//格式化时间  2018-06-06 00:00:00
+//如果只是简单的格式化只变成2018-6-6 0:0:0，需要运用三目运算判断并在适当的地方加上0，完成所需要的格式。
+var startTime = date1.getFullYear() + &quot;-&quot; + ((date1.getMonth() + 1) &lt; 10 ? &quot;0&quot; + (date1.getMonth() + 1):(date1.getMonth() + 1))+ &quot;-&quot; + (date1.getDate() &lt; 10 ? &quot;0&quot; + date1.getDate():date1.getDate()) + &quot; &quot; + (date1.getHours()&lt;10?&quot;0&quot;+date1.getHours():date1.getHours()) + &quot;:&quot; + (date1.getMinutes()&lt;10?&quot;0&quot;+date1.getMinutes():date1.getMinutes()) + &quot;:&quot; + (date1.getSeconds()&lt;10?&quot;0&quot;+date1.getSeconds():date1.getSeconds()),
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//获取格林时间</span></span><br><span class="line"><span class="keyword">var</span> date1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleDateString()).getTime());</span><br><span class="line"><span class="keyword">var</span> date2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleDateString()).getTime()+<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span><span class="number">-1</span>);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//格式化时间  2018-06-06 00:00:00</span></span><br><span class="line"><span class="comment">//如果只是简单的格式化只变成2018-6-6 0:0:0，需要运用三目运算判断并在适当的地方加上0，完成所需要的格式。</span></span><br><span class="line"><span class="keyword">var</span> startTime = date1.getFullYear() + <span class="string">"-"</span> + ((date1.getMonth() + <span class="number">1</span>) &lt; <span class="number">10</span> ? <span class="string">"0"</span> + (date1.getMonth() + <span class="number">1</span>):(date1.getMonth() + <span class="number">1</span>))+ <span class="string">"-"</span> + (date1.getDate() &lt; <span class="number">10</span> ? <span class="string">"0"</span> + date1.getDate():date1.getDate()) + <span class="string">" "</span> + (date1.getHours()&lt;<span class="number">10</span>?<span class="string">"0"</span>+date1.getHours():date1.getHours()) + <span class="string">":"</span> + (date1.getMinutes()&lt;<span class="number">10</span>?<span class="string">"0"</span>+date1.getMinutes():date1.getMinutes()) + <span class="string">":"</span> + (date1.getSeconds()&lt;<span class="number">10</span>?<span class="string">"0"</span>+date1.getSeconds():date1.getSeconds()),</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//格式化时间  2018-06-06 23:59:59</span></span><br><span class="line"> <span class="keyword">var</span> endTime = date2.getFullYear() + <span class="string">'-'</span> + (date2.getMonth() + <span class="number">1</span>) + <span class="string">'-'</span> + date2.getDate() + <span class="string">' '</span> + date2.getHours() + <span class="string">':'</span> + date2.getMinutes() + <span class="string">':'</span> + date2.getSeconds()</span><br></pre></td></tr></table></figure>
 
+//格式化时间  2018-06-06 23:59:59
+ var endTime = date2.getFullYear() + &#39;-&#39; + (date2.getMonth() + 1) + &#39;-&#39; + date2.getDate() + &#39; &#39; + date2.getHours() + &#39;:&#39; + date2.getMinutes() + &#39;:&#39; + date2.getSeconds()</code></pre>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -212,7 +205,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -237,7 +230,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

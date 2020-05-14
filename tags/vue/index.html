@@ -15,23 +15,21 @@
   </script>
 
   
-  <title>Tag: vue | Hexo</title>
+  <title>Tag: vue | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="AYE Blog">
 <meta property="og:url" content="http://yoursite.com/tags/vue/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AYE Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="aye">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -142,10 +140,9 @@
                                 <strong>vue-cli 3.0 打包</strong> <small class="post-date">at: 2019-10-29</small>
                                 <br>
                                 vue-cli 3.0 打包并本地查看使用命令行对项目打包
-1npm run build
-
-完成后直接打开生成的 dist 文件夹下的 index.html ，打开后出现了一个空白页面，并且控制台报错，提示文件找不到。修改 vue.config.js 中的路径。将 baseUrl 属性的值 ‘/‘ 修改为 ‘./‘
-12345678910module.e..
+npm run build完成后直接打开生成的 dist 文件夹下的 index.html ，打开后出现了一个空白页面，并且控制台报错，提示文件找不到。修改 vue.config.js 中的路径。将 baseUrl 属性的值 ‘/‘ 修改为 ‘./‘
+module.exports = {
+  /..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -165,9 +162,10 @@
                                 <strong>VUE-CLI 3.0 打包项目</strong> <small class="post-date">at: 2019-10-14</small>
                                 <br>
                                 解决vue cli3.0打包上线静态资源找不到路径问题解决方法是：在项目的根目录下创建vue.config,js文件，在里面配置静态资源的路径，publicPath是配置静态资源路径的属性，vue.config,js文件的代码如下： 
-123module.exports = &#123;    publicPath: './'&#125;
-
-项目打包上传..
+module.exports = {
+    publicPath: &#39;./&#39;
+}
+项目打包上传http..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -187,13 +185,13 @@
                                 <strong>VUE-CLI 3.0 如何创建项目</strong> <small class="post-date">at: 2019-10-14</small>
                                 <br>
                                 VUE-CLI 3.0 如何创建项目安装vue-cli 3.0首先查看本机是否有安装 vue-cli，在终端中运行下面命令
-1vue --version
+vue --version如果安装的不是 3.0 + ，先卸载当前 vue-cli
+npm uninstall -g vue-cli
 
-如果安装的不是 3.0 + ，先卸载当前 vue-cli
-123npm uninstall -g vue-clinpm install -g @vue&#x2F;cli
+npm install -g @vue/cli
+类 unix 用户，需加上 sudo
 
-
-类 unix 用户，需加上..
+创建初始..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -212,7 +210,10 @@
                             <p>
                                 <strong>vue.config.js 的配置</strong> <small class="post-date">at: 2019-10-14</small>
                                 <br>
-                                123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475const path = require('path')const deb..
+                                const path = require(&#39;path&#39;)
+const debug = process.env.NODE_ENV !== &#39;production&#39;
+//const VueConf = require(&#39;./src/assets/js/libs/vue_config_class&#39;)
+//cons..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -231,9 +232,11 @@
                             <p>
                                 <strong>vue项目中 img标签加载失败</strong> <small class="post-date">at: 2019-10-10</small>
                                 <br>
-                                vue项目中 img标签加载失败第一种方法：加载失败，直接删除img标签123&lt; img src&#x3D;“123” :οnerrοr&#x3D;“defaultImg” &#x2F;&gt;默认图地址defaultImg: ‘this.remove()’
-
-第二种方法：替换默认图片123456789&lt; img src&#x3D;“123”..
+                                vue项目中 img标签加载失败第一种方法：加载失败，直接删除img标签&lt; img src=“123” :οnerrοr=“defaultImg” /&gt;
+默认图地址
+defaultImg: ‘this.remove()’第二种方法：替换默认图片&lt; img src=“123” @error=“defImg()” /&gt;
+默认图地址
+d..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -274,7 +277,9 @@
                             <p>
                                 <strong>element-ui文件上传 做类型大小的限制</strong> <small class="post-date">at: 2019-10-09</small>
                                 <br>
-                                element-ui文件上传 做类型大小的限制1234567&lt;div class="filebox"&gt;    &lt;el-upload class="upload-demo" :action="url" :on-preview="handlePreview" :on-remove="handleRemove" multiple :limit..
+                                element-ui文件上传 做类型大小的限制
+&lt;div class=&quot;filebox&quot;&gt;
+    &lt;el-upload class=&quot;upload-demo&quot; :action=&quot;url&quot; :on-preview=&quot;handlePreview&quot; :on-re..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -295,11 +300,10 @@
                                 <br>
                                 使用Vue，获取当前页面的 IP地址使用vue引入外部js。（这里是使用搜狐的api来获取用户的ip）
 如果是单纯的html，我们引入js很简单直接
-1&lt;script src="http://pv.sohu.com/cityjson?ie=utf-8"&gt;&lt;/script&gt;
-
+&lt;script src=&quot;http://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/script&gt;
 但是vue不可以这样。
 
-在你要用到js的页面的comp..
+在你要用到js..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -329,7 +333,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

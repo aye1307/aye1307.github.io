@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>前端性能优化gzip | Hexo</title>
+  <title>前端性能优化gzip | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前端性能优化gzip什么是gzipgzip就是GNUzip的缩写，也是一个文件压缩程序，可以将文件压缩进后缀为.gz的压缩包。而我们前端所讲的gzip压缩优化，就是通过gzip这个压缩程序，对资源进行压缩，从而降低请求资源的文件大小。 gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何一个网站，看它们的html，js，css文件都是经过gzip压缩的（即使js，css这类文件经过了混淆压缩">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端性能优化gzip">
 <meta property="og:url" content="http://yoursite.com/2019/10/08/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96gzip/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AYE Blog">
 <meta property="og:description" content="前端性能优化gzip什么是gzipgzip就是GNUzip的缩写，也是一个文件压缩程序，可以将文件压缩进后缀为.gz的压缩包。而我们前端所讲的gzip压缩优化，就是通过gzip这个压缩程序，对资源进行压缩，从而降低请求资源的文件大小。 gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何一个网站，看它们的html，js，css文件都是经过gzip压缩的（即使js，css这类文件经过了混淆压缩">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T03:29:26.944Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:02:33.395Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-10-08</span>
             </div>
@@ -172,16 +170,66 @@
 </blockquote>
 <p>比如访问掘金，打开调试工具，在网络请求Network中，选择一个js或css，都能在Response Headers中找到 <strong>content-encoding: gzip</strong> 键值对，这就表示了这个文件是启用了gzip压缩的。</p>
 <h3 id="gzip压缩过程"><a href="#gzip压缩过程" class="headerlink" title="gzip压缩过程"></a>gzip压缩过程</h3><p>此处我们用原生node写一个服务：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> rs = fs.createReadStream(<span class="string">`static<span class="subst">$&#123;req.url&#125;</span>`</span>); <span class="comment">//读取文件流</span></span><br><span class="line">  rs.pipe(res); <span class="comment">//将数据以流的形式返回</span></span><br><span class="line">  rs.on(<span class="string">"error"</span>, err =&gt; &#123;</span><br><span class="line">    <span class="comment">//找不到返回404</span></span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">    res.writeHead(<span class="number">404</span>);</span><br><span class="line">    res.write(<span class="string">"Not Found"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//监听8080</span></span><br><span class="line">server.listen(<span class="number">8080</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"listen prot:8080"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">const http = require(&quot;http&quot;);
+const fs = require(&quot;fs&quot;);
 
+const server = http.createServer((req, res) =&gt; {
+  const rs = fs.createReadStream(`static${req.url}`); //读取文件流
+  rs.pipe(res); //将数据以流的形式返回
+  rs.on(&quot;error&quot;, err =&gt; {
+    //找不到返回404
+    console.log(err);
+    res.writeHead(404);
+    res.write(&quot;Not Found&quot;);
+  });
+});
+//监听8080
+server.listen(8080, () =&gt; {
+  console.log(&quot;listen prot:8080&quot;);
+});
+</code></pre>
 <p>用<code>node server.js</code>启动服务，此时我们访问 <a href="http://localhost:8080/xxx.js，网页会显示xxx.js文件的内容，查看Network面版，会发现xxx.js请求大小是88.73k，和原始资源文件大小一致，Response" target="_blank" rel="noopener">http://localhost:8080/xxx.js，网页会显示xxx.js文件的内容，查看Network面版，会发现xxx.js请求大小是88.73k，和原始资源文件大小一致，Response</a> Headers中也没有 <strong>content-encoding: gzip</strong> ，说明这是未经过gzip压缩的。</p>
 <p>如何开启gzip呢，很简单，node为我们提供了zlib模块，直接使用就行，上面的代码简单修改一下就可以。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"><span class="keyword">const</span> zlib = <span class="built_in">require</span>(<span class="string">"zlib"</span>); <span class="comment">// &lt;-- 引入zlib块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> rs = fs.createReadStream(<span class="string">`static<span class="subst">$&#123;req.url&#125;</span>`</span>);</span><br><span class="line">  <span class="keyword">const</span> gz = zlib.createGzip(); <span class="comment">// &lt;-- 创建gzip压缩</span></span><br><span class="line">  rs.pipe(gz).pipe(res); <span class="comment">// &lt;-- 返回数据前经过gzip压缩</span></span><br><span class="line">  rs.on(<span class="string">"error"</span>, err =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">    res.writeHead(<span class="number">404</span>);</span><br><span class="line">    res.write(<span class="string">"Not Found"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">8080</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"listen prot:8080"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">const http = require(&quot;http&quot;);
+const fs = require(&quot;fs&quot;);
+const zlib = require(&quot;zlib&quot;); // &lt;-- 引入zlib块
 
+const server = http.createServer((req, res) =&gt; {
+  const rs = fs.createReadStream(`static${req.url}`);
+  const gz = zlib.createGzip(); // &lt;-- 创建gzip压缩
+  rs.pipe(gz).pipe(res); // &lt;-- 返回数据前经过gzip压缩
+  rs.on(&quot;error&quot;, err =&gt; {
+    console.log(err);
+    res.writeHead(404);
+    res.write(&quot;Not Found&quot;);
+  });
+});
+
+server.listen(8080, () =&gt; {
+  console.log(&quot;listen prot:8080&quot;);
+});
+</code></pre>
 <p>但是如果你尝试用编辑器打开这个文件，会发现打开失败或者提示这是一个二进制文件而不是文本。这个时候如果反应快的朋友可能会和我第一次的想法一样，试试把js后缀改成gz。因为前面说了，其实gzip就是一个压缩程序，将文件压缩进一个.gz压缩包。</p>
 <p>原来gzip就是将资源文件压缩进一个压缩包,服务端返回压缩包的时候告诉浏览器一声，这其实是一个gz压缩包，浏览器你使用前先解压一下。而这个通知就是我们之前判断是否开启gzip压缩的请求头字段，Response Headers里的 <strong>content-encoding: gzip</strong>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"><span class="keyword">const</span> zlib = <span class="built_in">require</span>(<span class="string">"zlib"</span>); </span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> rs = fs.createReadStream(<span class="string">`static<span class="subst">$&#123;req.url&#125;</span>`</span>);</span><br><span class="line">  <span class="keyword">const</span> gz = zlib.createGzip(); </span><br><span class="line">  res.setHeader(<span class="string">"content-encoding"</span>, <span class="string">"gzip"</span>); <span class="comment">//添加content-encoding: gzip请求头。</span></span><br><span class="line">  rs.pipe(gz).pipe(res); </span><br><span class="line">  rs.on(<span class="string">"error"</span>, err =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">    res.writeHead(<span class="number">404</span>);</span><br><span class="line">    res.write(<span class="string">"Not Found"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">8080</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"listen prot:8080"</span>);</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">const http = require(&quot;http&quot;);
+const fs = require(&quot;fs&quot;);
+const zlib = require(&quot;zlib&quot;); 
 
+const server = http.createServer((req, res) =&gt; {
+  const rs = fs.createReadStream(`static${req.url}`);
+  const gz = zlib.createGzip(); 
+  res.setHeader(&quot;content-encoding&quot;, &quot;gzip&quot;); //添加content-encoding: gzip请求头。
+  rs.pipe(gz).pipe(res); 
+  rs.on(&quot;error&quot;, err =&gt; {
+    console.log(err);
+    res.writeHead(404);
+    res.write(&quot;Not Found&quot;);
+  });
+});
+
+server.listen(8080, () =&gt; {
+  console.log(&quot;listen prot:8080&quot;);
+</code></pre>
 <p>此时浏览器再请求到gzip压缩后的文件，会先解压处理一下再使用。</p>
 <h3 id="gzip的注意点"><a href="#gzip的注意点" class="headerlink" title="gzip的注意点"></a>gzip的注意点</h3><p>前面说的哪些文件适合开启gzip压缩，哪些不适合是一个注意点。</p>
 <p>还有一个注意点是，谁来做这个gzip压缩，我们的例子是在接到请求时，由node服务器进行压缩处理。这和express中使用compression中间件，koa中使用koa-compress中间件，nginx和tomcat进行配置都是一样的，这也是比较普遍的一种做法，由服务端进行压缩处理。</p>
@@ -194,25 +242,6 @@
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -232,7 +261,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -257,7 +286,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

@@ -15,23 +15,21 @@
   </script>
 
   
-  <title>Category: web前端 | Hexo</title>
+  <title>Category: web前端 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="AYE Blog">
 <meta property="og:url" content="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/page/5/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AYE Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="aye">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -137,7 +135,11 @@
                                 <br>
                                 常用的函数方法
 原生封装的ajax函数
-123456789101112131415161718192021222324252627282930313233343536373839404142434445function Ajax(type, url, data, success, failed)&#123;    // 创建ajax对象    var x..
+function Ajax(type, url, data, success, failed){
+    // 创建ajax对象
+    var xhr = null;
+    if ( window.XMLHttpRequest ) {//非IE浏览器
+        xhr = new XMLHttpReque..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -157,11 +159,10 @@
                                 <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
                                 DOMContentLoaded与load的区别onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
-1window.onload = function() &#123;&#125;
-
+window.onload = function() {}
 DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
 
-IE6、IE..
+IE6、IE7不支持DOMConte..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -200,28 +201,6 @@ Cooki..
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/25/安装git服务器/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>在CentOS下搭建Git服务器</strong> <small class="post-date">at: 2019-09-25</small>
-                                <br>
-                                在CentOS下搭建git服务器服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。
-1# yum info git //查看 yum 源仓库的 Git 信息
-
-可以看出，截至目前，yum 源仓库中..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
                 <a href="/2019/09/25/类数组对象结构/">
                     
                     <div class="media-content">
@@ -231,7 +210,10 @@ Cooki..
                                 <br>
                                 jQuery的类数组对象结构jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。
 首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：
-123456789jQuery([selector, [context]])jQuery(element)jQuery(elementArray)jQ..
+jQuery([selector, [context]])
+jQuery(element)
+jQuery(elementArray)
+jQuery(o..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -250,7 +232,31 @@ Cooki..
                             <p>
                                 <strong>jQuery立即调用表达式</strong> <small class="post-date">at: 2019-09-25</small>
                                 <br>
-                                立即调用表达式1234567891011;(function(global, factory)&#123;    factory(global);&#125;(typeof window !== "undefined" ? window : this, function(window, noGlobal) &#123;    var jQuery = f..
+                                立即调用表达式;(function(global, factory){
+    factory(global);
+}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
+    var jQuery = function (select..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/09/25/安装git服务器/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>在CentOS下搭建Git服务器</strong> <small class="post-date">at: 2019-09-25</small>
+                                <br>
+                                在CentOS下搭建git服务器服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。
+# yum info git //查看 yum 源仓库的 Git 信息
+可以看出，截至目前，yum 源仓库中最新..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -280,7 +286,7 @@ Cooki..
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

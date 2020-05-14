@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>百度地图创建图标 | Hexo</title>
+  <title>百度地图创建图标 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="百度地图创建图标1234567891011121314151617181920212223242526272829&#x2F;&#x2F;在轨迹点上创建图标，并添加点击事件  function addMarker(points)&amp;#123;  &#x2F;&#x2F; 创建图标对象         &#x2F;&#x2F; 创建标注对象并添加到地图         for(var i &#x3D; 0,pointsLen &#x3D; points.length;i &lt;">
+  <meta name="description" content="百度地图创建图标&#x2F;&#x2F;在轨迹点上创建图标，并添加点击事件   function addMarker(points){  &#x2F;&#x2F; 创建图标对象          &#x2F;&#x2F; 创建标注对象并添加到地图          for(var i &#x3D; 0,pointsLen &#x3D; points.length;i &lt;pointsLen;i++){           var point &#x3D; new BMap.Poin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度地图创建图标">
 <meta property="og:url" content="http://yoursite.com/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E5%88%9B%E5%BB%BA%E5%9B%BE%E6%A0%87/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="百度地图创建图标1234567891011121314151617181920212223242526272829&#x2F;&#x2F;在轨迹点上创建图标，并添加点击事件  function addMarker(points)&amp;#123;  &#x2F;&#x2F; 创建图标对象         &#x2F;&#x2F; 创建标注对象并添加到地图         for(var i &#x3D; 0,pointsLen &#x3D; points.length;i &lt;">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="百度地图创建图标&#x2F;&#x2F;在轨迹点上创建图标，并添加点击事件   function addMarker(points){  &#x2F;&#x2F; 创建图标对象          &#x2F;&#x2F; 创建标注对象并添加到地图          for(var i &#x3D; 0,pointsLen &#x3D; points.length;i &lt;pointsLen;i++){           var point &#x3D; new BMap.Poin">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-11-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:01:23.960Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:05:02.059Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="map">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-11-30</span>
             </div>
@@ -165,30 +163,38 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="百度地图创建图标"><a href="#百度地图创建图标" class="headerlink" title="百度地图创建图标"></a>百度地图创建图标</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在轨迹点上创建图标，并添加点击事件  </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addMarker</span>(<span class="params">points</span>)</span>&#123;  <span class="comment">// 创建图标对象     </span></span><br><span class="line">    <span class="comment">// 创建标注对象并添加到地图     </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,pointsLen = points.length;i &lt;pointsLen;i++)&#123;  </span><br><span class="line">        <span class="keyword">var</span> point = <span class="keyword">new</span> BMap.Point(points[i].lng,points[i].lat);      </span><br><span class="line">        <span class="keyword">var</span>  marker = <span class="keyword">new</span> BMap.Marker(point);     </span><br><span class="line">        map.addOverlay(marker);   </span><br><span class="line">        <span class="comment">//给标注点添加点击事件。使用立即执行函数和闭包  </span></span><br><span class="line">        (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">            <span class="keyword">var</span> thePoint = points[i];  </span><br><span class="line">            marker.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">                showInfo(<span class="keyword">this</span>,thePoint);  </span><br><span class="line">            &#125;);  </span><br><span class="line">        &#125;)();  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">//显示信息窗口，显示标注点的信息。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params">thisMaker,point</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> sContent =</span><br><span class="line">        <span class="string">'&lt;ul style="margin:0 0 5px 0;padding:0.2em 0"&gt;'</span></span><br><span class="line">        +<span class="string">'&lt;li style="line-height: 26px;font-size: 15px;"&gt;'</span></span><br><span class="line">        +<span class="string">'&lt;span style="width: 50px;display: inline-block;"&gt;id：&lt;/span&gt;'</span> + point.id + <span class="string">'&lt;/li&gt;'</span></span><br><span class="line">        +<span class="string">'&lt;li style="line-height: 26px;font-size: 15px;"&gt;'</span></span><br><span class="line">        +<span class="string">'&lt;span style="width: 50px;display: inline-block;"&gt;名称：&lt;/span&gt;'</span> + point.name + <span class="string">'&lt;/li&gt;'</span></span><br><span class="line">        +<span class="string">'&lt;li style="line-height: 26px;font-size: 15px;"&gt;&lt;span style="width: 50px;display: inline-block;"&gt;查看：&lt;/span&gt;&lt;a href="'</span>+point.url+<span class="string">'"&gt;详情&lt;/a&gt;&lt;/li&gt;'</span></span><br><span class="line">        +<span class="string">'&lt;/ul&gt;'</span>;</span><br><span class="line">    <span class="keyword">var</span> infoWindow = <span class="keyword">new</span> BMap.InfoWindow(sContent);  <span class="comment">// 创建信息窗口对象</span></span><br><span class="line">    thisMaker.openInfoWindow(infoWindow);   <span class="comment">//图片加载完毕重绘infowindow</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <h1 id="百度地图创建图标"><a href="#百度地图创建图标" class="headerlink" title="百度地图创建图标"></a>百度地图创建图标</h1><pre><code class="javascript">//在轨迹点上创建图标，并添加点击事件  
+function addMarker(points){  // 创建图标对象     
+    // 创建标注对象并添加到地图     
+    for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
+        var point = new BMap.Point(points[i].lng,points[i].lat);      
+        var  marker = new BMap.Marker(point);     
+        map.addOverlay(marker);   
+        //给标注点添加点击事件。使用立即执行函数和闭包  
+        (function() {  
+            var thePoint = points[i];  
+            marker.addEventListener(&quot;click&quot;,function(){  
+                showInfo(this,thePoint);  
+            });  
+        })();  
+    }  
+}  
+//显示信息窗口，显示标注点的信息。
+function showInfo(thisMaker,point){
+    var sContent =
+        &#39;&lt;ul style=&quot;margin:0 0 5px 0;padding:0.2em 0&quot;&gt;&#39;
+        +&#39;&lt;li style=&quot;line-height: 26px;font-size: 15px;&quot;&gt;&#39;
+        +&#39;&lt;span style=&quot;width: 50px;display: inline-block;&quot;&gt;id：&lt;/span&gt;&#39; + point.id + &#39;&lt;/li&gt;&#39;
+        +&#39;&lt;li style=&quot;line-height: 26px;font-size: 15px;&quot;&gt;&#39;
+        +&#39;&lt;span style=&quot;width: 50px;display: inline-block;&quot;&gt;名称：&lt;/span&gt;&#39; + point.name + &#39;&lt;/li&gt;&#39;
+        +&#39;&lt;li style=&quot;line-height: 26px;font-size: 15px;&quot;&gt;&lt;span style=&quot;width: 50px;display: inline-block;&quot;&gt;查看：&lt;/span&gt;&lt;a href=&quot;&#39;+point.url+&#39;&quot;&gt;详情&lt;/a&gt;&lt;/li&gt;&#39;
+        +&#39;&lt;/ul&gt;&#39;;
+    var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+    thisMaker.openInfoWindow(infoWindow);   //图片加载完毕重绘infowindow
+}</code></pre>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -208,7 +214,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -233,7 +239,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

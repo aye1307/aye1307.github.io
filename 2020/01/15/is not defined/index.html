@@ -15,30 +15,28 @@
   </script>
 
   
-  <title>is not defined | Hexo</title>
+  <title>is not defined | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS中 “is not defined” 如何判断defined，defined和undefined 的区别JS中 “is not defined” 我今天找了一些资料和自己试验了各种方法，都不能得到正解，故写了这个问题的解决方案。 首先什么是is not defined？从字面意思上来讲就是未定义，也就是未申明。就是这个变量（对象）压根就没有。如下： 1console.log(sojson);&#x2F;">
+  <meta name="description" content="JS中 “is not defined” 如何判断defined，defined和undefined 的区别JS中 “is not defined” 我今天找了一些资料和自己试验了各种方法，都不能得到正解，故写了这个问题的解决方案。 首先什么是is not defined？从字面意思上来讲就是未定义，也就是未申明。就是这个变量（对象）压根就没有。如下： console.log(sojson);&#x2F;&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="is not defined">
 <meta property="og:url" content="http://yoursite.com/2020/01/15/is%20not%20defined/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JS中 “is not defined” 如何判断defined，defined和undefined 的区别JS中 “is not defined” 我今天找了一些资料和自己试验了各种方法，都不能得到正解，故写了这个问题的解决方案。 首先什么是is not defined？从字面意思上来讲就是未定义，也就是未申明。就是这个变量（对象）压根就没有。如下： 1console.log(sojson);&#x2F;">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="JS中 “is not defined” 如何判断defined，defined和undefined 的区别JS中 “is not defined” 我今天找了一些资料和自己试验了各种方法，都不能得到正解，故写了这个问题的解决方案。 首先什么是is not defined？从字面意思上来讲就是未定义，也就是未申明。就是这个变量（对象）压根就没有。如下： console.log(sojson);&#x2F;&#x2F;">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://qab0509yb.bkt.clouddn.com/202001151.png">
 <meta property="article:published_time" content="2020-01-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:33:58.576Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T06:58:11.532Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://qab0509yb.bkt.clouddn.com/202001151.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -154,7 +152,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2020-01-15</span>
             </div>
@@ -169,16 +167,12 @@
         <div class="content" style="overflow: auto">
             <h1 id="JS中-“is-not-defined”-如何判断defined，defined和undefined-的区别"><a href="#JS中-“is-not-defined”-如何判断defined，defined和undefined-的区别" class="headerlink" title="JS中 “is not defined” 如何判断defined，defined和undefined 的区别"></a>JS中 “is not defined” 如何判断defined，defined和undefined 的区别</h1><p>JS中 “is not defined” 我今天找了一些资料和自己试验了各种方法，都不能得到正解，故写了这个问题的解决方案。</p>
 <h1 id="首先什么是is-not-defined？"><a href="#首先什么是is-not-defined？" class="headerlink" title="首先什么是is not defined？"></a>首先什么是is not defined？</h1><p>从字面意思上来讲就是未定义，也就是未申明。就是这个变量（对象）压根就没有。如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(sojson);<span class="comment">//sojson is not defined</span></span><br></pre></td></tr></table></figure>
-
-<p>可能还一知半解，我们继续往下看。</p>
+<pre><code>console.log(sojson);//sojson is not defined</code></pre><p>可能还一知半解，我们继续往下看。</p>
 <h1 id="is-not-defined-和-undefined-区别。"><a href="#is-not-defined-和-undefined-区别。" class="headerlink" title="is not defined 和 undefined 区别。"></a>is not defined 和 undefined 区别。</h1><p>我们大多数人都知道<a href="https://www.sojson.com/tag_undefined.html" target="_blank" rel="noopener"> undefined </a>，却不知道<a href="https://www.sojson.com/tag_defined.html" target="_blank" rel="noopener"> defined </a>，<a href="https://www.sojson.com/tag_undefined.html" target="_blank" rel="noopener"> undefined </a>是未定义，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> so;<span class="built_in">console</span>.log(so);<span class="comment">//undefinedconsole.log(so.a);//so.a is undefined</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var so;console.log(so);//undefinedconsole.log(so.a);//so.a is undefined</code></pre>
 <p>这个时候输出的是<a href="https://www.sojson.com/tag_undefined.html" target="_blank" rel="noopener"> undefined </a>。访问变量的属性就会提示<code>is undefined</code> 就是这个变量<code>so</code> 未定义值（类型）；</p>
 <p>而<code>defined</code> 呢，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(so);<span class="comment">//so is not defined</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">console.log(so);//so is not defined</code></pre>
 <p>其实如果理解一下其实就是未申明。也就是可以理解变量的过程是，先声明后赋值，在赋值的过程中确定了这个变量的类型。</p>
 <p><img src="http://qab0509yb.bkt.clouddn.com/202001151.png" alt="img"></p>
 <p>所以总结一下：is not defined 优先于 undefined ，也就是先判断这个对象是否申明了，如果没申明直接就 is not defined，如果已经申明，那么再看有没有赋值（类型），如果没有那么就是 undefined 或者 访问对象的属性就是 is undefined 。</p>
@@ -189,42 +183,36 @@
 <li>是否过多引入<code>jQuery</code> ，或者引入多个版本的<code>jQuery</code> 。</li>
 </ul>
 <p>我们自己定义对象的时候，对外要提供方法，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//申明局部变量 so。var so = &#123;     a : function()&#123;&#125;;&#125;//对外提供访问。window.so = so;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">//申明局部变量 so。var so = {     a : function(){};}//对外提供访问。window.so = so;</code></pre>
 <h1 id="如何判断-undefined。"><a href="#如何判断-undefined。" class="headerlink" title="如何判断 undefined。"></a>如何判断 undefined。</h1><p>undefined 很好判断，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sojson;<span class="built_in">console</span>.log(sojson == <span class="literal">undefined</span>);<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(sojson === <span class="literal">undefined</span>);<span class="comment">//true;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> sojson == <span class="string">'undefined'</span>);<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> sojson ===  <span class="string">'undefined'</span>);<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(!sojson);<span class="comment">//true//... ...</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var sojson;console.log(sojson == undefined);//true
+console.log(sojson === undefined);//true;
+console.log(typeof sojson == &#39;undefined&#39;);//true
+console.log(typeof sojson ===  &#39;undefined&#39;);//true
+console.log(!sojson);//true//... ...</code></pre>
 <h1 id="如何判断is-not-defined"><a href="#如何判断is-not-defined" class="headerlink" title="如何判断is not defined"></a>如何判断is not defined</h1><p>我在网上没找到合适的资料来判断“is not defined”，我项目中因为是公共js需要解决，对象是否定义。都不好判断。所以我用比较low的方式来判断的，如果你有好的点子，请留言或者告知我，我加上。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;	</span><br><span class="line">    <span class="keyword">var</span> x = sojson.demo;	</span><br><span class="line">&#125;<span class="keyword">catch</span>(e)&#123;	</span><br><span class="line">    <span class="built_in">console</span>.log(e.message);<span class="comment">//sojson is undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">try{    
+    var x = sojson.demo;    
+}catch(e){    
+    console.log(e.message);//sojson is undefined
+}</code></pre>
 <p>因为抛出了<code>Exception</code> ，所以能<code>catch</code> ，进入了<code>catch</code> 模块。如果有多个，请分开<code>cache</code> ，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;	</span><br><span class="line">    <span class="keyword">var</span> x = sojson.demo;	</span><br><span class="line">&#125;<span class="keyword">catch</span>(e)&#123;	</span><br><span class="line">    <span class="built_in">console</span>.log(e.message);<span class="comment">//sojson is undefined</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">try</span>&#123;	</span><br><span class="line">    <span class="keyword">var</span> y = sojson.y;	</span><br><span class="line">&#125;<span class="keyword">catch</span>(e)&#123;	</span><br><span class="line">    <span class="built_in">console</span>.log(e.message);<span class="comment">//sojson is undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">try{    
+    var x = sojson.demo;    
+}catch(e){    
+    console.log(e.message);//sojson is undefined
+}
+try{    
+    var y = sojson.y;    
+}catch(e){    
+    console.log(e.message);//sojson is undefined
+}</code></pre>
 <p>因为出现一个<a href="https://www.sojson.com/tag_exception.html" target="_blank" rel="noopener"> Exception </a>，就不会往下执行了，所以要分开去处理。</p>
 <p>[参考]：</p>
 <p><a href="https://www.sojson.com/blog/182.html" target="_blank" rel="noopener">JS中 “is not defined” 如何判断defined，defined和undefined 的区别</a></p>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -244,7 +232,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -269,7 +257,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>vue-router原理 | Hexo</title>
+  <title>vue-router原理 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="vue-router原理随着前端应用的业务功能越来越复杂、用户对于使用体验的要求越来越高，单页应用（SPA）成为前端应用的主流形式。大型单页应用最显著特点之一就是采用前端路由系统，通过改变URL，在不重新请求页面的情况下，更新页面视图。 “更新视图但不重新请求页面”是前端路由原理的核心之一，目前在浏览器环境中这一功能的实现主要有两种方式：  利用URL中的hash（“#”） 利用History i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-router原理">
 <meta property="og:url" content="http://yoursite.com/2019/10/10/vue-router%E5%8E%9F%E7%90%86/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AYE Blog">
 <meta property="og:description" content="vue-router原理随着前端应用的业务功能越来越复杂、用户对于使用体验的要求越来越高，单页应用（SPA）成为前端应用的主流形式。大型单页应用最显著特点之一就是采用前端路由系统，通过改变URL，在不重新请求页面的情况下，更新页面视图。 “更新视图但不重新请求页面”是前端路由原理的核心之一，目前在浏览器环境中这一功能的实现主要有两种方式：  利用URL中的hash（“#”） 利用History i">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:20:34.029Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:06:50.977Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-10-10</span>
             </div>
@@ -172,11 +170,81 @@
 <li>利用History interface在 HTML5中新增的方法</li>
 </ul>
 <h3 id="模式参数"><a href="#模式参数" class="headerlink" title="模式参数"></a>模式参数</h3><p>在vue-router中是通过mode这一参数控制路由的实现模式的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  mode: <span class="string">'history'</span>,</span><br><span class="line">  routes: [...]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">const router = new VueRouter({
+  mode: &#39;history&#39;,
+  routes: [...]
+})</code></pre>
 <p>创建VueRouter的实例对象时，mode以构造函数参数的形式传入。带着问题阅读源码，我们就可以从VueRouter类的定义入手。一般插件对外暴露的类都是定义在源码src根目录下的index.js文件中，打开该文件，可以看到VueRouter类的定义，摘录与mode参数有关的部分如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">VueRouter</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  mode: string; <span class="comment">// 传入的字符串参数，指示history类别</span></span><br><span class="line">  history: HashHistory | HTML5History | AbstractHistory; <span class="comment">// 实际起作用的对象属性，必须是以上三个类的枚举</span></span><br><span class="line">  fallback: boolean; <span class="comment">// 如浏览器不支持，'history'模式需回滚为'hash'模式</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">constructor</span> (options: RouterOptions = &#123;&#125;) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> mode = options.mode || <span class="string">'hash'</span> <span class="comment">// 默认为'hash'模式</span></span><br><span class="line">    <span class="keyword">this</span>.fallback = mode === <span class="string">'history'</span> &amp;&amp; !supportsPushState <span class="comment">// 通过supportsPushState判断浏览器是否支持'history'模式</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.fallback) &#123;</span><br><span class="line">      mode = <span class="string">'hash'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!inBrowser) &#123;</span><br><span class="line">      mode = <span class="string">'abstract'</span> <span class="comment">// 不在浏览器环境下运行需强制为'abstract'模式</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.mode = mode</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 根据mode确定history实际的类并实例化</span></span><br><span class="line">    <span class="keyword">switch</span> (mode) &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'history'</span>:</span><br><span class="line">        <span class="keyword">this</span>.history = <span class="keyword">new</span> HTML5History(<span class="keyword">this</span>, options.base)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">      <span class="keyword">case</span> <span class="string">'hash'</span>:</span><br><span class="line">        <span class="keyword">this</span>.history = <span class="keyword">new</span> HashHistory(<span class="keyword">this</span>, options.base, <span class="keyword">this</span>.fallback)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">      <span class="keyword">case</span> <span class="string">'abstract'</span>:</span><br><span class="line">        <span class="keyword">this</span>.history = <span class="keyword">new</span> AbstractHistory(<span class="keyword">this</span>, options.base)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">      <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span>) &#123;</span><br><span class="line">          assert(<span class="literal">false</span>, <span class="string">`invalid mode: <span class="subst">$&#123;mode&#125;</span>`</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  init (app: any <span class="comment">/* Vue component instance */</span>) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> history = <span class="keyword">this</span>.history</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 根据history的类别执行相应的初始化操作和监听</span></span><br><span class="line">    <span class="keyword">if</span> (history <span class="keyword">instanceof</span> HTML5History) &#123;</span><br><span class="line">      history.transitionTo(history.getCurrentLocation())</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (history <span class="keyword">instanceof</span> HashHistory) &#123;</span><br><span class="line">      <span class="keyword">const</span> setupHashListener = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        history.setupListeners()</span><br><span class="line">      &#125;</span><br><span class="line">      history.transitionTo(</span><br><span class="line">        history.getCurrentLocation(),</span><br><span class="line">        setupHashListener,</span><br><span class="line">        setupHashListener</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    history.listen(<span class="function"><span class="params">route</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.apps.forEach(<span class="function">(<span class="params">app</span>) =&gt;</span> &#123;</span><br><span class="line">        app._route = route</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// VueRouter类暴露的以下方法实际是调用具体history对象的方法</span></span><br><span class="line">  push (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.history.push(location, onComplete, onAbort)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  replace (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.history.replace(location, onComplete, onAbort)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">export default class VueRouter {
 
+  mode: string; // 传入的字符串参数，指示history类别
+  history: HashHistory | HTML5History | AbstractHistory; // 实际起作用的对象属性，必须是以上三个类的枚举
+  fallback: boolean; // 如浏览器不支持，&#39;history&#39;模式需回滚为&#39;hash&#39;模式
+
+  constructor (options: RouterOptions = {}) {
+
+    let mode = options.mode || &#39;hash&#39; // 默认为&#39;hash&#39;模式
+    this.fallback = mode === &#39;history&#39; &amp;&amp; !supportsPushState // 通过supportsPushState判断浏览器是否支持&#39;history&#39;模式
+    if (this.fallback) {
+      mode = &#39;hash&#39;
+    }
+    if (!inBrowser) {
+      mode = &#39;abstract&#39; // 不在浏览器环境下运行需强制为&#39;abstract&#39;模式
+    }
+    this.mode = mode
+
+    // 根据mode确定history实际的类并实例化
+    switch (mode) {
+      case &#39;history&#39;:
+        this.history = new HTML5History(this, options.base)
+        break
+      case &#39;hash&#39;:
+        this.history = new HashHistory(this, options.base, this.fallback)
+        break
+      case &#39;abstract&#39;:
+        this.history = new AbstractHistory(this, options.base)
+        break
+      default:
+        if (process.env.NODE_ENV !== &#39;production&#39;) {
+          assert(false, `invalid mode: ${mode}`)
+        }
+    }
+  }
+
+  init (app: any /* Vue component instance */) {
+
+    const history = this.history
+
+    // 根据history的类别执行相应的初始化操作和监听
+    if (history instanceof HTML5History) {
+      history.transitionTo(history.getCurrentLocation())
+    } else if (history instanceof HashHistory) {
+      const setupHashListener = () =&gt; {
+        history.setupListeners()
+      }
+      history.transitionTo(
+        history.getCurrentLocation(),
+        setupHashListener,
+        setupHashListener
+      )
+    }
+
+    history.listen(route =&gt; {
+      this.apps.forEach((app) =&gt; {
+        app._route = route
+      })
+    })
+  }
+
+  // VueRouter类暴露的以下方法实际是调用具体history对象的方法
+  push (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+    this.history.push(location, onComplete, onAbort)
+  }
+
+  replace (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+    this.history.replace(location, onComplete, onAbort)
+  }
+}</code></pre>
 <p>可以看出：</p>
 <ol>
 <li><p>作为参数传入的字符串属性mode只是一个标记，用来指示实际起作用的对象属性history的实现类，两者对应关系如下：</p>
@@ -198,41 +266,91 @@
 <li><p>hash虽然出现在URL中，但不会被包括在HTTP请求中。它是用来指导浏览器动作的，对服务器端完全无用，因此，改变hash不会重新加载页面</p>
 </li>
 <li><p>可以为hash的改变添加监听事件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"hashchange"</span>, funcRef, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">window.addEventListener(&quot;hashchange&quot;, funcRef, false)</code></pre>
 </li>
 <li><p>每一次改变hash（window.location.hash），都会在浏览器的访问历史中增加一个记录</p>
 </li>
 </ul>
 <p>利用hash的以上特点，就可以来实现前端路由“更新视图但不重新请求页面”的功能了。</p>
 <h5 id="HashHistory-push"><a href="#HashHistory-push" class="headerlink" title="HashHistory.push()"></a><strong>HashHistory.push()</strong></h5><p>我们来看HashHistory中的push()方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">push (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">  <span class="keyword">this</span>.transitionTo(location, route =&gt; &#123;</span><br><span class="line">    pushHash(route.fullPath)</span><br><span class="line">    onComplete &amp;&amp; onComplete(route)</span><br><span class="line">  &#125;, onAbort)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pushHash</span> (<span class="params">path</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">window</span>.location.hash = path</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">push (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+  this.transitionTo(location, route =&gt; {
+    pushHash(route.fullPath)
+    onComplete &amp;&amp; onComplete(route)
+  }, onAbort)
+}
 
+function pushHash (path) {
+  window.location.hash = path
+}</code></pre>
 <p>transitionTo()方法是父类中定义的是用来处理路由变化中的基础逻辑的，push()方法最主要的是对window的hash进行了直接赋值：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.location.hash = route.fullPath</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">window.location.hash = route.fullPath</code></pre>
 <p>hash的改变会自动添加到浏览器的访问历史记录中。</p>
 <p>那么视图的更新是怎么实现的呢，我们来看父类History中transitionTo()方法的这么一段：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">transitionTo (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> route = <span class="keyword">this</span>.router.match(location, <span class="keyword">this</span>.current)</span><br><span class="line">  <span class="keyword">this</span>.confirmTransition(route, () =&gt; &#123;</span><br><span class="line">    <span class="keyword">this</span>.updateRoute(route)</span><br><span class="line">    ...</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">updateRoute (route: Route) &#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">this</span>.cb &amp;&amp; <span class="keyword">this</span>.cb(route)</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">listen (cb: <span class="built_in">Function</span>) &#123;</span><br><span class="line">  <span class="keyword">this</span>.cb = cb</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">transitionTo (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+  const route = this.router.match(location, this.current)
+  this.confirmTransition(route, () =&gt; {
+    this.updateRoute(route)
+    ...
+  })
+}
 
+updateRoute (route: Route) {
+
+  this.cb &amp;&amp; this.cb(route)
+
+}
+
+listen (cb: Function) {
+  this.cb = cb
+}</code></pre>
 <p>可以看到，当路由变化时，调用了History中的this.cb方法，而this.cb方法是通过History.listen(cb)进行设置的。回到VueRouter类定义中，找到了在init()方法中对其进行了设置：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">install</span> (<span class="params">Vue</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">  Vue.mixin(&#123;</span><br><span class="line">    beforeCreate () &#123;</span><br><span class="line">      <span class="keyword">if</span> (isDef(<span class="keyword">this</span>.$options.router)) &#123;</span><br><span class="line">        <span class="keyword">this</span>._router = <span class="keyword">this</span>.$options.router</span><br><span class="line">        <span class="keyword">this</span>._router.init(<span class="keyword">this</span>)</span><br><span class="line">        Vue.util.defineReactive(<span class="keyword">this</span>, <span class="string">'_route'</span>, <span class="keyword">this</span>._router.history.current)</span><br><span class="line">      &#125;</span><br><span class="line">      registerInstance(<span class="keyword">this</span>, <span class="keyword">this</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">export function install (Vue) {
 
+  Vue.mixin({
+    beforeCreate () {
+      if (isDef(this.$options.router)) {
+        this._router = this.$options.router
+        this._router.init(this)
+        Vue.util.defineReactive(this, &#39;_route&#39;, this._router.history.current)
+      }
+      registerInstance(this, this)
+    },
+  })
+}</code></pre>
 <p>通过Vue.mixin()方法，全局注册一个混合，影响注册之后所有创建的每个 Vue 实例，该混合在beforeCreate钩子中通过Vue.util.defineReactive()定义了响应式的_route属性。所谓响应式属性，即当_route值改变时，会自动调用Vue实例的render()方法，更新视图。</p>
 <p>总结一下，从设置路由改变到视图更新的流程如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$router.push() --&gt; HashHistory.push() --&gt; History.transitionTo() --&gt; History.updateRoute() --&gt; &#123;app._route &#x3D; route&#125; --&gt; vm.render()</span><br></pre></td></tr></table></figure>
+<pre><code>$router.push() --&gt; HashHistory.push() --&gt; History.transitionTo() --&gt; History.updateRoute() --&gt; {app._route = route} --&gt; vm.render()</code></pre><h5 id="HashHistory-replace"><a href="#HashHistory-replace" class="headerlink" title="HashHistory.replace()"></a><strong>HashHistory.replace()</strong></h5><p>replace()方法与push()方法不同之处在于，它并不是将新路由添加到浏览器访问历史的栈顶，而是替换掉当前的路由：</p>
+<pre><code class="javascript">replace (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+  this.transitionTo(location, route =&gt; {
+    replaceHash(route.fullPath)
+    onComplete &amp;&amp; onComplete(route)
+  }, onAbort)
+}
 
-<h5 id="HashHistory-replace"><a href="#HashHistory-replace" class="headerlink" title="HashHistory.replace()"></a><strong>HashHistory.replace()</strong></h5><p>replace()方法与push()方法不同之处在于，它并不是将新路由添加到浏览器访问历史的栈顶，而是替换掉当前的路由：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">replace (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">  <span class="keyword">this</span>.transitionTo(location, route =&gt; &#123;</span><br><span class="line">    replaceHash(route.fullPath)</span><br><span class="line">    onComplete &amp;&amp; onComplete(route)</span><br><span class="line">  &#125;, onAbort)</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">replaceHash</span> (<span class="params">path</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> i = <span class="built_in">window</span>.location.href.indexOf(<span class="string">'#'</span>)</span><br><span class="line">  <span class="built_in">window</span>.location.replace(</span><br><span class="line">    <span class="built_in">window</span>.location.href.slice(<span class="number">0</span>, i &gt;= <span class="number">0</span> ? i : <span class="number">0</span>) + <span class="string">'#'</span> + path</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+function replaceHash (path) {
+  const i = window.location.href.indexOf(&#39;#&#39;)
+  window.location.replace(
+    window.location.href.slice(0, i &gt;= 0 ? i : 0) + &#39;#&#39; + path
+  )
+}</code></pre>
 <p>可以看出，它与push()的实现结构上基本相似，不同点在于它不是直接对window.location.hash进行赋值，而是调用window.location.replace方法将路由进行替换。</p>
 <h5 id="监听地址栏"><a href="#监听地址栏" class="headerlink" title="监听地址栏"></a><strong>监听地址栏</strong></h5><p>以上讨论的VueRouter.push()和VueRouter.replace()是可以在vue组件的逻辑代码中直接调用的，除此之外在浏览器中，用户还可以直接在浏览器地址栏中输入改变路由，因此VueRouter还需要能监听浏览器地址栏中路由的变化，并具有与通过代码调用相同的响应行为。在HashHistory中这一功能通过setupListeners实现：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setupListeners () &#123;</span><br><span class="line">  <span class="built_in">window</span>.addEventListener(<span class="string">'hashchange'</span>, () =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (!ensureSlash()) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.transitionTo(getHash(), route =&gt; &#123;</span><br><span class="line">      replaceHash(route.fullPath)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">setupListeners () {
+  window.addEventListener(&#39;hashchange&#39;, () =&gt; {
+    if (!ensureSlash()) {
+      return
+    }
+    this.transitionTo(getHash(), route =&gt; {
+      replaceHash(route.fullPath)
+    })
+  })
+}</code></pre>
 <p>该方法设置监听了浏览器事件hashchange，调用的函数为replaceHash，即在浏览器地址栏中直接输入路由相当于代码调用了replace()方法。</p>
 <h3 id="HTML5History"><a href="#HTML5History" class="headerlink" title="HTML5History"></a>HTML5History</h3><p>History interface是浏览器历史记录栈提供的接口，通过back(), forward(), go()等方法，我们可以读取浏览器历史记录栈的信息，进行各种跳转操作。</p>
 <p>从HTML5开始，History interface提供了两个新的方法：pushState(), replaceState()使得我们可以对浏览器历史记录栈进行修改：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.history.pushState(stateObject, title, URL)</span><br><span class="line"><span class="built_in">window</span>.history.replaceState(stateObject, title, URL)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">window.history.pushState(stateObject, title, URL)
+window.history.replaceState(stateObject, title, URL)</code></pre>
 <ul>
 <li>stateObject: 当浏览器跳转到新的状态时，将触发popState事件，该事件将携带这个stateObject参数的副本</li>
 <li>title: 所添加记录的标题</li>
@@ -240,15 +358,74 @@
 </ul>
 <p>这两个方法有个共同的特点：当调用他们修改浏览器历史记录栈后，虽然当前URL改变了，但浏览器不会立即发送请求该URL（the browser won’t attempt to load this URL after a call to pushState()），这就为单页应用前端路由“更新视图但不重新请求页面”提供了基础。</p>
 <p>我们来看vue-router中的源码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">push (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">current</span>: fromRoute &#125; = <span class="keyword">this</span></span><br><span class="line">  <span class="keyword">this</span>.transitionTo(location, route =&gt; &#123;</span><br><span class="line">    pushState(cleanPath(<span class="keyword">this</span>.base + route.fullPath))</span><br><span class="line">    handleScroll(<span class="keyword">this</span>.router, route, fromRoute, <span class="literal">false</span>)</span><br><span class="line">    onComplete &amp;&amp; onComplete(route)</span><br><span class="line">  &#125;, onAbort)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">replace (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">current</span>: fromRoute &#125; = <span class="keyword">this</span></span><br><span class="line">  <span class="keyword">this</span>.transitionTo(location, route =&gt; &#123;</span><br><span class="line">    replaceState(cleanPath(<span class="keyword">this</span>.base + route.fullPath))</span><br><span class="line">    handleScroll(<span class="keyword">this</span>.router, route, fromRoute, <span class="literal">false</span>)</span><br><span class="line">    onComplete &amp;&amp; onComplete(route)</span><br><span class="line">  &#125;, onAbort)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// src/util/push-state.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">pushState</span> (<span class="params">url?: string, replace?: boolean</span>) </span>&#123;</span><br><span class="line">  saveScrollPosition()</span><br><span class="line">  <span class="comment">// try...catch the pushState call to get around Safari</span></span><br><span class="line">  <span class="comment">// DOM Exception 18 where it limits to 100 pushState calls</span></span><br><span class="line">  <span class="keyword">const</span> history = <span class="built_in">window</span>.history</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (replace) &#123;</span><br><span class="line">      history.replaceState(&#123; <span class="attr">key</span>: _key &#125;, <span class="string">''</span>, url)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      _key = genKey()</span><br><span class="line">      history.pushState(&#123; <span class="attr">key</span>: _key &#125;, <span class="string">''</span>, url)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    <span class="built_in">window</span>.location[replace ? <span class="string">'replace'</span> : <span class="string">'assign'</span>](url)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">replaceState</span> (<span class="params">url?: string</span>) </span>&#123;</span><br><span class="line">  pushState(url, <span class="literal">true</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">push (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+  const { current: fromRoute } = this
+  this.transitionTo(location, route =&gt; {
+    pushState(cleanPath(this.base + route.fullPath))
+    handleScroll(this.router, route, fromRoute, false)
+    onComplete &amp;&amp; onComplete(route)
+  }, onAbort)
+}
 
+replace (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+  const { current: fromRoute } = this
+  this.transitionTo(location, route =&gt; {
+    replaceState(cleanPath(this.base + route.fullPath))
+    handleScroll(this.router, route, fromRoute, false)
+    onComplete &amp;&amp; onComplete(route)
+  }, onAbort)
+}
+
+// src/util/push-state.js
+export function pushState (url?: string, replace?: boolean) {
+  saveScrollPosition()
+  // try...catch the pushState call to get around Safari
+  // DOM Exception 18 where it limits to 100 pushState calls
+  const history = window.history
+  try {
+    if (replace) {
+      history.replaceState({ key: _key }, &#39;&#39;, url)
+    } else {
+      _key = genKey()
+      history.pushState({ key: _key }, &#39;&#39;, url)
+    }
+  } catch (e) {
+    window.location[replace ? &#39;replace&#39; : &#39;assign&#39;](url)
+  }
+}
+
+export function replaceState (url?: string) {
+  pushState(url, true)
+}</code></pre>
 <p>代码结构以及更新视图的逻辑与hash模式基本类似，只不过将对window.location.hash直接进行赋值window.location.replace()改为了调用history.pushState()和history.replaceState()方法。</p>
 <p>在HTML5History中添加对修改浏览器地址栏URL的监听是直接在构造函数中执行的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span> (router: Router, base: ?string) &#123;</span><br><span class="line">  </span><br><span class="line">  <span class="built_in">window</span>.addEventListener(<span class="string">'popstate'</span>, e =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> current = <span class="keyword">this</span>.current</span><br><span class="line">    <span class="keyword">this</span>.transitionTo(getLocation(<span class="keyword">this</span>.base), route =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (expectScroll) &#123;</span><br><span class="line">        handleScroll(router, route, current, <span class="literal">true</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">constructor (router: Router, base: ?string) {
 
+  window.addEventListener(&#39;popstate&#39;, e =&gt; {
+    const current = this.current
+    this.transitionTo(getLocation(this.base), route =&gt; {
+      if (expectScroll) {
+        handleScroll(router, route, current, true)
+      }
+    })
+  })
+}</code></pre>
 <p>当然了HTML5History用到了HTML5的新特特性，是需要特定浏览器版本的支持的，前文已经知道，浏览器是否支持是通过变量supportsPushState来检查的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/util/push-state.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> supportsPushState = inBrowser &amp;&amp; (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> ua = <span class="built_in">window</span>.navigator.userAgent</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (</span><br><span class="line">    (ua.indexOf(<span class="string">'Android 2.'</span>) !== <span class="number">-1</span> || ua.indexOf(<span class="string">'Android 4.0'</span>) !== <span class="number">-1</span>) &amp;&amp;</span><br><span class="line">    ua.indexOf(<span class="string">'Mobile Safari'</span>) !== <span class="number">-1</span> &amp;&amp;</span><br><span class="line">    ua.indexOf(<span class="string">'Chrome'</span>) === <span class="number">-1</span> &amp;&amp;</span><br><span class="line">    ua.indexOf(<span class="string">'Windows Phone'</span>) === <span class="number">-1</span></span><br><span class="line">  ) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">window</span>.history &amp;&amp; <span class="string">'pushState'</span> <span class="keyword">in</span> <span class="built_in">window</span>.history</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">// src/util/push-state.js
+export const supportsPushState = inBrowser &amp;&amp; (function () {
+  const ua = window.navigator.userAgent
 
+  if (
+    (ua.indexOf(&#39;Android 2.&#39;) !== -1 || ua.indexOf(&#39;Android 4.0&#39;) !== -1) &amp;&amp;
+    ua.indexOf(&#39;Mobile Safari&#39;) !== -1 &amp;&amp;
+    ua.indexOf(&#39;Chrome&#39;) === -1 &amp;&amp;
+    ua.indexOf(&#39;Windows Phone&#39;) === -1
+  ) {
+    return false
+  }
+
+  return window.history &amp;&amp; &#39;pushState&#39; in window.history
+})()</code></pre>
 <p>以上就是hash模式与history模式源码的导读，这两种模式都是通过浏览器接口实现的，除此之外vue-router还为非浏览器环境准备了一个abstract模式，其原理为用一个数组stack模拟出浏览器历史记录栈的功能。当然，以上只是一些核心逻辑，为保证系统的鲁棒性源码中还有大量的辅助逻辑，也很值得学习。此外在vue-router中还有路由匹配、router-view视图组件等重要部分，关于整体源码的阅读推荐滴滴前端的<a href="https://zhuanlan.zhihu.com/p/24574970" target="_blank" rel="noopener">这篇文章</a>。</p>
 <h3 id="两种模式比较"><a href="#两种模式比较" class="headerlink" title="两种模式比较"></a>两种模式比较</h3><p>在一般的需求场景中，hash模式与history模式是差不多的，但几乎所有的文章都推荐使用history模式，理由竟然是：”#” 符号太丑…0_0 “</p>
 <blockquote>
@@ -263,12 +440,10 @@
 </ul>
 <h4 id="history模式的一个问题"><a href="#history模式的一个问题" class="headerlink" title="history模式的一个问题"></a><strong>history模式的一个问题</strong></h4><p>我们知道对于单页应用来讲，理想的使用场景是仅在进入应用时加载index.html，后续在的网络操作通过Ajax完成，不会根据URL重新请求页面，但是难免遇到特殊情况，比如用户直接在地址栏中输入并回车，浏览器重启重新加载应用等。</p>
 <p>hash模式仅改变hash部分的内容，而hash部分是不会包含在HTTP请求中的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;oursite.com&#x2F;#&#x2F;user&#x2F;id   &#x2F;&#x2F; 如重新请求只会发送http:&#x2F;&#x2F;oursite.com&#x2F;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="text">http://oursite.com/#/user/id   // 如重新请求只会发送http://oursite.com/</code></pre>
 <p>故在hash模式下遇到根据URL请求页面的情况不会有问题。</p>
 <p>而history模式则会将URL修改得就和正常请求后端的URL一样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;oursite.com&#x2F;user&#x2F;id</span><br></pre></td></tr></table></figure>
-
+<pre><code class="text">http://oursite.com/user/id</code></pre>
 <p>在此情况下重新向后端发送请求，如后端没有配置对应/user/id的路由处理，则会返回404错误。官方推荐的解决办法是在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面。同时这么做以后，服务器就不再返回 404 错误页面，因为对于所有路径都会返回 index.html 文件。为了避免这种情况，在 Vue 应用里面覆盖所有的路由情况，然后在给出一个 404 页面。或者，如果是用 Node.js 作后台，可以使用服务端的路由来匹配 URL，当没有匹配到路由的时候返回 404，从而实现 fallback。</p>
 <h3 id="直接加载应用文件"><a href="#直接加载应用文件" class="headerlink" title="直接加载应用文件"></a>直接加载应用文件</h3><blockquote>
 <p>Tip: built files are meant to be served over an HTTP server.</p>
@@ -276,8 +451,30 @@
 </blockquote>
 <p>Vue项目通过vue-cli的webpack打包完成后，命令行会有这么一段提示。通常情况，无论是开发还是线上，前端项目都是通过服务器访问，不存在 “Opening index.html over file://“ ，但程序员都知道，需求和场景永远是千奇百怪的，只有你想不到的，没有产品经理想不到的。</p>
 <p>本文写作的初衷就是遇到了这样一个问题：需要快速开发一个移动端的展示项目，决定采用WebView加载Vue单页应用的形式，但没有后端服务器提供，所以所有资源需从本地文件系统加载：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AndroidAppWrapper</span></span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    private WebView webView;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected <span class="keyword">void</span> onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line"></span><br><span class="line">        webView = <span class="keyword">new</span> WebView(<span class="keyword">this</span>);</span><br><span class="line">        webView.getSettings().setJavaScriptEnabled(<span class="literal">true</span>);</span><br><span class="line">        webView.loadUrl(<span class="string">"file:///android_asset/index.html"</span>);</span><br><span class="line">        setContentView(webView);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean onKeyDown(int keyCode, KeyEvent event) &#123;</span><br><span class="line">        <span class="keyword">if</span> ((keyCode == KeyEvent.KEYCODE_BACK) &amp;&amp; webView.canGoBack()) &#123;</span><br><span class="line">            webView.goBack();</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">// AndroidAppWrapper
+public class MainActivity extends AppCompatActivity {
 
+    private WebView webView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        webView = new WebView(this);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl(&quot;file:///android_asset/index.html&quot;);
+        setContentView(webView);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) &amp;&amp; webView.canGoBack()) {
+            webView.goBack();
+            return true;
+        }
+        return false;
+    }
+}</code></pre>
 <p>此情此景看来是必须 “Opening index.html over file://“ 了，为此，我首先要进行了一些设置</p>
 <ul>
 <li>在项目config.js文件中将assetsPublicPath字段的值改为相对路径 ‘./‘</li>
@@ -286,22 +483,72 @@
 <p>这是比较明显的需要改动之处，但改完后依旧无法顺利加载，经过反复排查发现，项目在开发时，router设置为了history模式（为了美观…0_0”），当改为hash模式后就可正常加载了。</p>
 <p>为什么会出现这种情况呢？我分析原因可能如下：</p>
 <p>当从文件系统中直接加载index.html时，URL为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file:&#x2F;&#x2F;&#x2F;android_asset&#x2F;index.html</span><br></pre></td></tr></table></figure>
-
-<p>而首页视图需匹配的路径为path: ‘/‘ :</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  mode: <span class="string">'history'</span>,</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,</span><br><span class="line">      name: <span class="string">'index'</span>,</span><br><span class="line">      component: IndexView</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
+<pre><code>file:///android_asset/index.html</code></pre><p>而首页视图需匹配的路径为path: ‘/‘ :</p>
+<pre><code class="javascript">export default new Router({
+  mode: &#39;history&#39;,
+  routes: [
+    {
+      path: &#39;/&#39;,
+      name: &#39;index&#39;,
+      component: IndexView
+    }
+  ]
+})</code></pre>
 <p>我们先来看history模式，在HTML5History中：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ensureURL (push?: <span class="built_in">boolean</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (getLocation(<span class="keyword">this</span>.base) !== <span class="keyword">this</span>.current.fullPath) &#123;</span><br><span class="line">    <span class="keyword">const</span> current = cleanPath(<span class="keyword">this</span>.base + <span class="keyword">this</span>.current.fullPath)</span><br><span class="line">    push ? pushState(current) : replaceState(current)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getLocation</span> (<span class="params">base: <span class="built_in">string</span></span>): <span class="title">string</span> </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> path = <span class="built_in">window</span>.location.pathname</span><br><span class="line">  <span class="keyword">if</span> (base &amp;&amp; path.indexOf(base) === <span class="number">0</span>) &#123;</span><br><span class="line">    path = path.slice(base.length)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (path || <span class="string">'/'</span>) + <span class="built_in">window</span>.location.search + <span class="built_in">window</span>.location.hash</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="typescript">ensureURL (push?: boolean) {
+  if (getLocation(this.base) !== this.current.fullPath) {
+    const current = cleanPath(this.base + this.current.fullPath)
+    push ? pushState(current) : replaceState(current)
+  }
+}
 
+export function getLocation (base: string): string {
+  let path = window.location.pathname
+  if (base &amp;&amp; path.indexOf(base) === 0) {
+    path = path.slice(base.length)
+  }
+  return (path || &#39;/&#39;) + window.location.search + window.location.hash
+}</code></pre>
 <p>逻辑只会确保存在URL，path是通过剪切的方式直接从window.location.pathname获取到的，它的结尾是index.html，因此匹配不到 ‘/‘ ，故 “Opening index.html over file:// won’t work” 。</p>
 <p>再看hash模式，在HashHistory中：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> HashHistory <span class="keyword">extends</span> History &#123;</span><br><span class="line">  <span class="keyword">constructor</span> (<span class="params">router: Router, base: ?<span class="built_in">string</span>, fallback: <span class="built_in">boolean</span></span>) &#123;</span><br><span class="line">    ...</span><br><span class="line">    ensureSlash()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// this is delayed until the app mounts</span></span><br><span class="line">  <span class="comment">// to avoid the hashchange listener being fired too early</span></span><br><span class="line">  setupListeners () &#123;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'hashchange'</span>, <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (!ensureSlash()) &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      &#125;</span><br><span class="line">      ...</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  getCurrentLocation () &#123;</span><br><span class="line">    <span class="keyword">return</span> getHash()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ensureSlash</span> (<span class="params"></span>): <span class="title">boolean</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> path = getHash()</span><br><span class="line">  <span class="keyword">if</span> (path.charAt(<span class="number">0</span>) === <span class="string">'/'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">  replaceHash(<span class="string">'/'</span> + path)</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getHash</span> (<span class="params"></span>): <span class="title">string</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> href = <span class="built_in">window</span>.location.href</span><br><span class="line">  <span class="keyword">const</span> index = href.indexOf(<span class="string">'#'</span>)</span><br><span class="line">  <span class="keyword">return</span> index === <span class="number">-1</span> ? <span class="string">''</span> : href.slice(index + <span class="number">1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="typescript">export class HashHistory extends History {
+  constructor (router: Router, base: ?string, fallback: boolean) {
+    ...
+    ensureSlash()
+  }
 
+  // this is delayed until the app mounts
+  // to avoid the hashchange listener being fired too early
+  setupListeners () {
+    window.addEventListener(&#39;hashchange&#39;, () =&gt; {
+      if (!ensureSlash()) {
+        return
+      }
+      ...
+    })
+  }
+
+  getCurrentLocation () {
+    return getHash()
+  }
+}
+
+function ensureSlash (): boolean {
+  const path = getHash()
+  if (path.charAt(0) === &#39;/&#39;) {
+    return true
+  }
+  replaceHash(&#39;/&#39; + path)
+  return false
+}
+
+export function getHash (): string {
+  const href = window.location.href
+  const index = href.indexOf(&#39;#&#39;)
+  return index === -1 ? &#39;&#39; : href.slice(index + 1)
+}</code></pre>
 <p>我们看到在代码逻辑中，多次出现一个函数ensureSlash()，当#符号后紧跟着的是’/‘，则返回true，否则强行插入这个’/‘，故我们可以看到，即使是从文件系统打开index.html，URL依旧会变为以下形式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file:&#x2F;&#x2F;&#x2F;C:&#x2F;Users&#x2F;dist&#x2F;index.html#&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>getHash()方法返回的path为 ‘/‘ ，可与首页视图的路由匹配。</p>
+<pre><code>file:///C:/Users/dist/index.html#/</code></pre><p>getHash()方法返回的path为 ‘/‘ ，可与首页视图的路由匹配。</p>
 <p>故要想从文件系统直接加载Vue单页应用而不借助后端服务器，除了打包后的一些路径设置外，还需确保vue-router使用的是hash模式。</p>
 <p>【参考】：</p>
 <p><a href="https://zhuanlan.zhihu.com/p/27588422" target="_blank" rel="noopener">【源码拾遗】从vue-router看前端路由的两种实现</a></p>
@@ -309,25 +556,6 @@
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -347,7 +575,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -372,7 +600,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

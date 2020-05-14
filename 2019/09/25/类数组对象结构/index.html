@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>jQuery的类数组对象结构 | Hexo</title>
+  <title>jQuery的类数组对象结构 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jQuery的类数组对象结构jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。 首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载： 123456789jQuery([selector, [context]])jQuery(element)jQuery(elementArray)jQuery(object)jQuery(jQu">
+  <meta name="description" content="jQuery的类数组对象结构jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。 首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载： jQuery([selector, [context]]) jQuery(element) jQuery(elementArray) jQuery(object) jQuery(jQuery o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery的类数组对象结构">
 <meta property="og:url" content="http://yoursite.com/2019/09/25/%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%BB%93%E6%9E%84/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="jQuery的类数组对象结构jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。 首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载： 123456789jQuery([selector, [context]])jQuery(element)jQuery(elementArray)jQuery(object)jQuery(jQu">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="jQuery的类数组对象结构jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。 首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载： jQuery([selector, [context]]) jQuery(element) jQuery(elementArray) jQuery(object) jQuery(jQuery o">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-09-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T03:17:09.563Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:01:21.199Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="jQuery">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-09-25</span>
             </div>
@@ -167,30 +165,18 @@
         <div class="content" style="overflow: auto">
             <h2 id="jQuery的类数组对象结构"><a href="#jQuery的类数组对象结构" class="headerlink" title="jQuery的类数组对象结构"></a>jQuery的类数组对象结构</h2><p>jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。</p>
 <p>首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">jQuery([selector, [context]])</span><br><span class="line">jQuery(element)</span><br><span class="line">jQuery(elementArray)</span><br><span class="line">jQuery(object)</span><br><span class="line">jQuery(jQuery object)</span><br><span class="line">jQuery(html, [ownerDocument])</span><br><span class="line">jQuery(html, [attributes])</span><br><span class="line">jQuery()</span><br><span class="line">jQuery(callback)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">jQuery([selector, [context]])
+jQuery(element)
+jQuery(elementArray)
+jQuery(object)
+jQuery(jQuery object)
+jQuery(html, [ownerDocument])
+jQuery(html, [attributes])
+jQuery()
+jQuery(callback)</code></pre>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -210,7 +196,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -235,7 +221,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

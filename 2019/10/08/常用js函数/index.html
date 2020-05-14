@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>常用js函数 | Hexo</title>
+  <title>常用js函数 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="参考： 让你瞬间提高工作效率的常用js函数汇总(持续更新) 常用的正则校验1234567891011121314151617181920212223242526&#x2F;&#x2F; 匹配邮箱let reg &#x3D; &#x2F;^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]&amp;#123;2,4&amp;#125;)$&#x2F;&#x2F; (新)匹配手机号let reg &#x3D; &#x2F;^1[0-9]&amp;#123;1">
+  <meta name="description" content="参考： 让你瞬间提高工作效率的常用js函数汇总(持续更新) 常用的正则校验&#x2F;&#x2F; 匹配邮箱 let reg &#x3D; &#x2F;^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$  &#x2F;&#x2F; (新)匹配手机号 let reg &#x3D; &#x2F;^1[0-9]{10}$&#x2F;;  &#x2F;&#x2F; (旧)匹配手机号 let reg &#x3D; &#x2F;^1(3|4|5|7|8)[0-9]{9}$&#x2F;;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用js函数">
 <meta property="og:url" content="http://yoursite.com/2019/10/08/%E5%B8%B8%E7%94%A8js%E5%87%BD%E6%95%B0/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="参考： 让你瞬间提高工作效率的常用js函数汇总(持续更新) 常用的正则校验1234567891011121314151617181920212223242526&#x2F;&#x2F; 匹配邮箱let reg &#x3D; &#x2F;^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]&amp;#123;2,4&amp;#125;)$&#x2F;&#x2F; (新)匹配手机号let reg &#x3D; &#x2F;^1[0-9]&amp;#123;1">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="参考： 让你瞬间提高工作效率的常用js函数汇总(持续更新) 常用的正则校验&#x2F;&#x2F; 匹配邮箱 let reg &#x3D; &#x2F;^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$  &#x2F;&#x2F; (新)匹配手机号 let reg &#x3D; &#x2F;^1[0-9]{10}$&#x2F;;  &#x2F;&#x2F; (旧)匹配手机号 let reg &#x3D; &#x2F;^1(3|4|5|7|8)[0-9]{9}$&#x2F;;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T03:27:13.648Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:02:43.192Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-10-08</span>
             </div>
@@ -167,42 +165,240 @@
         <div class="content" style="overflow: auto">
             <p>参考：</p>
 <p><a href="https://juejin.im/post/5d1a45b0f265da1bb277494c#heading-0" target="_blank" rel="noopener">让你瞬间提高工作效率的常用js函数汇总(持续更新)</a></p>
-<h3 id="常用的正则校验"><a href="#常用的正则校验" class="headerlink" title="常用的正则校验"></a>常用的正则校验</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 匹配邮箱</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]&#123;2,4&#125;)$</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ (新)匹配手机号</span></span><br><span class="line"><span class="regexp">let reg = /</span>^<span class="number">1</span>[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">10</span>&#125;$/;</span><br><span class="line"></span><br><span class="line"><span class="comment">// (旧)匹配手机号</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^1(3|4|5|7|8)[0-9]&#123;9&#125;$/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配8-16位数字和字母密码的正则表达式</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]&#123;8,16&#125;$/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配国内电话号码 0510-4305211</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\d&#123;3&#125;-\d&#123;8&#125;|\d&#123;4&#125;-\d&#123;7&#125;/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配身份证号码</span></span><br><span class="line"><span class="keyword">let</span> reg=<span class="regexp">/(^\d&#123;15&#125;$)|(^\d&#123;18&#125;$)|(^\d&#123;17&#125;(\d|X|x)$)/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配腾讯QQ号</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/[1-9][0-9]&#123;4,&#125;/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配ip地址</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/\d+\.\d+\.\d+\.\d+/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配中文</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^[\u4e00-\u9fa5]*$/</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="常用的正则校验"><a href="#常用的正则校验" class="headerlink" title="常用的正则校验"></a>常用的正则校验</h3><pre><code class="javascript">// 匹配邮箱
+let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$
 
-<h3 id="常用的设备检测方式"><a href="#常用的设备检测方式" class="headerlink" title="常用的设备检测方式"></a>常用的设备检测方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> isWechat = <span class="regexp">/micromessenger/i</span>.test(navigator.userAgent),</span><br><span class="line">    isWeibo = <span class="regexp">/weibo/i</span>.test(navigator.userAgent),</span><br><span class="line">    isQQ = <span class="regexp">/qq\//i</span>.test(navigator.userAgent),</span><br><span class="line">    isIOS = <span class="regexp">/(iphone|ipod|ipad|ios)/i</span>.test(navigator.userAgent),</span><br><span class="line">    isAndroid = <span class="regexp">/android/i</span>.test(navigator.userAgent);</span><br></pre></td></tr></table></figure>
+// (新)匹配手机号
+let reg = /^1[0-9]{10}$/;
 
-<h3 id="常用的日期时间函数"><a href="#常用的日期时间函数" class="headerlink" title="常用的日期时间函数"></a>常用的日期时间函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 时间格式化</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">format_date</span>(<span class="params">timeStamp</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(timeStamp);</span><br><span class="line">    <span class="keyword">return</span> date.getFullYear() + <span class="string">"年"</span></span><br><span class="line">        + prefix_zero(date.getMonth() + <span class="number">1</span>) + <span class="string">"月"</span></span><br><span class="line">        + prefix_zero(date.getDate()) + <span class="string">"日 "</span></span><br><span class="line">        + prefix_zero(date.getHours()) + <span class="string">":"</span></span><br><span class="line">        + prefix_zero(date.getMinutes());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数字格式化</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prefix_zero</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num &gt;= <span class="number">10</span> ? num : <span class="string">"0"</span> + num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 倒计时时间格式化</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">format_time</span>(<span class="params">timeStamp</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> day = <span class="built_in">Math</span>.floor(timeStamp / (<span class="number">24</span> * <span class="number">3600</span> * <span class="number">1000</span>));</span><br><span class="line">    <span class="keyword">let</span> leave1 = timeStamp % (<span class="number">24</span> * <span class="number">3600</span> * <span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">let</span> hours = <span class="built_in">Math</span>.floor(leave1 / (<span class="number">3600</span> * <span class="number">1000</span>));</span><br><span class="line">    <span class="keyword">let</span> leave2 = leave1 % (<span class="number">3600</span> * <span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">let</span> minutes = <span class="built_in">Math</span>.floor(leave2 / (<span class="number">60</span> * <span class="number">1000</span>));</span><br><span class="line">    <span class="keyword">let</span> leave3 = leave2 % (<span class="number">60</span> * <span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">let</span> seconds = <span class="built_in">Math</span>.floor(leave3 / <span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">if</span> (day) <span class="keyword">return</span> day + <span class="string">"天"</span> + hours + <span class="string">"小时"</span> + minutes + <span class="string">"分"</span>;</span><br><span class="line">    <span class="keyword">if</span> (hours) <span class="keyword">return</span> hours + <span class="string">"小时"</span> + minutes + <span class="string">"分"</span> + seconds + <span class="string">"秒"</span>;</span><br><span class="line">    <span class="keyword">if</span> (minutes) <span class="keyword">return</span> minutes + <span class="string">"分"</span> + seconds + <span class="string">"秒"</span>;</span><br><span class="line">    <span class="keyword">if</span> (seconds) <span class="keyword">return</span> seconds + <span class="string">"秒"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"时间到！"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+// (旧)匹配手机号
+let reg = /^1(3|4|5|7|8)[0-9]{9}$/;
 
-<h3 id="跨端事件处理"><a href="#跨端事件处理" class="headerlink" title="跨端事件处理"></a>跨端事件处理</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 是否支持触摸事件</span></span><br><span class="line"><span class="keyword">let</span> isSupportTouch = (<span class="string">"ontouchstart"</span> <span class="keyword">in</span> <span class="built_in">document</span>.documentElement) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//禁用Enter键表单自动提交</span></span><br><span class="line"><span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> target, code, tag;</span><br><span class="line">    <span class="keyword">if</span> (!event) &#123;</span><br><span class="line">        event = <span class="built_in">window</span>.event; <span class="comment">//针对ie浏览器</span></span><br><span class="line">        target = event.srcElement;</span><br><span class="line">        code = event.keyCode;</span><br><span class="line">        <span class="keyword">if</span> (code == <span class="number">13</span>) &#123;</span><br><span class="line">            tag = target.tagName;</span><br><span class="line">            <span class="keyword">if</span> (tag == <span class="string">"TEXTAREA"</span>) &#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="literal">false</span>; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        target = event.target; <span class="comment">//针对遵循w3c标准的浏览器，如Firefox</span></span><br><span class="line">        code = event.keyCode;</span><br><span class="line">        <span class="keyword">if</span> (code == <span class="number">13</span>) &#123;</span><br><span class="line">            tag = target.tagName;</span><br><span class="line">            <span class="keyword">if</span> (tag == <span class="string">"INPUT"</span>) &#123; <span class="keyword">return</span> <span class="literal">false</span>; &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+// 匹配8-16位数字和字母密码的正则表达式
+let reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;
 
-<h3 id="移动端适配方案"><a href="#移动端适配方案" class="headerlink" title="移动端适配方案"></a>移动端适配方案</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">        resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">        recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> clientWidth = docEl.clientWidth;</span><br><span class="line">            <span class="keyword">var</span> fontSize = <span class="number">20</span>;</span><br><span class="line">            docEl.style.fontSize = fontSize + <span class="string">'px'</span>;</span><br><span class="line">            <span class="keyword">var</span> docStyles = getComputedStyle(docEl);</span><br><span class="line">            <span class="keyword">var</span> realFontSize = <span class="built_in">parseFloat</span>(docStyles.fontSize);</span><br><span class="line">            <span class="keyword">var</span> scale = realFontSize / fontSize;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"realFontSize: "</span> + realFontSize + <span class="string">", scale: "</span> + scale);</span><br><span class="line">            fontSize = clientWidth / <span class="number">667</span> * <span class="number">20</span>;</span><br><span class="line">            <span class="keyword">if</span>(isIphoneX()) fontSize = <span class="number">19</span>;</span><br><span class="line">            fontSize = fontSize / scale;</span><br><span class="line">            docEl.style.fontSize = fontSize + <span class="string">'px'</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">    <span class="comment">// Abort if browser does not support addEventListener</span></span><br><span class="line">    <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">    doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// iphoneX判断</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">isIphoneX</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="regexp">/iphone/gi</span>.test(navigator.userAgent) &amp;&amp; (screen.height == <span class="number">812</span> &amp;&amp; screen.width == <span class="number">375</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+// 匹配国内电话号码 0510-4305211
+let reg = /\d{3}-\d{8}|\d{4}-\d{7}/;
 
-<h3 id="xss预防方式"><a href="#xss预防方式" class="headerlink" title="xss预防方式"></a>xss预防方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 敏感符号转义</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">entities</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> e = &#123;</span><br><span class="line">        <span class="string">'"'</span>: <span class="string">'&amp;quot;'</span>,</span><br><span class="line">        <span class="string">'&amp;'</span>: <span class="string">'&amp;amp;'</span>,</span><br><span class="line">        <span class="string">'&lt;'</span>: <span class="string">'&amp;lt;'</span>,</span><br><span class="line">        <span class="string">'&gt;'</span>: <span class="string">'&amp;gt;'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s.replace(<span class="regexp">/["&lt;&gt;&amp;]/g</span>, m =&gt; &#123;</span><br><span class="line">        <span class="keyword">return</span> e[m]</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+// 匹配身份证号码
+let reg=/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
 
-<h3 id="常用的js算法"><a href="#常用的js算法" class="headerlink" title="常用的js算法"></a>常用的js算法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 节流函数--规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fun, delay</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> last, deferTimer</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">args</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">        <span class="keyword">let</span> _args = <span class="built_in">arguments</span></span><br><span class="line">        <span class="keyword">let</span> now = +<span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">        <span class="keyword">if</span> (last &amp;&amp; now &lt; last + delay) &#123;</span><br><span class="line">            clearTimeout(deferTimer)</span><br><span class="line">            deferTimer = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                last = now</span><br><span class="line">                fun.apply(that, _args)</span><br><span class="line">            &#125;, delay)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            last = now</span><br><span class="line">            fun.apply(that,_args)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 防抖函数--在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fun, delay</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">args</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">        clearTimeout(fun.id)</span><br><span class="line">        fun.id = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            fun.call(that, args)</span><br><span class="line">        &#125;, delay)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 观察者模式</span></span><br><span class="line"><span class="keyword">let</span> Observer = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> t __messages = &#123;&#125;;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    regist: <span class="function"><span class="keyword">function</span>(<span class="params">type, fn</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">typeof</span> __messages[type] === <span class="string">'undefined'</span>) &#123;</span><br><span class="line">        messages[type] = [fn];</span><br><span class="line">      &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        __messages[type].push(fn);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    fire: <span class="function"><span class="keyword">function</span>(<span class="params">type, args</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(!__messages[type])&#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">let</span> events = &#123;</span><br><span class="line">        type: type,</span><br><span class="line">        args: args || &#123;&#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      i = <span class="number">0</span>,</span><br><span class="line">      len = __messages[type].length;</span><br><span class="line">      <span class="keyword">for</span>(;i&lt;len;i++)&#123;</span><br><span class="line">        __messages[type][i].call(<span class="keyword">this</span>, events);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    remove: <span class="function"><span class="keyword">function</span>(<span class="params">type, fn</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(__messages[type] <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> i = __messages[type].length <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">          __messages[type][i] === fn &amp;&amp; __messages[type].splice(i, <span class="number">1</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 模板渲染方法</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">formatString</span>(<span class="params">str, data</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> str.replace(<span class="regexp">/\&#123;\&#123;(\w+)\&#125;\&#125;/g</span>, <span class="function"><span class="keyword">function</span>(<span class="params">match, key</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="keyword">typeof</span> data[key] === <span class="literal">undefined</span> ? <span class="string">''</span> : data[key]</span><br><span class="line">   &#125;)</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> <span class="comment">// 冒泡排序</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = arr.length - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">          swap(arr, j, j + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 置换函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">swap</span>(<span class="params">arr, indexA, indexB</span>) </span>&#123;</span><br><span class="line">    [arr[indexA], arr[indexB]] = [arr[indexB], arr[indexA]];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组去重</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">distinct</span>(<span class="params">arr = testArr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr.filter(<span class="function">(<span class="params">v, i, array</span>) =&gt;</span> array.indexOf(v) === i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+// 匹配腾讯QQ号
+let reg = /[1-9][0-9]{4,}/;
 
+// 匹配ip地址
+let reg = /\d+\.\d+\.\d+\.\d+/;
+
+// 匹配中文
+let reg = /^[\u4e00-\u9fa5]*$/;
+</code></pre>
+<h3 id="常用的设备检测方式"><a href="#常用的设备检测方式" class="headerlink" title="常用的设备检测方式"></a>常用的设备检测方式</h3><pre><code class="javascript">let isWechat = /micromessenger/i.test(navigator.userAgent),
+    isWeibo = /weibo/i.test(navigator.userAgent),
+    isQQ = /qq\//i.test(navigator.userAgent),
+    isIOS = /(iphone|ipod|ipad|ios)/i.test(navigator.userAgent),
+    isAndroid = /android/i.test(navigator.userAgent);
+</code></pre>
+<h3 id="常用的日期时间函数"><a href="#常用的日期时间函数" class="headerlink" title="常用的日期时间函数"></a>常用的日期时间函数</h3><pre><code class="javascript">// 时间格式化
+function format_date(timeStamp) {
+    let date = new Date(timeStamp);
+    return date.getFullYear() + &quot;年&quot;
+        + prefix_zero(date.getMonth() + 1) + &quot;月&quot;
+        + prefix_zero(date.getDate()) + &quot;日 &quot;
+        + prefix_zero(date.getHours()) + &quot;:&quot;
+        + prefix_zero(date.getMinutes());
+}
+
+// 数字格式化
+function prefix_zero(num) {
+    return num &gt;= 10 ? num : &quot;0&quot; + num;
+}
+
+// 倒计时时间格式化
+function format_time(timeStamp) {
+    let day = Math.floor(timeStamp / (24 * 3600 * 1000));
+    let leave1 = timeStamp % (24 * 3600 * 1000);
+    let hours = Math.floor(leave1 / (3600 * 1000));
+    let leave2 = leave1 % (3600 * 1000);
+    let minutes = Math.floor(leave2 / (60 * 1000));
+    let leave3 = leave2 % (60 * 1000);
+    let seconds = Math.floor(leave3 / 1000);
+    if (day) return day + &quot;天&quot; + hours + &quot;小时&quot; + minutes + &quot;分&quot;;
+    if (hours) return hours + &quot;小时&quot; + minutes + &quot;分&quot; + seconds + &quot;秒&quot;;
+    if (minutes) return minutes + &quot;分&quot; + seconds + &quot;秒&quot;;
+    if (seconds) return seconds + &quot;秒&quot;;
+    return &quot;时间到！&quot;;
+}</code></pre>
+<h3 id="跨端事件处理"><a href="#跨端事件处理" class="headerlink" title="跨端事件处理"></a>跨端事件处理</h3><pre><code class="javascript">// 是否支持触摸事件
+let isSupportTouch = (&quot;ontouchstart&quot; in document.documentElement) ? true : false;
+
+//禁用Enter键表单自动提交
+document.onkeydown = function(event) {
+    let target, code, tag;
+    if (!event) {
+        event = window.event; //针对ie浏览器
+        target = event.srcElement;
+        code = event.keyCode;
+        if (code == 13) {
+            tag = target.tagName;
+            if (tag == &quot;TEXTAREA&quot;) { return true; }
+            else { return false; }
+        }
+    }
+    else {
+        target = event.target; //针对遵循w3c标准的浏览器，如Firefox
+        code = event.keyCode;
+        if (code == 13) {
+            tag = target.tagName;
+            if (tag == &quot;INPUT&quot;) { return false; }
+            else { return true; }
+        }
+    }
+};
+</code></pre>
+<h3 id="移动端适配方案"><a href="#移动端适配方案" class="headerlink" title="移动端适配方案"></a>移动端适配方案</h3><pre><code class="javascript">(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = &#39;orientationchange&#39; in window ? &#39;orientationchange&#39; : &#39;resize&#39;,
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            var fontSize = 20;
+            docEl.style.fontSize = fontSize + &#39;px&#39;;
+            var docStyles = getComputedStyle(docEl);
+            var realFontSize = parseFloat(docStyles.fontSize);
+            var scale = realFontSize / fontSize;
+            console.log(&quot;realFontSize: &quot; + realFontSize + &quot;, scale: &quot; + scale);
+            fontSize = clientWidth / 667 * 20;
+            if(isIphoneX()) fontSize = 19;
+            fontSize = fontSize / scale;
+            docEl.style.fontSize = fontSize + &#39;px&#39;;
+        };
+    // Abort if browser does not support addEventListener
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener(&#39;DOMContentLoaded&#39;, recalc, false);
+
+    // iphoneX判断
+    function isIphoneX(){
+        return /iphone/gi.test(navigator.userAgent) &amp;&amp; (screen.height == 812 &amp;&amp; screen.width == 375)
+    }
+
+})(document, window);
+</code></pre>
+<h3 id="xss预防方式"><a href="#xss预防方式" class="headerlink" title="xss预防方式"></a>xss预防方式</h3><pre><code class="javascript">// 敏感符号转义
+function entities(s) {
+    let e = {
+        &#39;&quot;&#39;: &#39;&amp;quot;&#39;,
+        &#39;&amp;&#39;: &#39;&amp;amp;&#39;,
+        &#39;&lt;&#39;: &#39;&amp;lt;&#39;,
+        &#39;&gt;&#39;: &#39;&amp;gt;&#39;
+    }
+    return s.replace(/[&quot;&lt;&gt;&amp;]/g, m =&gt; {
+        return e[m]
+    })
+}
+</code></pre>
+<h3 id="常用的js算法"><a href="#常用的js算法" class="headerlink" title="常用的js算法"></a>常用的js算法</h3><pre><code class="javascript">/**
+ * 节流函数--规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。
+ */
+function throttle(fun, delay) {
+    let last, deferTimer
+    return function (args) {
+        let that = this
+        let _args = arguments
+        let now = +new Date()
+        if (last &amp;&amp; now &lt; last + delay) {
+            clearTimeout(deferTimer)
+            deferTimer = setTimeout(function () {
+                last = now
+                fun.apply(that, _args)
+            }, delay)
+        }else {
+            last = now
+            fun.apply(that,_args)
+        }
+    }
+}
+
+/**
+ * 防抖函数--在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时
+ */
+ function debounce(fun, delay) {
+    return function (args) {
+        let that = this
+        clearTimeout(fun.id)
+        fun.id = setTimeout(function () {
+            fun.call(that, args)
+        }, delay)
+    }
+}
+
+// 观察者模式
+let Observer = (function(){
+  let t __messages = {};
+  return {
+    regist: function(type, fn) {
+      if(typeof __messages[type] === &#39;undefined&#39;) {
+        messages[type] = [fn];
+      }else {
+        __messages[type].push(fn);
+      }
+    },
+    fire: function(type, args) {
+      if(!__messages[type]){
+        return
+      }
+      let events = {
+        type: type,
+        args: args || {}
+      },
+      i = 0,
+      len = __messages[type].length;
+      for(;i&lt;len;i++){
+        __messages[type][i].call(this, events);
+      }
+    },
+    remove: function(type, fn) {
+      if(__messages[type] instanceof Array){
+        let i = __messages[type].length -1;
+        for(;i&gt;=0;i--){
+          __messages[type][i] === fn &amp;&amp; __messages[type].splice(i, 1)
+        }
+      }
+    }
+  }
+})();
+
+ // 模板渲染方法
+ function formatString(str, data) {
+   return str.replace(/\{\{(\w+)\}\}/g, function(match, key) {
+     return typeof data[key] === undefined ? &#39;&#39; : data[key]
+   })
+ }
+
+ // 冒泡排序
+function bubbleSort(arr) {
+    for (let i = arr.length - 1; i &gt; 0; i--) {
+      for (let j = 0; j &lt; i; j++) {
+        if (arr[j] &gt; arr[j + 1]) {
+          swap(arr, j, j + 1);
+        }
+      }
+    }
+    return arr;
+}
+
+// 置换函数
+function swap(arr, indexA, indexB) {
+    [arr[indexA], arr[indexB]] = [arr[indexB], arr[indexA]];
+}
+
+// 数组去重
+function distinct(arr = testArr) {
+    return arr.filter((v, i, array) =&gt; array.indexOf(v) === i)
+}
+</code></pre>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -222,7 +418,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -247,7 +443,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

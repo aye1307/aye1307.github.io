@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>百度地图封装 | Hexo</title>
+  <title>百度地图封装 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="百度地图封装12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010">
+  <meta name="description" content="百度地图封装&#x2F;&#x2F;创建和初始化地图函数： function initMap() {     createMap();&#x2F;&#x2F;创建地图     setMapEvent();&#x2F;&#x2F;设置地图事件     addMapControl();&#x2F;&#x2F;向地图添加控件     addMarker();&#x2F;&#x2F;向地图中添加marker }  &#x2F;&#x2F;创建地图函数： function createMap() {     var map">
 <meta property="og:type" content="article">
 <meta property="og:title" content="百度地图封装">
 <meta property="og:url" content="http://yoursite.com/2019/11/30/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E5%B0%81%E8%A3%85/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="百度地图封装12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="百度地图封装&#x2F;&#x2F;创建和初始化地图函数： function initMap() {     createMap();&#x2F;&#x2F;创建地图     setMapEvent();&#x2F;&#x2F;设置地图事件     addMapControl();&#x2F;&#x2F;向地图添加控件     addMarker();&#x2F;&#x2F;向地图中添加marker }  &#x2F;&#x2F;创建地图函数： function createMap() {     var map">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-11-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:01:23.855Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:04:48.553Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="map">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-11-30</span>
             </div>
@@ -165,32 +163,120 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="百度地图封装"><a href="#百度地图封装" class="headerlink" title="百度地图封装"></a>百度地图封装</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建和初始化地图函数：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMap</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    createMap();<span class="comment">//创建地图</span></span><br><span class="line">    setMapEvent();<span class="comment">//设置地图事件</span></span><br><span class="line">    addMapControl();<span class="comment">//向地图添加控件</span></span><br><span class="line">    addMarker();<span class="comment">//向地图中添加marker</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建地图函数：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMap</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"dituContent"</span>);<span class="comment">//在百度地图容器中创建一个地图</span></span><br><span class="line">    <span class="keyword">var</span> point = <span class="keyword">new</span> BMap.Point(<span class="number">113.739165</span>, <span class="number">23.016775</span>);<span class="comment">//定义一个中心点坐标</span></span><br><span class="line">    map.centerAndZoom(point, <span class="number">17</span>);<span class="comment">//设定地图的中心点和坐标并将地图显示在地图容器中</span></span><br><span class="line">    <span class="built_in">window</span>.map = map;<span class="comment">//将map变量存储在全局</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//地图事件设置函数：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setMapEvent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    map.enableDragging();<span class="comment">//启用地图拖拽事件，默认启用(可不写)</span></span><br><span class="line">    map.enableScrollWheelZoom();<span class="comment">//启用地图滚轮放大缩小</span></span><br><span class="line">    map.enableDoubleClickZoom();<span class="comment">//启用鼠标双击放大，默认启用(可不写)</span></span><br><span class="line">    map.enableKeyboard();<span class="comment">//启用键盘上下左右键移动地图</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//地图控件添加函数：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addMapControl</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//向地图中添加缩放控件</span></span><br><span class="line">    <span class="keyword">var</span> ctrl_nav = <span class="keyword">new</span> BMap.NavigationControl(&#123;<span class="attr">anchor</span>: BMAP_ANCHOR_TOP_LEFT, <span class="attr">type</span>: BMAP_NAVIGATION_CONTROL_LARGE&#125;);</span><br><span class="line">    map.addControl(ctrl_nav);</span><br><span class="line">    <span class="comment">//向地图中添加缩略图控件</span></span><br><span class="line">    <span class="keyword">var</span> ctrl_ove = <span class="keyword">new</span> BMap.OverviewMapControl(&#123;<span class="attr">anchor</span>: BMAP_ANCHOR_BOTTOM_RIGHT, <span class="attr">isOpen</span>: <span class="number">1</span>&#125;);</span><br><span class="line">    map.addControl(ctrl_ove);</span><br><span class="line">    <span class="comment">//向地图中添加比例尺控件</span></span><br><span class="line">    <span class="keyword">var</span> ctrl_sca = <span class="keyword">new</span> BMap.ScaleControl(&#123;<span class="attr">anchor</span>: BMAP_ANCHOR_BOTTOM_LEFT&#125;);</span><br><span class="line">    map.addControl(ctrl_sca);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//标注点数组</span></span><br><span class="line"><span class="keyword">var</span> markerArr = [&#123;</span><br><span class="line">    title: <span class="string">"蓝居鸟科技有限公司"</span>,</span><br><span class="line">    content: <span class="string">"我的备注"</span>,</span><br><span class="line">    point: <span class="string">"113.739318|23.016758"</span>,</span><br><span class="line">    isOpen: <span class="number">1</span>,</span><br><span class="line">    icon: &#123;<span class="attr">w</span>: <span class="number">23</span>, <span class="attr">h</span>: <span class="number">25</span>, <span class="attr">l</span>: <span class="number">46</span>, <span class="attr">t</span>: <span class="number">21</span>, <span class="attr">x</span>: <span class="number">9</span>, <span class="attr">lb</span>: <span class="number">12</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">                ];</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建marker</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addMarker</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; markerArr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> json = markerArr[i];</span><br><span class="line">        <span class="keyword">var</span> p0 = json.point.split(<span class="string">"|"</span>)[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">var</span> p1 = json.point.split(<span class="string">"|"</span>)[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">var</span> point = <span class="keyword">new</span> BMap.Point(p0, p1);</span><br><span class="line">        <span class="keyword">var</span> iconImg = createIcon(json.icon);</span><br><span class="line">        <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(point, &#123;<span class="attr">icon</span>: iconImg&#125;);</span><br><span class="line">        <span class="keyword">var</span> iw = createInfoWindow(i);</span><br><span class="line">        <span class="keyword">var</span> label = <span class="keyword">new</span> BMap.Label(json.title, &#123;<span class="string">"offset"</span>: <span class="keyword">new</span> BMap.Size(json.icon.lb - json.icon.x + <span class="number">10</span>, <span class="number">-20</span>)&#125;);</span><br><span class="line">        marker.setLabel(label);</span><br><span class="line">        map.addOverlay(marker);</span><br><span class="line">        label.setStyle(&#123;</span><br><span class="line">            borderColor: <span class="string">"#808080"</span>,</span><br><span class="line">            color: <span class="string">"#333"</span>,</span><br><span class="line">            cursor: <span class="string">"pointer"</span></span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> index = i;</span><br><span class="line">            <span class="keyword">var</span> _iw = createInfoWindow(i);</span><br><span class="line">            <span class="keyword">var</span> _marker = marker;</span><br><span class="line">            _marker.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.openInfoWindow(_iw);</span><br><span class="line">            &#125;);</span><br><span class="line">            _iw.addEventListener(<span class="string">"open"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                _marker.getLabel().hide();</span><br><span class="line">            &#125;)</span><br><span class="line">            _iw.addEventListener(<span class="string">"close"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                _marker.getLabel().show();</span><br><span class="line">            &#125;)</span><br><span class="line">            label.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                _marker.openInfoWindow(_iw);</span><br><span class="line">            &#125;)</span><br><span class="line">            <span class="keyword">if</span> (!!json.isOpen) &#123;</span><br><span class="line">                label.hide();</span><br><span class="line">                _marker.openInfoWindow(_iw);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建InfoWindow</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createInfoWindow</span>(<span class="params">i</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> json = markerArr[i];</span><br><span class="line">    <span class="keyword">var</span> iw = <span class="keyword">new</span> BMap.InfoWindow(<span class="string">"&lt;b class='iw_poi_title' title='"</span> + json.title + <span class="string">"'&gt;"</span> + json.title + <span class="string">"&lt;/b&gt;&lt;div class='iw_poi_content'&gt;"</span> + json.content + <span class="string">"&lt;/div&gt;"</span>);</span><br><span class="line">    <span class="keyword">return</span> iw;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个Icon</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createIcon</span>(<span class="params">json</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> icon = <span class="keyword">new</span> BMap.Icon(<span class="string">"http://api.map.baidu.com/lbsapi/creatmap/images/us_mk_icon.png"</span>, <span class="keyword">new</span> BMap.Size(json.w, json.h), &#123;</span><br><span class="line">        imageOffset: <span class="keyword">new</span> BMap.Size(-json.l, -json.t),</span><br><span class="line">        infoWindowOffset: <span class="keyword">new</span> BMap.Size(json.lb + <span class="number">5</span>, <span class="number">1</span>),</span><br><span class="line">        offset: <span class="keyword">new</span> BMap.Size(json.x, json.h)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> icon;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h1 id="百度地图封装"><a href="#百度地图封装" class="headerlink" title="百度地图封装"></a>百度地图封装</h1><pre><code class="javascript">//创建和初始化地图函数：
+function initMap() {
+    createMap();//创建地图
+    setMapEvent();//设置地图事件
+    addMapControl();//向地图添加控件
+    addMarker();//向地图中添加marker
+}
 
+//创建地图函数：
+function createMap() {
+    var map = new BMap.Map(&quot;dituContent&quot;);//在百度地图容器中创建一个地图
+    var point = new BMap.Point(113.739165, 23.016775);//定义一个中心点坐标
+    map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
+    window.map = map;//将map变量存储在全局
+}
+
+//地图事件设置函数：
+function setMapEvent() {
+    map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+    map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+    map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+    map.enableKeyboard();//启用键盘上下左右键移动地图
+}
+
+//地图控件添加函数：
+function addMapControl() {
+    //向地图中添加缩放控件
+    var ctrl_nav = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE});
+    map.addControl(ctrl_nav);
+    //向地图中添加缩略图控件
+    var ctrl_ove = new BMap.OverviewMapControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1});
+    map.addControl(ctrl_ove);
+    //向地图中添加比例尺控件
+    var ctrl_sca = new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT});
+    map.addControl(ctrl_sca);
+}
+
+//标注点数组
+var markerArr = [{
+    title: &quot;蓝居鸟科技有限公司&quot;,
+    content: &quot;我的备注&quot;,
+    point: &quot;113.739318|23.016758&quot;,
+    isOpen: 1,
+    icon: {w: 23, h: 25, l: 46, t: 21, x: 9, lb: 12}
+}
+                ];
+
+//创建marker
+function addMarker() {
+    for (var i = 0; i &lt; markerArr.length; i++) {
+        var json = markerArr[i];
+        var p0 = json.point.split(&quot;|&quot;)[0];
+        var p1 = json.point.split(&quot;|&quot;)[1];
+        var point = new BMap.Point(p0, p1);
+        var iconImg = createIcon(json.icon);
+        var marker = new BMap.Marker(point, {icon: iconImg});
+        var iw = createInfoWindow(i);
+        var label = new BMap.Label(json.title, {&quot;offset&quot;: new BMap.Size(json.icon.lb - json.icon.x + 10, -20)});
+        marker.setLabel(label);
+        map.addOverlay(marker);
+        label.setStyle({
+            borderColor: &quot;#808080&quot;,
+            color: &quot;#333&quot;,
+            cursor: &quot;pointer&quot;
+        });
+
+        (function () {
+            var index = i;
+            var _iw = createInfoWindow(i);
+            var _marker = marker;
+            _marker.addEventListener(&quot;click&quot;, function () {
+                this.openInfoWindow(_iw);
+            });
+            _iw.addEventListener(&quot;open&quot;, function () {
+                _marker.getLabel().hide();
+            })
+            _iw.addEventListener(&quot;close&quot;, function () {
+                _marker.getLabel().show();
+            })
+            label.addEventListener(&quot;click&quot;, function () {
+                _marker.openInfoWindow(_iw);
+            })
+            if (!!json.isOpen) {
+                label.hide();
+                _marker.openInfoWindow(_iw);
+            }
+        })()
+    }
+}
+
+//创建InfoWindow
+function createInfoWindow(i) {
+    var json = markerArr[i];
+    var iw = new BMap.InfoWindow(&quot;&lt;b class=&#39;iw_poi_title&#39; title=&#39;&quot; + json.title + &quot;&#39;&gt;&quot; + json.title + &quot;&lt;/b&gt;&lt;div class=&#39;iw_poi_content&#39;&gt;&quot; + json.content + &quot;&lt;/div&gt;&quot;);
+    return iw;
+}
+
+//创建一个Icon
+function createIcon(json) {
+    var icon = new BMap.Icon(&quot;http://api.map.baidu.com/lbsapi/creatmap/images/us_mk_icon.png&quot;, new BMap.Size(json.w, json.h), {
+        imageOffset: new BMap.Size(-json.l, -json.t),
+        infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+        offset: new BMap.Size(json.x, json.h)
+    })
+    return icon;
+}
+
+
+</code></pre>
 <p>链接：</p>
 <p><a href="https://blog.csdn.net/u014132947/article/details/80277622" target="_blank" rel="noopener"><strong>解决百度地图生成器添加标注后图标不显示的问题</strong> </a></p>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -210,7 +296,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -235,7 +321,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

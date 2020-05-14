@@ -15,23 +15,21 @@
   </script>
 
   
-  <title>Tag: JavaScript | Hexo</title>
+  <title>Tag: JavaScript | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="AYE Blog">
 <meta property="og:url" content="http://yoursite.com/tags/JavaScript/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="AYE Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="aye">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -164,7 +162,7 @@
                                 <br>
                                 获取当前websocket的连接状态 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
  它将是以下值之一：CONNECTING OPEN CLOSING或CLOSED 
-123if(yourWsObject.readyState === yourWsObject.CLOSE..
+if(yourWsObject.readyState === yourWsObject.CLOSED){..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -183,7 +181,11 @@
                             <p>
                                 <strong>获取当天的时间戳</strong> <small class="post-date">at: 2019-12-23</small>
                                 <br>
-                                获取当天的时间戳12345678var start = new Date(	new Date(new Date().toLocaleDateString()).getTime()); // 当天0点var end = new Date( // 当天23:59	new Date(new Date().toLocaleDateString()).getTim..
+                                获取当天的时间戳var start = new Date(
+    new Date(new Date().toLocaleDateString()).getTime()
+); // 当天0点
+var end = new Date( // 当天23:59
+    new Date(new Date().toLocaleDateString()).getT..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -203,9 +205,11 @@
                                 <strong>判断对象是否为空对象的几种方法</strong> <small class="post-date">at: 2019-12-23</small>
                                 <br>
                                 javaScript判断对象是否为空对象的几种方法1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
-123var data = &#123;&#125;;var b = (JSON.stringify(data) == "&#123;&#125;");alert(b);//true
-
-2.for in 循环..
+var data = {};
+var b = (JSON.stringify(data) == &quot;{}&quot;);
+alert(b);//true
+2.for in 循环判断
+var obj =..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -224,7 +228,10 @@
                             <p>
                                 <strong>window.open</strong> <small class="post-date">at: 2019-12-19</small>
                                 <br>
-                                Javascript window.open使用POST传递值12345678910111213141516171819function openWindowWithPost(url, data) &#123;    var form &#x3D; document.createElement(&quot;form&quot;);    form.tar..
+                                Javascript window.open使用POST传递值function openWindowWithPost(url, data) {
+    var form = document.createElement(&quot;form&quot;);
+    form.target = &quot;_blank&quot;;
+    form.me..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -243,7 +250,10 @@
                             <p>
                                 <strong>封装cookie方法</strong> <small class="post-date">at: 2019-12-18</small>
                                 <br>
-                                封装cookie方法12345678910111213141516171819202122232425262728293031function setCookie(cname,cvalue,exdays)&#123;    var d = new Date();    d.setTime(d.getTime()+(exdays*24*60*60*1000..
+                                封装cookie方法function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    var expires = &quot;expires=&quot;+d.toGMTString..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -262,7 +272,11 @@
                             <p>
                                 <strong>添加书签至浏览器</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                添加书签至浏览器1234567891011121314151617181920212223242526272829 // 添加书签至浏览器function addfavorite() &#123;     var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Comm..
+                                添加书签至浏览器 // 添加书签至浏览器
+function addfavorite() { 
+    var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;
+    try{
+ ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -281,7 +295,10 @@
                             <p>
                                 <strong>js实现promise的方法</strong> <small class="post-date">at: 2019-10-10</small>
                                 <br>
-                                js实现promise的方法123456789101112131415161718192021222324252627282930313233343536373839404142434445const PromisePolyfill = (() =&gt; &#123;    //状态管理    const promiseStatusSymbol = S..
+                                js实现promise的方法const PromisePolyfill = (() =&gt; {
+    //状态管理
+    const promiseStatusSymbol = Symbol(&#39;PromiseStatus&#39;);
+    const promiseValueSymbol = Symbol(&#39;PromiseVa..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -322,7 +339,14 @@ gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何�
                                 <br>
                                 参考：
 让你瞬间提高工作效率的常用js函数汇总(持续更新)
-常用的正则校验1234567891011121314151617181920212223242526// 匹配邮箱let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]&#123;2,4&#125;)$// (新)匹配手机号let..
+常用的正则校验// 匹配邮箱
+let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$
+
+// (新)匹配手机号
+let reg = /^1[0-9]{10}$/;
+
+// (旧)匹配手机号
+let reg = /^1..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -352,7 +376,7 @@ gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何�
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

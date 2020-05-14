@@ -184,3 +184,5 @@
 .blur {
     filter: blur(8px);
 }
+
+code, pre { font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New";}

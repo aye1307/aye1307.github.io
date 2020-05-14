@@ -15,31 +15,29 @@
   </script>
 
   
-  <title>Axiso解决跨域访问 | Hexo</title>
+  <title>Axiso解决跨域访问 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Axiso解决跨域访问首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： 12$ vue -V2.X or 3.X  一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： 1234567this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;).then(res&#x3D;&gt;&amp;#123;    con">
+  <meta name="description" content="Axiso解决跨域访问首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： $ vue -V 2.X or 3.X一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;) .then(res&#x3D;&gt;{     consol">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Axiso解决跨域访问">
 <meta property="og:url" content="http://yoursite.com/2019/10/09/Axiso%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Axiso解决跨域访问首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： 12$ vue -V2.X or 3.X  一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： 1234567this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;).then(res&#x3D;&gt;&amp;#123;    con">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="Axiso解决跨域访问首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： $ vue -V 2.X or 3.X一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;) .then(res&#x3D;&gt;{     consol">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://qab0509yb.bkt.clouddn.com/201910091.png">
 <meta property="og:image" content="http://qab0509yb.bkt.clouddn.com/201910092.png">
 <meta property="article:published_time" content="2019-10-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:37:12.131Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:08:17.397Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="axios">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://qab0509yb.bkt.clouddn.com/201910091.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -155,7 +153,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-10-09</span>
             </div>
@@ -169,27 +167,55 @@
         </div>
         <div class="content" style="overflow: auto">
             <h1 id="Axiso解决跨域访问"><a href="#Axiso解决跨域访问" class="headerlink" title="Axiso解决跨域访问"></a>Axiso解决跨域访问</h1><p>首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vue -V</span><br><span class="line">2.X or 3.X</span><br></pre></td></tr></table></figure>
-
-<h3 id="一、Vue2-版本"><a href="#一、Vue2-版本" class="headerlink" title="一、Vue2 版本"></a>一、Vue2 版本</h3><p>这里以访问 Ve2x 的一个公告API为例，直接访问如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$axios.get(<span class="string">"https://www.v2ex.com/api/site/info.json"</span>)</span><br><span class="line">.then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="params">err</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
+<pre><code>$ vue -V
+2.X or 3.X</code></pre><h3 id="一、Vue2-版本"><a href="#一、Vue2-版本" class="headerlink" title="一、Vue2 版本"></a>一、Vue2 版本</h3><p>这里以访问 Ve2x 的一个公告API为例，直接访问如下：</p>
+<pre><code class="javascript">this.$axios.get(&quot;https://www.v2ex.com/api/site/info.json&quot;)
+.then(res=&gt;{
+    console.log(res)
+})
+.catch(err=&gt;{
+    console.log(err)
+})</code></pre>
 <p>当我们运行程序后，控制台报错如下：</p>
 <p><img src="http://qab0509yb.bkt.clouddn.com/201910091.png" alt=""></p>
 <p>可以看到浏览器拦截了我们的请求，因为我们跨域了，下面解决跨域问题。</p>
 <p><strong>Step1：配置BaseUrl</strong></p>
 <p>首先在<code>main.js</code>中，配置下我们访问的Url前缀：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></span><br><span class="line"><span class="keyword">import</span> Axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line"></span><br><span class="line">Vue.prototype.$axios = Axios</span><br><span class="line">Axios.defaults.baseURL = <span class="string">'/api'</span></span><br><span class="line">Axios.defaults.headers.post[<span class="string">'Content-Type'</span>] = <span class="string">'application/json'</span>;</span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-disable no-new */</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">'&lt;App/&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">import Vue from &#39;vue&#39;
+import App from &#39;./App&#39;
+import Axios from &#39;axios&#39;
 
+Vue.prototype.$axios = Axios
+Axios.defaults.baseURL = &#39;/api&#39;
+Axios.defaults.headers.post[&#39;Content-Type&#39;] = &#39;application/json&#39;;
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: &#39;#app&#39;,
+  components: { App },
+  template: &#39;&lt;App/&gt;&#39;
+})</code></pre>
 <p>关键代码是：<code>Axios.defaults.baseURL = &#39;/api&#39;</code>，这样每次发送请求都会带一个<code>/api</code>的前缀。</p>
 <p><strong>Step2：配置代理</strong></p>
 <p>修改config文件夹下的<code>index.js</code>文件，在<code>proxyTable</code>中加上如下代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'/api'</span>:&#123;</span><br><span class="line">    target: <span class="string">"https://www.v2ex.com/api"</span>,</span><br><span class="line">    changeOrigin:<span class="literal">true</span>,</span><br><span class="line">    pathRewrite:&#123;</span><br><span class="line">        <span class="string">'^/api'</span>:<span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">&#39;/api&#39;:{
+    target: &quot;https://www.v2ex.com/api&quot;,
+    changeOrigin:true,
+    pathRewrite:{
+        &#39;^/api&#39;:&#39;&#39;
+    }
+}</code></pre>
 <p><strong>Step3：修改请求Url</strong></p>
 <p>修改刚刚的axios请求，把<code>url</code>修改如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$axios.get(<span class="string">"/site/info.json"</span>)</span><br><span class="line">.then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="params">err</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">this.$axios.get(&quot;/site/info.json&quot;)
+.then(res=&gt;{
+    console.log(res)
+})
+.catch(err=&gt;{
+    console.log(err)
+})</code></pre>
 <p><strong>Step4：重启服务</strong></p>
 <p><strong>重启服务</strong>后，此时已经能够访问了：</p>
 <p><img src="http://qab0509yb.bkt.clouddn.com/201910092.png" alt=""></p>
@@ -197,44 +223,108 @@
 <p>因为我们给url加上了前缀 /api，我们访问 <a href="http://127.0.0.1:19323/site/info.json" target="_blank" rel="noopener">http://127.0.0.1:19323/site/info.json</a> 就当于访问了：<a href="http://127.0.0.1:19323/api/site/info.json。" target="_blank" rel="noopener">http://127.0.0.1:19323/api/site/info.json。</a>(假设本地访问端口号为 19323)</p>
 <p>又因为在 index.js 中的 proxyTable 中拦截了 /api ,并把 /api 及其前面的所有替换成了 target 中的内容，因此实际访问 Url 是<a href="https://www.v2ex.com/api/site/info.json。" target="_blank" rel="noopener">https://www.v2ex.com/api/site/info.json。</a></p>
 <h3 id="二、Vue3-版本"><a href="#二、Vue3-版本" class="headerlink" title="二、Vue3 版本"></a>二、Vue3 版本</h3><p>升级到 Vue3 后，会发现 Vue2 中存放配置的 <code>config</code> 文件夹没有了，大家不要慌张。可以在 package.json 文件的同级目录下创建 <code>vue.config.js</code> 文件。给出该文件的基础配置：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    outputDir: <span class="string">'dist'</span>,   <span class="comment">//build输出目录</span></span><br><span class="line">    assetsDir: <span class="string">'assets'</span>, <span class="comment">//静态资源目录（js, css, img）</span></span><br><span class="line">    lintOnSave: <span class="literal">false</span>, <span class="comment">//是否开启eslint</span></span><br><span class="line">    devServer: &#123;</span><br><span class="line">        open: <span class="literal">true</span>, <span class="comment">//是否自动弹出浏览器页面</span></span><br><span class="line">        host: <span class="string">"localhost"</span>, </span><br><span class="line">        port: <span class="string">'8081'</span>, </span><br><span class="line">        https: <span class="literal">false</span>,   <span class="comment">//是否使用https协议</span></span><br><span class="line">        hotOnly: <span class="literal">false</span>, <span class="comment">//是否开启热更新</span></span><br><span class="line">        proxy: <span class="literal">null</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">module.exports = {
+    outputDir: &#39;dist&#39;,   //build输出目录
+    assetsDir: &#39;assets&#39;, //静态资源目录（js, css, img）
+    lintOnSave: false, //是否开启eslint
+    devServer: {
+        open: true, //是否自动弹出浏览器页面
+        host: &quot;localhost&quot;, 
+        port: &#39;8081&#39;, 
+        https: false,   //是否使用https协议
+        hotOnly: false, //是否开启热更新
+        proxy: null,
+    }
+}</code></pre>
 <blockquote>
 <p>Vue3 解决跨域，内容只有第二步<strong>配置代理</strong> 和 Vue2 不同，其他的一致。</p>
 </blockquote>
 <p><strong>Step2：配置代理</strong></p>
 <p>修改 vue.config.js 中 <code>devServer</code> 子节点内容，添加一个 <code>proxy</code>：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">    open: <span class="literal">true</span>, <span class="comment">//是否自动弹出浏览器页面</span></span><br><span class="line">    host: <span class="string">"localhost"</span>, </span><br><span class="line">    port: <span class="string">'8081'</span>,</span><br><span class="line">    https: <span class="literal">false</span>,</span><br><span class="line">    hotOnly: <span class="literal">false</span>, </span><br><span class="line">    proxy: &#123;</span><br><span class="line">        <span class="string">'/api'</span>: &#123;</span><br><span class="line">            target: <span class="string">'https://www.v2ex.com/api'</span>, <span class="comment">//API服务器的地址</span></span><br><span class="line">            changeOrigin: <span class="literal">true</span>,</span><br><span class="line">            pathRewrite: &#123;</span><br><span class="line">                <span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">devServer: {
+    open: true, //是否自动弹出浏览器页面
+    host: &quot;localhost&quot;, 
+    port: &#39;8081&#39;,
+    https: false,
+    hotOnly: false, 
+    proxy: {
+        &#39;/api&#39;: {
+            target: &#39;https://www.v2ex.com/api&#39;, //API服务器的地址
+            changeOrigin: true,
+            pathRewrite: {
+                &#39;^/api&#39;: &#39;&#39;
+            }
+        }
+    },
+}</code></pre>
 <h3 id="三、番外"><a href="#三、番外" class="headerlink" title="三、番外"></a>三、番外</h3><p>当然，跨域问题也可以由后端解决，将下面这个过滤器加入程序即可。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 跨域过滤器</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author <span class="variable">jitwxs</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since </span>2018/10/16 20:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">CorsFilter</span> <span class="title">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public <span class="keyword">void</span> doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException &#123;</span><br><span class="line">        HttpServletResponse response = (HttpServletResponse) res;</span><br><span class="line">        HttpServletRequest request = (HttpServletRequest) req;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 不使用*，自动适配跨域域名，避免携带Cookie时失效</span></span><br><span class="line">        <span class="built_in">String</span> origin = request.getHeader(<span class="string">"Origin"</span>);</span><br><span class="line">        <span class="keyword">if</span>(StringUtils.isNotBlank(origin)) &#123;</span><br><span class="line">            response.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, origin);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 自适应所有自定义头</span></span><br><span class="line">        <span class="built_in">String</span> headers = request.getHeader(<span class="string">"Access-Control-Request-Headers"</span>);</span><br><span class="line">        <span class="keyword">if</span>(StringUtils.isNotBlank(headers)) &#123;</span><br><span class="line">            response.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, headers);</span><br><span class="line">            response.setHeader(<span class="string">"Access-Control-Expose-Headers"</span>, headers);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 允许跨域的请求方法类型</span></span><br><span class="line">        response.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        <span class="comment">// 预检命令（OPTIONS）缓存时间，单位：秒</span></span><br><span class="line">        response.setHeader(<span class="string">"Access-Control-Max-Age"</span>, <span class="string">"3600"</span>);</span><br><span class="line">        <span class="comment">// 明确许可客户端发送Cookie，不允许删除字段即可</span></span><br><span class="line">        response.setHeader(<span class="string">"Access-Control-Allow-Credentials"</span>, <span class="string">"true"</span>);</span><br><span class="line">        </span><br><span class="line">        chain.doFilter(request, response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public <span class="keyword">void</span> init(FilterConfig filterConfig) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public <span class="keyword">void</span> destroy() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    注册过滤器：</span></span><br><span class="line"><span class="comment">    @Bean</span></span><br><span class="line"><span class="comment">    public FilterRegistrationBean registerFilter() &#123;</span></span><br><span class="line"><span class="comment">        FilterRegistrationBean&lt;CorsFilter&gt; bean = new FilterRegistrationBean&lt;&gt;();</span></span><br><span class="line"><span class="comment">        bean.addUrlPatterns("/*");</span></span><br><span class="line"><span class="comment">        bean.setFilter(new CorsFilter());</span></span><br><span class="line"><span class="comment">        // 过滤顺序，从小到大依次过滤</span></span><br><span class="line"><span class="comment">        bean.setOrder(Ordered.HIGHEST_PRECEDENCE);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return bean;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
+/**
+ * 跨域过滤器
+ * @author jitwxs
+ * @since 2018/10/16 20:53
+ */
+public class CorsFilter implements Filter {
+    @Override
+    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+        HttpServletResponse response = (HttpServletResponse) res;
+        HttpServletRequest request = (HttpServletRequest) req;
 
+        // 不使用*，自动适配跨域域名，避免携带Cookie时失效
+        String origin = request.getHeader(&quot;Origin&quot;);
+        if(StringUtils.isNotBlank(origin)) {
+            response.setHeader(&quot;Access-Control-Allow-Origin&quot;, origin);
+        }
 
+        // 自适应所有自定义头
+        String headers = request.getHeader(&quot;Access-Control-Request-Headers&quot;);
+        if(StringUtils.isNotBlank(headers)) {
+            response.setHeader(&quot;Access-Control-Allow-Headers&quot;, headers);
+            response.setHeader(&quot;Access-Control-Expose-Headers&quot;, headers);
+        }
+
+        // 允许跨域的请求方法类型
+        response.setHeader(&quot;Access-Control-Allow-Methods&quot;, &quot;*&quot;);
+        // 预检命令（OPTIONS）缓存时间，单位：秒
+        response.setHeader(&quot;Access-Control-Max-Age&quot;, &quot;3600&quot;);
+        // 明确许可客户端发送Cookie，不允许删除字段即可
+        response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);
+
+        chain.doFilter(request, response);
+    }
+
+    @Override
+    public void init(FilterConfig filterConfig) {
+
+    }
+
+    @Override
+    public void destroy() {
+    }
+
+    /*
+    注册过滤器：
+    @Bean
+    public FilterRegistrationBean registerFilter() {
+        FilterRegistrationBean&lt;CorsFilter&gt; bean = new FilterRegistrationBean&lt;&gt;();
+        bean.addUrlPatterns(&quot;/*&quot;);
+        bean.setFilter(new CorsFilter());
+        // 过滤顺序，从小到大依次过滤
+        bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
+
+        return bean;
+    }
+     */
+}</code></pre>
 <p>参考：</p>
 <p><a href="https://blog.csdn.net/yuanlaijike/article/details/80522621" target="_blank" rel="noopener">Axiso解决跨域访问</a></p>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -254,7 +344,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -279,7 +369,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

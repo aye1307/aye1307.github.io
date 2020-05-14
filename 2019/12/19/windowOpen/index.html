@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>window.open | Hexo</title>
+  <title>window.open | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Javascript window.open使用POST传递值12345678910111213141516171819function openWindowWithPost(url, data) &amp;#123;    var form &#x3D; document.createElement(&quot;form&quot;);    form.target &#x3D; &quot;_blan">
+  <meta name="description" content="Javascript window.open使用POST传递值function openWindowWithPost(url, data) {     var form &#x3D; document.createElement(&quot;form&quot;);     form.target &#x3D; &quot;_blank&quot;;     form.method &#x3D; &quot;POST&amp;quot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="window.open">
 <meta property="og:url" content="http://yoursite.com/2019/12/19/windowOpen/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Javascript window.open使用POST传递值12345678910111213141516171819function openWindowWithPost(url, data) &amp;#123;    var form &#x3D; document.createElement(&quot;form&quot;);    form.target &#x3D; &quot;_blan">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="Javascript window.open使用POST传递值function openWindowWithPost(url, data) {     var form &#x3D; document.createElement(&quot;form&quot;);     form.target &#x3D; &quot;_blank&quot;;     form.method &#x3D; &quot;POST&amp;quot">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T05:20:46.839Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T06:59:26.339Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-12-19</span>
             </div>
@@ -165,30 +163,28 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h2 id="Javascript-window-open使用POST传递值"><a href="#Javascript-window-open使用POST传递值" class="headerlink" title="Javascript window.open使用POST传递值"></a>Javascript window.open使用POST传递值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function openWindowWithPost(url, data) &#123;</span><br><span class="line">    var form &#x3D; document.createElement(&quot;form&quot;);</span><br><span class="line">    form.target &#x3D; &quot;_blank&quot;;</span><br><span class="line">    form.method &#x3D; &quot;POST&quot;;</span><br><span class="line">    form.action &#x3D; url;</span><br><span class="line">    form.style.display &#x3D; &quot;none&quot;;</span><br><span class="line"></span><br><span class="line">    for (var key in data) &#123;</span><br><span class="line">        var input &#x3D; document.createElement(&quot;input&quot;);</span><br><span class="line">        input.type &#x3D; &quot;hidden&quot;;</span><br><span class="line">        input.name &#x3D; key;</span><br><span class="line">        input.value &#x3D; data[key];</span><br><span class="line">        form.appendChild(input);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    document.body.appendChild(form);</span><br><span class="line">    form.submit();</span><br><span class="line">    document.body.removeChild(form);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h2 id="Javascript-window-open使用POST传递值"><a href="#Javascript-window-open使用POST传递值" class="headerlink" title="Javascript window.open使用POST传递值"></a>Javascript window.open使用POST传递值</h2><pre><code class="javascript">function openWindowWithPost(url, data) {
+    var form = document.createElement(&quot;form&quot;);
+    form.target = &quot;_blank&quot;;
+    form.method = &quot;POST&quot;;
+    form.action = url;
+    form.style.display = &quot;none&quot;;
 
+    for (var key in data) {
+        var input = document.createElement(&quot;input&quot;);
+        input.type = &quot;hidden&quot;;
+        input.name = key;
+        input.value = data[key];
+        form.appendChild(input);
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+}</code></pre>
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -208,7 +204,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -233,7 +229,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>

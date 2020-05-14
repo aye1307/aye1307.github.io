@@ -15,28 +15,26 @@
   </script>
 
   
-  <title>在CentOS下搭建Git服务器 | Hexo</title>
+  <title>在CentOS下搭建Git服务器 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在CentOS下搭建git服务器服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。 1# yum info git &#x2F;&#x2F;查看 yum 源仓库的 Git 信息  可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8.3.1 ，而">
+  <meta name="description" content="在CentOS下搭建git服务器服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。 # yum info git &#x2F;&#x2F;查看 yum 源仓库的 Git 信息 可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8.3.1 ，而查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在CentOS下搭建Git服务器">
 <meta property="og:url" content="http://yoursite.com/2019/09/25/%E5%AE%89%E8%A3%85git%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="在CentOS下搭建git服务器服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。 1# yum info git &#x2F;&#x2F;查看 yum 源仓库的 Git 信息  可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8.3.1 ，而">
+<meta property="og:site_name" content="AYE Blog">
+<meta property="og:description" content="在CentOS下搭建git服务器服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。 # yum info git &#x2F;&#x2F;查看 yum 源仓库的 Git 信息 可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8.3.1 ，而查看">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-09-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T03:17:09.006Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-14T07:01:35.124Z">
+<meta property="article:author" content="aye">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="AYE Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -152,7 +150,7 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
                 <span class="post-date sub-title">at: 2019-09-25</span>
             </div>
@@ -166,124 +164,139 @@
         </div>
         <div class="content" style="overflow: auto">
             <h2 id="在CentOS下搭建git服务器"><a href="#在CentOS下搭建git服务器" class="headerlink" title="在CentOS下搭建git服务器"></a><strong>在</strong>CentOS下搭建git服务器</h2><h3 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h3><h4 id="第一步：安装git服务"><a href="#第一步：安装git服务" class="headerlink" title="第一步：安装git服务"></a>第一步：安装git服务</h4><p>【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum info git //查看 yum 源仓库的 Git 信息</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># yum info git //查看 yum 源仓库的 Git 信息</code></pre>
 <p>可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8.3.1 ，而查看最新的 Git 发布版本，已经 2.9.2 了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 依赖库安装</span><br><span class="line"><span class="comment"># yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span></span><br><span class="line"><span class="comment"># yum install gcc perl-ExtUtils-MakeMaker</span></span><br><span class="line"></span><br><span class="line">// 卸载低版本的 Git</span><br><span class="line"><span class="comment"># yum remove git</span></span><br><span class="line"></span><br><span class="line">// 下载新版的 Git 源码包 （放在了 /usr/<span class="built_in">local</span>/git 的目录下，git 是新建的目录）</span><br><span class="line"><span class="comment"># cd git</span></span><br><span class="line"><span class="comment"># wget https://github.com/git/git/archive/v2.9.2.tar.gz</span></span><br><span class="line"><span class="comment"># tar -xzvf v2.9.2.tar.gz</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">// 依赖库安装
+# yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+# yum install gcc perl-ExtUtils-MakeMaker
 
+// 卸载低版本的 Git
+# yum remove git
+
+// 下载新版的 Git 源码包 （放在了 /usr/local/git 的目录下，git 是新建的目录）
+# cd git
+# wget https://github.com/git/git/archive/v2.9.2.tar.gz
+# tar -xzvf v2.9.2.tar.gz</code></pre>
 <p>分别执行一下命令进行编译安装，编译过程可能比较漫长，请耐心等待完成。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd git-2.9.2</span></span><br><span class="line"><span class="comment"># make prefix=/usr/local/git all</span></span><br><span class="line"><span class="comment"># make prefix=/usr/local/git install</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># cd git-2.9.2
+# make prefix=/usr/local/git all
+# make prefix=/usr/local/git install</code></pre>
 <p>添加到环境变量</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim /etc/profile</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># vim /etc/profile</code></pre>
 <p>添加这一条： <code>export PATH=/usr/local/git/bin:$PATH</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># source /etc/profile	// 使配置立即生效</span></span><br><span class="line"><span class="comment"># git --version		// 查看版本号</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># source /etc/profile    // 使配置立即生效
+# git --version        // 查看版本号</code></pre>
 <p>将git设置为默认路径，不然后面克隆时会报错</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ln -s /usr/local/git/bin/git-upload-pack /usr/bin/git-upload-pack</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ln -s /usr/local/git/bin/git-receive-pack /usr/bin/git-receive-pack</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># ln -s /usr/local/git/bin/git-upload-pack /usr/bin/git-upload-pack
 
+# ln -s /usr/local/git/bin/git-receive-pack /usr/bin/git-receive-pack</code></pre>
 <p>创建一个git用户组和用户，用来运行git服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># groupadd git</span></span><br><span class="line"><span class="comment"># useradd git -g git</span></span><br><span class="line"><span class="comment"># passwd git</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># groupadd git
+# useradd git -g git
+# passwd git </code></pre>
 <p>禁止该git用户使用shell登录系统（为了安全性，一般都禁止）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim /etc/passwd</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># vim /etc/passwd</code></pre>
 <p>找到类似下面的一行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:502:502::&#x2F;home&#x2F;git:&#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
-
-<p>改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:502:502::&#x2F;home&#x2F;git:&#x2F;usr&#x2F;local&#x2F;git&#x2F;bin&#x2F;git-shell</span><br></pre></td></tr></table></figure>
-
-<p>保存并退出。</p>
+<pre><code>git:x:502:502::/home/git:/bin/bash</code></pre><p>改为</p>
+<pre><code>git:x:502:502::/home/git:/usr/local/git/bin/git-shell</code></pre><p>保存并退出。</p>
 <p>至此， git服务安装完成！</p>
 <h4 id="第二步：配置远程仓库"><a href="#第二步：配置远程仓库" class="headerlink" title="第二步：配置远程仓库"></a>第二步：配置远程仓库</h4><p>创建一个空仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd /home</span></span><br><span class="line"><span class="comment"># mkdir git</span></span><br><span class="line"><span class="comment"># cd git</span></span><br><span class="line"><span class="comment"># git init --bare LearnProject.git</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># cd /home
+# mkdir git
+# cd git
+# git init --bare LearnProject.git</code></pre>
 <p>到这里，空仓库已经创建成功，仓库的路径为：<code>/home/git/LearnProject.git</code></p>
 <blockquote>
 <p>通过 <code>git init --bare LearnProject.git</code> 建立的仓库是没有工作目录的，如需包含工作目录，请看注1。</p>
 </blockquote>
 <p>为刚刚创建的用户git赋予权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//chown -R 用户名:组名 文件</span><br><span class="line"><span class="comment"># chown -R git:git LearnProject.git</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">//chown -R 用户名:组名 文件
+# chown -R git:git LearnProject.git</code></pre>
 <h4 id="第三步：打开-RSA-认证"><a href="#第三步：打开-RSA-认证" class="headerlink" title="第三步：打开 RSA 认证"></a>第三步：打开 RSA 认证</h4><p>进入 <code>/etc/ssh</code>  目录，编辑 sshd_config</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd /etc/ssh</span></span><br><span class="line"><span class="comment"># vim sshd_config</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># cd /etc/ssh
+# vim sshd_config</code></pre>
 <p>将下面几个的注释解开（带#为注释）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RSAAuthentication yes</span><br><span class="line">PubkeyAuthentication yes</span><br><span class="line">AuthorizedKeysFile .ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>
-
-<p>保存完成后，重启sshd服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /etc/rc.d/init.d/sshd restart</span></span><br></pre></td></tr></table></figure>
-
+<pre><code>RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys</code></pre><p>保存完成后，重启sshd服务</p>
+<pre><code class="bash"># /etc/rc.d/init.d/sshd restart</code></pre>
 <p>如果运行上述命令出现以下错误：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: &#x2F;etc&#x2F;rc.d&#x2F;init.d&#x2F;sshd: No such file or directory</span><br></pre></td></tr></table></figure>
-
-<p>可以尝试以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service sshd restart</span></span><br></pre></td></tr></table></figure>
-
+<pre><code>-bash: /etc/rc.d/init.d/sshd: No such file or directory</code></pre><p>可以尝试以下命令：</p>
+<pre><code class="bash"># service sshd restart</code></pre>
 <p>或者</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl restart sshd</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># systemctl restart sshd</code></pre>
 <p>至此，服务器端git配置完成。</p>
 <h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><h4 id="第一步：配置git"><a href="#第一步：配置git" class="headerlink" title="第一步：配置git"></a>第一步：配置git</h4><h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5><p>傻瓜式安装</p>
-<h5 id="打开git-bash创建git使用者"><a href="#打开git-bash创建git使用者" class="headerlink" title="打开git bash创建git使用者"></a>打开git bash创建git使用者</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;姓名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
-
+<h5 id="打开git-bash创建git使用者"><a href="#打开git-bash创建git使用者" class="headerlink" title="打开git bash创建git使用者"></a>打开git bash创建git使用者</h5><pre><code class="git">git config --global user.name &quot;姓名&quot;
+git config --global user.email &quot;邮箱&quot;</code></pre>
 <h5 id="创建与服务器通讯的密钥"><a href="#创建与服务器通讯的密钥" class="headerlink" title="创建与服务器通讯的密钥"></a>创建与服务器通讯的密钥</h5><p>在git bash中，输入一下命令，为自己的邮箱创建一个密钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="git">ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre>
 <p>一路enter下去</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;c&#x2F;Users&#x2F;***&#x2F;.ssh&#x2F;id_rsa):</span><br><span class="line">Created directory &#39;&#x2F;c&#x2F;Users&#x2F;***&#x2F;.ssh&#39;.</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in &#x2F;c&#x2F;Users&#x2F;***&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;c&#x2F;Users&#x2F;***&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:F0NzRZYN3zMR5oGeOxuQE5LBwoKsEC8Un&#x2F;0cl4SWk44 ***@******</span><br><span class="line">The key&#39;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">|.+o . . &#x3D;o&#x3D; .o*O.|</span><br><span class="line">|o..oo. O.&#x3D;.+ o+.&#x3D;|</span><br><span class="line">|o oo .&#x3D;.oo+ + .+o|</span><br><span class="line">| o   Eo.o  * o  o|</span><br><span class="line">|       oS . o .  |</span><br><span class="line">|         .   +   |</span><br><span class="line">|              +  |</span><br><span class="line">|             .   |</span><br><span class="line">|                 |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
-
-<p>这时候，系统已经为我们创建了一个公钥和密钥，id_rsa是密钥，不能告诉任何人，id_rsa.pub是公钥，可以公开。</p>
+<pre><code>Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/***/.ssh/id_rsa):
+Created directory &#39;/c/Users/***/.ssh&#39;.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/***/.ssh/id_rsa.
+Your public key has been saved in /c/Users/***/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:F0NzRZYN3zMR5oGeOxuQE5LBwoKsEC8Un/0cl4SWk44 ***@******
+The key&#39;s randomart image is:
++---[RSA 2048]----+
+|.+o . . =o= .o*O.|
+|o..oo. O.=.+ o+.=|
+|o oo .=.oo+ + .+o|
+| o   Eo.o  * o  o|
+|       oS . o .  |
+|         .   +   |
+|              +  |
+|             .   |
+|                 |
++----[SHA256]-----+
+</code></pre><p>这时候，系统已经为我们创建了一个公钥和密钥，id_rsa是密钥，不能告诉任何人，id_rsa.pub是公钥，可以公开。</p>
 <h5 id="将本地的公钥添加到服务器上"><a href="#将本地的公钥添加到服务器上" class="headerlink" title="将本地的公钥添加到服务器上"></a>将本地的公钥添加到服务器上</h5><ul>
 <li>通过客户端命令行将本地公钥添加进远程服务器中</li>
 </ul>
 <p>在gitbash下，输入一下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@IP地址 <span class="string">'cat &gt;&gt; .ssh/authorized_keys'</span> &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">ssh git@IP地址 &#39;cat &gt;&gt; .ssh/authorized_keys&#39; &lt; ~/.ssh/id_rsa.pub</code></pre>
 <ul>
 <li>手动将公钥添加到服务器中</li>
 </ul>
 <p>找到id_rsa.pub文件，用编辑器打开，全选复制。</p>
 <p>在服务器端，将复制的内容粘贴到authorized_keys文件中</p>
 <p><strong>注意文件路径：<code>/root/.ssh/authorized_keys</code></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim /root/.ssh/authorized_keys</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># vim /root/.ssh/authorized_keys</code></pre>
 <p>通过以上两种方法，我们就将本地的公钥添加进服务器中了。如果发现该目录下没有 .ssh 文件，我们可以手动创建一个，并添加一个 authorized_keys 。</p>
 <h4 id="第二步：克隆远程仓库cd-vim"><a href="#第二步：克隆远程仓库cd-vim" class="headerlink" title="第二步：克隆远程仓库cd /vim"></a>第二步：克隆远程仓库cd /vim</h4><p>创建一个用于本地的git仓库文件夹，在文件夹内克隆远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@IP地址：端口/home/git/LearnProject.git</span><br><span class="line">git <span class="built_in">clone</span> ssh://root@IP地址/home/git/LearnProject.git</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">git clone git@IP地址：端口/home/git/LearnProject.git
+git clone ssh://root@IP地址/home/git/LearnProject.git</code></pre>
 <p>这时候，bash会提示你克隆的仓库是空的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cloning into &#39;LearnProject&#39;...</span><br><span class="line">warning: You appear to have cloned an empty repository.</span><br></pre></td></tr></table></figure>
-
-<blockquote>
+<pre><code>Cloning into &#39;LearnProject&#39;...
+warning: You appear to have cloned an empty repository.</code></pre><blockquote>
 <p>如果想使用 http 方式克隆，参考 <a href="https://blog.csdn.net/name_is_wl/article/details/86705032" target="_blank" rel="noopener">使用nginx搭建http 访问的git服务器</a></p>
 </blockquote>
 <p>至此，我们完成了远程仓库的克隆。</p>
 <h4 id="第三步：push-pull项目"><a href="#第三步：push-pull项目" class="headerlink" title="第三步：push/pull项目"></a>第三步：push/pull项目</h4><p>做完以上服务器端/客户端各两步的内容，你的本地git已经可以和git服务器进行通信了，此时我们可以进行常规的项目push和pull了。</p>
 <h4 id="注1：建立包含工作目录的仓库"><a href="#注1：建立包含工作目录的仓库" class="headerlink" title="注1：建立包含工作目录的仓库"></a>注1：建立包含工作目录的仓库</h4><h5 id="post-receive-实现自动同步到站点目录"><a href="#post-receive-实现自动同步到站点目录" class="headerlink" title="post-receive 实现自动同步到站点目录"></a><code>post-receive</code> 实现自动同步到站点目录</h5><p>如果你是用 <code>git init --bare LernProject.git</code> 建立的仓库，该仓库是没有工作目录的。</p>
 <p>我们需要在该仓库的 hooks下，创建 post-receive 文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># cd LearnProject.git</span><br><span class="line"># cd hooks</span><br><span class="line"># vim post-receive</span><br></pre></td></tr></table></figure>
-
-<p>文件内容为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">git --work-tree&#x3D;&#x2F;home&#x2F;www checkout -f</span><br></pre></td></tr></table></figure>
-
-<p>保存退出后，设置权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># chown git:git post-receive &#x2F;&#x2F;将该文件用户及用户组都设置成git</span><br><span class="line"># chmod +x post-receive &#x2F;&#x2F;由于该文件是一个shell文件，应设置为可执行权限</span><br></pre></td></tr></table></figure>
-
-<h5 id="创建支持工作目录的远程仓库"><a href="#创建支持工作目录的远程仓库" class="headerlink" title="创建支持工作目录的远程仓库"></a>创建支持工作目录的远程仓库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># git init &lt;仓库名&gt; </span><br><span class="line"># git config receive.denyCurrentBranch ignore &#x2F;&#x2F;设置允许远程接收文件</span><br></pre></td></tr></table></figure>
-
-<p>在远程仓库 <code>post-receive</code> 钩子文件中添加自动更新工作目录内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WORK_TREE&#x3D;&#39;..&#x2F;&#39;</span><br><span class="line">git --work-tree&#x3D;&quot;$&#123;WORK_TREE&#125;&quot; reset --hard</span><br></pre></td></tr></table></figure>
-
-<p>保存退出后，设置权限，同上文。</p>
+<pre><code># cd LearnProject.git
+# cd hooks
+# vim post-receive</code></pre><p>文件内容为：</p>
+<pre><code>#!/bin/bash
+git --work-tree=/home/www checkout -f</code></pre><p>保存退出后，设置权限</p>
+<pre><code># chown git:git post-receive //将该文件用户及用户组都设置成git
+# chmod +x post-receive //由于该文件是一个shell文件，应设置为可执行权限</code></pre><h5 id="创建支持工作目录的远程仓库"><a href="#创建支持工作目录的远程仓库" class="headerlink" title="创建支持工作目录的远程仓库"></a>创建支持工作目录的远程仓库</h5><pre><code># git init &lt;仓库名&gt; 
+# git config receive.denyCurrentBranch ignore //设置允许远程接收文件</code></pre><p>在远程仓库 <code>post-receive</code> 钩子文件中添加自动更新工作目录内容</p>
+<pre><code>WORK_TREE=&#39;../&#39;
+git --work-tree=&quot;${WORK_TREE}&quot; reset --hard</code></pre><p>保存退出后，设置权限，同上文。</p>
 <h4 id="注2：git如何解决The-authenticity-of-host-can’t-be-established"><a href="#注2：git如何解决The-authenticity-of-host-can’t-be-established" class="headerlink" title="注2：git如何解决The authenticity of host can’t be established"></a>注2：git如何解决The authenticity of host can’t be established</h4><p>新生成的密钥，git clone或者push的时候，有可能会报下面的错误：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &#39;148.70.59.85 (148.70.59.85)&#39; can&#39;t be established.</span><br><span class="line">ECDSA key fingerprint is SHA256:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.</span><br></pre></td></tr></table></figure>
+<pre><code>The authenticity of host &#39;148.70.59.85 (148.70.59.85)&#39; can&#39;t be established.
+ECDSA key fingerprint is SHA256:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.</code></pre><p>文件夹内少了一个konwn_hosts文件，本来密钥文件应该是三个，现在只有两个，便报了这样的错误，此时输入yes回车之后，生成了缺少的konwn_hosts文件，便可解决这个问题。</p>
+<pre><code class="bash">Are you sure you want to continue connecting (yes/no)?  yes
 
-<p>文件夹内少了一个konwn_hosts文件，本来密钥文件应该是三个，现在只有两个，便报了这样的错误，此时输入yes回车之后，生成了缺少的konwn_hosts文件，便可解决这个问题。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Are you sure you want to <span class="built_in">continue</span> connecting (yes/no)?  yes</span><br><span class="line"></span><br><span class="line">Warning: Permanently added <span class="string">'gitee.com,xxx.xxx.xxx.xxx'</span> (ECDSA) to the list of known hosts.</span><br><span class="line"></span><br><span class="line">ssh_packet_read: Connection closed</span><br></pre></td></tr></table></figure>
+Warning: Permanently added &#39;gitee.com,xxx.xxx.xxx.xxx&#39; (ECDSA) to the list of known hosts.
 
+ssh_packet_read: Connection closed</code></pre>
 <p>【参考】</p>
 <p><a href="https://blog.csdn.net/w252064/article/details/82691343" target="_blank" rel="noopener">Centos7搭建git服务器端</a></p>
 <p><a href="https://blog.csdn.net/bbcckkl/article/details/81634761" target="_blank" rel="noopener">Git丨在CentOS下搭建私有的git服务器</a></p>
@@ -292,25 +305,6 @@
 
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -330,7 +324,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/highlight_github.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
@@ -355,7 +349,7 @@
         <!--请您保留作者署名, 主题制作来之不易-->
         Theme by <a href="https://github.com/haojen" target="_blank" rel="noopener">Haojen Ma</a>
         <br>
-        Copyright © John Doe 2020
+        Copyright © aye 2020
         <br>
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       </div>
