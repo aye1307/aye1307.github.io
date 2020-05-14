@@ -128,15 +128,64 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/08/断点续传/">
+                <a href="/2020/05/13/微信小程序反编译报错/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>断点续传</strong> <small class="post-date">at: 2019-10-08</small>
+                                <strong>微信小程序反编译报错</strong> <small class="post-date">at: 2020-05-13</small>
                                 <br>
-                                断点续传主要依赖http协议的206返回码。前提条件是通信双方使用http1.1以上协议。
-客户端使用请求头Range告知自己需要的数据范围；服务器使用响应头Content-Range说明返回的数据范围和数据长度。
+                                微信小程序反编译报错前言​    微信小程序的格式是：.wxapkg ，.wxapkg 是一个二进制文件。详细内容可参考 微信小程序源码阅读笔记 
+​    安卓手机目录为 /data/data/com.tencent.mm/MicroMsg/{User}/appbrand/pkg
+​    电脑目录为 /WeChat Files/Applet
+准备
+n..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2020/01/15/is not defined/">
+                    
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="http://qab0509yb.bkt.clouddn.com/202001151.png" style="height: 100%; width: 100%">
+                        </figure>
+                    </div>
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>is not defined</strong> <small class="post-date">at: 2020-01-15</small>
+                                <br>
+                                JS中 “is not defined” 如何判断defined，defined和undefined 的区别JS中 “is not defined” 我今天找了一些资料和自己试验了各种方法，都不能得到正解，故写了这个问题的解决方案。
+首先什么是is not defined？从字面意思上来讲就是未定义，也就是未申明。就是这个变量（对象）压根就没有。如下：
+..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2020/01/08/微信小程序背景音乐/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>微信小程序的背景音乐问题</strong> <small class="post-date">at: 2020-01-08</small>
+                                <br>
+                                微信小程序的背景音乐问题微信小程序在 IOS 下，当歌曲名称为中文时，无法播放歌曲，在安卓下正常。可以使用 encodeURIComponent() 将歌曲名称作为  URI 组件进行编码。
 
                             </p>
                             <button class="button is-info">Read</button>
@@ -149,14 +198,16 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/08/meta属性/">
+                <a href="/2019/12/31/获取当前websocket连接状态/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>meta属性</strong> <small class="post-date">at: 2019-10-08</small>
+                                <strong>获取当前websocket的连接状态</strong> <small class="post-date">at: 2019-12-31</small>
                                 <br>
-                                meta属性1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909..
+                                获取当前websocket的连接状态 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
+ 它将是以下值之一：CONNECTING OPEN CLOSING或CLOSED 
+123if(yourWsObject.readyState === yourWsObject.CLOSE..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -168,15 +219,14 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/08/readonly和disabled的区别/">
+                <a href="/2019/12/23/获取当天的时间戳/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>readonly与disabled区别</strong> <small class="post-date">at: 2019-10-08</small>
+                                <strong>获取当天的时间戳</strong> <small class="post-date">at: 2019-12-23</small>
                                 <br>
-                                readonly与disabled区别readonly 和 disabled 它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：
- Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以P..
+                                获取当天的时间戳12345678var start = new Date(	new Date(new Date().toLocaleDateString()).getTime()); // 当天0点var end = new Date( // 当天23:59	new Date(new Date().toLocaleDateString()).getTim..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -188,61 +238,17 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/08/面试题/">
+                <a href="/2019/12/23/判断变量为空对象/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>面试题</strong> <small class="post-date">at: 2019-10-08</small>
+                                <strong>判断对象是否为空对象的几种方法</strong> <small class="post-date">at: 2019-12-23</small>
                                 <br>
-                                Shadow DOM和Virtual DOM有什么区别？
-Shadow DOM 是Web Components标准，为Web组件提供了封装，Shadow DOM使得这些东西与主文档的DOM保持分离
-Virtual DOM 是 Rect/Vue等框架实现的虚拟DOM，其本质上是JavaScript对象，用于模拟DOM对象，在需要操作DOM的地方，先操作Vi..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/10/08/前端性能优化gzip/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>前端性能优化gzip</strong> <small class="post-date">at: 2019-10-08</small>
-                                <br>
-                                前端性能优化gzip什么是gzipgzip就是GNUzip的缩写，也是一个文件压缩程序，可以将文件压缩进后缀为.gz的压缩包。而我们前端所讲的gzip压缩优化，就是通过gzip这个压缩程序，对资源进行压缩，从而降低请求资源的文件大小。
-gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何一个网站，看它们的html，js，css文件都是经过gzip压..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/10/08/currentColor/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>currentColor</strong> <small class="post-date">at: 2019-10-08</small>
-                                <br>
-                                currentColor概念： 当前文字颜色
-应用场景： background-color | border-color | gradient | box-shadow
-参考：
-currentColor-CSS3超高校级好用CSS变量
+                                javaScript判断对象是否为空对象的几种方法1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
+123var data = &#123;&#125;;var b = (JSON.stringify(data) == "&#123;&#125;");alert(b);//true
 
-border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类似 currentColor ；
-其次，..
+2.for in 循环..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -254,16 +260,14 @@ border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类�
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/08/常用js函数/">
+                <a href="/2019/12/19/windowOpen/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>常用js函数</strong> <small class="post-date">at: 2019-10-08</small>
+                                <strong>window.open</strong> <small class="post-date">at: 2019-12-19</small>
                                 <br>
-                                参考：
-让你瞬间提高工作效率的常用js函数汇总(持续更新)
-常用的正则校验1234567891011121314151617181920212223242526// 匹配邮箱let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]&#123;2,4&#125;)$// (新)匹配手机号let..
+                                Javascript window.open使用POST传递值12345678910111213141516171819function openWindowWithPost(url, data) &#123;    var form &#x3D; document.createElement(&quot;form&quot;);    form.tar..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -275,16 +279,14 @@ border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类�
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/封装的函数方法/">
+                <a href="/2019/12/18/封装cookie/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>封装cookie方法</strong> <small class="post-date">at: 2019-12-18</small>
                                 <br>
-                                常用的函数方法
-原生封装的ajax函数
-123456789101112131415161718192021222324252627282930313233343536373839404142434445function Ajax(type, url, data, success, failed)&#123;    // 创建ajax对象    var x..
+                                封装cookie方法12345678910111213141516171819202122232425262728293031function setCookie(cname,cvalue,exdays)&#123;    var d = new Date();    d.setTime(d.getTime()+(exdays*24*60*60*1000..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -296,16 +298,14 @@ border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类�
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/兼容IE8的一些方法/">
+                <a href="/2019/12/14/百度地图渲染路线/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>兼容IE8的方法函数</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>百度地图渲染路线</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                兼容IE8的方法函数
-兼容IE8 数组的 forEach
-12345678910111213141516171819202122232425if ( !Array.prototype.forEach ) &#123;	Array.prototype.forEach = function forEach( callback, thisArg ) &#123..
+                                百度地图渲染路线通过经纬度渲染路线1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283var ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -317,19 +317,14 @@ border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类�
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/DOMContentLoaded和load的区别/">
+                <a href="/2019/12/14/百度地图搜索并上传位置/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>百度地图搜索并上传位置</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                DOMContentLoaded与load的区别onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
-1window.onload = function() &#123;&#125;
-
-DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
-
-IE6、IE..
+                                百度地图搜索并上传位置12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
