@@ -157,17 +157,47 @@ module.exports = {
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/14/vue.config.js的配置/">
+                <a href="/2019/10/14/vue-cli 3.0 创建项目/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>vue.config.js 的配置</strong> <small class="post-date">at: 2019-10-14</small>
+                                <strong>VUE-CLI 3.0 如何创建项目</strong> <small class="post-date">at: 2019-10-14</small>
                                 <br>
-                                const path = require(&#39;path&#39;)
-const debug = process.env.NODE_ENV !== &#39;production&#39;
-//const VueConf = require(&#39;./src/assets/js/libs/vue_config_class&#39;)
-//cons..
+                                
+
+安装vue-cli 3.0首先查看本机是否有安装 vue-cli，在终端中运行下面命令
+vue --version如果安装的不是 3.0 + ，先卸载当前 vue-cli
+npm uninstall -g vue-cli
+
+npm install -g @vue/cli
+类 unix 用户，需加上 sudo
+
+创建初始项目在终端中，输入下面命令
+vu..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/10/12/移动端开发技巧/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>移动端开发技巧</strong> <small class="post-date">at: 2019-10-12</small>
+                                <br>
+                                
+
+META 相关1.添加到主屏后的标题（IOS）
+&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;标题&quot;&gt;2.启用 WebApp 全屏模式（IOS）
+&lt;meta name=&quot;apple-mobile-web-app-capable&qu..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -205,29 +235,6 @@ const debug = process.env.NODE_ENV !== &#39;production&#39;
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/12/移动端开发技巧/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>移动端开发技巧</strong> <small class="post-date">at: 2019-10-12</small>
-                                <br>
-                                
-
-META 相关1.添加到主屏后的标题（IOS）
-&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;标题&quot;&gt;2.启用 WebApp 全屏模式（IOS）
-&lt;meta name=&quot;apple-mobile-web-app-capable&qu..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
                 <a href="/2019/10/11/雅虎前端优化/">
                     
                     <div class="media-content">
@@ -241,6 +248,30 @@ META 相关1.添加到主屏后的标题（IOS）
 减少组件数的一个方法就是简化页面设计。保持富内容的页面且能减少http请求，有以下几个技术：
 
 Combined files。合并文件，如合并js，..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/10/10/vue-router原理/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>vue-router原理</strong> <small class="post-date">at: 2019-10-10</small>
+                                <br>
+                                
+
+随着前端应用的业务功能越来越复杂、用户对于使用体验的要求越来越高，单页应用（SPA）成为前端应用的主流形式。大型单页应用最显著特点之一就是采用前端路由系统，通过改变URL，在不重新请求页面的情况下，更新页面视图。
+“更新视图但不重新请求页面”是前端路由原理的核心之一，目前在浏览器环境中这一功能的实现主要有两种方式：
+
+利用URL中的hash（“#”）..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -291,30 +322,6 @@ const PromisePolyfill = (() =&gt; {
 defaultImg: ‘this.remove()’第二种方法：替换默认图片&lt; img src=“123” @error=“defImg()” /&gt;
 默认图地址
 defaultImg: req..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/10/10/vue-router原理/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>vue-router原理</strong> <small class="post-date">at: 2019-10-10</small>
-                                <br>
-                                
-
-随着前端应用的业务功能越来越复杂、用户对于使用体验的要求越来越高，单页应用（SPA）成为前端应用的主流形式。大型单页应用最显著特点之一就是采用前端路由系统，通过改变URL，在不重新请求页面的情况下，更新页面视图。
-“更新视图但不重新请求页面”是前端路由原理的核心之一，目前在浏览器环境中这一功能的实现主要有两种方式：
-
-利用URL中的hash（“#”）..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

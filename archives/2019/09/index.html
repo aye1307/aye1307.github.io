@@ -153,7 +153,7 @@
                 <!-- 
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  is-7-desktop">
-        <a href="/2019/09/27/DOMContentLoaded和load的区别/">
+        <a href="/2019/09/27/封装的函数方法/">
             <div class="full-height post-hover"
                  style="
                          background-image: url('');
@@ -163,7 +163,7 @@
                          ">
                     <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
                         <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            DOMContentLoaded与load的区别
+                            常用的函数方法
                         </h1>
                         <div>
                         
@@ -175,9 +175,12 @@
                         <p class="post-content-text is-marginless has-padding text-shadow">
                             
 
-onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
-window.onload = function() {}
-DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所..
+
+原生封装的ajax函数
+function Ajax(type, url, data, success, failed){
+    // 创建ajax对象
+    var xhr = null;
+    if ( window.XM..
                         </p>
                         <p class="date text-shadow">2019-09-27</p>
                         <button class="button is-info is-small">Read More</button>
@@ -189,32 +192,6 @@ DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所
         <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
                 
-<a class="post-hover" href="/2019/09/27/封装的函数方法/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                常用的函数方法
-            </h3>
-            
-            
-            <span class="tag is-post-tag">JavaScript</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-
-
-原生封装的ajax函数
-function Ajax(type, url, data, su..
-            </p>
-            <p class="date text-shadow is-marginless">2019-09-27</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
 <a class="post-hover" href="/2019/09/27/兼容IE8的一些方法/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
@@ -233,6 +210,31 @@ function Ajax(type, url, data, su..
 
 兼容IE8 数组的 forEach
 if ( !Array.prototype.forEa..
+            </p>
+            <p class="date text-shadow is-marginless">2019-09-27</p>
+        </div>
+    </div>
+</a>
+            
+            
+                
+<a class="post-hover" href="/2019/09/27/DOMContentLoaded和load的区别/" style="height: 48.5%">
+    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
+        <div class="content-bg-mask full-width full-height has-padding">
+            <h3 class="title is-marginless text-shadow">
+                DOMContentLoaded与load的区别
+            </h3>
+            
+            
+            <span class="tag is-post-tag">JavaScript</span>
+            
+            
+            <p class="sub-title text-shadow"></p>
+            <p class="is-marginless text-shadow post-content-text">
+                
+
+onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
+window.o..
             </p>
             <p class="date text-shadow is-marginless">2019-09-27</p>
         </div>
@@ -244,32 +246,6 @@ if ( !Array.prototype.forEa..
     <div class="column is-12 is-hidden-desktop">
         
         
-<a class="post-hover" href="/2019/09/27/封装的函数方法/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                常用的函数方法
-            </h3>
-            
-            
-            <span class="tag is-post-tag">JavaScript</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-
-
-原生封装的ajax函数
-function Ajax(type, url, data, su..
-            </p>
-            <p class="date text-shadow is-marginless">2019-09-27</p>
-        </div>
-    </div>
-</a>
-        
-        
-        
 <a class="post-hover" href="/2019/09/27/兼容IE8的一些方法/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
@@ -288,6 +264,31 @@ function Ajax(type, url, data, su..
 
 兼容IE8 数组的 forEach
 if ( !Array.prototype.forEa..
+            </p>
+            <p class="date text-shadow is-marginless">2019-09-27</p>
+        </div>
+    </div>
+</a>
+        
+        
+        
+<a class="post-hover" href="/2019/09/27/DOMContentLoaded和load的区别/" style="height: 48.5%">
+    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
+        <div class="content-bg-mask full-width full-height has-padding">
+            <h3 class="title is-marginless text-shadow">
+                DOMContentLoaded与load的区别
+            </h3>
+            
+            
+            <span class="tag is-post-tag">JavaScript</span>
+            
+            
+            <p class="sub-title text-shadow"></p>
+            <p class="is-marginless text-shadow post-content-text">
+                
+
+onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
+window.o..
             </p>
             <p class="date text-shadow is-marginless">2019-09-27</p>
         </div>
@@ -300,39 +301,6 @@ if ( !Array.prototype.forEa..
                 
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/27/DOMContentLoaded和load的区别/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>DOMContentLoaded与load的区别</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">JavaScript</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
-window.onload = function() {}
-DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
-
-IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
-                                        </p>
-                                        <p>2019-09-27</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/09/27/封装的函数方法/">
                             <div class="columns" style="min-height: 230px;">
@@ -391,6 +359,39 @@ if ( !Array.prototype.forEach ) {
         var T, k;
         if ( this == null ) {
      ..
+                                        </p>
+                                        <p>2019-09-27</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/09/27/DOMContentLoaded和load的区别/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>DOMContentLoaded与load的区别</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">JavaScript</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
+window.onload = function() {}
+DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
+
+IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
                                         </p>
                                         <p>2019-09-27</p>
                                         <button class="button is-small">Read More</button>
@@ -471,25 +472,24 @@ CookieCo..
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/25/立即调用表达式/">
+                            <a class="post-hover" href="/2019/09/25/安装git服务器/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
                                 <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
-                                        <h3>jQuery立即调用表达式</h3>
+                                        <h3>在CentOS下搭建Git服务器</h3>
                                         
                                         <p>
                                             
-                                                <span class="tag is-post-tag">jQuery</span>
+                                                <span class="tag is-post-tag">Git</span>
                                             
                                         </p>
                                         <p>
                                             
 
-;(function(global, factory){
-    factory(global);
-}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
-    var jQuery = function (selector, c..
+服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。
+# yum info git //查看 yum 源仓库的 Git 信息
+可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8...
                                         </p>
                                         <p>2019-09-25</p>
                                         <button class="button is-small">Read More</button>
@@ -538,24 +538,25 @@ jQuer..
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/25/安装git服务器/">
+                            <a class="post-hover" href="/2019/09/25/立即调用表达式/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
                                 <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
-                                        <h3>在CentOS下搭建Git服务器</h3>
+                                        <h3>jQuery立即调用表达式</h3>
                                         
                                         <p>
                                             
-                                                <span class="tag is-post-tag">Git</span>
+                                                <span class="tag is-post-tag">jQuery</span>
                                             
                                         </p>
                                         <p>
                                             
 
-服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。
-# yum info git //查看 yum 源仓库的 Git 信息
-可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8...
+;(function(global, factory){
+    factory(global);
+}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
+    var jQuery = function (selector, c..
                                         </p>
                                         <p>2019-09-25</p>
                                         <button class="button is-small">Read More</button>

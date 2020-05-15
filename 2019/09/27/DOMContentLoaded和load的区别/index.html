@@ -161,7 +161,12 @@
             <div class="is-flex align-center">
                 <img class="post-avatar" src="http://qab0509yb.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200509104456.jpg">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> AYE</span>
-                <span class="post-date sub-title">at: 2019-09-27</span>
+                <span class="post-date sub-title">At: <span style="color: #4a4a4a;">2019-09-27</span></span>
+                <!-- id 将作为查询条件 -->
+                <span id="/2019/09/27/DOMContentLoaded%E5%92%8Cload%E7%9A%84%E5%8C%BA%E5%88%AB/" class="leancloud_visitors" data-flag-title="DOMContentLoaded与load的区别" style="padding:0 10px;">
+                    <span class="post-meta-item-text" style="color: darkgray;">Clicks: </span>
+                    <span class="leancloud-visitors-count">0</span>
+                </span>
             </div>
             
                 <div>
@@ -217,13 +222,54 @@
         <div class="post-reply">
             
             
+            <!-- valine 评论系统 -->
             
                 <div id="vcomments"></div>
                 <script>
+                    // 1.定义 langName 和 langMode 
+                    var langName = 'en',
+                    langMode = {	
+                        "nick": "NickName",
+                        "mail": "E-Mail",
+                        "link": "Website(http://)",
+                        "nickFail":"NickName cannot be less than 3 bytes.",
+                        "mailFail":"Please confirm your email address.",
+                        "sofa": "No comment yet.",
+                        "submit": "Submit",
+                        "reply": "Reply",
+                        "cancelReply": "Cancel reply",
+                        "comments": "Comments",
+                        "cancel": "Cancel",
+                        "confirm": "Confirm",
+                        "continue": "Continue",
+                        "more": "Load More...",
+                        "preview": "Preview",
+                        "emoji": "Emoji",
+                        "expand": "See more....",
+                        "seconds": "seconds ago",
+                        "minutes": "minutes ago",
+                        "hours": "hours ago",
+                        "days": "days ago",
+                        "now": "just now",
+                        "uploading":"Uploading ...",
+                        "uploadDone":"Upload completed!",
+                        "busy":"Submit is busy, please wait...",
+                        "code-98":"Valine initialization failed, please check your version of av-min.js.",
+                        "code-99": "Valine initialization failed, Please check the `el` element in the init method.",
+                        "code-100": "Valine initialization failed, Please check your appId and appKey.",
+                        "code-140":"The total number of API calls today has exceeded the development version limit.",
+                        "code-401": "Unauthorized operation, Please check your appId and appKey.",
+                        "code-403": "Access denied by API domain white list, Please check your security domain."
+                    };
                     new Valine({
                         el: '#vcomments',
                         appId: 'oOTefgkcFwBBe8C08fjwe0uX-gzGzoHsz',
-                        appKey: '89jbaOQbHo1oa0woOK8BvyDO'
+                        appKey: '89jbaOQbHo1oa0woOK8BvyDO',
+                        placeholder: 'Write a Comment',
+                        visitor: true,
+                        avatar: 'retro',
+                        lang: langName,
+                        langMode: langMode
                     })
                 </script>
             
