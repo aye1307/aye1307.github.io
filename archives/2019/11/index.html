@@ -145,7 +145,7 @@
                 <!-- 
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  is-7-desktop">
-        <a href="/2019/11/30/百度地图封装/">
+        <a href="/2019/11/30/百度地图创建图标/">
             <div class="full-height post-hover"
                  style="
                          background-image: url('');
@@ -155,7 +155,7 @@
                          ">
                     <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
                         <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            百度地图封装
+                            百度地图创建图标
                         </h1>
                         <div>
                         
@@ -167,12 +167,10 @@
                         <p class="post-content-text is-marginless has-padding text-shadow">
                             
 
-//创建和初始化地图函数：
-function initMap() {
-    createMap();//创建地图
-    setMapEvent();//设置地图事件
-    addMapControl();//向地图添加控件
- ..
+//在轨迹点上创建图标，并添加点击事件  
+function addMarker(points){  // 创建图标对象     
+    // 创建标注对象并添加到地图     
+    for(var i = 0,pointsL..
                         </p>
                         <p class="date text-shadow">2019-11-30</p>
                         <button class="button is-info is-small">Read More</button>
@@ -184,11 +182,11 @@ function initMap() {
         <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
                 
-<a class="post-hover" href="/2019/11/30/百度地图创建图标/" style="height: 48.5%">
+<a class="post-hover" href="/2019/11/30/百度地图添加折线/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图创建图标
+                百度地图添加折线
             </h3>
             
             
@@ -199,8 +197,7 @@ function initMap() {
             <p class="is-marginless text-shadow post-content-text">
                 
 
-//在轨迹点上创建图标，并添加点击事件  
-function addMarker(point..
+var map = new BMap.Map(&quot;container&quot;);..
             </p>
             <p class="date text-shadow is-marginless">2019-11-30</p>
         </div>
@@ -209,11 +206,11 @@ function addMarker(point..
             
             
                 
-<a class="post-hover" href="/2019/11/30/百度地图常用API/" style="height: 48.5%">
+<a class="post-hover" href="/2019/11/30/百度地图封装/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图常用API
+                百度地图封装
             </h3>
             
             
@@ -224,7 +221,9 @@ function addMarker(point..
             <p class="is-marginless text-shadow post-content-text">
                 
 
-&lt;div id=&quot;container&quot;&gt;&lt;/div&g..
+//创建和初始化地图函数：
+function initMap() {
+    createM..
             </p>
             <p class="date text-shadow is-marginless">2019-11-30</p>
         </div>
@@ -236,11 +235,11 @@ function addMarker(point..
     <div class="column is-12 is-hidden-desktop">
         
         
-<a class="post-hover" href="/2019/11/30/百度地图创建图标/" style="height: 48.5%">
+<a class="post-hover" href="/2019/11/30/百度地图添加折线/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图创建图标
+                百度地图添加折线
             </h3>
             
             
@@ -251,8 +250,7 @@ function addMarker(point..
             <p class="is-marginless text-shadow post-content-text">
                 
 
-//在轨迹点上创建图标，并添加点击事件  
-function addMarker(point..
+var map = new BMap.Map(&quot;container&quot;);..
             </p>
             <p class="date text-shadow is-marginless">2019-11-30</p>
         </div>
@@ -261,11 +259,11 @@ function addMarker(point..
         
         
         
-<a class="post-hover" href="/2019/11/30/百度地图常用API/" style="height: 48.5%">
+<a class="post-hover" href="/2019/11/30/百度地图封装/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图常用API
+                百度地图封装
             </h3>
             
             
@@ -276,7 +274,9 @@ function addMarker(point..
             <p class="is-marginless text-shadow post-content-text">
                 
 
-&lt;div id=&quot;container&quot;&gt;&lt;/div&g..
+//创建和初始化地图函数：
+function initMap() {
+    createM..
             </p>
             <p class="date text-shadow is-marginless">2019-11-30</p>
         </div>
@@ -289,6 +289,71 @@ function addMarker(point..
                 
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/11/30/百度地图创建图标/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图创建图标</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+//在轨迹点上创建图标，并添加点击事件  
+function addMarker(points){  // 创建图标对象     
+    // 创建标注对象并添加到地图     
+    for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
+        var point..
+                                        </p>
+                                        <p>2019-11-30</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/11/30/百度地图添加折线/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图添加折线</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+var map = new BMap.Map(&quot;container&quot;);
+var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标
+var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标A
+var ..
+                                        </p>
+                                        <p>2019-11-30</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/11/30/百度地图封装/">
                             <div class="columns" style="min-height: 230px;">
@@ -326,103 +391,6 @@ function createMa..
                     
                 
                     
-                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图创建图标/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图创建图标</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-//在轨迹点上创建图标，并添加点击事件  
-function addMarker(points){  // 创建图标对象     
-    // 创建标注对象并添加到地图     
-    for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
-        var point..
-                                        </p>
-                                        <p>2019-11-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图常用API/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图常用API</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
-    map.enableScrollWheelZoom(tru..
-                                        </p>
-                                        <p>2019-11-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图添加折线/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图添加折线</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-var map = new BMap.Map(&quot;container&quot;);
-var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标
-var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标A
-var ..
-                                        </p>
-                                        <p>2019-11-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/11/30/百度地图自适应显示/">
@@ -444,6 +412,38 @@ var ..
 //根据经纬极值计算绽放级别。  
 function getZoom (maxLng, minLng, maxLat, minLat) {  
     var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&quot;,&quot;5..
+                                        </p>
+                                        <p>2019-11-30</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/11/30/百度地图常用API/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图常用API</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
+    map.enableScrollWheelZoom(tru..
                                         </p>
                                         <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>

@@ -126,17 +126,18 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/08/前端性能优化gzip/">
+                <a href="/2019/10/08/断点续传/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>前端性能优化gzip</strong> <small class="post-date">at: 2019-10-08</small>
+                                <strong>断点续传</strong> <small class="post-date">at: 2019-10-08</small>
                                 <br>
                                 
 
-什么是gzipgzip就是GNUzip的缩写，也是一个文件压缩程序，可以将文件压缩进后缀为.gz的压缩包。而我们前端所讲的gzip压缩优化，就是通过gzip这个压缩程序，对资源进行压缩，从而降低请求资源的文件大小。
-gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何一个网站，看它们的html，js，css文件都是经过gzip压缩的（即使js，..
+主要依赖http协议的206返回码。前提条件是通信双方使用http1.1以上协议。
+客户端使用请求头Range告知自己需要的数据范围；服务器使用响应头Content-Range说明返回的数据范围和数据长度。
+
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -148,20 +149,22 @@ gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何�
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/DOMContentLoaded和load的区别/">
+                <a href="/2019/09/27/封装的函数方法/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
                                 
 
-onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
-window.onload = function() {}
-DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
 
-IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
+原生封装的ajax函数
+function Ajax(type, url, data, success, failed){
+    // 创建ajax对象
+    var xhr = null;
+    if ( window.XMLHttpRequest ) {//非IE浏览器
+        xhr = new XMLHttpRequest();..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -200,22 +203,20 @@ if ( !Array.prototype.forEach ) {
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/封装的函数方法/">
+                <a href="/2019/09/27/DOMContentLoaded和load的区别/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
                                 
 
+onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
+window.onload = function() {}
+DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
 
-原生封装的ajax函数
-function Ajax(type, url, data, success, failed){
-    // 创建ajax对象
-    var xhr = null;
-    if ( window.XMLHttpRequest ) {//非IE浏览器
-        xhr = new XMLHttpRequest();..
+IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

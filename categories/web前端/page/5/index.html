@@ -126,20 +126,22 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/DOMContentLoaded和load的区别/">
+                <a href="/2019/09/27/封装的函数方法/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
                                 
 
-onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
-window.onload = function() {}
-DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
 
-IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
+原生封装的ajax函数
+function Ajax(type, url, data, success, failed){
+    // 创建ajax对象
+    var xhr = null;
+    if ( window.XMLHttpRequest ) {//非IE浏览器
+        xhr = new XMLHttpRequest();..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -178,22 +180,20 @@ if ( !Array.prototype.forEach ) {
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/封装的函数方法/">
+                <a href="/2019/09/27/DOMContentLoaded和load的区别/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
                                 
 
+onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
+window.onload = function() {}
+DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
 
-原生封装的ajax函数
-function Ajax(type, url, data, success, failed){
-    // 创建ajax对象
-    var xhr = null;
-    if ( window.XMLHttpRequest ) {//非IE浏览器
-        xhr = new XMLHttpRequest();..
+IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
