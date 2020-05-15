@@ -74,10 +74,6 @@
                 About
             </a>
             
-            <a class="nav-item" href="/tags">
-                Tags
-            </a>
-            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -96,10 +92,6 @@
             
             <a class="nav-item flex-1" href="/about">
                 About
-            </a>
-            
-            <a class="nav-item flex-1" href="/tags">
-                Tags
             </a>
             
         </div>
@@ -218,11 +210,11 @@ function addfavorite() {
             
             
                 
-<a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/" style="height: 48.5%">
+<a class="post-hover" href="/2019/12/14/百度地图渲染路线/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图搜索并上传位置
+                百度地图渲染路线
             </h3>
             
             
@@ -233,8 +225,8 @@ function addfavorite() {
             <p class="is-marginless text-shadow post-content-text">
                 
 
-var start_point = {lng: 116.404,lat: 39.915}
-v..
+通过经纬度渲染路线var points = [
+    {&quot;lng&quot;: ..
             </p>
             <p class="date text-shadow is-marginless">2019-12-14</p>
         </div>
@@ -272,11 +264,11 @@ function addfavorite() {
         
         
         
-<a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/" style="height: 48.5%">
+<a class="post-hover" href="/2019/12/14/百度地图渲染路线/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图搜索并上传位置
+                百度地图渲染路线
             </h3>
             
             
@@ -287,8 +279,8 @@ function addfavorite() {
             <p class="is-marginless text-shadow post-content-text">
                 
 
-var start_point = {lng: 116.404,lat: 39.915}
-v..
+通过经纬度渲染路线var points = [
+    {&quot;lng&quot;: ..
             </p>
             <p class="date text-shadow is-marginless">2019-12-14</p>
         </div>
@@ -370,6 +362,37 @@ function addfavorite() {
                     
                         <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/12/14/百度地图渲染路线/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图渲染路线</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+通过经纬度渲染路线var points = [
+    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853, &quot;title&quot;:&quot;无锡市&quot;},
+    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322..
+                                        </p>
+                                        <p>2019-12-14</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
@@ -403,12 +426,12 @@ map.centerAndZoo..
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/12/14/百度地图渲染路线/">
+                            <a class="post-hover" href="/2019/11/30/百度地图封装/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
                                 <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
-                                        <h3>百度地图渲染路线</h3>
+                                        <h3>百度地图封装</h3>
                                         
                                         <p>
                                             
@@ -418,11 +441,51 @@ map.centerAndZoo..
                                         <p>
                                             
 
-通过经纬度渲染路线var points = [
-    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853, &quot;title&quot;:&quot;无锡市&quot;},
-    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322..
+//创建和初始化地图函数：
+function initMap() {
+    createMap();//创建地图
+    setMapEvent();//设置地图事件
+    addMapControl();//向地图添加控件
+    addMarker();//向地图中添加marker
+}
+
+//创建地图函数：
+function createMa..
                                         </p>
-                                        <p>2019-12-14</p>
+                                        <p>2019-11-30</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/11/30/百度地图创建图标/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图创建图标</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+//在轨迹点上创建图标，并添加点击事件  
+function addMarker(points){  // 创建图标对象     
+    // 创建标注对象并添加到地图     
+    for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
+        var point..
+                                        </p>
+                                        <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>
                                     </div>
                                 </div>
@@ -498,44 +561,6 @@ var ..
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图封装/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图封装</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-//创建和初始化地图函数：
-function initMap() {
-    createMap();//创建地图
-    setMapEvent();//设置地图事件
-    addMapControl();//向地图添加控件
-    addMarker();//向地图中添加marker
-}
-
-//创建地图函数：
-function createMa..
-                                        </p>
-                                        <p>2019-11-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/11/30/百度地图自适应显示/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
@@ -555,39 +580,6 @@ function createMa..
 //根据经纬极值计算绽放级别。  
 function getZoom (maxLng, minLng, maxLat, minLat) {  
     var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&quot;,&quot;5..
-                                        </p>
-                                        <p>2019-11-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图创建图标/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图创建图标</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-//在轨迹点上创建图标，并添加点击事件  
-function addMarker(points){  // 创建图标对象     
-    // 创建标注对象并添加到地图     
-    for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
-        var point..
                                         </p>
                                         <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>
