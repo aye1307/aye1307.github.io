@@ -74,6 +74,10 @@
                 About
             </a>
             
+            <a class="nav-item" href="/tags">
+                Tags
+            </a>
+            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -92,6 +96,10 @@
             
             <a class="nav-item flex-1" href="/about">
                 About
+            </a>
+            
+            <a class="nav-item flex-1" href="/tags">
+                Tags
             </a>
             
         </div>
@@ -145,7 +153,7 @@
                 <!-- 
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  is-7-desktop">
-        <a href="/2019/10/08/面试题/">
+        <a href="/2019/10/08/readonly和disabled的区别/">
             <div class="full-height post-hover"
                  style="
                          background-image: url('');
@@ -155,19 +163,20 @@
                          ">
                     <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
                         <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            面试题
+                            readonly与disabled区别
                         </h1>
                         <div>
                         
                             `
-                                <span class="tag is-post-tag">面试题</span>
+                                <span class="tag is-post-tag">CSS</span>
                             
                         
                         </div>
                         <p class="post-content-text is-marginless has-padding text-shadow">
-                            Shadow DOM和Virtual DOM有什么区别？
-Shadow DOM 是Web Components标准，为Web组件提供了封装，Shadow DOM使得这些东西与主文档的DOM保持分离
-Virtual DOM 是 Rect/..
+                            
+
+readonly 和 disabled 它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：
+ Readonly只针对input(text / password)和textarea有效，而disabl..
                         </p>
                         <p class="date text-shadow">2019-10-08</p>
                         <button class="button is-info is-small">Read More</button>
@@ -179,11 +188,11 @@ Virtual DOM 是 Rect/..
         <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
                 
-<a class="post-hover" href="/2019/10/08/readonly和disabled的区别/" style="height: 48.5%">
+<a class="post-hover" href="/2019/10/08/currentColor/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                readonly与disabled区别
+                currentColor
             </h3>
             
             
@@ -194,7 +203,8 @@ Virtual DOM 是 Rect/..
             <p class="is-marginless text-shadow post-content-text">
                 
 
-readonly 和 disabled 它们都能够做到使用户不能够更改表单域中的内容。但是它..
+概念： 当前文字颜色
+应用场景： background-color | border-col..
             </p>
             <p class="date text-shadow is-marginless">2019-10-08</p>
         </div>
@@ -231,11 +241,11 @@ window.o..
     <div class="column is-12 is-hidden-desktop">
         
         
-<a class="post-hover" href="/2019/10/08/readonly和disabled的区别/" style="height: 48.5%">
+<a class="post-hover" href="/2019/10/08/currentColor/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                readonly与disabled区别
+                currentColor
             </h3>
             
             
@@ -246,7 +256,8 @@ window.o..
             <p class="is-marginless text-shadow post-content-text">
                 
 
-readonly 和 disabled 它们都能够做到使用户不能够更改表单域中的内容。但是它..
+概念： 当前文字颜色
+应用场景： background-color | border-col..
             </p>
             <p class="date text-shadow is-marginless">2019-10-08</p>
         </div>
@@ -285,35 +296,6 @@ window.o..
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/08/面试题/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>面试题</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">面试题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            Shadow DOM和Virtual DOM有什么区别？
-Shadow DOM 是Web Components标准，为Web组件提供了封装，Shadow DOM使得这些东西与主文档的DOM保持分离
-Virtual DOM 是 Rect/Vue等框架实现的虚拟DOM，其本质上是JavaScript对象，用于模拟DOM对象，在需要操作DOM的地方，先操作Vi..
-                                        </p>
-                                        <p>2019-10-08</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/10/08/readonly和disabled的区别/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
@@ -331,6 +313,41 @@ Virtual DOM 是 Rect/Vue等框架实现的虚拟DOM，其本质上是JavaScript�
 
 readonly 和 disabled 它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：
  Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个..
+                                        </p>
+                                        <p>2019-10-08</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/10/08/currentColor/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>currentColor</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">CSS</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+概念： 当前文字颜色
+应用场景： background-color | border-color | gradient | box-shadow
+参考：
+currentColor-CSS3超高校级好用CSS变量
+
+border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类似 currentColor ；
+其次，在IOS Safar..
                                         </p>
                                         <p>2019-10-08</p>
                                         <button class="button is-small">Read More</button>
@@ -364,41 +381,6 @@ window.onload = function() {}
 DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
 
 IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
-                                        </p>
-                                        <p>2019-09-27</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/27/兼容IE8的一些方法/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>兼容IE8的方法函数</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">JavaScript</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-
-兼容IE8 数组的 forEach
-if ( !Array.prototype.forEach ) {
-    Array.prototype.forEach = function forEach( callback, thisArg ) {
-        var T, k;
-        if ( this == null ) {
-     ..
                                         </p>
                                         <p>2019-09-27</p>
                                         <button class="button is-small">Read More</button>
@@ -447,27 +429,30 @@ function Ajax(type, url, data, success, failed){
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/26/Linux进程命令/">
+                            <a class="post-hover" href="/2019/09/27/兼容IE8的一些方法/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
                                 <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
-                                        <h3>Linux 查看端口，查看进程，关闭进程</h3>
+                                        <h3>兼容IE8的方法函数</h3>
                                         
                                         <p>
                                             
-                                                <span class="tag is-post-tag">Linux</span>
-                                            
-                                                <span class="tag is-post-tag">Golang</span>
+                                                <span class="tag is-post-tag">JavaScript</span>
                                             
                                         </p>
                                         <p>
-                                            Linux 查看端口，查看进程，关闭进程查看进程xxxx的pid：
-# ps -ef | grep xxxx查看端口12345的pid
-# lsof -i:12345关闭pid为xxxx的进程
-# kill -9 xxxx
+                                            
+
+
+兼容IE8 数组的 forEach
+if ( !Array.prototype.forEach ) {
+    Array.prototype.forEach = function forEach( callback, thisArg ) {
+        var T, k;
+        if ( this == null ) {
+     ..
                                         </p>
-                                        <p>2019-09-26</p>
+                                        <p>2019-09-27</p>
                                         <button class="button is-small">Read More</button>
                                     </div>
                                 </div>
@@ -514,30 +499,27 @@ CookieCo..
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/25/类数组对象结构/">
+                            <a class="post-hover" href="/2019/09/26/Linux进程命令/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
                                 <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
-                                        <h3>jQuery的类数组对象结构</h3>
+                                        <h3>Linux 查看端口，查看进程，关闭进程</h3>
                                         
                                         <p>
                                             
-                                                <span class="tag is-post-tag">jQuery</span>
+                                                <span class="tag is-post-tag">Linux</span>
+                                            
+                                                <span class="tag is-post-tag">Golang</span>
                                             
                                         </p>
                                         <p>
-                                            
-
-jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。
-首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：
-jQuery([selector, [context]])
-jQuery(element)
-jQuery(elementArray)
-jQuery(object)
-jQuer..
+                                            Linux 查看端口，查看进程，关闭进程查看进程xxxx的pid：
+# ps -ef | grep xxxx查看端口12345的pid
+# lsof -i:12345关闭pid为xxxx的进程
+# kill -9 xxxx
                                         </p>
-                                        <p>2019-09-25</p>
+                                        <p>2019-09-26</p>
                                         <button class="button is-small">Read More</button>
                                     </div>
                                 </div>
@@ -568,6 +550,41 @@ jQuer..
     factory(global);
 }(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
     var jQuery = function (selector, c..
+                                        </p>
+                                        <p>2019-09-25</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/09/25/类数组对象结构/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>jQuery的类数组对象结构</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">jQuery</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。
+首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：
+jQuery([selector, [context]])
+jQuery(element)
+jQuery(elementArray)
+jQuery(object)
+jQuer..
                                         </p>
                                         <p>2019-09-25</p>
                                         <button class="button is-small">Read More</button>
@@ -751,12 +768,12 @@ jQuer..
         </div>
         <div class="content-inner is-flex flex-wrap justify-space-between">
             
-                <a class="tags-item" href="tags/Axios/" title="Axios" rel="2">
-                    Axios
+                <a class="tags-item" href="tags/Linux/" title="Linux" rel="1">
+                    Linux
                 </a>
             
-                <a class="tags-item" href="tags/JavaScript/" title="JavaScript" rel="14">
-                    JavaScript
+                <a class="tags-item" href="tags/Golang/" title="Golang" rel="1">
+                    Golang
                 </a>
             
                 <a class="tags-item" href="tags/CSS/" title="CSS" rel="5">
@@ -771,12 +788,16 @@ jQuer..
                     hexo
                 </a>
             
-                <a class="tags-item" href="tags/Linux/" title="Linux" rel="1">
-                    Linux
+                <a class="tags-item" href="tags/JavaScript/" title="JavaScript" rel="14">
+                    JavaScript
                 </a>
             
-                <a class="tags-item" href="tags/Golang/" title="Golang" rel="1">
-                    Golang
+                <a class="tags-item" href="tags/Axios/" title="Axios" rel="2">
+                    Axios
+                </a>
+            
+                <a class="tags-item" href="tags/cookie/" title="cookie" rel="2">
+                    cookie
                 </a>
             
                 <a class="tags-item" href="tags/Git/" title="Git" rel="1">
@@ -795,10 +816,6 @@ jQuer..
                     jQuery
                 </a>
             
-                <a class="tags-item" href="tags/cookie/" title="cookie" rel="2">
-                    cookie
-                </a>
-            
                 <a class="tags-item" href="tags/HTML/" title="HTML" rel="1">
                     HTML
                 </a>
@@ -807,12 +824,12 @@ jQuer..
                     移动端
                 </a>
             
-                <a class="tags-item" href="tags/面试题/" title="面试题" rel="1">
-                    面试题
-                </a>
-            
                 <a class="tags-item" href="tags/前端优化/" title="前端优化" rel="1">
                     前端优化
+                </a>
+            
+                <a class="tags-item" href="tags/面试题/" title="面试题" rel="1">
+                    面试题
                 </a>
             
         </div>

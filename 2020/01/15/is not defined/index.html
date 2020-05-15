@@ -81,6 +81,10 @@
                 About
             </a>
             
+            <a class="nav-item" href="/tags">
+                Tags
+            </a>
+            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -99,6 +103,10 @@
             
             <a class="nav-item flex-1" href="/about">
                 About
+            </a>
+            
+            <a class="nav-item flex-1" href="/tags">
+                Tags
             </a>
             
         </div>
@@ -143,6 +151,7 @@
 </style>
 <header>
     <div id="header_box" class="header-box"></div>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </header>
 <section>
     <div class="container post-box">
@@ -214,6 +223,16 @@ try{
         </div>
         <div class="post-reply">
             
+            
+            
+                <div id="vcomments"></div>
+                <script>
+                    new Valine({
+                        el: '#vcomments',
+                        appId: 'oOTefgkcFwBBe8C08fjwe0uX-gzGzoHsz',
+                        appKey: '89jbaOQbHo1oa0woOK8BvyDO'
+                    })
+                </script>
             
         </div>
     </div>
