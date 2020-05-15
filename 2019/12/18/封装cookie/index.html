@@ -17,15 +17,15 @@
   
   <title>封装cookie方法 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="封装cookie方法function setCookie(cname,cvalue,exdays){     var d &#x3D; new Date();     d.setTime(d.getTime()+(exdays*24*60*60*1000));     var expires &#x3D; &quot;expires&#x3D;&quot;+d.toGMTString();     document.cooki">
+  <meta name="description" content="function setCookie(cname,cvalue,exdays){     var d &#x3D; new Date();     d.setTime(d.getTime()+(exdays*24*60*60*1000));     var expires &#x3D; &quot;expires&#x3D;&quot;+d.toGMTString();     document.cookie &#x3D; cnam">
 <meta property="og:type" content="article">
 <meta property="og:title" content="封装cookie方法">
 <meta property="og:url" content="http://yoursite.com/2019/12/18/%E5%B0%81%E8%A3%85cookie/index.html">
 <meta property="og:site_name" content="AYE Blog">
-<meta property="og:description" content="封装cookie方法function setCookie(cname,cvalue,exdays){     var d &#x3D; new Date();     d.setTime(d.getTime()+(exdays*24*60*60*1000));     var expires &#x3D; &quot;expires&#x3D;&quot;+d.toGMTString();     document.cooki">
+<meta property="og:description" content="function setCookie(cname,cvalue,exdays){     var d &#x3D; new Date();     d.setTime(d.getTime()+(exdays*24*60*60*1000));     var expires &#x3D; &quot;expires&#x3D;&quot;+d.toGMTString();     document.cookie &#x3D; cnam">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T06:59:43.752Z">
+<meta property="article:modified_time" content="2020-05-15T02:40:33.697Z">
 <meta property="article:author" content="aye">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="cookie">
@@ -166,7 +166,9 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h2 id="封装cookie方法"><a href="#封装cookie方法" class="headerlink" title="封装cookie方法"></a>封装cookie方法</h2><pre><code class="javascript">function setCookie(cname,cvalue,exdays){
+            <!-- ## 封装cookie方法 -->
+
+<pre><code class="javascript">function setCookie(cname,cvalue,exdays){
     var d = new Date();
     d.setTime(d.getTime()+(exdays*24*60*60*1000));
     var expires = &quot;expires=&quot;+d.toGMTString();

@@ -145,7 +145,7 @@
                 <!-- 
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  is-7-desktop">
-        <a href="/2019/12/14/添加书签至浏览器/">
+        <a href="/2019/12/18/封装cookie/">
             <div class="full-height post-hover"
                  style="
                          background-image: url('');
@@ -155,21 +155,26 @@
                          ">
                     <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
                         <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            添加书签至浏览器
+                            封装cookie方法
                         </h1>
                         <div>
                         
                             `
                                 <span class="tag is-post-tag">JavaScript</span>
+                            `
+                                <span class="tag is-post-tag">cookie</span>
                             
                         
                         </div>
                         <p class="post-content-text is-marginless has-padding text-shadow">
-                            添加书签至浏览器 // 添加书签至浏览器
-function addfavorite() { 
-    var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39..
+                            
+
+function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+..
                         </p>
-                        <p class="date text-shadow">2019-12-14</p>
+                        <p class="date text-shadow">2019-12-18</p>
                         <button class="button is-info is-small">Read More</button>
                     </div>
             </div>
@@ -179,11 +184,11 @@ function addfavorite() {
         <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
                 
-<a class="post-hover" href="/2019/11/30/百度地图常用API/" style="height: 48.5%">
+<a class="post-hover" href="/2019/12/14/百度地图渲染路线/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图常用API
+                百度地图渲染路线
             </h3>
             
             
@@ -192,20 +197,23 @@ function addfavorite() {
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                百度地图常用API&lt;div id=&quot;container&quot;&gt;&lt..
+                
+
+通过经纬度渲染路线var points = [
+    {&quot;lng&quot;: ..
             </p>
-            <p class="date text-shadow is-marginless">2019-11-30</p>
+            <p class="date text-shadow is-marginless">2019-12-14</p>
         </div>
     </div>
 </a>
             
             
                 
-<a class="post-hover" href="/2019/11/30/百度地图创建图标/" style="height: 48.5%">
+<a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图创建图标
+                百度地图搜索并上传位置
             </h3>
             
             
@@ -214,10 +222,12 @@ function addfavorite() {
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                百度地图创建图标//在轨迹点上创建图标，并添加点击事件  
-function addMarker..
+                
+
+var start_point = {lng: 116.404,lat: 39.915}
+v..
             </p>
-            <p class="date text-shadow is-marginless">2019-11-30</p>
+            <p class="date text-shadow is-marginless">2019-12-14</p>
         </div>
     </div>
 </a>
@@ -227,11 +237,11 @@ function addMarker..
     <div class="column is-12 is-hidden-desktop">
         
         
-<a class="post-hover" href="/2019/11/30/百度地图常用API/" style="height: 48.5%">
+<a class="post-hover" href="/2019/12/14/百度地图渲染路线/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图常用API
+                百度地图渲染路线
             </h3>
             
             
@@ -240,20 +250,23 @@ function addMarker..
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                百度地图常用API&lt;div id=&quot;container&quot;&gt;&lt..
+                
+
+通过经纬度渲染路线var points = [
+    {&quot;lng&quot;: ..
             </p>
-            <p class="date text-shadow is-marginless">2019-11-30</p>
+            <p class="date text-shadow is-marginless">2019-12-14</p>
         </div>
     </div>
 </a>
         
         
         
-<a class="post-hover" href="/2019/11/30/百度地图创建图标/" style="height: 48.5%">
+<a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                百度地图创建图标
+                百度地图搜索并上传位置
             </h3>
             
             
@@ -262,10 +275,12 @@ function addMarker..
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                百度地图创建图标//在轨迹点上创建图标，并添加点击事件  
-function addMarker..
+                
+
+var start_point = {lng: 116.404,lat: 39.915}
+v..
             </p>
-            <p class="date text-shadow is-marginless">2019-11-30</p>
+            <p class="date text-shadow is-marginless">2019-12-14</p>
         </div>
     </div>
 </a>
@@ -273,6 +288,105 @@ function addMarker..
     </div>
 </div>
  -->
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/12/18/封装cookie/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>封装cookie方法</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">JavaScript</span>
+                                            
+                                                <span class="tag is-post-tag">cookie</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    var expires = &quot;expires=&quot;+d.toGMTString();
+    ..
+                                        </p>
+                                        <p>2019-12-18</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/12/14/百度地图渲染路线/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图渲染路线</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+通过经纬度渲染路线var points = [
+    {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853, &quot;title&quot;:&quot;无锡市&quot;},
+    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322..
+                                        </p>
+                                        <p>2019-12-14</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图搜索并上传位置</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+var start_point = {lng: 116.404,lat: 39.915}
+var map = new BMap.Map(&quot;container&quot;);
+map.enableScrollWheelZoom(true);     // 开启鼠标滚轮缩放
+// 根据经纬度自适应zoom和中点
+map.centerAndZoo..
+                                        </p>
+                                        <p>2019-12-14</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
                 
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
@@ -290,11 +404,13 @@ function addMarker..
                                             
                                         </p>
                                         <p>
-                                            添加书签至浏览器 // 添加书签至浏览器
+                                            
+
+ // 添加书签至浏览器
 function addfavorite() { 
     var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;
     try{
- ..
+       ..
                                         </p>
                                         <p>2019-12-14</p>
                                         <button class="button is-small">Read More</button>
@@ -306,37 +422,7 @@ function addfavorite() {
                     
                 
                     
-                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图常用API/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图常用API</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            百度地图常用API&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
-    map.enableScrollWheelZ..
-                                        </p>
-                                        <p>2019-11-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;"> -->
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2019/11/30/百度地图创建图标/">
                             <div class="columns" style="min-height: 230px;">
@@ -351,11 +437,13 @@ function addfavorite() {
                                             
                                         </p>
                                         <p>
-                                            百度地图创建图标//在轨迹点上创建图标，并添加点击事件  
+                                            
+
+//在轨迹点上创建图标，并添加点击事件  
 function addMarker(points){  // 创建图标对象     
     // 创建标注对象并添加到地图     
     for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
-        var..
+        var point..
                                         </p>
                                         <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>
@@ -369,12 +457,12 @@ function addMarker(points){  // 创建图标对象
                     
                         <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
                         <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图封装/">
+                            <a class="post-hover" href="/2019/11/30/百度地图常用API/">
                             <div class="columns" style="min-height: 230px;">
                                 <!--  -->
                                 <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
-                                        <h3>百度地图封装</h3>
+                                        <h3>百度地图常用API</h3>
                                         
                                         <p>
                                             
@@ -382,46 +470,12 @@ function addMarker(points){  // 创建图标对象
                                             
                                         </p>
                                         <p>
-                                            百度地图封装//创建和初始化地图函数：
-function initMap() {
-    createMap();//创建地图
-    setMapEvent();//设置地图事件
-    addMapControl();//向地图添加控件
-    addMarker();//向地图中添加marker
-}
+                                            
 
-//创建地图函数：
-function crea..
-                                        </p>
-                                        <p>2019-11-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图自适应显示/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图自适应显示地图</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            百度地图自适应显示地图**根据标注点坐标范围计算显示缩放级别zoom1、 计算缩放级别的函数
-//根据经纬极值计算绽放级别。  
-function getZoom (maxLng, minLng, maxLat, minLat) {  
-    var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&qu..
+&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
+    map.enableScrollWheelZoom(tru..
                                         </p>
                                         <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>
@@ -448,9 +502,82 @@ function getZoom (maxLng, minLng, maxLat, minLat) {
                                             
                                         </p>
                                         <p>
-                                            百度地图添加折线var map = new BMap.Map(&quot;container&quot;);
+                                            
+
+var map = new BMap.Map(&quot;container&quot;);
 var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标
-var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标..
+var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标A
+var ..
+                                        </p>
+                                        <p>2019-11-30</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/11/30/百度地图自适应显示/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图自适应显示地图</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+根据标注点坐标范围计算显示缩放级别zoom1、 计算缩放级别的函数
+//根据经纬极值计算绽放级别。  
+function getZoom (maxLng, minLng, maxLat, minLat) {  
+    var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&quot;,&quot;5..
+                                        </p>
+                                        <p>2019-11-30</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/11/30/百度地图封装/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图封装</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+//创建和初始化地图函数：
+function initMap() {
+    createMap();//创建地图
+    setMapEvent();//设置地图事件
+    addMapControl();//向地图添加控件
+    addMarker();//向地图中添加marker
+}
+
+//创建地图函数：
+function createMa..
                                         </p>
                                         <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>
@@ -477,109 +604,14 @@ var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标..
                                             
                                         </p>
                                         <p>
-                                            Axios的二次封装
-在项目下新建一个service文件夹（与package.json同级），子文件：http.js 对axios请求头、拦截器等， reset.js：请求方法的封装，get，post等。 axios的二次封装跟api的封装、或者在vuex的store中使用， axios的reset用于api封装用,提供api封装中使用，以及store中..
+                                            
+
+
+在项目下新建一个service文件夹（与package.json同级），子文件：http.js 对axios请求头、拦截器等， reset.js：请求方法的封装，get，post等。 axios的二次封装跟api的封装、或者在vuex的store中使用， axios的reset用于api封装用,提供api封装中使用，以及store中使用。
+
+ 1...
                                         </p>
                                         <p>2019-11-07</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/29/vue-cli 3.0 打包预览/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!-- 
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://qab0509yb.bkt.clouddn.com/201910291.png')">
-                                    </div>
-                                 -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>vue-cli 3.0 打包</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">vue</span>
-                                            
-                                        </p>
-                                        <p>
-                                            vue-cli 3.0 打包并本地查看使用命令行对项目打包
-npm run build完成后直接打开生成的 dist 文件夹下的 index.html ，打开后出现了一个空白页面，并且控制台报错，提示文件找不到。修改 vue.config.js 中的路径。将 baseUrl 属性的值 ‘/‘ 修改为 ‘./‘
-module.exports = {
-  /..
-                                        </p>
-                                        <p>2019-10-29</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/14/vue-cli 3.0 创建项目/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>VUE-CLI 3.0 如何创建项目</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">vue</span>
-                                            
-                                        </p>
-                                        <p>
-                                            VUE-CLI 3.0 如何创建项目安装vue-cli 3.0首先查看本机是否有安装 vue-cli，在终端中运行下面命令
-vue --version如果安装的不是 3.0 + ，先卸载当前 vue-cli
-npm uninstall -g vue-cli
-
-npm install -g @vue/cli
-类 unix 用户，需加上 sudo
-
-创建初始..
-                                        </p>
-                                        <p>2019-10-14</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/14/vue-cli 3.0 打包项目/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>VUE-CLI 3.0 打包项目</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">vue</span>
-                                            
-                                        </p>
-                                        <p>
-                                            解决vue cli3.0打包上线静态资源找不到路径问题解决方法是：在项目的根目录下创建vue.config,js文件，在里面配置静态资源的路径，publicPath是配置静态资源路径的属性，vue.config,js文件的代码如下： 
-module.exports = {
-    publicPath: &#39;./&#39;
-}
-项目打包上传http..
-                                        </p>
-                                        <p>2019-10-14</p>
                                         <button class="button is-small">Read More</button>
                                     </div>
                                 </div>

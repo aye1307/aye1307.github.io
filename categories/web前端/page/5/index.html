@@ -126,20 +126,22 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/封装的函数方法/">
+                <a href="/2019/09/27/兼容IE8的一些方法/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>兼容IE8的方法函数</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
-                                常用的函数方法
-原生封装的ajax函数
-function Ajax(type, url, data, success, failed){
-    // 创建ajax对象
-    var xhr = null;
-    if ( window.XMLHttpRequest ) {//非IE浏览器
-        xhr = new XMLHttpReque..
+                                
+
+
+兼容IE8 数组的 forEach
+if ( !Array.prototype.forEach ) {
+    Array.prototype.forEach = function forEach( callback, thisArg ) {
+        var T, k;
+        if ( this == null ) {
+     ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -151,19 +153,47 @@ function Ajax(type, url, data, success, failed){
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/27/兼容IE8的一些方法/">
+                <a href="/2019/09/27/DOMContentLoaded和load的区别/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>兼容IE8的方法函数</strong> <small class="post-date">at: 2019-09-27</small>
+                                <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
-                                兼容IE8的方法函数
-兼容IE8 数组的 forEach
-if ( !Array.prototype.forEach ) {
-    Array.prototype.forEach = function forEach( callback, thisArg ) {
-        var T, k;
-        if ( this == null )..
+                                
+
+onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
+window.onload = function() {}
+DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
+
+IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/09/27/封装的函数方法/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
+                                <br>
+                                
+
+
+原生封装的ajax函数
+function Ajax(type, url, data, success, failed){
+    // 创建ajax对象
+    var xhr = null;
+    if ( window.XMLHttpRequest ) {//非IE浏览器
+        xhr = new XMLHttpRequest();..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -188,52 +218,11 @@ if ( !Array.prototype.forEach ) {
                             <p>
                                 <strong>客户端存储</strong> <small class="post-date">at: 2019-09-26</small>
                                 <br>
-                                客户端存储随着技术的发展、网速的提升，浏览器做的事情也越来越多，能实现的功能也越来越丰富。而传统的C/S架构也基本被B/S架构给替代。
+                                
+
+随着技术的发展、网速的提升，浏览器做的事情也越来越多，能实现的功能也越来越丰富。而传统的C/S架构也基本被B/S架构给替代。
 此时传统的Cookie已经远远不能满足我们的需求了。于是WebSQL、HTML5中本地存储（LocalStorage、SessionStorage）、IndexedDB等便适时出现，让前端可以彻底的大展手脚。
-Cooki..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/09/25/立即调用表达式/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>jQuery立即调用表达式</strong> <small class="post-date">at: 2019-09-25</small>
-                                <br>
-                                立即调用表达式;(function(global, factory){
-    factory(global);
-}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
-    var jQuery = function (select..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/09/25/安装git服务器/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>在CentOS下搭建Git服务器</strong> <small class="post-date">at: 2019-09-25</small>
-                                <br>
-                                在CentOS下搭建git服务器服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。
-# yum info git //查看 yum 源仓库的 Git 信息
-可以看出，截至目前，yum 源仓库中最新..
+CookieCo..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -252,12 +241,62 @@ Cooki..
                             <p>
                                 <strong>jQuery的类数组对象结构</strong> <small class="post-date">at: 2019-09-25</small>
                                 <br>
-                                jQuery的类数组对象结构jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。
+                                
+
+jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。
 首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：
 jQuery([selector, [context]])
 jQuery(element)
 jQuery(elementArray)
-jQuery(o..
+jQuery(object)
+jQuer..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/09/25/立即调用表达式/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>jQuery立即调用表达式</strong> <small class="post-date">at: 2019-09-25</small>
+                                <br>
+                                
+
+;(function(global, factory){
+    factory(global);
+}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
+    var jQuery = function (selector, c..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/09/25/安装git服务器/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>在CentOS下搭建Git服务器</strong> <small class="post-date">at: 2019-09-25</small>
+                                <br>
+                                
+
+服务器端第一步：安装git服务【注】yum 源仓库里的 Git 版本更新不及时，最新版本的 Git 是1.8.3.1，但是官方最新版本已经到了 2.9.2。想要安装最新版本的 Git ，之恶能下载源码进行安装。
+# yum info git //查看 yum 源仓库的 Git 信息
+可以看出，截至目前，yum 源仓库中最新的 Git 版本才 1.8...
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

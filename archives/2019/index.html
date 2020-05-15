@@ -165,8 +165,11 @@
                         
                         </div>
                         <p class="post-content-text is-marginless has-padding text-shadow">
-                            获取当前websocket的连接状态 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
- 它将是以下值之一：CONNECTING OPEN CLOSING或..
+                            
+
+ 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
+ 它将是以下值之一：CONNECTING OPEN CLOSING或CLOSED 
+if(yourW..
                         </p>
                         <p class="date text-shadow">2019-12-31</p>
                         <button class="button is-info is-small">Read More</button>
@@ -191,8 +194,10 @@
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                获取当天的时间戳var start = new Date(
-    new Date(new D..
+                
+
+var start = new Date(
+    new Date(new Date()...
             </p>
             <p class="date text-shadow is-marginless">2019-12-23</p>
         </div>
@@ -214,7 +219,9 @@
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                javaScript判断对象是否为空对象的几种方法1.将 json对象转化为 json 字符串，..
+                
+
+1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quo..
             </p>
             <p class="date text-shadow is-marginless">2019-12-23</p>
         </div>
@@ -239,8 +246,10 @@
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                获取当天的时间戳var start = new Date(
-    new Date(new D..
+                
+
+var start = new Date(
+    new Date(new Date()...
             </p>
             <p class="date text-shadow is-marginless">2019-12-23</p>
         </div>
@@ -262,7 +271,9 @@
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                javaScript判断对象是否为空对象的几种方法1.将 json对象转化为 json 字符串，..
+                
+
+1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quo..
             </p>
             <p class="date text-shadow is-marginless">2019-12-23</p>
         </div>
@@ -289,9 +300,12 @@
                                             
                                         </p>
                                         <p>
-                                            获取当前websocket的连接状态 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
+                                            
+
+ 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
  它将是以下值之一：CONNECTING OPEN CLOSING或CLOSED 
-if(yourWsObject.readyState === yourWsObject.CLOSED){..
+if(yourWsObject.readyState === yourWsObject.CLOSED){
+   // Do your s..
                                         </p>
                                         <p>2019-12-31</p>
                                         <button class="button is-small">Read More</button>
@@ -318,11 +332,13 @@ if(yourWsObject.readyState === yourWsObject.CLOSED){..
                                             
                                         </p>
                                         <p>
-                                            获取当天的时间戳var start = new Date(
+                                            
+
+var start = new Date(
     new Date(new Date().toLocaleDateString()).getTime()
 ); // 当天0点
 var end = new Date( // 当天23:59
-    new Date(new Date().toLocaleDateString()).getT..
+    new Date(new Date().toLocaleDateString()).getTime() ..
                                         </p>
                                         <p>2019-12-23</p>
                                         <button class="button is-small">Read More</button>
@@ -349,12 +365,15 @@ var end = new Date( // 当天23:59
                                             
                                         </p>
                                         <p>
-                                            javaScript判断对象是否为空对象的几种方法1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
+                                            
+
+1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
 var data = {};
 var b = (JSON.stringify(data) == &quot;{}&quot;);
 alert(b);//true
 2.for in 循环判断
-var obj =..
+var obj = {};
+var b = function()..
                                         </p>
                                         <p>2019-12-23</p>
                                         <button class="button is-small">Read More</button>
@@ -413,43 +432,15 @@ var obj =..
                                             
                                         </p>
                                         <p>
-                                            封装cookie方法function setCookie(cname,cvalue,exdays){
+                                            
+
+function setCookie(cname,cvalue,exdays){
     var d = new Date();
     d.setTime(d.getTime()+(exdays*24*60*60*1000));
-    var expires = &quot;expires=&quot;+d.toGMTString..
+    var expires = &quot;expires=&quot;+d.toGMTString();
+    ..
                                         </p>
                                         <p>2019-12-18</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图搜索并上传位置</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            百度地图搜索并上传位置var start_point = {lng: 116.404,lat: 39.915}
-var map = new BMap.Map(&quot;container&quot;);
-map.enableScrollWheelZoom(true);     // 开启鼠标滚轮缩放
-// 根据经纬度自适应zoom和中点
-map.cen..
-                                        </p>
-                                        <p>2019-12-14</p>
                                         <button class="button is-small">Read More</button>
                                     </div>
                                 </div>
@@ -474,9 +465,44 @@ map.cen..
                                             
                                         </p>
                                         <p>
-                                            百度地图渲染路线通过经纬度渲染路线var points = [
+                                            
+
+通过经纬度渲染路线var points = [
     {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853, &quot;title&quot;:&quot;无锡市&quot;},
-    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31..
+    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322..
+                                        </p>
+                                        <p>2019-12-14</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/12/14/百度地图搜索并上传位置/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图搜索并上传位置</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+var start_point = {lng: 116.404,lat: 39.915}
+var map = new BMap.Map(&quot;container&quot;);
+map.enableScrollWheelZoom(true);     // 开启鼠标滚轮缩放
+// 根据经纬度自适应zoom和中点
+map.centerAndZoo..
                                         </p>
                                         <p>2019-12-14</p>
                                         <button class="button is-small">Read More</button>
@@ -503,43 +529,15 @@ map.cen..
                                             
                                         </p>
                                         <p>
-                                            添加书签至浏览器 // 添加书签至浏览器
+                                            
+
+ // 添加书签至浏览器
 function addfavorite() { 
     var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;
     try{
- ..
+       ..
                                         </p>
                                         <p>2019-12-14</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
-                        <div class="content-box" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/30/百度地图常用API/">
-                            <div class="columns" style="min-height: 230px;">
-                                <!--  -->
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>百度地图常用API</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">map</span>
-                                            
-                                        </p>
-                                        <p>
-                                            百度地图常用API&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
-    map.enableScrollWheelZ..
-                                        </p>
-                                        <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>
                                     </div>
                                 </div>
@@ -564,11 +562,45 @@ function addfavorite() {
                                             
                                         </p>
                                         <p>
-                                            百度地图创建图标//在轨迹点上创建图标，并添加点击事件  
+                                            
+
+//在轨迹点上创建图标，并添加点击事件  
 function addMarker(points){  // 创建图标对象     
     // 创建标注对象并添加到地图     
     for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
-        var..
+        var point..
+                                        </p>
+                                        <p>2019-11-30</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <!-- <div class="content-box  " style="margin-bottom: 27px;"> -->
+                        <div class="content-box" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/11/30/百度地图常用API/">
+                            <div class="columns" style="min-height: 230px;">
+                                <!--  -->
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>百度地图常用API</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">map</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+
+&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
+    map.enableScrollWheelZoom(tru..
                                         </p>
                                         <p>2019-11-30</p>
                                         <button class="button is-small">Read More</button>

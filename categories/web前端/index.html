@@ -133,11 +133,47 @@
                             <p>
                                 <strong>微信小程序反编译报错</strong> <small class="post-date">at: 2020-05-13</small>
                                 <br>
-                                微信小程序反编译报错前言​    微信小程序的格式是：.wxapkg ，.wxapkg 是一个二进制文件。详细内容可参考 微信小程序源码阅读笔记 
+                                
+
+前言​    微信小程序的格式是：.wxapkg ，.wxapkg 是一个二进制文件。详细内容可参考 微信小程序源码阅读笔记 
 ​    安卓手机目录为 /data/data/com.tencent.mm/MicroMsg/{User}/appbrand/pkg
 ​    电脑目录为 /WeChat Files/Applet
 准备
-n..
+node.js 运..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2020/05/12/高德地图渲染路线/">
+                    
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="http://qab0509yb.bkt.clouddn.com/Snipaste_2020-05-15_10-35-15.png" style="height: 100%; width: 100%">
+                        </figure>
+                    </div>
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>高德地图渲染路线</strong> <small class="post-date">at: 2020-05-12</small>
+                                <br>
+                                
+
+在项目中，使用百度地图时，发现通过城市名获取经纬度不准确，故替换为高德地图。
+
+代码如下：
+var points = []
+var adds = [&#39;江苏省无锡市惠山区&#39;,&#39;江苏省常州市金坛市&#39;,&#39;江苏省泰州市姜堰县&#39;]
+
+var startIcon = new AMap.Icon({
+    // 图..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -183,7 +219,9 @@ n..
                             <p>
                                 <strong>微信小程序的背景音乐问题</strong> <small class="post-date">at: 2020-01-08</small>
                                 <br>
-                                微信小程序的背景音乐问题微信小程序在 IOS 下，当歌曲名称为中文时，无法播放歌曲，在安卓下正常。可以使用 encodeURIComponent() 将歌曲名称作为  URI 组件进行编码。
+                                
+
+微信小程序在 IOS 下，当歌曲名称为中文时，无法播放歌曲，在安卓下正常。可以使用 encodeURIComponent() 将歌曲名称作为  URI 组件进行编码。
 
                             </p>
                             <button class="button is-info">Read</button>
@@ -203,33 +241,12 @@ n..
                             <p>
                                 <strong>获取当前websocket的连接状态</strong> <small class="post-date">at: 2019-12-31</small>
                                 <br>
-                                获取当前websocket的连接状态 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
+                                
+
+ 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
  它将是以下值之一：CONNECTING OPEN CLOSING或CLOSED 
-if(yourWsObject.readyState === yourWsObject.CLOSED){..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/12/23/判断变量为空对象/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>判断对象是否为空对象的几种方法</strong> <small class="post-date">at: 2019-12-23</small>
-                                <br>
-                                javaScript判断对象是否为空对象的几种方法1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
-var data = {};
-var b = (JSON.stringify(data) == &quot;{}&quot;);
-alert(b);//true
-2.for in 循环判断
-var obj =..
+if(yourWsObject.readyState === yourWsObject.CLOSED){
+   // Do your s..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -248,11 +265,40 @@ var obj =..
                             <p>
                                 <strong>获取当天的时间戳</strong> <small class="post-date">at: 2019-12-23</small>
                                 <br>
-                                获取当天的时间戳var start = new Date(
+                                
+
+var start = new Date(
     new Date(new Date().toLocaleDateString()).getTime()
 ); // 当天0点
 var end = new Date( // 当天23:59
-    new Date(new Date().toLocaleDateString()).getT..
+    new Date(new Date().toLocaleDateString()).getTime() ..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/12/23/判断变量为空对象/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>判断对象是否为空对象的几种方法</strong> <small class="post-date">at: 2019-12-23</small>
+                                <br>
+                                
+
+1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
+var data = {};
+var b = (JSON.stringify(data) == &quot;{}&quot;);
+alert(b);//true
+2.for in 循环判断
+var obj = {};
+var b = function()..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -293,33 +339,13 @@ var end = new Date( // 当天23:59
                             <p>
                                 <strong>封装cookie方法</strong> <small class="post-date">at: 2019-12-18</small>
                                 <br>
-                                封装cookie方法function setCookie(cname,cvalue,exdays){
+                                
+
+function setCookie(cname,cvalue,exdays){
     var d = new Date();
     d.setTime(d.getTime()+(exdays*24*60*60*1000));
-    var expires = &quot;expires=&quot;+d.toGMTString..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/12/14/添加书签至浏览器/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>添加书签至浏览器</strong> <small class="post-date">at: 2019-12-14</small>
-                                <br>
-                                添加书签至浏览器 // 添加书签至浏览器
-function addfavorite() { 
-    var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;
-    try{
- ..
+    var expires = &quot;expires=&quot;+d.toGMTString();
+    ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -338,9 +364,11 @@ function addfavorite() {
                             <p>
                                 <strong>百度地图渲染路线</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                百度地图渲染路线通过经纬度渲染路线var points = [
+                                
+
+通过经纬度渲染路线var points = [
     {&quot;lng&quot;: 120.28429, &quot;lat&quot;:31.52853, &quot;title&quot;:&quot;无锡市&quot;},
-    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31..
+    {&quot;lng&quot;: 119.59794, &quot;lat&quot;:31.72322..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

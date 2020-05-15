@@ -126,19 +126,19 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/25/类数组对象结构/">
+                <a href="/2019/09/25/立即调用表达式/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>jQuery的类数组对象结构</strong> <small class="post-date">at: 2019-09-25</small>
+                                <strong>jQuery立即调用表达式</strong> <small class="post-date">at: 2019-09-25</small>
                                 <br>
-                                jQuery的类数组对象结构jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。
-首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：
-jQuery([selector, [context]])
-jQuery(element)
-jQuery(elementArray)
-jQuery(o..
+                                
+
+;(function(global, factory){
+    factory(global);
+}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
+    var jQuery = function (selector, c..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -150,17 +150,22 @@ jQuery(o..
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/09/25/立即调用表达式/">
+                <a href="/2019/09/25/类数组对象结构/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>jQuery立即调用表达式</strong> <small class="post-date">at: 2019-09-25</small>
+                                <strong>jQuery的类数组对象结构</strong> <small class="post-date">at: 2019-09-25</small>
                                 <br>
-                                立即调用表达式;(function(global, factory){
-    factory(global);
-}(typeof window !== &quot;undefined&quot; ? window : this, function(window, noGlobal) {
-    var jQuery = function (select..
+                                
+
+jQuery为什么能像数组一样操作，通过对象get方法或者直接通过下标0索引就能转成DOM对象。
+首先jQuery的入口都是统一的$，通过传递参数的不同，实现了9种方法的重载：
+jQuery([selector, [context]])
+jQuery(element)
+jQuery(elementArray)
+jQuery(object)
+jQuer..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

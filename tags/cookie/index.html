@@ -133,10 +133,13 @@
                             <p>
                                 <strong>封装cookie方法</strong> <small class="post-date">at: 2019-12-18</small>
                                 <br>
-                                封装cookie方法function setCookie(cname,cvalue,exdays){
+                                
+
+function setCookie(cname,cvalue,exdays){
     var d = new Date();
     d.setTime(d.getTime()+(exdays*24*60*60*1000));
-    var expires = &quot;expires=&quot;+d.toGMTString..
+    var expires = &quot;expires=&quot;+d.toGMTString();
+    ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -161,9 +164,11 @@
                             <p>
                                 <strong>客户端存储</strong> <small class="post-date">at: 2019-09-26</small>
                                 <br>
-                                客户端存储随着技术的发展、网速的提升，浏览器做的事情也越来越多，能实现的功能也越来越丰富。而传统的C/S架构也基本被B/S架构给替代。
+                                
+
+随着技术的发展、网速的提升，浏览器做的事情也越来越多，能实现的功能也越来越丰富。而传统的C/S架构也基本被B/S架构给替代。
 此时传统的Cookie已经远远不能满足我们的需求了。于是WebSQL、HTML5中本地存储（LocalStorage、SessionStorage）、IndexedDB等便适时出现，让前端可以彻底的大展手脚。
-Cooki..
+CookieCo..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

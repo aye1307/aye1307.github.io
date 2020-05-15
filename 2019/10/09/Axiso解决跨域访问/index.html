@@ -17,17 +17,17 @@
   
   <title>Axiso解决跨域访问 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Axiso解决跨域访问首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： $ vue -V 2.X or 3.X一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;) .then(res&#x3D;&gt;{     consol">
+  <meta name="description" content="首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： $ vue -V 2.X or 3.X一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;) .then(res&#x3D;&gt;{     console.log(res">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Axiso解决跨域访问">
 <meta property="og:url" content="http://yoursite.com/2019/10/09/Axiso%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE/index.html">
 <meta property="og:site_name" content="AYE Blog">
-<meta property="og:description" content="Axiso解决跨域访问首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： $ vue -V 2.X or 3.X一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;) .then(res&#x3D;&gt;{     consol">
+<meta property="og:description" content="首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同： $ vue -V 2.X or 3.X一、Vue2 版本这里以访问 Ve2x 的一个公告API为例，直接访问如下： this.$axios.get(&quot;https:&#x2F;&#x2F;www.v2ex.com&#x2F;api&#x2F;site&#x2F;info.json&quot;) .then(res&#x3D;&gt;{     console.log(res">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://qab0509yb.bkt.clouddn.com/201910091.png">
 <meta property="og:image" content="http://qab0509yb.bkt.clouddn.com/201910092.png">
 <meta property="article:published_time" content="2019-10-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T08:42:13.867Z">
+<meta property="article:modified_time" content="2020-05-15T02:40:34.144Z">
 <meta property="article:author" content="aye">
 <meta property="article:tag" content="Axios">
 <meta name="twitter:card" content="summary">
@@ -166,7 +166,9 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="Axiso解决跨域访问"><a href="#Axiso解决跨域访问" class="headerlink" title="Axiso解决跨域访问"></a>Axiso解决跨域访问</h1><p>首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同：</p>
+            <!-- # Axiso解决跨域访问 -->
+
+<p>首先请检查下你的 Vue 版本，Vue2 和 Vue3 跨域方式不同：</p>
 <pre><code>$ vue -V
 2.X or 3.X</code></pre><h3 id="一、Vue2-版本"><a href="#一、Vue2-版本" class="headerlink" title="一、Vue2 版本"></a>一、Vue2 版本</h3><p>这里以访问 Ve2x 的一个公告API为例，直接访问如下：</p>
 <pre><code class="javascript">this.$axios.get(&quot;https://www.v2ex.com/api/site/info.json&quot;)

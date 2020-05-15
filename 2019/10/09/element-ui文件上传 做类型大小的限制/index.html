@@ -17,15 +17,15 @@
   
   <title>element-ui文件上传 做类型大小的限制 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="element-ui文件上传 做类型大小的限制 &lt;div class&#x3D;&quot;filebox&quot;&gt;     &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemov">
+  <meta name="description" content="&lt;div class&#x3D;&quot;filebox&quot;&gt;     &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemove&quot; multiple :lim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="element-ui文件上传 做类型大小的限制">
 <meta property="og:url" content="http://yoursite.com/2019/10/09/element-ui%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%20%E5%81%9A%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E7%9A%84%E9%99%90%E5%88%B6/index.html">
 <meta property="og:site_name" content="AYE Blog">
-<meta property="og:description" content="element-ui文件上传 做类型大小的限制 &lt;div class&#x3D;&quot;filebox&quot;&gt;     &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemov">
+<meta property="og:description" content="&lt;div class&#x3D;&quot;filebox&quot;&gt;     &lt;el-upload class&#x3D;&quot;upload-demo&quot; :action&#x3D;&quot;url&quot; :on-preview&#x3D;&quot;handlePreview&quot; :on-remove&#x3D;&quot;handleRemove&quot; multiple :lim">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T07:08:08.668Z">
+<meta property="article:modified_time" content="2020-05-15T02:42:23.260Z">
 <meta property="article:author" content="aye">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
@@ -163,7 +163,9 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="element-ui文件上传-做类型大小的限制"><a href="#element-ui文件上传-做类型大小的限制" class="headerlink" title="element-ui文件上传 做类型大小的限制"></a>element-ui文件上传 做类型大小的限制</h1><pre><code class="html">
+            <!-- # element-ui文件上传 做类型大小的限制 -->
+
+<pre><code class="html">
 &lt;div class=&quot;filebox&quot;&gt;
     &lt;el-upload class=&quot;upload-demo&quot; :action=&quot;url&quot; :on-preview=&quot;handlePreview&quot; :on-remove=&quot;handleRemove&quot; multiple :limit=&quot;limitnum&quot; :on-exceed=&quot;handleExceed&quot; :file-list=&quot;fileList&quot; :beforeUpload=&quot;beforeAvatarUpload&quot;&gt;
         &lt;el-button size=&quot;mini&quot; type=&quot;primary&quot;&gt;点击上传&lt;/el-button&gt;

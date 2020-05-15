@@ -133,11 +133,13 @@
                             <p>
                                 <strong>百度地图搜索并上传位置</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                百度地图搜索并上传位置var start_point = {lng: 116.404,lat: 39.915}
+                                
+
+var start_point = {lng: 116.404,lat: 39.915}
 var map = new BMap.Map(&quot;container&quot;);
 map.enableScrollWheelZoom(true);     // 开启鼠标滚轮缩放
 // 根据经纬度自适应zoom和中点
-map.cen..
+map.centerAndZoo..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -149,17 +151,20 @@ map.cen..
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/11/30/百度地图常用API/">
+                <a href="/2019/12/14/添加书签至浏览器/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>百度地图常用API</strong> <small class="post-date">at: 2019-11-30</small>
+                                <strong>添加书签至浏览器</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                百度地图常用API&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
-    map.enableScrollWheelZ..
+                                
+
+ // 添加书签至浏览器
+function addfavorite() { 
+    var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;
+    try{
+       ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -178,10 +183,12 @@ map.cen..
                             <p>
                                 <strong>百度地图自适应显示地图</strong> <small class="post-date">at: 2019-11-30</small>
                                 <br>
-                                百度地图自适应显示地图**根据标注点坐标范围计算显示缩放级别zoom1、 计算缩放级别的函数
+                                
+
+根据标注点坐标范围计算显示缩放级别zoom1、 计算缩放级别的函数
 //根据经纬极值计算绽放级别。  
 function getZoom (maxLng, minLng, maxLat, minLat) {  
-    var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&qu..
+    var zoom = [&quot;50&quot;,&quot;100&quot;,&quot;200&quot;,&quot;5..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -200,39 +207,13 @@ function getZoom (maxLng, minLng, maxLat, minLat) {
                             <p>
                                 <strong>百度地图创建图标</strong> <small class="post-date">at: 2019-11-30</small>
                                 <br>
-                                百度地图创建图标//在轨迹点上创建图标，并添加点击事件  
+                                
+
+//在轨迹点上创建图标，并添加点击事件  
 function addMarker(points){  // 创建图标对象     
     // 创建标注对象并添加到地图     
     for(var i = 0,pointsLen = points.length;i &lt;pointsLen;i++){  
-        var..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/11/30/百度地图封装/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>百度地图封装</strong> <small class="post-date">at: 2019-11-30</small>
-                                <br>
-                                百度地图封装//创建和初始化地图函数：
-function initMap() {
-    createMap();//创建地图
-    setMapEvent();//设置地图事件
-    addMapControl();//向地图添加控件
-    addMarker();//向地图中添加marker
-}
-
-//创建地图函数：
-function crea..
+        var point..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -251,9 +232,66 @@ function crea..
                             <p>
                                 <strong>百度地图添加折线</strong> <small class="post-date">at: 2019-11-30</small>
                                 <br>
-                                百度地图添加折线var map = new BMap.Map(&quot;container&quot;);
+                                
+
+var map = new BMap.Map(&quot;container&quot;);
 var point_start = new BMap.Point(120.28429,31.52853);  // 创建起点坐标
-var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标..
+var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标A
+var ..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/11/30/百度地图封装/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>百度地图封装</strong> <small class="post-date">at: 2019-11-30</small>
+                                <br>
+                                
+
+//创建和初始化地图函数：
+function initMap() {
+    createMap();//创建地图
+    setMapEvent();//设置地图事件
+    addMapControl();//向地图添加控件
+    addMarker();//向地图中添加marker
+}
+
+//创建地图函数：
+function createMa..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/11/30/百度地图常用API/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>百度地图常用API</strong> <small class="post-date">at: 2019-11-30</small>
+                                <br>
+                                
+
+&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var map = new BMap.Map(&quot;container&quot;); //初始化百度地图时，注意ID必须为container
+    map.enableScrollWheelZoom(tru..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -272,8 +310,12 @@ var pointA = new BMap.Point(119.59794,31.72322);  // 创建点坐标..
                             <p>
                                 <strong>Axios的二次封装</strong> <small class="post-date">at: 2019-11-07</small>
                                 <br>
-                                Axios的二次封装
-在项目下新建一个service文件夹（与package.json同级），子文件：http.js 对axios请求头、拦截器等， reset.js：请求方法的封装，get，post等。 axios的二次封装跟api的封装、或者在vuex的store中使用， axios的reset用于api封装用,提供api封装中使用，以及store中..
+                                
+
+
+在项目下新建一个service文件夹（与package.json同级），子文件：http.js 对axios请求头、拦截器等， reset.js：请求方法的封装，get，post等。 axios的二次封装跟api的封装、或者在vuex的store中使用， axios的reset用于api封装用,提供api封装中使用，以及store中使用。
+
+ 1...
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -320,36 +362,17 @@ module.exports = {
                             <p>
                                 <strong>VUE-CLI 3.0 如何创建项目</strong> <small class="post-date">at: 2019-10-14</small>
                                 <br>
-                                VUE-CLI 3.0 如何创建项目安装vue-cli 3.0首先查看本机是否有安装 vue-cli，在终端中运行下面命令
+                                
+
+安装vue-cli 3.0首先查看本机是否有安装 vue-cli，在终端中运行下面命令
 vue --version如果安装的不是 3.0 + ，先卸载当前 vue-cli
 npm uninstall -g vue-cli
 
 npm install -g @vue/cli
 类 unix 用户，需加上 sudo
 
-创建初始..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/10/14/vue.config.js的配置/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>vue.config.js 的配置</strong> <small class="post-date">at: 2019-10-14</small>
-                                <br>
-                                const path = require(&#39;path&#39;)
-const debug = process.env.NODE_ENV !== &#39;production&#39;
-//const VueConf = require(&#39;./src/assets/js/libs/vue_config_class&#39;)
-//cons..
+创建初始项目在终端中，输入下面命令
+vu..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

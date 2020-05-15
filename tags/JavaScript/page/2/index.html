@@ -126,40 +126,23 @@
         <div class="box">
             <article class="media">
                 
-                <a href="/2019/10/08/断点续传/">
+                <a href="/2019/10/08/常用js函数/">
                     
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>断点续传</strong> <small class="post-date">at: 2019-10-08</small>
+                                <strong>常用js函数</strong> <small class="post-date">at: 2019-10-08</small>
                                 <br>
-                                断点续传主要依赖http协议的206返回码。前提条件是通信双方使用http1.1以上协议。
-客户端使用请求头Range告知自己需要的数据范围；服务器使用响应头Content-Range说明返回的数据范围和数据长度。
+                                参考：
+让你瞬间提高工作效率的常用js函数汇总(持续更新)
+常用的正则校验// 匹配邮箱
+let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$
 
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/09/27/兼容IE8的一些方法/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>兼容IE8的方法函数</strong> <small class="post-date">at: 2019-09-27</small>
-                                <br>
-                                兼容IE8的方法函数
-兼容IE8 数组的 forEach
-if ( !Array.prototype.forEach ) {
-    Array.prototype.forEach = function forEach( callback, thisArg ) {
-        var T, k;
-        if ( this == null )..
+// (新)匹配手机号
+let reg = /^1[0-9]{10}$/;
+
+// (旧)匹配手机号
+let reg = /^1..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -178,13 +161,42 @@ if ( !Array.prototype.forEach ) {
                             <p>
                                 <strong>常用的函数方法</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
-                                常用的函数方法
+                                
+
+
 原生封装的ajax函数
 function Ajax(type, url, data, success, failed){
     // 创建ajax对象
     var xhr = null;
     if ( window.XMLHttpRequest ) {//非IE浏览器
-        xhr = new XMLHttpReque..
+        xhr = new XMLHttpRequest();..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/09/27/兼容IE8的一些方法/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>兼容IE8的方法函数</strong> <small class="post-date">at: 2019-09-27</small>
+                                <br>
+                                
+
+
+兼容IE8 数组的 forEach
+if ( !Array.prototype.forEach ) {
+    Array.prototype.forEach = function forEach( callback, thisArg ) {
+        var T, k;
+        if ( this == null ) {
+     ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -203,11 +215,13 @@ function Ajax(type, url, data, success, failed){
                             <p>
                                 <strong>DOMContentLoaded与load的区别</strong> <small class="post-date">at: 2019-09-27</small>
                                 <br>
-                                DOMContentLoaded与load的区别onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
+                                
+
+onload事件onload事件所有的浏览器都支持，所以不需要考虑兼容性。
 window.onload = function() {}
 DOMContentLoaded事件DOMContentLoaded不同的浏览器对其支持不同，所以在使用时，需要做不同浏览器的兼容。
 
-IE6、IE7不支持DOMConte..
+IE6、IE7不支持DOMContentLoaded，但支持onreadysta..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

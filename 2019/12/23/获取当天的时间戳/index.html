@@ -17,15 +17,15 @@
   
   <title>获取当天的时间戳 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="获取当天的时间戳var start &#x3D; new Date(     new Date(new Date().toLocaleDateString()).getTime() ); &#x2F;&#x2F; 当天0点 var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59     new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 *">
+  <meta name="description" content="var start &#x3D; new Date(     new Date(new Date().toLocaleDateString()).getTime() ); &#x2F;&#x2F; 当天0点 var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59     new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000">
 <meta property="og:type" content="article">
 <meta property="og:title" content="获取当天的时间戳">
 <meta property="og:url" content="http://yoursite.com/2019/12/23/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%A4%A9%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3/index.html">
 <meta property="og:site_name" content="AYE Blog">
-<meta property="og:description" content="获取当天的时间戳var start &#x3D; new Date(     new Date(new Date().toLocaleDateString()).getTime() ); &#x2F;&#x2F; 当天0点 var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59     new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 *">
+<meta property="og:description" content="var start &#x3D; new Date(     new Date(new Date().toLocaleDateString()).getTime() ); &#x2F;&#x2F; 当天0点 var end &#x3D; new Date( &#x2F;&#x2F; 当天23:59     new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T07:00:47.014Z">
+<meta property="article:modified_time" content="2020-05-15T02:40:33.746Z">
 <meta property="article:author" content="aye">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -163,7 +163,9 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="获取当天的时间戳"><a href="#获取当天的时间戳" class="headerlink" title="获取当天的时间戳"></a>获取当天的时间戳</h1><pre><code>var start = new Date(
+            <!-- # 获取当天的时间戳 -->
+
+<pre><code>var start = new Date(
     new Date(new Date().toLocaleDateString()).getTime()
 ); // 当天0点
 var end = new Date( // 当天23:59

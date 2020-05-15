@@ -17,15 +17,15 @@
   
   <title>移动端 1px 像素问题及解决办法 | AYE Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="移动端 1px 像素问题及解决办法一、为什么会有1px问题那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。 window.devicePixelRatio &#x3D; 物理像素 &#x2F;CSS像素目前主流的屏幕DPR&#x3D;2 （iPhone 8）,或者3 （iPhone 8 Plus）。拿2倍屏来说">
+  <meta name="description" content="一、为什么会有1px问题那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。 window.devicePixelRatio &#x3D; 物理像素 &#x2F;CSS像素目前主流的屏幕DPR&#x3D;2 （iPhone 8）,或者3 （iPhone 8 Plus）。拿2倍屏来说，设备的物理像素要实现1像素，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端 1px 像素问题及解决办法">
 <meta property="og:url" content="http://yoursite.com/2019/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF1px%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="AYE Blog">
-<meta property="og:description" content="移动端 1px 像素问题及解决办法一、为什么会有1px问题那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。 window.devicePixelRatio &#x3D; 物理像素 &#x2F;CSS像素目前主流的屏幕DPR&#x3D;2 （iPhone 8）,或者3 （iPhone 8 Plus）。拿2倍屏来说">
+<meta property="og:description" content="一、为什么会有1px问题那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。 window.devicePixelRatio &#x3D; 物理像素 &#x2F;CSS像素目前主流的屏幕DPR&#x3D;2 （iPhone 8）,或者3 （iPhone 8 Plus）。拿2倍屏来说，设备的物理像素要实现1像素，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T07:07:29.990Z">
+<meta property="article:modified_time" content="2020-05-15T02:40:34.061Z">
 <meta property="article:author" content="aye">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -163,7 +163,9 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="移动端-1px-像素问题及解决办法"><a href="#移动端-1px-像素问题及解决办法" class="headerlink" title="移动端 1px 像素问题及解决办法"></a>移动端 1px 像素问题及解决办法</h1><h3 id="一、为什么会有1px问题"><a href="#一、为什么会有1px问题" class="headerlink" title="一、为什么会有1px问题"></a>一、为什么会有1px问题</h3><p>那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。</p>
+            <!-- # 移动端 1px 像素问题及解决办法 -->
+
+<h3 id="一、为什么会有1px问题"><a href="#一、为什么会有1px问题" class="headerlink" title="一、为什么会有1px问题"></a>一、为什么会有1px问题</h3><p>那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。</p>
 <pre><code>window.devicePixelRatio = 物理像素 /CSS像素</code></pre><p>目前主流的屏幕DPR=2 （iPhone 8）,或者3 （iPhone 8 Plus）。拿2倍屏来说，设备的物理像素要实现1像素，而DPR=2，所以css 像素只能是 0.5。一般设计稿是按照750来设计的，它上面的1px是以750来参照的，而我们写css样式是以设备375为参照的，所以我们应该写的0.5px就好了啊！ 试过了就知道，iOS 8+系统支持，安卓系统不支持。</p>
 <h3 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h3><h5 id="1、直接设置0-5px"><a href="#1、直接设置0-5px" class="headerlink" title="1、直接设置0.5px"></a>1、直接设置0.5px</h5><p> 媒体查询利用设备像素比缩放，设置小数像素。</p>
 <p>优点：简单，好理解<br>缺点：兼容性差，目前之余IOS8+才支持，在IOS7及其以下、安卓系统都是显示0px。</p>

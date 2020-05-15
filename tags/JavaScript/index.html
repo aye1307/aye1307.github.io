@@ -160,33 +160,12 @@
                             <p>
                                 <strong>获取当前websocket的连接状态</strong> <small class="post-date">at: 2019-12-31</small>
                                 <br>
-                                获取当前websocket的连接状态 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
+                                
+
+ 这是非常简单的：readyStatewebsocket 的属性总是包含websocket的连接，正如WebSocket API 
  它将是以下值之一：CONNECTING OPEN CLOSING或CLOSED 
-if(yourWsObject.readyState === yourWsObject.CLOSED){..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/12/23/判断变量为空对象/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>判断对象是否为空对象的几种方法</strong> <small class="post-date">at: 2019-12-23</small>
-                                <br>
-                                javaScript判断对象是否为空对象的几种方法1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
-var data = {};
-var b = (JSON.stringify(data) == &quot;{}&quot;);
-alert(b);//true
-2.for in 循环判断
-var obj =..
+if(yourWsObject.readyState === yourWsObject.CLOSED){
+   // Do your s..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -205,11 +184,40 @@ var obj =..
                             <p>
                                 <strong>获取当天的时间戳</strong> <small class="post-date">at: 2019-12-23</small>
                                 <br>
-                                获取当天的时间戳var start = new Date(
+                                
+
+var start = new Date(
     new Date(new Date().toLocaleDateString()).getTime()
 ); // 当天0点
 var end = new Date( // 当天23:59
-    new Date(new Date().toLocaleDateString()).getT..
+    new Date(new Date().toLocaleDateString()).getTime() ..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/12/23/判断变量为空对象/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>判断对象是否为空对象的几种方法</strong> <small class="post-date">at: 2019-12-23</small>
+                                <br>
+                                
+
+1.将 json对象转化为 json 字符串，再判断该字符串是否为 &quot;{}&quot;
+var data = {};
+var b = (JSON.stringify(data) == &quot;{}&quot;);
+alert(b);//true
+2.for in 循环判断
+var obj = {};
+var b = function()..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -250,10 +258,13 @@ var end = new Date( // 当天23:59
                             <p>
                                 <strong>封装cookie方法</strong> <small class="post-date">at: 2019-12-18</small>
                                 <br>
-                                封装cookie方法function setCookie(cname,cvalue,exdays){
+                                
+
+function setCookie(cname,cvalue,exdays){
     var d = new Date();
     d.setTime(d.getTime()+(exdays*24*60*60*1000));
-    var expires = &quot;expires=&quot;+d.toGMTString..
+    var expires = &quot;expires=&quot;+d.toGMTString();
+    ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -272,11 +283,13 @@ var end = new Date( // 当天23:59
                             <p>
                                 <strong>添加书签至浏览器</strong> <small class="post-date">at: 2019-12-14</small>
                                 <br>
-                                添加书签至浏览器 // 添加书签至浏览器
+                                
+
+ // 添加书签至浏览器
 function addfavorite() { 
     var ctrl = (navigator.userAgent.toLowerCase()).indexOf(&#39;mac&#39;) != -1 ? &#39;Command/Cmd&#39;: &#39;CTRL&#39;;
     try{
- ..
+       ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -295,38 +308,13 @@ function addfavorite() {
                             <p>
                                 <strong>js实现promise的方法</strong> <small class="post-date">at: 2019-10-10</small>
                                 <br>
-                                js实现promise的方法const PromisePolyfill = (() =&gt; {
+                                
+
+const PromisePolyfill = (() =&gt; {
     //状态管理
     const promiseStatusSymbol = Symbol(&#39;PromiseStatus&#39;);
-    const promiseValueSymbol = Symbol(&#39;PromiseVa..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/10/08/常用js函数/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>常用js函数</strong> <small class="post-date">at: 2019-10-08</small>
-                                <br>
-                                参考：
-让你瞬间提高工作效率的常用js函数汇总(持续更新)
-常用的正则校验// 匹配邮箱
-let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$
-
-// (新)匹配手机号
-let reg = /^1[0-9]{10}$/;
-
-// (旧)匹配手机号
-let reg = /^1..
+    const promiseValueSymbol = Symbol(&#39;PromiseValue&#39;);
+ ..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -345,8 +333,33 @@ let reg = /^1..
                             <p>
                                 <strong>前端性能优化gzip</strong> <small class="post-date">at: 2019-10-08</small>
                                 <br>
-                                前端性能优化gzip什么是gzipgzip就是GNUzip的缩写，也是一个文件压缩程序，可以将文件压缩进后缀为.gz的压缩包。而我们前端所讲的gzip压缩优化，就是通过gzip这个压缩程序，对资源进行压缩，从而降低请求资源的文件大小。
-gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何一个网站，看它们的html，js，css文件都是经过gzip压..
+                                
+
+什么是gzipgzip就是GNUzip的缩写，也是一个文件压缩程序，可以将文件压缩进后缀为.gz的压缩包。而我们前端所讲的gzip压缩优化，就是通过gzip这个压缩程序，对资源进行压缩，从而降低请求资源的文件大小。
+gzip压缩优化在业界的应用有多么普遍呢，基本上你打开任何一个网站，看它们的html，js，css文件都是经过gzip压缩的（即使js，..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/10/08/断点续传/">
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>断点续传</strong> <small class="post-date">at: 2019-10-08</small>
+                                <br>
+                                
+
+主要依赖http协议的206返回码。前提条件是通信双方使用http1.1以上协议。
+客户端使用请求头Range告知自己需要的数据范围；服务器使用响应头Content-Range说明返回的数据范围和数据长度。
+
                             </p>
                             <button class="button is-info">Read</button>
                         </div>

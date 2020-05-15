@@ -133,12 +133,14 @@
                             <p>
                                 <strong>元素的水平垂直居中</strong> <small class="post-date">at: 2019-10-12</small>
                                 <br>
-                                元素的水平垂直居中已知元素宽高margin负值 + 绝对定位优点：兼容性好。
+                                
+
+已知元素宽高margin负值 + 绝对定位优点：兼容性好。
 缺点：需提前知道元素的尺寸，否则需借助JS获得。
 .child {
     width: 600px; height: 400px;
     position: absolute; left: 50%; top: 50%;
-    margin-top: -200px;    ..
+    margin-top: -200px;    /* 高度的一..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -157,9 +159,14 @@
                             <p>
                                 <strong>如何disabled禁用所有表单input输入框元素</strong> <small class="post-date">at: 2019-10-09</small>
                                 <br>
-                                如何disabled禁用所有表单input输入框元素参考：如何disabled禁用所有表单input输入框元素
+                                
+
+参考：如何disabled禁用所有表单input输入框元素
 pointer-events:none和覆盖层方法的问题经常会遇到需求，需要禁用div中或者form元素中一堆表单控件元素，如&lt;input&gt;，&lt;select&gt;，&lt;textarea&gt;元素。
-很多人用的下面这两种..
+很多人用的下面这两种方法实现：
+
+设置
+pointer-events..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -178,8 +185,10 @@ pointer-events:none和覆盖层方法的问题经常会遇到需求，需要禁�
                             <p>
                                 <strong>移动端 1px 像素问题及解决办法</strong> <small class="post-date">at: 2019-10-09</small>
                                 <br>
-                                移动端 1px 像素问题及解决办法一、为什么会有1px问题那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。
-window.devicePixelRatio = 物理像素 /CSS像素目前主流的屏幕DPR=2 （iPhone 8）,或者3 ..
+                                
+
+一、为什么会有1px问题那么为什么会产生这个问题呢？主要是跟一个东西有关，DPR(devicePixelRatio) 设备像素比，它是默认缩放为100%的情况下，设备像素和CSS像素的比值。
+window.devicePixelRatio = 物理像素 /CSS像素目前主流的屏幕DPR=2 （iPhone 8）,或者3 （iPhone 8 Plus）..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -198,13 +207,15 @@ window.devicePixelRatio = 物理像素 /CSS像素目前主流的屏幕DPR=2 （i
                             <p>
                                 <strong>currentColor</strong> <small class="post-date">at: 2019-10-08</small>
                                 <br>
-                                currentColor概念： 当前文字颜色
+                                
+
+概念： 当前文字颜色
 应用场景： background-color | border-color | gradient | box-shadow
 参考：
 currentColor-CSS3超高校级好用CSS变量
 
 border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类似 currentColor ；
-其次，..
+其次，在IOS Safar..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -223,8 +234,10 @@ border 和 box-shadow 默认的颜色就是当前的文字颜色，也就是类�
                             <p>
                                 <strong>readonly与disabled区别</strong> <small class="post-date">at: 2019-10-08</small>
                                 <br>
-                                readonly与disabled区别readonly 和 disabled 它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：
- Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以P..
+                                
+
+readonly 和 disabled 它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：
+ Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
